@@ -1,0 +1,1255 @@
+<div id="loadOverlay" class="load-overlay" aria-hidden="true">
+    <div id="loaderPanel" class="loader-panel">
+      <div id="loaderMark" class="loader-logo">
+        <img src="/mahir_new.png" alt="">
+      </div>
+    </div>
+    <div id="loaderCapsule" class="loader-capsule"></div>
+
+  </div>
+
+  <header class="mahir-floating-nav">
+    <div class="mahir-floating-nav-inner">
+      <a href="/mahir.html" class="nav-brand" aria-label="MAHIR home">
+        <span class="nav-logo-chip"><img src="/mahir_new.png" alt="MAHIR"></span>
+      </a>
+      <nav>
+        <a href="#process" class="nav-link">Approach</a>
+        <a href="#range" class="nav-link">Products</a>
+        <a href="/about" class="nav-link">About Us</a>
+        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/team" class="nav-link">Team</a>
+        <a href="/careers" class="nav-link">Careers</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:.5rem;">
+        <a href="/contact" class="mahir-nav-contact-fancy mahir-nav-contact-desktop">
+          <span class="nc-ring" aria-hidden="true"></span>
+          <span class="nc-inner">Contact</span>
+        </a>
+        <button type="button" class="mahir-nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="(function(b){var d=document.getElementById('mahirMobileDrawer');var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';})(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="mahirMobileDrawer" class="mahir-mobile-drawer" onclick="this.classList.remove('open');document.body.style.overflow='';">
+    <a href="#process">Approach</a>
+    <a href="#range">Products</a>
+    <a href="/about">About Us</a>
+    <a href="/blog">Blog</a>
+    <a href="/team">Team</a>
+    <a href="/careers">Careers</a>
+    <a href="/contact" class="mahir-nav-contact-fancy">
+      <span class="nc-ring" aria-hidden="true"></span>
+      <span class="nc-inner">Contact</span>
+    </a>
+  </div>
+
+
+  <main>
+    <section id="reveal" class="relative h-[610vh] md:h-[690vh]">
+      <div id="stage" class="sticky top-0 h-screen overflow-hidden bg-black">
+        <div id="lightLayer" class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,#12213f_0%,#080d1c_44%,#000000_100%)]"></div>
+        <div id="darkLayer" class="absolute inset-0 z-[1] bg-[#020305] opacity-0"></div>
+
+        <div class="absolute left-1/2 top-[55%] z-[2] h-[74vmin] w-[74vmin] -translate-x-1/2 -translate-y-1/2 rounded-none machined-border opacity-10"></div>
+
+        <div class="noise pointer-events-none absolute inset-0 z-[60] opacity-[0.4]"></div>
+        <div id="grid" class="technical-grid pointer-events-none absolute inset-0 z-[4] opacity-30"></div>
+
+        <aside class="pointer-events-none absolute left-4 top-28 z-[70] hidden h-[64vh] flex-col justify-between sm:flex">
+          <div class="absolute left-0 top-0 h-full w-[3px] bg-black"></div>
+          <div id="railProgress" class="absolute left-0 top-0 w-[3px] bg-white" style="height: 0%"></div>
+
+          <div data-chapter="0" class="relative pl-6 transition-all duration-300">
+            <span class="absolute left-[-3px] top-1.5 h-2 w-2 rounded-none bg-white"></span>
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.22rem] text-white">01</p>
+            <p class="mt-1 text-[0.65rem] font-bold uppercase tracking-[0.16rem] text-white/60">Philosophy</p>
+          </div>
+          <div data-chapter="1" class="relative pl-6 transition-all duration-300 opacity-40">
+            <span class="absolute left-[-3px] top-1.5 h-2 w-2 rounded-none bg-white"></span>
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.22rem] text-white">02</p>
+            <p class="mt-1 text-[0.65rem] font-bold uppercase tracking-[0.16rem] text-white/60">Mission</p>
+          </div>
+          <div data-chapter="2" class="relative pl-6 transition-all duration-300 opacity-40">
+            <span class="absolute left-[-3px] top-1.5 h-2 w-2 rounded-none bg-white"></span>
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.22rem] text-white">03</p>
+            <p class="mt-1 text-[0.65rem] font-bold uppercase tracking-[0.16rem] text-white/60">Vision</p>
+          </div>
+          <div data-chapter="3" class="relative pl-6 transition-all duration-300 opacity-40">
+            <span class="absolute left-[-3px] top-1.5 h-2 w-2 rounded-none bg-white"></span>
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.22rem] text-white">04</p>
+            <p class="mt-1 text-[0.65rem] font-bold uppercase tracking-[0.16rem] text-white/60">Today</p>
+          </div>
+        </aside>
+
+        <div id="productWrap" class="absolute left-1/2 top-1/2 z-20 h-[100vmin] w-[100vmin] will-change-transform drop-shadow-[0_40px_50px_rgba(0,0,0,0.9)]" style="transform-style: preserve-3d;">
+<div class="mobile-mock" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(46vmin,420px);aspect-ratio:9/19;background:#000;border-radius:44px;padding:14px;box-shadow:0 40px 90px rgba(0,0,0,0.9),0 0 0 2px rgba(255,255,255,0.08);">
+  <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:38%;height:26px;background:#000;border-radius:0 0 18px 18px;z-index:3;"></div>
+  <div style="position:relative;width:100%;height:100%;background:#0a0a0a;border-radius:32px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.06);">
+    <div id="phoneLogoSpin" style="display:flex;align-items:center;justify-content:center;width:64%;will-change:transform;">
+      <img src="/mahir-mark-white.png" alt="MAHIR" style="width:100%;height:auto;display:block;" />
+    </div>
+    <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:36%;height:4px;background:rgba(255,255,255,0.3);border-radius:99px;"></div>
+  </div>
+</div>
+</div>
+
+        <div class="pointer-events-none absolute inset-0 z-40">
+          <section id="state0" data-state="" data-center="" class="absolute left-1/2 top-[24%] w-[min(42rem,86vw)] -translate-x-1/2 text-center text-white drop-shadow-[0_8px_26px_rgba(0,0,0,.55)]">
+            <div class="overflow-hidden"><p data-line="" class="state-line text-[0.68rem] font-bold uppercase tracking-[0.34rem] text-white/80"><span class="font-syne uppercase">MAHIR</span> GROUP</p></div>
+            <div class="mt-5 overflow-hidden"><h1 data-line="" class="state-line text-4xl font-semibold leading-[0.95] tracking-[-0.02em] sm:text-[2.5rem] md:text-[2.75rem] lg:text-5xl">Building Institutions<br class="hidden sm:block"> That Serve People First.</h1></div>
+            <div class="mx-auto mt-6 max-w-md overflow-hidden"><p data-line="" class="state-line text-sm leading-6 text-white/70">A SEBI-registered research team helping people invest with clarity, confidence, and a long-term view.</p></div>
+            <div class="mt-8 flex justify-center"><a data-line="" href="#range" class="pointer-events-auto state-line mahir-cta-btn"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Explore What We Build</span></a></div>
+          </section>
+
+          <section id="state1" data-state="" class="absolute right-[7%] top-[22%] w-[min(34rem,72vw)] text-white opacity-0 drop-shadow-[0_8px_26px_rgba(0,0,0,.45)] max-md:left-6 max-md:right-auto max-md:top-[15%]">
+            <div class="overflow-hidden"><p data-line="" class="state-line text-[0.68rem] font-bold uppercase tracking-[0.32rem] text-white/70">Philosophy</p></div>
+            <div class="mt-4 overflow-hidden"><h2 data-line="" class="state-line text-4xl font-semibold leading-[0.9] tracking-[-0.02em] sm:text-6xl lg:text-7xl">Excellence Must Have A Conscience.</h2></div>
+            <div class="mt-5 max-w-sm overflow-hidden"><p data-line="" class="state-line text-sm leading-6 text-white/60">Every recommendation we make is filtered through one question: does this truly help our clients build wealth over time?</p></div>
+          </section>
+
+          <section id="state2" data-state="" data-center="" class="absolute left-1/2 top-[18%] w-[min(40rem,84vw)] -translate-x-1/2 text-center text-white opacity-0 drop-shadow-[0_8px_26px_rgba(0,0,0,.45)] max-md:top-[14%]">
+            <div class="overflow-hidden"><p data-line="" class="state-line text-[0.68rem] font-bold uppercase tracking-[0.32rem] text-white/70">Mission</p></div>
+            <div class="mt-4 overflow-hidden"><h2 data-line="" class="state-line text-4xl font-semibold leading-[0.9] tracking-[-0.02em] sm:text-6xl lg:text-7xl">The Most Dependable Voice In The Room.</h2></div>
+            <div class="mx-auto mt-5 max-w-md overflow-hidden"><p data-line="" class="state-line text-sm leading-6 text-white/60">To be the most dependable voice in your investment decisions. Not the loudest, but the one you can trust when it matters.</p></div>
+          </section>
+
+          <section id="state3" data-state="" class="absolute left-[22%] top-[31%] w-[min(34rem,72vw)] text-white opacity-0 drop-shadow-[0_8px_26px_rgba(0,0,0,.45)] max-md:left-6 max-md:top-[57%]">
+            <div class="overflow-hidden"><p data-line="" class="state-line text-[0.68rem] font-bold uppercase tracking-[0.32rem] text-white/70">Vision</p></div>
+            <div class="mt-4 overflow-hidden"><h2 data-line="" class="state-line text-4xl font-semibold leading-[0.9] tracking-[-0.02em] sm:text-6xl lg:text-7xl">A Globally Trusted Institution.</h2></div>
+            <div class="mt-6 max-w-md overflow-hidden"><p data-line="" class="state-line text-sm leading-6 text-white/60">To build a financial institution India trusts, where every client knows exactly why they own what they own, and why it fits their goals.</p></div>
+          </section>
+
+          <section id="state4" data-state="" class="absolute left-[22%] top-[24%] w-[min(34rem,72vw)] text-white opacity-0 drop-shadow-[0_8px_26px_rgba(0,0,0,.45)] max-md:left-6 max-md:top-[56%]">
+            <div class="overflow-hidden"><p data-line="" class="state-line text-[0.68rem] font-bold uppercase tracking-[0.32rem] text-white/70">Today</p></div>
+            <div class="mt-4 overflow-hidden"><h2 data-line="" class="state-line text-4xl font-semibold leading-[0.9] tracking-[-0.02em] sm:text-6xl lg:text-7xl"><span class="font-syne uppercase">MAHIR</span></h2></div>
+            <div class="mt-6 max-w-md overflow-hidden"><p data-line="" class="state-line text-sm leading-6 text-white/60">Today, <span class="font-syne uppercase">MAHIR</span> is a growing set of advisory services and market tools built for one purpose: helping you invest with confidence.</p></div>
+            <div class="mt-8"><a data-line="" href="#signatures" class="pointer-events-auto state-line inline-flex mahir-cta-btn"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">See Our Products</span></a></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro prelude, About-style scroll reveal -->
+    <section class="relative z-20 bg-white py-24 sm:py-28 lg:py-32 overflow-hidden">
+      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-[0.22fr_1fr] gap-10 lg:gap-16">
+          <div class="reveal-up lg:sticky lg:top-28 lg:self-start">
+            <p class="text-sm font-semibold tracking-tight text-[#0B1220]">How We Work</p>
+          </div>
+          <div>
+            <div class="reveal-up">
+              <h2 class="text-2xl font-semibold leading-[1.15] tracking-[-.02em] text-[#0B1220] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem]">
+                <span class="font-syne uppercase">MAHIR</span> is built to help you invest with more clarity and less noise. Every research note, every screen, and every recommendation is designed to make your investment decisions better, simpler, and more confident.
+              </h2>
+            </div>
+            <div class="mt-8 grid gap-5 max-w-3xl">
+              <p class="reveal-up text-base leading-[1.7] text-[#5b6067]">
+                We do not chase trends or push products. Our advisory and screener start with one question: will this help the client build wealth over time? That question drives our stock research, risk framework, portfolio reviews, and the way we communicate every investment idea.
+              </p>
+              <p class="reveal-up text-base leading-[1.7] text-[#5b6067]">
+                What you read in our reports is backed by documented research. The strict risk checks, compliance reviews, and our refusal to recommend anything we would not own ourselves are what make the advice worth following. <span class="font-syne uppercase">MAHIR</span> is for investors who take the long term seriously and expect the same from their partner.
+              </p>
+            </div>
+
+            <!-- Milestones timeline -->
+            <div class="mt-20 lg:mt-24 lg:-ml-[calc(18%_+_4rem)] lg:w-[calc(100%_+_18%_+_4rem)]">
+              <div class="reveal-up mb-12 max-w-2xl mx-auto text-center">
+                <p class="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#5b6067]">Our Story</p>
+                <h3 class="mt-3 text-3xl font-semibold leading-[1.05] tracking-[-.03em] text-[#0B1220] sm:text-4xl">Key Moments</h3>
+                <p class="mt-3 text-sm leading-[1.7] text-[#5b6067]">From a single idea in October 2025 to a company built with the same care.</p>
+              </div>
+
+              <div id="mahir-timeline" class="relative">
+                <div class="mahir-tl-line hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 rounded-full bg-[#e4e5e1] overflow-hidden">
+                  <div id="mahir-tl-progress" class="w-full h-0 bg-gradient-to-b from-[#0B1220] to-[#3b5566] transition-[height] duration-1000 ease-out"></div>
+                </div>
+
+                <div class="flex flex-col gap-10">
+                  <!-- Step 1 -->
+                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <div class="md:pr-2">
+                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
+                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 01</span>
+                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Founded</h4>
+                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]"><span class="font-syne uppercase">MAHIR</span> started in October 2025 with one belief. Advice should be clear, easy to explain, and truly in the client's interest.</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                          <span>Oct 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
+                  </div>
+
+                  <!-- Step 2 -->
+                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-2">
+                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
+                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 02</span>
+                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]">SEBI Registered Advisory</h4>
+                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]"><span class="font-syne uppercase">MAHIR</span> Invest became a SEBI Registered Investment Adviser, giving our long-term approach the compliance and transparency clients deserve.</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                          <span>Oct 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
+                  </div>
+
+                  <!-- Step 3 -->
+                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <div class="md:pr-2">
+                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
+                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 03</span>
+                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Invest Launched</h4>
+                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]">On 15 May 2026, <span class="font-syne uppercase">MAHIR</span> Invest opened for clients, turning our research into clear, personal investment advice.</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                          <span>May 15, 2026</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
+                  </div>
+
+                  <!-- Step 4 -->
+                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-2">
+                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
+                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 04</span>
+                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Screener in Build</h4>
+                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]">The same research logic is being shaped into a screening tool so investors can study markets on the <span class="font-syne uppercase">MAHIR</span> framework.</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                          <span>2026</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <style>
+        .mahir-tl-card { background: #0B1220 !important; border-color: #1e2530 !important; color: #ffffff; }
+        .mahir-tl-card span, .mahir-tl-card p, .mahir-tl-card h4, .mahir-tl-card div { color: #ffffff !important; }
+        .mahir-tl-card p { color: #c8ccd3 !important; }
+        .mahir-tl-card .text-\[\#8a8f96\], .mahir-tl-card .text-\[\#5b6067\] { color: #a8adb5 !important; }
+        .mahir-tl-card:hover { border-color: #ffffff !important; transform: translateY(-3px); }
+        .mahir-tl-step.is-in { opacity: 1 !important; transform: translateY(0) !important; }
+        .mahir-tl-step.is-in .mahir-tl-dot { background: #0B1220; box-shadow: 0 0 0 6px rgba(11,18,32,0.08); }
+      </style>
+
+      
+    </section>
+
+
+    <!-- Marquee strap -->
+    <div class="relative z-20 overflow-hidden bg-[#0B1220] py-5">
+      <div class="mahir-strap-track flex whitespace-nowrap">
+        <div class="mahir-strap-group flex shrink-0 items-center gap-8 pr-8">
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">long-term thinking</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">trusted by design</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85"><span class="font-syne uppercase">MAHIR</span> built quietly</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">research-led advisory</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">long-term thinking</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">trusted by design</span><span class="text-white/40">•</span>
+          <span class="text-sm font-semibold uppercase tracking-[0.28em] text-white"><span class="font-syne uppercase">MAHIR</span> GROUP</span><span class="text-white/40">•</span>
+        </div>
+        <div class="mahir-strap-group flex shrink-0 items-center gap-8 pr-8" aria-hidden="true">
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">long-term thinking</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">trusted by design</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85"><span class="font-syne uppercase">MAHIR</span> built quietly</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">research-led advisory</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">long-term thinking</span><span class="text-white/40">•</span>
+          <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">trusted by design</span><span class="text-white/40">•</span>
+          <span class="text-sm font-semibold uppercase tracking-[0.28em] text-white"><span class="font-syne uppercase">MAHIR</span> GROUP</span><span class="text-white/40">•</span>
+        </div>
+      </div>
+    </div>
+    <style>
+      .mahir-strap-track { animation: mahirStrapScroll 38s linear infinite; }
+      @keyframes mahirStrapScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) { .mahir-strap-track { animation: none; } }
+    </style>
+
+
+    <!-- Hero CTA banner: talk to us -->
+    <section class="mahir-force-white relative isolate w-full overflow-hidden">
+      <img src="/talk-arc.png" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="relative z-10 mx-auto max-w-5xl px-6 py-28 text-center sm:py-32 lg:py-40">
+        <span class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/15 backdrop-blur">One Team One Standard</span>
+        <h2 class="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Have a question about your money? <span class="text-white">Talk to us first.</span>
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-base text-white sm:text-lg">
+          Before you invest, screen, or plan your next move, speak with a SEBI-registered advisor at <span class="font-syne uppercase">MAHIR</span>. No sales script, no pressure, just a clear conversation about what fits your goals and your risk appetite.
+        </p>
+        <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+          <a href="/contact" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To Us</span></a>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Product range section -->
+    <section id="range" class="scroll-dark-section relative bg-white py-24 sm:py-28 lg:min-h-screen lg:py-0">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 max-w-5xl lg:pt-24 reveal-up">
+          <p class="section-kicker">Our Products</p>
+          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] sm:text-5xl lg:text-7xl">
+            Advisory And Market Insights.
+            <span class="text-white">One Research Team.</span>
+          </h2>
+        </div>
+
+        <div id="specialPin" class="grid min-h-[44rem] grid-cols-1 gap-10 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
+          <div class="relative h-[26rem] overflow-hidden rounded-2xl bg-[#f7f7f7] sm:h-[34rem] lg:h-[42rem]">
+            <div class="special-img absolute inset-0 h-full w-full opacity-100"><img src="/mahir-invest-app.png" alt="MAHIR Invest app" loading="lazy" class="h-full w-full object-cover" /></div>
+            <div class="special-img absolute inset-0 h-full w-full opacity-0"><img src="/mahir-screener-app.png" alt="MAHIR Screener app" loading="lazy" class="h-full w-full object-cover" /></div>
+            
+            <div class="absolute inset-0 ring-1 ring-inset ring-black/10"></div>
+          </div>
+
+          <div>
+            <div class="mb-10 flex items-end justify-between border-b border-[#d8dad5] pb-5">
+              <h3 class="text-3xl font-semibold tracking-tight sm:text-4xl"><span class="font-syne uppercase">MAHIR</span> PRODUCTS</h3>
+              <span id="specialNumber" class="text-3xl font-semibold text-[#303833]">1</span>
+            </div>
+
+            <div class="space-y-7">
+              <div class="special-row opacity-100">
+                <div class="mb-3 flex items-center justify-between">
+                  <h4 class="text-lg font-semibold"><span class="font-syne uppercase">MAHIR</span> Invest</h4>
+                  <span class="text-sm text-[#9b9b9b]">01</span>
+                </div>
+                <p class="soft-copy">SEBI-registered RIA. Personal recommendations built on strong research and careful risk checks.</p>
+                <a href="https://mahirinvest.com" target="_blank" rel="noopener" class="mahir-cta-btn mt-5 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Invest</span></a>
+              </div>
+
+              <div class="special-row opacity-20">
+                <div class="mb-3 flex items-center justify-between">
+                  <h4 class="text-lg font-semibold"><span class="font-syne uppercase">MAHIR</span> Screener</h4>
+                  <span class="text-sm text-[#9b9b9b]">02</span>
+                </div>
+                <p class="soft-copy">Filter, study and shortlist stocks using the same logic that powers our advisory desk.</p>
+                <a href="https://screener.mahir.in" target="_blank" rel="noopener" class="mahir-cta-btn mt-5 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Screener</span></a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+    </section>
+
+    <!-- Feature card banner -->
+    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#0B1220]">
+      <img src="/team-workspace.png" alt="MAHIR team at work" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_40%,rgba(0,0,0,0.02),rgba(0,0,0,0.2)),linear-gradient(to_top,rgba(0,0,0,0.3),rgba(0,0,0,0.1))]"></div>
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="relative z-10 flex min-h-[70vh] items-center">
+        <div class="mx-auto max-w-4xl px-6 py-24 text-center md:px-8">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/10">
+            Our Team
+          </span>
+          <h3 class="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+            The Same People Who Research Your Stocks <span class="text-white">Also Write Your Advice.</span>
+          </h3>
+          <p class="mx-auto mt-6 max-w-2xl text-base font-light text-white sm:text-lg">
+            At <span class="font-syne uppercase">MAHIR</span>, the team that studies companies is the same team that advises you. There are no middlemen, no outsourced opinions. You get research-backed advice from people who know your portfolio and stand behind every recommendation.
+          </p>
+          <div class="mt-10">
+            <a href="/contact" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To Us</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="scroll-dark-section relative overflow-hidden bg-white py-24 text-[#303833] sm:py-28 lg:py-36">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+
+      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+          <div class="reveal-up lg:sticky lg:top-28 lg:self-start">
+            <p class="section-kicker">Our Approach</p>
+            <h2 class="mt-4 text-4xl font-semibold leading-[0.94] tracking-[-.055em] sm:text-5xl lg:text-7xl">
+              Advice, Refined
+              <span class="text-[#b9bbb7]">Down To The Decision.</span>
+            </h2>
+            <p class="soft-copy mt-7 max-w-xl">
+              Every <span class="font-syne uppercase">MAHIR</span> engagement follows the same four steps, whether you're a first-time investor or an existing client exploring a new product.
+            </p>
+          </div>
+
+          <div class="reveal-up">
+            <div class="grid grid-cols-1 gap-0">
+              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
+                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">01</p>
+                <div>
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">We Listen First</h3>
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Goals / risk comfort / time horizon</span>
+                  </div>
+                  <p class="soft-copy mt-4 max-w-3xl">We begin by understanding what you actually want from your investments — how much risk you are comfortable with, and how long you plan to stay invested. No generic portfolios, no assumptions.</p>
+                </div>
+              </article>
+
+              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
+                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">02</p>
+                <div>
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">We Study The Options</h3>
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Research / fundamentals / risk checks</span>
+                  </div>
+                  <p class="soft-copy mt-4 max-w-3xl">Our team digs into companies, numbers, and market data before suggesting anything. We only recommend what we have actually researched and believe in.</p>
+                </div>
+              </article>
+
+              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
+                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">03</p>
+                <div>
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">We Explain Our Reasoning</h3>
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Clear advice / full transparency</span>
+                  </div>
+                  <p class="soft-copy mt-4 max-w-3xl">Every suggestion comes with a plain explanation of why we think it makes sense for you. You will always know what we recommended and the thinking behind it.</p>
+                </div>
+              </article>
+
+              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
+                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">04</p>
+                <div>
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">We Stay With You</h3>
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Ongoing review / support / accountability</span>
+                  </div>
+                  <p class="soft-copy mt-4 max-w-3xl">Our job does not end with a recommendation. We track how things go, review our calls honestly, and stay available to you for any questions — long after the first advice is given.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="mt-10 flex flex-col justify-between gap-6 rounded-2xl border border-[#e2e4df] bg-[#f7f7f3] p-6 sm:flex-row sm:items-center">
+              <div>
+                <p class="text-[0.68rem] font-semibold uppercase tracking-[.22em] text-[#0B1220]">Client Advisory</p>
+                <p class="mt-2 max-w-2xl text-2xl font-semibold tracking-[-.04em] text-[#0B1220]">Confidence, Finished With Restraint.</p>
+              </div>
+              <a href="/contact" class="mahir-cta-btn shrink-0"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To Us</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Director section -->
+    <section id="director" class="relative bg-white py-24 sm:py-28 lg:py-32">
+      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <div class="reveal-up">
+            <div class="relative overflow-hidden rounded-2xl">
+              <img src="/yash-new-director.jpg" alt="Yash Bedmuttha, Director, <span class="font-syne uppercase">MAHIR</span> Group" loading="lazy" class="h-full w-full object-cover" style="aspect-ratio: 4/5;">
+            </div>
+          </div>
+          <div class="reveal-up">
+            <p class="section-kicker">Director</p>
+            <h2 class="mt-4 text-2xl font-medium leading-[1.1] tracking-[-.03em] text-[#111] sm:text-3xl lg:text-4xl">
+              A Steady Hand
+              <span class="text-[#b9bbb7]">Behind Every Recommendation.</span>
+            </h2>
+            <p class="soft-copy mt-6 max-w-xl">Yash leads <span class="font-syne uppercase">MAHIR</span> with a simple idea. Research first, client first. His work across Indian markets, from research desks to advisory floors to governance rooms, shapes the thinking behind every <span class="font-syne uppercase">MAHIR</span> call.</p>
+            <blockquote class="mt-8 border-l-2 border-[#0B1220]/20 pl-5 text-lg italic tracking-[-.01em] text-[#2a3038]">
+              "We would rather explain a modest call than defend a loud one. That's the only way this compounds."
+              <cite class="mt-3 block not-italic text-xs font-semibold uppercase tracking-[.22em] text-[#0B1220]/60">Yash Bedmuttha, Director</cite>
+            </blockquote>
+            <a href="/contact" class="mahir-cta-btn mt-8 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To The Team</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial / quote banner -->
+    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#0B1220]">
+      <img src="/9a09de18-b356-4c1a-b720-8c0d05f29746_3840w.jpg" alt="" class="pointer-events-none absolute inset-0 h-full w-full object-cover object-top" />
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_40%,rgba(0,0,0,0.25),rgba(0,0,0,0.55)),linear-gradient(to_top,rgba(0,0,0,0.7),rgba(0,0,0,0.2))]"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="relative z-10 flex min-h-[70vh] items-center">
+        <div class="mx-auto max-w-4xl px-6 py-24 text-center md:px-8">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/10">
+            Client Story
+          </span>
+          <p class="mt-6 text-3xl font-medium tracking-tight text-white drop-shadow-xl sm:text-4xl md:text-5xl">
+            "<span class="font-syne uppercase">MAHIR</span> gave us clear thinking and steady advice. We understand every recommendation and why it fits our plan."
+          </p>
+          <div class="mt-8 flex items-center justify-center gap-3">
+            <img src="/trusted-2.jpg" alt="A <span class="font-syne uppercase">MAHIR</span> Group Client" class="inline-flex h-9 w-9 rounded-full ring-1 ring-white/15 object-cover" />
+            <div class="text-left">
+              <div class="text-sm font-medium text-white">Rajesh Kulkarni</div>
+              <div class="text-xs text-white">Long term investor, Pune</div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <a href="/contact" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To Us</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance / dark pinned section -->
+    <section id="engineering" class="scroll-dark-section relative overflow-hidden bg-white py-24 pb-32 text-[#303833] sm:py-28 sm:pb-36 lg:min-h-screen lg:py-0">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="noise pointer-events-none absolute inset-0 opacity-[0.04]"></div>
+      <div id="engineeringPin" class="relative flex min-h-screen flex-col items-center justify-center px-4 pt-24 pb-28 text-center sm:px-6 sm:pb-32 lg:px-8 lg:pb-40">
+        <div id="engineeringText" class="engineering-text-card relative z-10 mx-auto max-w-4xl reveal-up rounded-2xl border border-transparent px-6 py-8 sm:px-10 sm:py-10">
+          <p class="section-kicker">What Is Inside Every Product</p>
+          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] text-[#111] sm:text-5xl lg:text-7xl">Inside Every <span class="font-syne uppercase">MAHIR</span> Product.</h2>
+          <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#747a76] sm:text-lg">
+            Every recommendation, screen, and report is checked against one simple standard. Is this clear to explain, backed by research, and truly right for the client?
+          </p>
+          <a href="/contact" class="mahir-cta-btn mt-8 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Request A Consultation</span></a>
+        </div>
+
+        <div id="ctWrap" class="relative z-0 mt-14 w-full max-w-6xl">
+          <div id="ctImage" class="mahir-standards-grid">
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 9 9 10 5.2-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                <span class="mahir-std-pill">Registered</span>
+              </div>
+              <h4>SEBI Compliant</h4>
+              <p>Every recommendation is sent under our SEBI-registered RIA framework, with clear disclosures included from the start.</p>
+              <div class="mahir-std-foot">Ria Framework</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+                </span>
+                <span class="mahir-std-pill">Documented</span>
+              </div>
+              <h4>Research First</h4>
+              <p>Fundamentals, screening, and internal review. Every call is written up before it is ever sent to a client.</p>
+              <div class="mahir-std-foot">Written Theses</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+                </span>
+                <span class="mahir-std-pill">Checked</span>
+              </div>
+              <h4>Risk Checked</h4>
+              <p>Position size, risk levels, and time frame are always checked against the client's profile, not the market's mood.</p>
+              <div class="mahir-std-foot">Client-Fit First</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="mahir-std-pill">Suitability</span>
+              </div>
+              <h4>Client-First Advice</h4>
+              <p>We check if an idea fits the client first. If it doesn't fit, we don't recommend it, no matter how good the idea looks.</p>
+              <div class="mahir-std-foot">Client Fit First</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+                </span>
+                <span class="mahir-std-pill">Transparent</span>
+              </div>
+              <h4>Clear Reasoning</h4>
+              <p>Every buy, hold, and exit call comes with a written 'why', so the reason is clear even years later.</p>
+              <div class="mahir-std-foot">Decision Logs</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/></svg>
+                </span>
+                <span class="mahir-std-pill">Compounding</span>
+              </div>
+              <h4>Long-Term Focus</h4>
+              <p>Long term investing rewards patience. We track results, review our calls, and stay responsible long after a recommendation is made.</p>
+              <div class="mahir-std-foot">Multi-Year View</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-band">
+      <div id="signalTrack" class="signal-track">
+        <span class="signal-item"><span class="font-syne uppercase">MAHIR</span> GROUP</span><span class="signal-dot">•</span>
+        <span class="signal-item">built quietly</span><span class="signal-dot">•</span>
+        <span class="signal-item">research-led advisory</span><span class="signal-dot">•</span>
+        <span class="signal-item">long-term thinking</span><span class="signal-dot">•</span>
+        <span class="signal-item">trusted by design</span><span class="signal-dot">•</span>
+        <span class="signal-item"><span class="font-syne uppercase">MAHIR</span> GROUP</span><span class="signal-dot">•</span>
+        <span class="signal-item">built quietly</span><span class="signal-dot">•</span>
+        <span class="signal-item">research-led advisory</span><span class="signal-dot">•</span>
+        <span class="signal-item">long-term thinking</span><span class="signal-dot">•</span>
+        <span class="signal-item">trusted by design</span>
+      </div>
+    </section>
+
+
+
+    <!-- ============ Client Highlights (tilted testimonials) ============ -->
+    <section class="relative bg-white py-20">
+      <div class="mb-10 text-center">
+        <p class="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-3">What Clients Say</p>
+        <h2 class="text-3xl sm:text-4xl font-medium tracking-tight" style="color:#0B1220;">Client Highlights</h2>
+      </div>
+      <div class="mahir-testi-wrap">
+        <div class="mahir-testi-row">
+          <div class="mahir-testi-card t1">
+            <div class="mahir-testi-inner">
+              <p>"<span class="font-syne uppercase">MAHIR</span>'s research process gave us conviction to hold through volatility. Their advisory feels institutional, but personal."</p>
+              <div class="mahir-testi-meta">
+                <div>
+                  <div class="mahir-testi-name">Ananya Deshpande</div>
+                  <div class="mahir-testi-role">Founder, Aarna Capital</div>
+                </div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+              </div>
+            </div>
+          </div>
+          <div class="mahir-testi-card t2">
+            <div class="mahir-testi-inner">
+              <p>"The screener alone changed how we filter opportunities. Fewer names, deeper theses, cleaner decisions."</p>
+              <div class="mahir-testi-meta">
+                <div>
+                  <div class="mahir-testi-name">Rohit Menon</div>
+                  <div class="mahir-testi-role">CIO, Northmark PMS</div>
+                </div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+              </div>
+            </div>
+          </div>
+          <div class="mahir-testi-card t3">
+            <div class="mahir-testi-inner">
+              <p>"Governance, disclosures, and reporting are handled with the seriousness we expect from a top-tier RIA."</p>
+              <div class="mahir-testi-meta">
+                <div>
+                  <div class="mahir-testi-name">Kavya Iyer</div>
+                  <div class="mahir-testi-role">Partner, Ledger &amp; Trust</div>
+                </div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+              </div>
+            </div>
+          </div>
+          <div class="mahir-testi-card t4">
+            <div class="mahir-testi-inner">
+              <p>"Every recommendation arrives with the reasoning behind it. That has changed how our family office makes decisions."</p>
+              <div class="mahir-testi-meta">
+                <div>
+                  <div class="mahir-testi-name">Vikram Shetty</div>
+                  <div class="mahir-testi-role">Principal, Shetty Family Office</div>
+                </div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+              </div>
+            </div>
+          </div>
+          <div class="mahir-testi-card t5">
+            <div class="mahir-testi-inner">
+              <p>"Quiet, considered, and defensible. <span class="font-syne uppercase">MAHIR</span> is the rare advisor that says less and means more."</p>
+              <div class="mahir-testi-meta">
+                <div>
+                  <div class="mahir-testi-name">Priya Ramanathan</div>
+                  <div class="mahir-testi-role">Managing Partner, Kestrel Advisors</div>
+                </div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Social proof band ============ -->
+    <section class="mahir-socialproof">
+      <div class="msp-inner">
+        <div class="msp-badge">
+          <div class="msp-avatars" aria-hidden="true">
+            <img src="/trusted-1.jpg" alt="" loading="lazy" />
+            <img src="/trusted-2.jpg" alt="" loading="lazy" />
+            <img src="/trusted-3.jpg" alt="" loading="lazy" />
+            <img src="/trusted-4.jpg" alt="" loading="lazy" />
+            <img src="/trusted-5.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="msp-rating">
+            <div class="msp-stars" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+            </div>
+            <p>Trusted by business owners, employees, and long-term investors</p>
+          </div>
+        </div>
+        <h2 class="msp-title">
+          Advice, <span class="msp-italic">refined</span> for people who take investing seriously.
+        </h2>
+        <p class="msp-sub">
+          A quiet, research-first advisory group building trustworthy systems for how people invest, decide and plan, one call at a time.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============ FAQ ============ -->
+    <section class="mahir-faq-band" id="faq">
+      <div class="mahir-faq-inner">
+        <div>
+          <p class="mahir-faq-eyebrow">FAQ</p>
+          <h2 class="mahir-faq-title">Questions,<br>answered plainly.</h2>
+          <p class="mahir-faq-sub">The essentials about who we are, how we work, and what to expect before you speak with us.</p>
+        </div>
+        <div class="mahir-faq-list">
+          <details class="mahir-faq-item">
+            <summary>What does <span class="font-syne uppercase">MAHIR</span> actually do?</summary>
+            <div class="mahir-faq-a">We are a SEBI-registered investment advisory and market intelligence firm. We help long-term investors build portfolios grounded in original research, disciplined risk, and clear reasoning, not noise or short-term calls.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>Are you registered with SEBI?</summary>
+            <div class="mahir-faq-a">Yes. <span class="font-syne uppercase">MAHIR</span> Group Investment Advisers Private Limited operates a Separately Identifiable Investment Advisory Unit registered with SEBI (RIA Reg. No. INA000022668) and enlisted with BSE (No. 2526). Registration is valid from June 01, 2026, Perpetual.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>Who is this for?</summary>
+            <div class="mahir-faq-a">Individuals, families, and institutions who take investing seriously and want a research-led partner focused on process, transparency, and a long horizon rather than product-pushing.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>How do you charge?</summary>
+            <div class="mahir-faq-a">Fees are advisory-only and disclosed transparently before onboarding, in line with SEBI's IA regulations. We do not earn commissions or brokerage on client transactions.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>What is <span class="font-syne uppercase">MAHIR</span> Screener?</summary>
+            <div class="mahir-faq-a"><span class="font-syne uppercase">MAHIR</span> Screener is our market intelligence product | a research toolkit for filtering, comparing, and understanding listed companies. It complements the advisory practice and is available at mahirscreener.com.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>How do I get in touch?</summary>
+            <div class="mahir-faq-a">Write to us at admin@mahiradvisers.com or call +91-9084945151. You can also use the Contact page and we will get back within one business day.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Pre-footer CTA hero card ============ -->
+    <div class="mahir-prefooter-band">
+      <section class="mahir-prefooter">
+        <img aria-hidden="true" src="/mahir-wordmark.png" alt="" class="mahir-prefooter-mark" />
+        <div class="mahir-prefooter-grid">
+          <div>
+            <h2>Building Institutions That Serve People First.</h2>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:1.5rem;">
+            <p>Research-led investment advisory and market intelligence, built quietly and built to last. Let's talk about what you're building.</p>
+            <div>
+              <a href="/contact" class="mahir-cta-btn">
+                <span class="mahir-cta-h"></span>
+                <span class="mahir-cta-h2"></span>
+                <span class="mahir-cta-glow"></span>
+                <span class="mahir-cta-label">Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ Redesigned footer ============ -->
+    <footer class="mahir-footer">
+      <div class="mahir-footer-inner">
+        <div class="mahir-footer-top">
+          <div>
+            <span class="mahir-footer-logo"><img src="/mahir_new.png" alt="MAHIR"></span>
+            <p class="mahir-footer-brand-copy">Research-led investment advisory and market intelligence. Built quietly. Built to last.</p>
+            <div class="mahir-footer-socials">
+              <a href="https://linkedin.com/company/mahirinvest" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869C24 5.989 15.078 6.276 12.982 10.155V8z"/></svg></a>
+              <a href="https://x.com/mahirinvest" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.574 4.9 4.9 0 0 1-2.229-.616v.062a4.918 4.918 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.92 4.92 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 14.307-14.417 0-.22-.005-.437-.014-.653A10.243 10.243 0 0 0 24 4.557z"/></svg></a>
+              <a href="https://instagram.com/mahirinvest" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+              <a href="https://facebook.com/mahirinvest" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.412c0-3.017 1.792-4.686 4.533-4.686 1.312 0 2.686.235 2.686.235v2.972h-1.514c-1.49 0-1.955.93-1.955 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <h4>Products</h4>
+            <ul>
+              <li><a href="https://mahirinvest.com" target="_blank" rel="noopener"><span class="font-syne uppercase">MAHIR</span> Invest</a></li>
+              <li><a href="https://mahirscreener.com" target="_blank" rel="noopener"><span class="font-syne uppercase">MAHIR</span> Screener</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/team">Our Team</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/mahir.html#process">Approach</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/disclaimer">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product URLs quick strip -->
+        <div class="mahir-footer-address">
+          <strong>Registered office</strong>
+          301 &amp; 302, 3rd Floor, Quick Office, Raichandani 45 Street, 112, Main Road, opposite D-Mart, Baner, Pune, Maharashtra 411045
+        </div>
+
+        <!-- Compliance / legal -->
+        <div class="mahir-footer-legal">
+          <div>
+            <h4>Regulatory Disclosures</h4>
+            <p><span class="font-syne uppercase">MAHIR</span> Investment Advisers Private Limited- Investment Advisory Unit (Separately Identifiable Unit)</p>
+            <p>SEBI RIA Registration No: INA000022668</p>
+            <p><strong>Advisory office address:</strong> Kasturi Market PL G/A-9/1 SHOP 1, MIDC G NR MORIS SO, Chinchwad East, Pune, Pune City, Maharashtra, India, 411019.</p>
+            <p><strong>Corresponding SEBI local office:</strong> Securities and Exchange Board of India, SEBI Bhavan II, Plot No: C7, "G" Block, Bandra Kurla Complex, Bandra (East), Mumbai, 400051.</p>
+            <p><strong>Principal Officer:</strong> Yash Mahavir Bedmuttha &nbsp;·&nbsp; <a href="mailto:admin@mahiradvisers.com" style="color:rgba(255,255,255,0.85) !important; text-decoration:underline;">admin@mahiradvisers.com</a> &nbsp;·&nbsp; +91-9084945151.</p>
+            <p class="mahir-footer-disclaimer">Disclaimer: Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, enlistment of IA with the Exchange and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. The securities quoted are for illustration only and are not recommendatory.</p>
+          </div>
+
+          <div>
+            <h4>Our Products</h4>
+            <div class="mahir-footer-products">
+              <a href="https://mahirinvest.com" target="_blank" rel="noopener">
+                <span><span class="font-syne uppercase">MAHIR</span> Invest</span><span>mahirinvest.com →</span>
+              </a>
+              <a href="https://mahirscreener.com" target="_blank" rel="noopener">
+                <span><span class="font-syne uppercase">MAHIR</span> Screener</span><span>mahirscreener.com →</span>
+              </a>
+            </div>
+
+            <div class="mahir-footer-trusted">
+              <p class="mahir-footer-trusted-label">Trusted by</p>
+              <img src="/startup-india.png" alt="Startup India" style="height:48px !important; width:auto !important; background:#fff !important; padding:8px 14px !important; border-radius:8px !important; display:block !important;">
+            </div>
+          </div>
+        </div>
+
+        <div class="mahir-footer-bottom">
+          <p>© 2026 <span class="font-syne uppercase">MAHIR</span> Group | All Rights Reserved. Website owned and managed by <span class="font-syne uppercase">MAHIR</span> Group.</p>
+          <div class="mahir-footer-bottom-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/disclaimer">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  
+
+
+<aside class="mahir-qr-widget" aria-label="MAHIR Invest app">
+  <span class="mahir-qr-h"></span><span class="mahir-qr-h2"></span>
+  <div class="mahir-qr-code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" width="100%" height="100%">
+  
+  <rect width="330" height="330" fill="#FFFFFF" rx="16" />
+  
+  
+  
+    <g fill="#0B1220">
+      
+      <rect x="20" y="20" width="70" height="70" rx="18" fill="#0B1220" />
+      
+      <rect x="30" y="30" width="50" height="50" rx="10" fill="#FFFFFF" />
+      
+      <rect x="40" y="40" width="30" height="30" rx="6" fill="#0B1220" />
+    </g>
+  
+
+    <g fill="#0B1220">
+      
+      <rect x="240" y="20" width="70" height="70" rx="18" fill="#0B1220" />
+      
+      <rect x="250" y="30" width="50" height="50" rx="10" fill="#FFFFFF" />
+      
+      <rect x="260" y="40" width="30" height="30" rx="6" fill="#0B1220" />
+    </g>
+  
+
+    <g fill="#0B1220">
+      
+      <rect x="20" y="240" width="70" height="70" rx="18" fill="#0B1220" />
+      
+      <rect x="30" y="250" width="50" height="50" rx="10" fill="#FFFFFF" />
+      
+      <rect x="40" y="260" width="30" height="30" rx="6" fill="#0B1220" />
+    </g>
+  
+  
+  
+  <circle cx="125.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="25.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="35.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="35.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="35.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="45.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="55.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="65.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="75.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="85.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="95.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="95.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="95.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="95.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="95.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="105.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="115.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="35.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="125.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="135.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="145.0" r="4.3" fill="#0B1220" />
+<circle cx="35.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="155.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="165.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="35.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="175.0" r="4.3" fill="#0B1220" />
+<circle cx="35.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="185.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="195.0" r="4.3" fill="#0B1220" />
+<circle cx="25.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="205.0" r="4.3" fill="#0B1220" />
+<circle cx="95.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="215.0" r="4.3" fill="#0B1220" />
+<circle cx="35.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="45.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="55.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="65.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="75.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="85.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="225.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="235.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="245.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="255.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="135.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="235.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="265.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="195.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="275.0" r="4.3" fill="#0B1220" />
+<circle cx="105.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="125.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="285.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="305.0" cy="285.0" r="4.3" fill="#0B1220" />
+<circle cx="145.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="155.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="165.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="265.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="275.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="295.0" r="4.3" fill="#0B1220" />
+<circle cx="115.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="175.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="185.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="205.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="215.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="225.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="245.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="255.0" cy="305.0" r="4.3" fill="#0B1220" />
+<circle cx="295.0" cy="305.0" r="4.3" fill="#0B1220" />
+</svg></div>
+  <div class="mahir-qr-copy">
+    <span class="mahir-qr-eyebrow">Scan</span>
+    <span class="mahir-qr-title"><span class="font-syne uppercase">MAHIR</span> Invest</span>
+    <span class="mahir-qr-sub">iOS · Android</span>
+  </div>
+</aside>
