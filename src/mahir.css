@@ -572,7 +572,12 @@ body { padding-top: 0; }
 .mahir-testi-meta { display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(11,18,32,.08); padding-top:.75rem; margin-top: 1rem; }
 .mahir-testi-name { font-family: var(--mahir-body); font-size:.78rem; font-weight:600; color:#0B1220 !important; }
 .mahir-testi-role { font-family: var(--mahir-body); font-size:.7rem; color:#6b7280 !important; margin-top:.15rem; }
-@media (max-width: 900px) { .mahir-testi-row { flex-direction:column; gap: 1.5rem; } .mahir-testi-card { margin: 0; transform: rotate(0deg) !important; width: 280px; height: auto; } }
+@media (max-width: 900px) {
+  .mahir-testi-wrap { min-height: auto; padding: 1rem 1rem; }
+  .mahir-testi-row { flex-direction: column; gap: 1.25rem; align-items: stretch; }
+  .mahir-testi-card { margin: 0; transform: rotate(0deg) !important; width: 100%; max-width: 340px; height: auto; min-height: 0; }
+  .mahir-testi-card.t3 { z-index: 0; }
+}
 
 /* ============ Redesigned footer ============ */
 .mahir-footer { background: #000 !important; color: #fff !important; padding: 5rem 1rem 2rem; position: relative; z-index: 11; clear: both; }
