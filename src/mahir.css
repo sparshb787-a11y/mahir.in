@@ -354,6 +354,7 @@ header { background: #000000 !important; border-color: rgba(255,255,255,0.12) !i
 .special-row + .special-row { margin-top: 1rem; }
 .special-row.is-active, .special-row:hover { border-color: rgba(255,255,255,.55); box-shadow: 0 12px 32px rgba(0,0,0,.35); }
 @media (max-width: 1023px) { #specialPin { display: flex !important; flex-direction: column !important; } #specialPin > div:first-child { order: 2; } #specialPin > div:last-child { order: 1; } }
+@media (max-width: 767px) { #range .overflow-hidden { overflow: visible !important; } #range [style*="max-height"] { max-height: none !important; } #range img { object-fit: contain !important; max-height: none !important; } }
 
 /* Lighter font weights across all headings */
 h1, h2, h3, h4, .section-title, #state0 h1, #state1 h2, #state2 h2, #state3 h2, #state4 h2 { font-weight: 500 !important; letter-spacing: -0.035em !important; }
@@ -508,9 +509,9 @@ body { padding-top: 0; }
 
 /* ============ Pre-footer CTA hero card (earth image) ============ */
 .mahir-prefooter-band { background: #000; padding: 0; overflow: hidden; }
-.mahir-prefooter { position: relative; z-index: 10; width: 100%; max-width: none; margin: 0; padding: 3rem 1rem; border-radius: 0; background-color: rgba(23,23,23,0.6); background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url("/earth-hero.jpg"); background-size: cover; background-position: center; border: 0; overflow: hidden; min-height: 28rem; }
-@media (min-width: 640px) { .mahir-prefooter { padding: 4rem 1.5rem; } }
-@media (min-width: 1024px) { .mahir-prefooter { padding: 5rem 2rem 10rem 2rem; min-height: 38rem; } }
+.mahir-prefooter { position: relative; z-index: 10; width: 100%; max-width: none; margin: 0; padding: 2.5rem 1rem; border-radius: 0; background-color: rgba(23,23,23,0.6); background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url("/earth-hero.jpg"); background-size: cover; background-position: center; border: 0; overflow: hidden; min-height: 24rem; }
+@media (min-width: 640px) { .mahir-prefooter { padding: 3.5rem 1.5rem; } }
+@media (min-width: 1024px) { .mahir-prefooter { padding: 4rem 2rem 8rem 2rem; min-height: 32rem; } }
 .mahir-prefooter-grid { position: relative; display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: start; padding-top: 1rem; max-width: 96rem; margin: 0 auto; }
 @media (min-width: 1024px) { .mahir-prefooter-grid { grid-template-columns: 7fr 5fr; gap: 2.5rem; } }
 .mahir-prefooter h2 { font-family: var(--mahir-display); font-weight: 300; color: #f4f4f5 !important; letter-spacing: -0.02em; line-height: 1.05; font-size: 2.75rem; margin: 0; }
@@ -518,6 +519,7 @@ body { padding-top: 0; }
 @media (min-width: 768px) { .mahir-prefooter h2 { font-size: 4.2rem; } }
 .mahir-prefooter p { color: rgba(212,212,216,1) !important; font-size: .95rem; max-width: 42ch; margin: 0; }
 .mahir-prefooter-mark { position: absolute; left: 1.25rem; bottom: 1rem; pointer-events: none; user-select: none; height: min(16vw, 208px); opacity: 0.5; filter: invert(1); mix-blend-mode: screen; }
+@media (max-width: 767px) { .mahir-prefooter-mark { display: none !important; } }
 
 /* ============ Standards grid (Inside Every MAHIR Product) ============ */
 .mahir-standards-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 78rem; margin: 0 auto; }
@@ -545,7 +547,7 @@ body { padding-top: 0; }
 
 
 /* ============ Social proof band (below Client Highlights) ============ */
-.mahir-socialproof { background: #ffffff; padding: 4.5rem 1rem 4rem; }
+.mahir-socialproof { background: #ffffff; padding: 3rem 1rem 2.5rem; }
 .msp-inner { max-width: 56rem; margin: 0 auto; text-align: center; }
 .msp-badge { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
 .msp-avatars { display: flex; }
@@ -555,7 +557,7 @@ body { padding-top: 0; }
 .msp-stars { display: flex; gap: .1rem; color: #0B1220; }
 .msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 600; color: #0B1220; letter-spacing: .01em; }
 @media (max-width: 640px) {
-  .mahir-socialproof { padding: 3rem 1rem 3rem; }
+  .mahir-socialproof { padding: 2rem 1rem 2rem; }
   .msp-badge { flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
   .msp-rating { align-items: center; }
   .msp-avatars img { width: 2.75rem; height: 2.75rem; margin-left: -0.45rem; }
@@ -588,9 +590,10 @@ body { padding-top: 0; }
 }
 
 /* ============ Redesigned footer ============ */
-.mahir-footer { background: #000 !important; color: #fff !important; padding: 5rem 1rem 2rem; position: relative; z-index: 11; clear: both; }
+.mahir-footer { background: #000 !important; color: #fff !important; padding: 4rem 1rem 2rem; position: relative; z-index: 11; clear: both; }
 .mahir-footer * { color: inherit; }
 .mahir-footer-inner { max-width: 96rem; margin: 0 auto; padding: 0 1.5rem; }
+@media (max-width: 767px) { .mahir-footer-inner { padding: 0 1rem; } }
 .mahir-footer-top { display:grid; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); grid-template-columns: 1fr; }
 @media (min-width: 768px) { .mahir-footer-top { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .mahir-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; } }
@@ -610,6 +613,8 @@ body { padding-top: 0; }
 .mahir-footer-bottom-links a:hover { color:#fff !important; }
 .mahir-footer-logo { display:inline-flex; align-items:center; height:4rem; }
 .mahir-footer-logo img { height:100%; width:auto; filter: invert(1); mix-blend-mode: screen; }
+.mahir-footer-logo .mahir-footer-logo-text { display: none; font-family: var(--mahir-display); font-weight: 700; font-size: 1.5rem; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; }
+@media (max-width: 767px) { .mahir-footer-logo img { display: none !important; } .mahir-footer-logo .mahir-footer-logo-text { display: inline-flex; } }
 
 /* Compliance / legal panel inside footer */
 .mahir-footer-legal { display:grid; gap:2rem; padding: 2.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); grid-template-columns: 1fr; }
@@ -630,8 +635,8 @@ body { padding-top: 0; }
 .mahir-footer-address strong { color:#fff !important; font-weight:600; display:block; margin-bottom:.35rem; letter-spacing:.02em; }
 
 /* FAQ section */
-.mahir-faq-band { background:#ffffff; padding: 3.5rem 1rem; }
-@media (min-width: 768px) { .mahir-faq-band { padding: 4.5rem 1.5rem; } }
+.mahir-faq-band { background:#ffffff; padding: 2.5rem 1rem; }
+@media (min-width: 768px) { .mahir-faq-band { padding: 3rem 1.5rem; } }
 .mahir-faq-inner { max-width: 60rem; margin: 0 auto; display:grid; gap: 2.5rem; grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 4rem; align-items:start; } }
 .mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#8a8a80; margin:0 0 .9rem; }

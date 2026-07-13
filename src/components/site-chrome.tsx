@@ -241,6 +241,7 @@ body { padding-top: 0; }
   opacity: 0.5;
   filter: invert(1); mix-blend-mode: screen;
 }
+@media (max-width: 767px) { .mahir-prefooter-mark { display: none !important; } }
 
 /* ============ Testimonials tilted cards ============ */
 .mahir-testi-wrap { position: relative; display:flex; justify-content:center; align-items:center; min-height: 450px; padding: 3rem 1rem; }
@@ -275,9 +276,10 @@ body { padding-top: 0; }
 }
 
 /* ============ Footer ============ */
-.mahir-footer { background: #000; color: #fff; padding: 5rem 1rem 2rem; }
+.mahir-footer { background: #000; color: #fff; padding: 4rem 1rem 2rem; }
 .mahir-footer * { color: inherit; }
 .mahir-footer-inner { max-width: 80rem; margin: 0 auto; }
+@media (max-width: 767px) { .mahir-footer-inner { padding: 0 1rem; } }
 .mahir-footer-top { display:grid; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); grid-template-columns: 1fr; }
 @media (min-width: 768px) { .mahir-footer-top { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .mahir-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; } }
@@ -302,6 +304,8 @@ body { padding-top: 0; }
 .mahir-footer-bottom-links a:hover { color:#fff !important; }
 .mahir-footer-logo { display:inline-flex; align-items:center; height: 4rem; }
 .mahir-footer-logo img { height: 100%; width: auto; filter: invert(1); mix-blend-mode: screen; }
+.mahir-footer-logo .mahir-footer-logo-text { display: none; font-family: var(--mahir-display); font-weight: 700; font-size: 1.5rem; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; }
+@media (max-width: 767px) { .mahir-footer-logo img { display: none !important; } .mahir-footer-logo .mahir-footer-logo-text { display: inline-flex; } }
 .mahir-footer-legal { display:grid; gap:2rem; padding: 2.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mahir-footer-legal { grid-template-columns: 2fr 1fr; gap: 3rem; } }
 .mahir-footer-legal h4 { font-size: .78rem !important; font-weight:700 !important; letter-spacing:.18em; text-transform:uppercase; color:#fff !important; margin: 0 0 .9rem; }
@@ -945,7 +949,7 @@ export function SiteFooter() {
       <div className="mahir-footer-inner">
         <div className="mahir-footer-top">
           <div className="mahir-footer-brand">
-            <span className="mahir-footer-logo"><img src={mahirNewLogo} alt="MAHIR" /></span>
+            <span className="mahir-footer-logo"><img src={mahirNewLogo} alt="MAHIR" /><span className="mahir-footer-logo-text">MAHIR</span></span>
             <p className="mahir-footer-brand-copy">
               Research-led investment advisory and market intelligence. Built quietly. Built to last.
             </p>
