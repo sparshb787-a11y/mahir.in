@@ -226,7 +226,7 @@ footer .nav-logo-chip img, footer img[alt="MAHIR"] { }
 .load-overlay { position: fixed; inset: 0; z-index: 9999; background: #ffffff; overflow: hidden; pointer-events: none; }
 .loader-panel {
   position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center;
-  width: 100vw; height: 0vh; overflow: hidden; background: #ffffff; transform: translate(-50%, -50%);
+  width: 100vw; height: 0vh; overflow: visible; background: #ffffff; transform: translate(-50%, -50%);
   will-change: width, height, transform, opacity, background-color;
 }
 .loader-logo { position: relative; width: min(22vmin, 12rem); height: min(22vmin, 12rem); opacity: 0; transform: scale(.84); display: flex; align-items: center; justify-content: center; background: transparent; padding: 0; transform-origin: center center; }
@@ -234,7 +234,7 @@ footer .nav-logo-chip img, footer img[alt="MAHIR"] { }
 
 .loader-micro { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); color: rgba(11,18,32,.55); font-family: var(--mahir-mono); font-size: .68rem; font-weight: 800; letter-spacing: .28em; text-transform: uppercase; opacity: 0; }
 .loader-capsule { position: absolute; left: 50%; top: 50%; width: 4.5rem; height: 1.05rem; border-radius: 999px; background: #0B1220; transform: translate(-50%, -50%) scaleX(.25); opacity: 0; }
-@media (max-width: 767px) { .loader-logo { width: min(34vmin, 9rem); height: min(34vmin, 9rem); } .loader-micro { bottom: 5vh; font-size: .58rem; } }
+@media (max-width: 767px) { .loader-logo { width: min(28vmin, 7.5rem); height: min(28vmin, 7.5rem); } .loader-micro { bottom: 5vh; font-size: .58rem; } }
 
 /* === BLUISH-BLACK & DEEP-WHITE OVERRIDE === */
 :root {
