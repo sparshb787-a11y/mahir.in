@@ -19,9 +19,11 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: blog.excerpt },
         { property: "og:url", content: `https://mahir.in/blog/${blog.slug}` },
         { property: "og:type", content: "article" },
+        { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: blog.title },
         { name: "twitter:description", content: blog.excerpt },
+        { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
       ],
       links: [{ rel: "canonical", href: `https://mahir.in/blog/${blog.slug}` }],
     };

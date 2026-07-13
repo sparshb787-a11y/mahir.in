@@ -84,9 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "MAHIR Group" },
       { property: "og:title", content: "MAHIR Group | SEBI Registered Investment Advisory" },
       { property: "og:description", content: "Research-led investment advisory and market intelligence, built quietly and built to last." },
+      { property: "og:url", content: "https://mahir.in/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@mahirinvest" },
+      { name: "twitter:title", content: "MAHIR Group | SEBI Registered Investment Advisory" },
+      { name: "twitter:description", content: "Research-led investment advisory and market intelligence, built quietly and built to last." },
+      { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
 
     links: [

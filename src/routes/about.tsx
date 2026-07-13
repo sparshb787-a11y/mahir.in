@@ -12,9 +12,11 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "Learn about the MAHIR Group. We are a strictly SEBI registered investment advisory operating on a transparent flat fee model." },
       { property: "og:url", content: "https://mahir.in/about" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "About Us | MAHIR Group" },
       { name: "twitter:description", content: "Learn about the MAHIR Group. SEBI registered investment advisory." },
+      { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
     links: [
       { rel: "canonical", href: "https://mahir.in/about" },
