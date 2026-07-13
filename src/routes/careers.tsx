@@ -200,4 +200,8 @@ const inputStyle: React.CSSProperties = {
   background: "#ffffff",
   outline: "none",
   fontFamily: "inherit",
+  width: "100%",
+  boxSizing: "border-box",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
 };
