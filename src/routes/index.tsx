@@ -372,7 +372,7 @@ function Index() {
     gsap.set("#grid", { autoAlpha: 0, scale: 1.06 });
     gsap.set("#stage .machined-border", { autoAlpha: 0, scale: 0.92 });
 
-    gsap.set(loaderPanel, { width: "100vw", height: "0vh", backgroundColor: "#ffffff" });
+    gsap.set(loaderPanel, { width: "100vw", height: "0vh", backgroundColor: "#0B1220" });
     gsap.set(loaderMark, { autoAlpha: 0, scale: 0.84, y: 10 });
     gsap.set(loaderMicro, { autoAlpha: 0, y: 10 });
     gsap.set(loaderCapsule, { autoAlpha: 0, scaleX: 0.25 });
