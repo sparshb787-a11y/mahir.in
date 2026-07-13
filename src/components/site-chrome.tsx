@@ -275,7 +275,7 @@ body { padding-top: 0; }
 }
 
 /* ============ Footer ============ */
-.mahir-footer { background: #fff; color: #fff; padding: 5rem 1rem 2rem; }
+.mahir-footer { background: #000; color: #fff; padding: 5rem 1rem 2rem; }
 .mahir-footer * { color: inherit; }
 .mahir-footer-inner { max-width: 80rem; margin: 0 auto; }
 .mahir-footer-top { display:grid; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); grid-template-columns: 1fr; }
@@ -1075,7 +1075,7 @@ export function SiteCookieConsent() {
 .mahir-cookie p a { color: #0B1220; text-decoration: underline; text-underline-offset: 2px; font-weight: 500; }
 .mahir-cookie-actions { display: flex; gap: .55rem; align-items: center; }
 .mahir-cookie-actions button { flex: 1; border: none; cursor: pointer; font-family: inherit; font-size: .74rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: .78rem .9rem; border-radius: 999px; transition: background .2s ease, color .2s ease; opacity: 1 !important; }
-.mahir-cookie-accept { background: #FAFAF9; color: #ffffff !important; }
+.mahir-cookie-accept { background: #0B1220; color: #ffffff !important; }
 .mahir-cookie-accept:hover { background: #1a2438; }
 .mahir-cookie-decline { background: transparent; color: #0B1220 !important; border: 1px solid #d9dad4 !important; }
 .mahir-cookie-decline:hover { background: #f4f5f1; }
