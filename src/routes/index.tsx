@@ -174,7 +174,7 @@ function Index() {
     const states = [
       { el: document.getElementById("state0"), center: true, opacity: (p) => clamp(1 - mapRange(p, 0.10, 0.23)), mid: 0.11 },
       { el: document.getElementById("state1"), center: false, opacity: (p) => triangular(p, 0.17, 0.25, 0.33, 0.43), mid: 0.30 },
-      { el: document.getElementById("state2"), center: true, opacity: (p) => triangular(p, 0.36, 0.43, 0.51, 0.59), mid: 0.48 },
+      { el: document.getElementById("state2"), center: false, opacity: (p) => triangular(p, 0.36, 0.43, 0.51, 0.59), mid: 0.48 },
       { el: document.getElementById("state3"), center: false, opacity: (p) => triangular(p, 0.55, 0.62, 0.72, 0.80), mid: 0.67 },
       { el: document.getElementById("state4"), center: false, opacity: (p) => mapRange(p, 0.75, 0.88), mid: 0.88 }
     ];

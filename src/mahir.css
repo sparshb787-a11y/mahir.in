@@ -581,9 +581,10 @@ body { padding-top: 0; }
 .mahir-testi-role { font-family: var(--mahir-body); font-size:.7rem; color:#6b7280 !important; margin-top:.15rem; }
 @media (max-width: 900px) {
   .mahir-testi-wrap { min-height: auto; padding: 1rem 1rem; }
-  .mahir-testi-row { flex-direction: column; gap: 1.25rem; align-items: stretch; }
-  .mahir-testi-card { margin: 0; transform: rotate(0deg) !important; width: 100%; max-width: 340px; height: auto; min-height: 0; }
+  .mahir-testi-row { flex-direction: column; gap: 1.25rem; align-items: center; }
+  .mahir-testi-card { margin: 0; transform: rotate(0deg) !important; width: 100%; max-width: 360px; height: auto; min-height: 0; position: relative; display: block; }
   .mahir-testi-card.t3 { z-index: 0; }
+  .mahir-testi-inner { position: relative; inset: auto; height: auto; }
 }
 
 /* ============ Redesigned footer ============ */
