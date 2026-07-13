@@ -84,9 +84,9 @@
         </aside>
 
         <div id="productWrap" class="absolute left-1/2 top-1/2 z-20 h-[100vmin] w-[100vmin] will-change-transform drop-shadow-[0_40px_50px_rgba(0,0,0,0.9)]" style="transform-style: preserve-3d;">
-<div class="mobile-mock" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(46vmin,420px);aspect-ratio:9/19;background:#000;border-radius:44px;padding:14px;box-shadow:0 40px 90px rgba(0,0,0,0.9),0 0 0 2px rgba(255,255,255,0.08);">
+<div class="mobile-mock" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(46vmin,420px);aspect-ratio:9/19;background:#000;border-radius:44px;padding:14px;box-shadow:0 40px 90px rgba(0,0,0,0.9);">
   <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:38%;height:26px;background:#000;border-radius:0 0 18px 18px;z-index:3;"></div>
-  <div style="position:relative;width:100%;height:100%;background:#0a0a0a;border-radius:32px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.06);">
+  <div style="position:relative;width:100%;height:100%;background:#0a0a0a;border-radius:32px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
     <div id="phoneLogoSpin" style="display:flex;align-items:center;justify-content:center;width:64%;will-change:transform;">
       <img src="/mahir-mark-white.png" alt="MAHIR" style="width:100%;height:auto;display:block;" fetchpriority="high" />
     </div>
@@ -308,7 +308,8 @@
 
     <!-- Product range section -->
     <section id="range" class="scroll-dark-section relative bg-[#0B1220] py-24 sm:py-28 lg:min-h-screen lg:py-0">
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-0 z-0 range-grid-bg" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent z-[1]"></div>
       <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
         <div class="mb-12 max-w-5xl lg:pt-24 reveal-up">
           <p class="section-kicker">Our Products</p>
