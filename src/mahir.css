@@ -491,22 +491,6 @@ body { padding-top: 0; }
   .pm-side { flex-direction:row; overflow-x:auto; border-right:0; border-bottom:1px solid rgba(255,255,255,0.06); }
 }
 
-/* ============ Fixed QR download widget ============ */
-.mahir-qr-widget { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 95; display:flex; align-items:center; gap:1rem; padding:1rem 1.25rem 1rem 1rem; background:#000; color:#fff; border-radius: 0; box-shadow: 0 24px 46px -18px rgba(0,0,0,0.6); font-family: var(--mahir-mono); }
-.mahir-qr-widget::before, .mahir-qr-widget::after, .mahir-qr-widget > .mahir-qr-h, .mahir-qr-widget > .mahir-qr-h2 { content:""; position:absolute; pointer-events:none; z-index:0; }
-.mahir-qr-widget::before { left:-1px; top:0; bottom:0; width:2px; background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
-.mahir-qr-widget::after { right:-1px; top:0; bottom:0; width:2px; background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
-.mahir-qr-widget > .mahir-qr-h { top:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
-.mahir-qr-widget > .mahir-qr-h2 { bottom:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
-.mahir-qr-widget .mahir-qr-code { width: 96px; height: 96px; border-radius: 4px; background:#fff; padding: 5px; flex-shrink:0; position:relative; z-index:2; }
-.mahir-qr-widget .mahir-qr-code img, .mahir-qr-widget .mahir-qr-code svg { width:100%; height:100%; display:block; }
-.mahir-qr-widget .mahir-qr-copy { display:flex; flex-direction:column; line-height:1.15; position:relative; z-index:2; }
-.mahir-qr-widget .mahir-qr-eyebrow { font-size: .56rem; letter-spacing:.26em; text-transform:uppercase; color: rgba(255,255,255,0.55); font-weight:600; }
-.mahir-qr-widget .mahir-qr-title { font-size: .98rem; font-weight:600; color:#fff; margin-top:.3rem; letter-spacing:-.005em; font-family: var(--mahir-display); max-width: 12ch; }
-.mahir-qr-widget .mahir-qr-sub { font-size: .58rem; letter-spacing:.18em; text-transform:uppercase; color: rgba(125,211,252,0.95); margin-top:.5rem; font-weight:600; }
-@media (max-width: 640px) { .mahir-qr-widget { right:.6rem; bottom:.6rem; padding:.7rem .8rem .7rem .7rem; gap:.7rem; } .mahir-qr-widget .mahir-qr-code { width:64px; height:64px; } .mahir-qr-widget .mahir-qr-title { font-size:.78rem; } }
-@media (max-width: 767px) { .mahir-qr-widget { display: none !important; } }
-
 /* ============ Pre-footer CTA hero card (earth image) ============ */
 .mahir-prefooter-band { background: #000; padding: 0; overflow: hidden; }
 .mahir-prefooter { position: relative; z-index: 10; width: 100%; max-width: none; margin: 0; padding: 2.5rem 1rem; border-radius: 0; background-color: rgba(23,23,23,0.6); background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url("/earth-hero.jpg"); background-size: cover; background-position: center; border: 0; overflow: hidden; min-height: 24rem; }
