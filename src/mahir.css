@@ -223,7 +223,7 @@ footer .nav-logo-chip img, footer img[alt="MAHIR"] { }
 @media (max-width: 640px) { .nav-logo-chip { height: 2rem; } }
 
 /* Loader */
-.load-overlay { position: fixed; inset: 0; z-index: 9999; background: #0B1220; overflow: hidden; pointer-events: none; }
+.load-overlay { position: fixed; inset: 0; z-index: 9999; background: #ffffff; overflow: hidden; pointer-events: none; }
 .loader-panel {
   position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center;
   width: 100vw; height: 0vh; overflow: visible; background: #ffffff; transform: translate(-50%, -50%);
