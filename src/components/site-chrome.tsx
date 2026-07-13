@@ -239,7 +239,7 @@ body { padding-top: 0; }
   pointer-events: none; user-select: none;
   height: min(16vw, 208px);
   opacity: 0.5;
-  filter: invert(82%) sepia(21%) saturate(1008%) hue-rotate(174deg) brightness(101%) contrast(102%);
+  filter: invert(1); mix-blend-mode: screen;
 }
 
 /* ============ Testimonials tilted cards ============ */

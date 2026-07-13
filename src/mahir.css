@@ -554,6 +554,13 @@ body { padding-top: 0; }
 .msp-rating { display: flex; flex-direction: column; align-items: flex-start; }
 .msp-stars { display: flex; gap: .1rem; color: #0B1220; }
 .msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 600; color: #0B1220; letter-spacing: .01em; }
+@media (max-width: 640px) {
+  .mahir-socialproof { padding: 3rem 1rem 3rem; }
+  .msp-badge { flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .msp-rating { align-items: center; }
+  .msp-avatars img { width: 2.75rem; height: 2.75rem; margin-left: -0.45rem; }
+  .msp-avatars img:first-child { margin-left: 0; }
+}
 .msp-title { font-family: var(--mahir-display); font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em; color: #0B1220; margin: 0 auto; max-width: 22ch; }
 .msp-italic { font-style: italic; font-family: "Instrument Serif", "Playfair Display", Georgia, serif; font-weight: 400; }
 .msp-sub { margin: 1.5rem auto 0; max-width: 46rem; font-size: 1.05rem; line-height: 1.55; color: #6b7166; }

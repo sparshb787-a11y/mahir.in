@@ -182,7 +182,7 @@ function AboutPage() {
                 We don't want you to follow our advice blindly. A true fiduciary does not just hand out stock tickers; they educate the client.
               </p>
               <p>
-                Through our comprehensive blog, detailed research reports, and one-on-one advisory sessions, we aim to elevate your financial literacy. We want you to understand the <strong className="text-[#0B1220] font-medium">why</strong> behind the <strong className="text-[#0B1220] font-medium">what</strong>, because an educated investor is a disciplined investor.
+                Through our comprehensive blog, detailed research reports, and direct research access, we aim to elevate your financial literacy. We want you to understand the <strong className="text-[#0B1220] font-medium">why</strong> behind the <strong className="text-[#0B1220] font-medium">what</strong>, because an educated investor is a disciplined investor.
               </p>
             </div>
           </div>
@@ -197,7 +197,7 @@ function AboutPage() {
                 Our ultimate objective is simple: to make everybody financially independent. 
               </p>
               <p>
-                We believe that with the right guidance, clear reasoning, and good risk management, financial freedom is achievable for everyone. Whether you use our tools like MAHIR Screener or partner with our advisory unit, we are here to help you get there.
+                We believe that with the right guidance, clear reasoning, and good risk management, financial freedom is achievable for everyone. Whether you use our tools like MAHIR Screener or connect with our research team, we are here to help you get there.
               </p>
             </div>
           </div>
