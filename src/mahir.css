@@ -487,6 +487,7 @@ body { padding-top: 0; }
 .mahir-qr-widget .mahir-qr-title { font-size: .98rem; font-weight:600; color:#fff; margin-top:.3rem; letter-spacing:-.005em; font-family: var(--mahir-display); max-width: 12ch; }
 .mahir-qr-widget .mahir-qr-sub { font-size: .58rem; letter-spacing:.18em; text-transform:uppercase; color: rgba(125,211,252,0.95); margin-top:.5rem; font-weight:600; }
 @media (max-width: 640px) { .mahir-qr-widget { right:.6rem; bottom:.6rem; padding:.7rem .8rem .7rem .7rem; gap:.7rem; } .mahir-qr-widget .mahir-qr-code { width:64px; height:64px; } .mahir-qr-widget .mahir-qr-title { font-size:.78rem; } }
+@media (max-width: 767px) { .mahir-qr-widget { display: none !important; } }
 
 /* ============ Pre-footer CTA hero card (earth image) ============ */
 .mahir-prefooter-band { background: #000; padding: 0; overflow: hidden; }
