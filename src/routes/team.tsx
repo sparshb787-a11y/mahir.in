@@ -54,7 +54,7 @@ const people: Person[] = [
   { name: "Sushil Kumar Pandit", role: "Sr Full Stack Developer", photo: sushilImage, thoughtProcess: "Connecting robust backend architectures with seamless frontend interfaces. Building full-stack solutions for complex problems." },
   { name: "Mohit Kale", role: "UI/UX Designer", photo: mohitImage, thoughtProcess: "Designing interfaces that make financial intelligence accessible and beautiful. Form must always follow function." },
   { name: "Prem Lama", role: "UI/UX Designer", photo: premImage, thoughtProcess: "Crafting intuitive micro-interactions that delight users. The best design is the one you don't even have to think about." },
-  { name: "Janvi Aswani", role: "HR Intern", photo: "/janvi.png", thoughtProcess: "Building a workplace where people thrive. Passionate about creating processes that put people first." },
+  { name: "Janvi Aswani", role: "HR Intern", photo: "/janvi.jpg", thoughtProcess: "Building a workplace where people thrive. Passionate about creating processes that put people first." },
   { name: "Yash Gajare", role: "Video Production", photo: yashGajareImage, thoughtProcess: "Distilling complex financial concepts into compelling visual narratives. Storytelling is the most powerful tool for education." },
   { name: "Mangesh", role: "Software Developer Intern", photo: mangeshImage, thoughtProcess: "Eager to learn, quick to adapt, and ready to write code that matters. Building the future of fintech." },
   { name: "Chandrakant", role: "Software Developer Intern", photo: chandrakantImage, thoughtProcess: "Translating academic knowledge into real-world software solutions. Every bug fixed is a lesson learned." },

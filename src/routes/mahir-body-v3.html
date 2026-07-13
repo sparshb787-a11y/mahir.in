@@ -88,7 +88,7 @@
   <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:38%;height:26px;background:#000;border-radius:0 0 18px 18px;z-index:3;"></div>
   <div style="position:relative;width:100%;height:100%;background:#0a0a0a;border-radius:32px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.06);">
     <div id="phoneLogoSpin" style="display:flex;align-items:center;justify-content:center;width:64%;will-change:transform;">
-      <img src="/mahir-mark-white.png" alt="MAHIR" style="width:100%;height:auto;display:block;" />
+      <img src="/mahir-mark-white.png" alt="MAHIR" style="width:100%;height:auto;display:block;" fetchpriority="high" />
     </div>
     <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:36%;height:4px;background:rgba(255,255,255,0.3);border-radius:99px;"></div>
   </div>
@@ -287,7 +287,7 @@
 
     <!-- Hero CTA banner: talk to us -->
     <section class="mahir-force-white relative isolate w-full overflow-hidden">
-      <img src="/talk-arc.png" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <img src="/talk-arc.jpg" alt="" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
       <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
       <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
@@ -320,8 +320,8 @@
 
         <div id="specialPin" class="grid min-h-[44rem] grid-cols-1 gap-10 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
           <div class="relative h-[26rem] overflow-hidden rounded-2xl bg-[#f7f7f7] sm:h-[34rem] lg:h-[42rem]">
-            <div class="special-img absolute inset-0 h-full w-full opacity-100"><img src="/mahir-invest-app.png" alt="MAHIR Invest app" loading="lazy" class="h-full w-full object-cover" /></div>
-            <div class="special-img absolute inset-0 h-full w-full opacity-0"><img src="/mahir-screener-app.png" alt="MAHIR Screener app" loading="lazy" class="h-full w-full object-cover" /></div>
+            <div class="special-img absolute inset-0 h-full w-full opacity-100"><img src="/mahir-invest-app.jpg" alt="MAHIR Invest app" loading="lazy" class="h-full w-full object-cover" /></div>
+            <div class="special-img absolute inset-0 h-full w-full opacity-0"><img src="/mahir-screener-app.jpg" alt="MAHIR Screener app" loading="lazy" class="h-full w-full object-cover" /></div>
             
             <div class="absolute inset-0 ring-1 ring-inset ring-black/10"></div>
           </div>
@@ -361,7 +361,7 @@
 
     <!-- Feature card banner -->
     <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#0B1220]">
-      <img src="/team-workspace.png" alt="MAHIR team at work" loading="lazy" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+      <img src="/team-workspace.jpg" alt="MAHIR team at work" loading="lazy" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_40%,rgba(0,0,0,0.02),rgba(0,0,0,0.2)),linear-gradient(to_top,rgba(0,0,0,0.3),rgba(0,0,0,0.1))]"></div>
       <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
       <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
@@ -498,7 +498,7 @@
             "<span class="font-syne uppercase">MAHIR</span> gave us clear thinking and steady advice. We understand every recommendation and why it fits our plan."
           </p>
           <div class="mt-8 flex items-center justify-center gap-3">
-            <img src="/trusted-2.jpg" alt="A MAHIR Group Client" class="inline-flex h-9 w-9 rounded-full ring-1 ring-white/15 object-cover" />
+              <img src="/trusted-2.jpg" alt="A MAHIR Group Client" loading="lazy" class="inline-flex h-9 w-9 rounded-full ring-1 ring-white/15 object-cover" />
             <div class="text-left">
               <div class="text-sm font-medium text-white">Rajesh Kulkarni</div>
               <div class="text-xs text-white">Long term investor, Pune</div>
@@ -632,7 +632,7 @@
                   <div class="mahir-testi-name">Ananya Deshpande</div>
                   <div class="mahir-testi-role">Founder, Aarna Capital</div>
                 </div>
-                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 4.8</div>
               </div>
             </div>
           </div>
@@ -644,7 +644,7 @@
                   <div class="mahir-testi-name">Rohit Menon</div>
                   <div class="mahir-testi-role">CIO, Northmark PMS</div>
                 </div>
-                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 4.7</div>
               </div>
             </div>
           </div>
@@ -656,7 +656,7 @@
                   <div class="mahir-testi-name">Kavya Iyer</div>
                   <div class="mahir-testi-role">Partner, Ledger &amp; Trust</div>
                 </div>
-                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 4.9</div>
               </div>
             </div>
           </div>
@@ -668,7 +668,7 @@
                   <div class="mahir-testi-name">Vikram Shetty</div>
                   <div class="mahir-testi-role">Principal, Shetty Family Office</div>
                 </div>
-                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 4.6</div>
               </div>
             </div>
           </div>
@@ -680,7 +680,7 @@
                   <div class="mahir-testi-name">Priya Ramanathan</div>
                   <div class="mahir-testi-role">Managing Partner, Kestrel Advisors</div>
                 </div>
-                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 5.0</div>
+                <div style="color:#f59e0b; font-size:.72rem; font-weight:600;">★ 4.8</div>
               </div>
             </div>
           </div>
@@ -760,7 +760,7 @@
     <!-- ============ Pre-footer CTA hero card ============ -->
     <div class="mahir-prefooter-band">
       <section class="mahir-prefooter">
-        <img aria-hidden="true" src="/mahir-wordmark.png" alt="" class="mahir-prefooter-mark" />
+        <img aria-hidden="true" src="/mahir-wordmark.jpg" alt="" class="mahir-prefooter-mark" />
         <div class="mahir-prefooter-grid">
           <div>
             <h2>Building Institutions That Serve People First.</h2>

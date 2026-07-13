@@ -917,7 +917,7 @@ export function SitePreFooterCTA() {
   return (
     <div className="mahir-prefooter-band">
       <section className="mahir-prefooter">
-        <img aria-hidden="true" src="/mahir-wordmark.png" alt="" className="mahir-prefooter-mark" />
+        <img aria-hidden="true" src="/mahir-wordmark.jpg" alt="" className="mahir-prefooter-mark" />
         <div className="mahir-prefooter-grid">
           <div>
             <h2>Building Institutions That Serve People First.</h2>

@@ -560,7 +560,7 @@ body { padding-top: 0; }
 /* ============ Redesigned footer ============ */
 .mahir-footer { background: #000 !important; color: #fff !important; padding: 5rem 1rem 2rem; position: relative; z-index: 11; clear: both; }
 .mahir-footer * { color: inherit; }
-.mahir-footer-inner { max-width: 80rem; margin: 0 auto; }
+.mahir-footer-inner { max-width: 96rem; margin: 0 auto; padding: 0 1.5rem; }
 .mahir-footer-top { display:grid; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); grid-template-columns: 1fr; }
 @media (min-width: 768px) { .mahir-footer-top { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .mahir-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; } }
