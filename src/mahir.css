@@ -599,8 +599,8 @@ body { padding-top: 0; }
 .mahir-footer-address strong { color:#fff !important; font-weight:600; display:block; margin-bottom:.35rem; letter-spacing:.02em; }
 
 /* FAQ section */
-.mahir-faq-band { background:#ffffff; padding: 5rem 1rem; }
-@media (min-width: 768px) { .mahir-faq-band { padding: 6rem 1.5rem; } }
+.mahir-faq-band { background:#ffffff; padding: 3.5rem 1rem; }
+@media (min-width: 768px) { .mahir-faq-band { padding: 4.5rem 1.5rem; } }
 .mahir-faq-inner { max-width: 60rem; margin: 0 auto; display:grid; gap: 2.5rem; grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 4rem; align-items:start; } }
 .mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#8a8a80; margin:0 0 .9rem; }
@@ -615,6 +615,7 @@ body { padding-top: 0; }
 .mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#0B1220; transition: transform .25s ease; line-height:1; }
 .mahir-faq-item[open] summary::after { content:"−"; }
 .mahir-faq-item .mahir-faq-a { padding: 0 0 1.4rem; font-size:.92rem; line-height:1.7; color:#4a4a44; max-width: 58ch; text-align: left; }
+.mahir-faq-item summary .font-syne, .mahir-faq-item .mahir-faq-a .font-syne { letter-spacing: 0.04em; }
 @media (max-width: 640px) { .mahir-faq-item .mahir-faq-a { max-width: 100%; } }
 
 .mahir-tl-card { background: #0B1220 !important; border-color: #1e2530 !important; color: #ffffff; }
