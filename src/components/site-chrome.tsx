@@ -305,7 +305,6 @@ body { padding-top: 0; }
 .mahir-footer-logo { display:inline-flex; align-items:center; height: 4rem; }
 .mahir-footer-logo img { height: 100%; width: auto; filter: invert(1); mix-blend-mode: screen; }
 .mahir-footer-logo .mahir-footer-logo-text { display: none; font-family: var(--mahir-display); font-weight: 700; font-size: 1.5rem; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; }
-@media (max-width: 767px) { .mahir-footer-logo img { display: none !important; } .mahir-footer-logo .mahir-footer-logo-text { display: inline-flex; } }
 .mahir-footer-legal { display:grid; gap:2rem; padding: 2.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mahir-footer-legal { grid-template-columns: 2fr 1fr; gap: 3rem; } }
 .mahir-footer-legal h4 { font-size: .78rem !important; font-weight:700 !important; letter-spacing:.18em; text-transform:uppercase; color:#fff !important; margin: 0 0 .9rem; }
