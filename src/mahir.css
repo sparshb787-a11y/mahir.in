@@ -516,7 +516,7 @@ body { padding-top: 0; }
 @media (min-width: 640px) { .mahir-prefooter h2 { font-size: 3.6rem; } }
 @media (min-width: 768px) { .mahir-prefooter h2 { font-size: 4.2rem; } }
 .mahir-prefooter p { color: rgba(212,212,216,1) !important; font-size: .95rem; max-width: 42ch; margin: 0; }
-.mahir-prefooter-mark { position: absolute; left: 1.25rem; bottom: 1rem; pointer-events: none; user-select: none; height: min(16vw, 208px); opacity: 0.5; filter: invert(82%) sepia(21%) saturate(1008%) hue-rotate(174deg) brightness(101%) contrast(102%); }
+.mahir-prefooter-mark { position: absolute; left: 1.25rem; bottom: 1rem; pointer-events: none; user-select: none; height: min(16vw, 208px); opacity: 0.5; filter: invert(1); mix-blend-mode: screen; }
 
 /* ============ Standards grid (Inside Every MAHIR Product) ============ */
 .mahir-standards-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 78rem; margin: 0 auto; }
