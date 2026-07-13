@@ -335,7 +335,7 @@ body { padding-top: 0; }
 @media (max-width: 640px) { .mahir-qr-widget { right:.6rem; bottom:.6rem; padding:.7rem .8rem .7rem .7rem; gap:.7rem; } .mahir-qr-widget .mahir-qr-code { width:64px; height:64px; } .mahir-qr-widget .mahir-qr-title { font-size:.78rem; } }
 `;
 
-export function SiteHeader() {
+export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -351,7 +351,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: chromeCss }} />
+      {injectCss && <style dangerouslySetInnerHTML={{ __html: chromeCss }} />}
       <header className="mahir-floating-nav">
         <div className="mahir-floating-nav-inner">
           <a href="/mahir.html" className="nav-brand" aria-label="MAHIR home" onClick={markMahirIntroSeen}>
