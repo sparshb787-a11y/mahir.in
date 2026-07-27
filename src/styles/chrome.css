@@ -588,10 +588,11 @@
 .mahir-footer-inner {
   max-width: 80rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 @media (max-width: 767px) {
   .mahir-footer-inner {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }
 .mahir-footer-top {
