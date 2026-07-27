@@ -1,207 +1,258 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState } from "react";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, PageHero, pageStyles } from "../components/site-chrome";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     meta: [
-      { title: "Careers | MAHIR Group Investment Advisory" },
-      { name: "description", content: "Careers at MAHIR Group | join a research-led SEBI-registered investment advisory building financial systems that put people first. Roles in Pune." },
-      { name: "keywords", content: "MAHIR Group Careers, jobs at MAHIR Group, investment advisory jobs Pune, finance jobs Pune" },
+      { title: "Careers | MAHIR Group" },
+      {
+        name: "description",
+        content:
+          "Careers at MAHIR Group | join a research-based SEBI-registered RIA building financial systems that put people first.",
+      },
+      {
+        name: "keywords",
+        content:
+          "MAHIR Group Careers, jobs at MAHIR Group, investment advisory jobs Pune, finance jobs Pune",
+      },
       { property: "og:title", content: "Careers | MAHIR Group" },
-      { property: "og:description", content: "Join a research-led investment advisory building financial systems that put people first." },
+      {
+        property: "og:description",
+        content:
+          "Join a research-based investment advisory building financial systems that put people first.",
+      },
       { property: "og:url", content: "https://mahir.in/careers" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Careers | MAHIR Group" },
-      { name: "twitter:description", content: "Join a research-led investment advisory building financial systems that put people first." },
+      {
+        name: "twitter:description",
+        content:
+          "Join a research-based investment advisory building financial systems that put people first.",
+      },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
     links: [{ rel: "canonical", href: "https://mahir.in/careers" }],
   }),
-
 });
 
-const roles = [
-  { title: "HR Intern", type: "Internship · Pune / Baner", desc: "Support hiring operations, candidate coordination, and onboarding for a small, deliberate team." },
-  { title: "Compliance Intern", type: "Internship · Pune / Baner", desc: "Assist with SEBI reporting, record-keeping, and disclosure workflows across the advisory desk." },
-  { title: "Marketing Manager", type: "Full-time · Pune / Baner", desc: "Drive awareness and engagement for MAHIR Group's products and services across digital and offline channels." },
-  { title: "Senior Developer", type: "Full-time · Pune / Baner", desc: "Ship the surface where research becomes decision. TypeScript, TanStack, data-heavy interfaces." },
+const perks = [
+  {
+    title: "Flexible Timings",
+    desc: "Work when you are most productive. We trust our team to manage their own schedules.",
+  },
+  {
+    title: "Learning Budget",
+    desc: "Annual budget for courses, conferences, books, and skill development of your choice.",
+  },
+  {
+    title: "Remote Friendly",
+    desc: "Hybrid work model with the flexibility to work from anywhere in India.",
+  },
+  {
+    title: "Performance Bonuses",
+    desc: "Competitive compensation with performance-linked bonus structure.",
+  },
+  {
+    title: "Small Team, Big Impact",
+    desc: "Your work directly shapes the product. No hiding behind layers of hierarchy.",
+  },
+  { title: "Health Benefits", desc: "Comprehensive health coverage for you and your family." },
 ];
 
 function CareersPage() {
-  const [openRole, setOpenRole] = useState<string | null>(null);
-  const [submitted, setSubmitted] = useState(false);
-  const [resumeName, setResumeName] = useState<string | null>(null);
-  const [resumeError, setResumeError] = useState<string | null>(null);
-  const fileRef = useRef<HTMLInputElement>(null);
-
-  function closeModal() {
-    setOpenRole(null);
-    setSubmitted(false);
-    setResumeName(null);
-    setResumeError(null);
-    if (fileRef.current) fileRef.current.value = "";
-  }
-
-  function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    setResumeError(null);
-    if (!file) { setResumeName(null); return; }
-    const okType = /\.(pdf|docx?|rtf)$/i.test(file.name);
-    if (!okType) {
-      setResumeError("Please upload a PDF, DOC, DOCX, or RTF file.");
-      setResumeName(null);
-      if (fileRef.current) fileRef.current.value = "";
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      setResumeError("File is larger than 5 MB.");
-      setResumeName(null);
-      if (fileRef.current) fileRef.current.value = "";
-      return;
-    }
-    setResumeName(file.name);
-  }
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!resumeName) {
-      setResumeError("A resume is required.");
-      return;
-    }
-    // Local, no-backend acknowledgement so the user sees confirmation.
-    setSubmitted(true);
-  }
-
-
   return (
     <div style={pageStyles.root}>
       <SiteHeader />
       <main>
         <PageHero
-          badge={{ tag: "Hiring", text: `${roles.length} open roles · Pune / Baner` }}
-          title="Come Build With Restraint."
-          titleBreak="Not With Noise."
-          subtitle="We hire slowly and stay for a long time. If you care about original research, clean systems and building financial products people can trust | we'd love to hear from you."
+          badge={{ tag: "Careers", text: "Open roles · Pune / Baner" }}
+          title="Join"
+          titleBreak="Our Mission."
+          subtitle="We hire slowly and stay for a long time. If you care about original research, clean systems and building financial products people can trust — we'd love to hear from you."
         />
 
-
-        <section style={{ padding: "1.5rem 1.5rem 5rem", maxWidth: "78rem", margin: "0 auto" }}>
-          <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
-          {roles.map((r) => (
-            <article key={r.title} style={{ background: "#ffffff", border: "1px solid #e4e7ee", borderRadius: 14, padding: "1.6rem 1.75rem", display: "flex", flexDirection: "column", gap: ".6rem" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem" }}>
-                <h3 style={{ fontSize: "1.25rem", fontWeight: 500, color: "#0B1220", letterSpacing: "-.02em" }}>{r.title}</h3>
-                <p style={{ fontSize: ".7rem", letterSpacing: ".18em", textTransform: "uppercase", color: "#0B1220", fontWeight: 500 }}>{r.type}</p>
+        {/* No Openings Card */}
+        <section className="px-5 md:px-12 py-16 md:py-20 max-w-[1100px] mx-auto text-center">
+          <div className="rounded-3xl bg-white border border-black/[0.06] p-8 md:p-12 shadow-sm">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-black/[0.04] flex items-center justify-center">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-black/40"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
               </div>
-              <p style={{ color: "#0B1220", lineHeight: 1.6 }}>{r.desc}</p>
-              <button
-                type="button"
-                onClick={() => { setOpenRole(r.title); setSubmitted(false); }}
-                style={{ marginTop: ".4rem", alignSelf: "flex-start", display: "inline-flex", alignItems: "center", gap: ".5rem", background: "#0B1220", color: "#ffffff", padding: ".7rem 1.1rem", borderRadius: 999, fontSize: ".7rem", letterSpacing: ".16em", textTransform: "uppercase", fontWeight: 500, border: 0, cursor: "pointer" }}
-              >
-                Apply Now →
-              </button>
-            </article>
-          ))}
+            </div>
+            <h2
+              className="text-2xl font-semibold text-black mb-3"
+              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+            >
+              No Openings Right Now
+            </h2>
+            <p className="text-black/60 text-lg max-w-lg mx-auto">
+              We are not actively hiring at the moment. We grow deliberately and only when the
+              timing is right.
+            </p>
+          </div>
+        </section>
+
+        {/* Perks & Benefits */}
+        <section className="px-5 md:px-12 py-16 md:py-20">
+          <div className="mx-auto max-w-[1100px]">
+            <h2
+              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-8 text-center"
+              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+            >
+              Perks & Benefits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {perks.map((p, i) => (
+                <div
+                  key={p.title}
+                  className="rounded-2xl border border-black/5 bg-white p-8 transition-all hover:shadow-lg hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-black/[0.04] flex items-center justify-center mb-5">
+                    {i === 0 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    )}
+                    {i === 1 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                    )}
+                    {i === 2 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg>
+                    )}
+                    {i === 3 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                      </svg>
+                    )}
+                    {i === 4 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    )}
+                    {i === 5 && (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-black/50"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    )}
+                  </div>
+                  <h3
+                    className="text-xl font-semibold text-black mb-3"
+                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  >
+                    {p.title}
+                  </h3>
+                  <p className="text-black/60 leading-relaxed text-[0.95rem]">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom text */}
+        <section className="px-5 py-16 md:py-20 md:px-12 text-center">
+          <div className="mx-auto max-w-[900px]">
+            <p className="text-lg text-black/60 mb-4">
+              Don't see your role? We're always open to hearing from exceptional people. Send us an
+              email.
+            </p>
+            <a
+              href="mailto:careers@mahir.in"
+              className="text-black font-semibold underline underline-offset-4 hover:text-black/70 transition-colors"
+            >
+              careers@mahir.in
+            </a>
           </div>
         </section>
       </main>
       <SitePreFooterCTA />
       <SiteFooter />
-
-      {openRole && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          onClick={closeModal}
-          style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(11,18,32,0.6)", display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "2rem 1rem", overflowY: "auto" }}
-        >
-          <div onClick={(e) => e.stopPropagation()} style={{ background: "#ffffff", width: "100%", maxWidth: "42rem", borderRadius: 16, padding: "1.75rem 1.75rem 1.5rem", boxShadow: "0 24px 60px rgba(0,0,0,0.25)", margin: "auto" }}>
-
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
-              <div>
-                <p style={{ fontSize: ".68rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 500 }}>Apply for</p>
-                <h2 style={{ marginTop: ".35rem", fontSize: "1.3rem", fontWeight: 500, color: "#0B1220", letterSpacing: "-.02em" }}>{openRole}</h2>
-                <p style={{ marginTop: ".2rem", fontSize: ".8rem", color: "#0B1220" }}>Pune / Baner</p>
-              </div>
-              <button onClick={closeModal} aria-label="Close" style={{ background: "transparent", border: 0, cursor: "pointer", fontSize: "1.5rem", color: "#0B1220", lineHeight: 1 }}>×</button>
-            </div>
-
-            {submitted ? (
-              <div style={{ marginTop: "1.5rem", padding: "1.25rem", background: "#f4f5f1", borderRadius: 12, color: "#0B1220" }}>
-                <p style={{ fontSize: ".7rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#14265C", fontWeight: 500 }}>Submitted</p>
-                <p style={{ marginTop: ".5rem", lineHeight: 1.6 }}>Thanks for applying to <strong>{openRole}</strong>. Our team will review your application and reach out shortly.</p>
-                <button onClick={closeModal} style={{ marginTop: "1rem", background: "#0B1220", color: "#ffffff", padding: ".65rem 1.1rem", borderRadius: 999, fontSize: ".7rem", letterSpacing: ".16em", textTransform: "uppercase", fontWeight: 500, border: 0, cursor: "pointer" }}>Close</button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} style={{ marginTop: "1.25rem", display: "grid", gap: ".85rem" }}>
-                <div style={{ display: "grid", gap: ".85rem", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
-                  <label style={{ display: "grid", gap: ".35rem" }}>
-                    <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>Full name</span>
-                    <input required maxLength={80} name="name" style={inputStyle} placeholder="Your full name" />
-                  </label>
-                  <label style={{ display: "grid", gap: ".35rem" }}>
-                    <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>Email</span>
-                    <input required type="email" maxLength={120} name="email" style={inputStyle} placeholder="you@example.com" />
-                  </label>
-                  <label style={{ display: "grid", gap: ".35rem" }}>
-                    <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>Phone</span>
-                    <input required maxLength={20} name="phone" style={inputStyle} placeholder="+91 " />
-                  </label>
-                  <label style={{ display: "grid", gap: ".35rem" }}>
-                    <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>LinkedIn or portfolio</span>
-                    <input maxLength={200} name="link" style={inputStyle} placeholder="https://" />
-                  </label>
-                </div>
-                <label style={{ display: "grid", gap: ".35rem" }}>
-                  <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>Why this role</span>
-                  <textarea required maxLength={1000} name="message" rows={4} style={{ ...inputStyle, resize: "vertical" }} placeholder="A few lines about your background and why MAHIR Group." />
-                </label>
-                <div style={{ display: "grid", gap: ".35rem" }}>
-                  <span style={{ fontSize: ".62rem", letterSpacing: ".2em", textTransform: "uppercase", color: "#0B1220", fontWeight: 600 }}>Resume <span style={{ color: "#b34747" }}>*</span></span>
-                  <label style={{ display: "flex", alignItems: "center", gap: ".8rem", border: "1px dashed #cfd2cd", borderRadius: 10, padding: ".85rem 1rem", cursor: "pointer", background: "#fafaf7" }}>
-                    <input
-                      ref={fileRef}
-                      type="file"
-                      name="resume"
-                      accept=".pdf,.doc,.docx,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                      onChange={handleFile}
-                      style={{ display: "none" }}
-                    />
-                    <span style={{ background: "#0B1220", color: "#ffffff", padding: ".5rem .85rem", borderRadius: 999, fontSize: ".65rem", letterSpacing: ".16em", textTransform: "uppercase", fontWeight: 600 }}>
-                      {resumeName ? "Change file" : "Choose file"}
-                    </span>
-                    <span style={{ fontSize: ".85rem", color: resumeName ? "#0B1220" : "#0B1220", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      {resumeName ?? "PDF, DOC, DOCX or RTF · up to 5 MB"}
-                    </span>
-                  </label>
-                  {resumeError && <span style={{ fontSize: ".78rem", color: "#b34747" }}>{resumeError}</span>}
-                </div>
-                <button type="submit" style={{ marginTop: ".25rem", background: "#0B1220", color: "#ffffff", padding: ".8rem 1.2rem", borderRadius: 999, fontSize: ".7rem", letterSpacing: ".16em", textTransform: "uppercase", fontWeight: 500, border: 0, cursor: "pointer", justifySelf: "start" }}>Submit application</button>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
-
-const inputStyle: React.CSSProperties = {
-  border: "1px solid #dcded9",
-  borderRadius: 10,
-  padding: ".7rem .85rem",
-  fontSize: ".92rem",
-  color: "#0B1220",
-  background: "#ffffff",
-  outline: "none",
-  fontFamily: "inherit",
-  width: "100%",
-  boxSizing: "border-box",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-};

@@ -1,212 +1,599 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, PageHero, pageStyles } from "../components/site-chrome";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { PageHero } from "@/components/sections";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Us | MAHIR Group Investment Advisory" },
-      { name: "description", content: "Learn about the MAHIR Group. We are a strictly SEBI registered investment advisory operating on a transparent flat fee model." },
-      { name: "keywords", content: "About MAHIR Group, SEBI registered advisory, transparent fee model, investment thinking" },
-      { property: "og:title", content: "About Us | MAHIR Group Investment Advisory" },
-      { property: "og:description", content: "Learn about the MAHIR Group. We are a strictly SEBI registered investment advisory operating on a transparent flat fee model." },
+      { title: "About MAHIR Group | Parent Company of MAHIR Invest & MAHIR Screener" },
+      {
+        name: "description",
+        content:
+          "MAHIR Group is the parent company behind MAHIR Invest (SEBI-registered RIA) and MAHIR Screener (market research tool). Learn our story, mission, and products.",
+      },
+      {
+        name: "keywords",
+        content:
+          "MAHIR Group, MAHIR Invest, MAHIR Screener, SEBI registered RIA, investment advisory, stock screening, market research",
+      },
+      { property: "og:title", content: "About MAHIR Group | MAHIR Invest & MAHIR Screener" },
+      {
+        property: "og:description",
+        content:
+          "MAHIR Group is the parent company behind MAHIR Invest and MAHIR Screener. Research-led investment advisory and market intelligence.",
+      },
       { property: "og:url", content: "https://mahir.in/about" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About Us | MAHIR Group" },
-      { name: "twitter:description", content: "Learn about the MAHIR Group. SEBI registered investment advisory." },
+      { name: "twitter:title", content: "About MAHIR Group" },
+      { name: "twitter:description", content: "Parent company of MAHIR Invest & MAHIR Screener." },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
-    links: [
-      { rel: "canonical", href: "https://mahir.in/about" },
-    ],
+    links: [{ rel: "canonical", href: "https://mahir.in/about" }],
   }),
 });
 
+const milestones = [
+  {
+    step: "Step 01",
+    title: "MAHIR Founded",
+    desc: "MAHIR started in October 2025 with one belief. Advice should be clear, easy to explain, and truly in the client's interest.",
+    date: "Oct 2025",
+  },
+  {
+    step: "Step 02",
+    title: "SEBI Registered Advisory",
+    desc: "MAHIR Invest became a SEBI Registered Investment Adviser, giving our long-term approach the compliance and transparency clients deserve.",
+    date: "Oct 2025",
+  },
+  {
+    step: "Step 03",
+    title: "MAHIR Invest Launched",
+    desc: "On 15 May 2026, MAHIR Invest opened for clients, turning our research into clear, personal investment advice.",
+    date: "May 15, 2026",
+  },
+  {
+    step: "Step 04",
+    title: "MAHIR Screener in Build",
+    desc: "The same research logic is being shaped into a screening tool so investors can study markets on the MAHIR framework.",
+    date: "2026",
+  },
+];
+
 function AboutPage() {
   return (
-    <div style={pageStyles.root} className="bg-white">
+    <div style={pageStyles.root}>
       <SiteHeader />
       <main>
+        {/* ===== Hero ===== */}
         <PageHero
-          badge={{ tag: "About Us", text: "Our Philosophy" }}
-          title="Built Quietly."
-          titleBreak="Built To Last."
-          subtitle="A SEBI registered advisory group building trustworthy systems for how people invest, decide, and plan."
+          badge={{ tag: "About us", text: "Who We Are" }}
+          title="Built for You "
+          titleBreak="With Clarity."
+          subtitle="MAHIR Group is the parent entity behind two powerful products — MAHIR Invest (SEBI-registered investment advisory) and MAHIR Screener (market research and screening platform). Together, we help investors think clearly, decide confidently, and build wealth sustainably."
         />
 
-        <section className="px-6 py-16 md:py-24 max-w-5xl mx-auto text-[#0B1220]">
-          
-          {/* Section 1: How We Started */}
-          <div className="mb-24 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              How We Started
-            </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                MAHIR Group was born out of an observation: the financial services industry was built to sell, not to advise. We saw everyday investors being overwhelmed with noise, short term speculation, and commission driven products that prioritized the distributor's wealth over the investor's.
+        <div className="px-5 md:px-12 mx-auto max-w-[1100px]">
+          {/* ===== How We Started ===== */}
+          <section className="py-16 md:py-20">
+            <div className="text-center mb-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
+                How We Started
               </p>
-              <p>
-                We started with a clear purpose: to build a better alternative. We wanted a firm where our own original research is the only foundation. Unbiased advice replaces hidden agendas here. Our goal is to bring high quality investment thinking to everyday investors.
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-[-.03em] text-black"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Clarity Over Noise.
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto space-y-5">
+              <p className="text-base leading-[1.8] text-black/55">
+                MAHIR is built to help you invest with more clarity and less noise. Every research
+                note, every screen, and every recommendation is designed to make your investment
+                decisions better, simpler, and more confident.
+              </p>
+              <p className="text-base leading-[1.8] text-black/55">
+                We do not chase trends or push products. Our advisory and screener start with one
+                question: will this help the client build wealth over time? That question drives our
+                stock research, risk framework, portfolio reviews, and the way we communicate every
+                investment idea.
+              </p>
+              <p className="text-base leading-[1.8] text-black/55">
+                What you read in our reports is backed by documented research. The strict risk
+                checks, compliance reviews, and our refusal to recommend anything we would not own
+                ourselves are what make the advice worth following. MAHIR is for investors who take
+                the long term seriously and expect the same from their partner.
               </p>
             </div>
-          </div>
+          </section>
 
-          {/* Section 2: Core Value: Trust */}
-          <div className="mb-24 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              One Core Value:<br/>Trust
-            </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                We are not running a race to hit a billion-dollar valuation. We are not interested in scaling aggressively at the cost of our integrity. 
+          {/* ===== Key Moments / Timeline ===== */}
+          <section className="py-16 md:py-20">
+            <div className="mb-12 text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
+                Our Story
               </p>
-              <p className="font-medium text-[#0B1220]">
-                We have exactly one core value: Trust. 
-              </p>
-              <p>
-                We want to build a company where people trust us more than anything else. We deliberately choose craft and accountability over mindless growth, because trust is built over years of consistent, transparent communication, and lost in a single compromised decision.
+              <h3
+                className="text-3xl md:text-4xl font-semibold leading-[1.05] tracking-[-.03em] text-black"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Key Moments
+              </h3>
+              <p className="mt-3 text-sm leading-[1.7] text-black/45">
+                From a single idea in October 2025 to a company built with the same care.
               </p>
             </div>
-          </div>
 
-          {/* Section 3: Accessible, Unbiased Advice */}
-          <div className="mb-24 pt-16 md:pt-24 border-t border-[#e2e4df]">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#0B1220] leading-[1.1] mb-16 max-w-4xl">
-              SEBI Registered. Zero Commissions.
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start">
-              <div className="col-span-1 md:col-span-2 text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-                <p>
-                  As a strictly SEBI registered investment advisory, we operate on a transparent <strong className="text-[#0B1220] font-medium">flat fee model</strong>. We do not take a single rupee in commissions from mutual funds, stock brokers, or insurance companies.
+            <div className="relative max-w-4xl mx-auto">
+              {/* Timeline line - visible on all screens */}
+              <div
+                className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] -translate-x-1/2 rounded-full"
+                style={{ background: "rgba(0,0,0,0.06)" }}
+              />
+
+              <div className="space-y-10 md:space-y-10">
+                {milestones.map((m, i) => (
+                  <div
+                    key={i}
+                    className="relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-start md:items-center"
+                  >
+                    {i % 2 === 0 ? (
+                      <>
+                        <div className="md:pr-2 md:text-right pl-10 md:pl-0">
+                          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
+                            {m.step}
+                          </span>
+                          <h4
+                            className="mt-2 text-lg font-semibold text-black"
+                            style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                          >
+                            {m.title}
+                          </h4>
+                          <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
+                          <div className="mt-4 flex items-center gap-2 text-xs text-black/40 md:justify-end">
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <rect x="3" y="4" width="18" height="18" rx="2" />
+                              <line x1="16" y1="2" x2="16" y2="6" />
+                              <line x1="8" y1="2" x2="8" y2="6" />
+                              <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>{m.date}</span>
+                          </div>
+                        </div>
+                        <div className="hidden md:block" />
+                      </>
+                    ) : (
+                      <>
+                        <div className="hidden md:block" />
+                        <div className="md:pl-2 pl-10 md:pl-0">
+                          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
+                            {m.step}
+                          </span>
+                          <h4
+                            className="mt-2 text-lg font-semibold text-black"
+                            style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                          >
+                            {m.title}
+                          </h4>
+                          <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
+                          <div className="mt-4 flex items-center gap-2 text-xs text-black/40">
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <rect x="3" y="4" width="18" height="18" rx="2" />
+                              <line x1="16" y1="2" x2="16" y2="6" />
+                              <line x1="8" y1="2" x2="8" y2="6" />
+                              <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>{m.date}</span>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {/* Dot on timeline */}
+                    <span className="absolute left-4 md:left-1/2 top-2 md:top-1/2 h-3.5 w-3.5 -translate-x-1/2 md:-translate-y-1/2 rounded-full bg-black/10 z-10" />
+                    <span className="hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/10 z-10" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===== Who is MAHIR ===== */}
+          <section className="py-16 md:py-20">
+            <div className="text-center mb-8">
+              <h2
+                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Who is MAHIR
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-black/70 leading-relaxed text-justify">
+                MAHIR Group is the parent company that powers two distinct products serving the
+                Indian investor. On one side, <strong className="text-black">MAHIR Invest</strong>{" "}
+                is a SEBI-registered Investment Adviser (RIA) providing personalized investment
+                recommendations grounded in deep fundamental research — no commissions, no
+                conflicts, just honest advice. On the other,{" "}
+                <strong className="text-black">MAHIR Screener</strong> is a market intelligence tool
+                that puts powerful screening, data visualization, and research capabilities in the
+                hands of every investor. We are a single team united by a shared mission: to make
+                high-quality investment thinking accessible to everyone.
+              </p>
+            </div>
+          </section>
+
+          {/* ===== Why We Started ===== */}
+          <section className="py-16 md:py-20">
+            <div className="text-center mb-8">
+              <h2
+                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Why We Started
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-black/70 leading-relaxed text-justify">
+                The financial services industry was built to sell — not to advise. Retail investors
+                were drowning in noise, pushed toward commission-heavy products that served
+                distributors better than they served the people buying them. At the same time,
+                quality market research tools were either prohibitively expensive or locked behind
+                institutional walls. We started MAHIR Group to solve both problems. With{" "}
+                <strong className="text-black">MAHIR Invest</strong>, we built an advisory service
+                where every recommendation is backed by documented research and zero hidden
+                incentives. With <strong className="text-black">MAHIR Screener</strong>, we built a
+                platform that democratizes access to the same caliber of data and analysis that
+                professionals use. Both products share one DNA: clarity, honesty, and a stubborn
+                commitment to evidence over hype.
+              </p>
+            </div>
+          </section>
+
+          {/* ===== Our Mission ===== */}
+          <section className="py-16 md:py-20">
+            <div className="text-center mb-8">
+              <h2
+                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Our Mission
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-black/70 leading-relaxed text-justify">
+                To bring high-quality investment thinking to every Indian investor. Quality advice
+                and powerful research tools should not be luxuries reserved for the ultra-wealthy.
+                We believe that with the right guidance, clear data, and disciplined risk
+                management, financial freedom is achievable for everyone — regardless of portfolio
+                size.
+              </p>
+            </div>
+          </section>
+
+          {/* ===== Our Products ===== */}
+          <section className="py-16 md:py-20">
+            <div className="text-center mb-12">
+              <h2
+                className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
+                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              >
+                Advisory and Market Insights.
+              </h2>
+              <p className="text-lg text-black/50 max-w-2xl mx-auto leading-relaxed">
+                One research team. Every recommendation, screen, and report follows the same standard — is this clear, backed by research, and truly right for the client?
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="rounded-3xl bg-[#f9fafb] border border-black/5 p-8 md:p-10 flex flex-col text-left">
+                <div className="flex items-center gap-3 mb-4">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-black/70"
+                  >
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                  <h3
+                    className="text-2xl font-semibold text-black"
+                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  >
+                    MAHIR Invest
+                  </h3>
+                </div>
+                <p className="text-black/50 text-sm tracking-wider uppercase mb-4">
+                  SEBI-Registered Investment Adviser
                 </p>
-                <p>
-                  Quality advice should not be a luxury for the very rich. You get completely unbiased and well researched advice that serves only you.
+                <p className="text-black/70 leading-relaxed mb-6">
+                  A strictly SEBI-registered Investment Adviser (INA000022668) offering personalized
+                  investment recommendations. Every idea is backed by deep fundamental research,
+                  documented reasoning, and clear entry-target-stop levels. No commissions. No
+                  conflicts. Just honest, data-driven advice.
                 </p>
-                
-                <ul className="pt-6 space-y-4 text-base md:text-lg text-[#0B1220]">
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0B1220]"></span>
-                    No hidden charges
+                <ul className="space-y-3 text-black/70 mt-auto">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Personalized stock recommendations</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0B1220]"></span>
-                    No percentage-based fees on your capital
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Research-backed with transparent reasoning</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0B1220]"></span>
-                    Completely unbiased research
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Flat-fee model, zero commissions</span>
                   </li>
                 </ul>
               </div>
-              
-              <div className="md:border-l border-[#e2e4df] md:pl-12 pt-8 md:pt-0 border-t md:border-t-0">
-                <p className="text-sm font-semibold text-[#5b6067] uppercase tracking-widest mb-6">Our Services Start At</p>
-                <div className="text-6xl md:text-7xl font-semibold tracking-tighter text-[#0B1220] mb-8">
-                  ₹499
+
+              <div className="rounded-3xl bg-[#f9fafb] border border-black/5 p-8 md:p-10 flex flex-col text-left">
+                <div className="flex items-center gap-3 mb-4">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-black/70"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                  </svg>
+                  <h3
+                    className="text-2xl font-semibold text-black"
+                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  >
+                    MAHIR Screener
+                  </h3>
                 </div>
-                
-                <div className="space-y-6 text-[#5b6067]">
-                  <div className="flex gap-4">
-                    <div className="flex-1">
-                      <p className="text-[#0B1220] font-medium mb-1">Less than a pizza</p>
-                      <p className="text-sm">A small price for quality advice</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-1">
-                      <p className="text-[#0B1220] font-medium mb-1">Cheaper than tickets</p>
-                      <p className="text-sm">For a movie weekend</p>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-black/50 text-sm tracking-wider uppercase mb-4">
+                  Market Research & Screening Tool
+                </p>
+                <p className="text-black/70 leading-relaxed mb-6">
+                  A powerful market research and stock screening platform built for the modern
+                  investor. Screen stocks by financial metrics, visualize data, and uncover
+                  opportunities with the same caliber of tools used by professional analysts.
+                  Data-driven insights at your fingertips.
+                </p>
+                <ul className="space-y-3 text-black/70 mt-auto">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Advanced stock screening by financial metrics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Data visualization and market intelligence</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Professional-grade tools for every investor</span>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Section 4: Process & Craft */}
-          <div className="mb-24 pt-16 border-t border-[#e2e4df] grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-            <div>
-              <h3 className="text-3xl font-semibold text-[#0B1220] mb-6">Process Over Noise</h3>
-              <p className="text-lg md:text-xl text-[#5b6067] leading-relaxed">
-                We ignore market hysteria and focus on fundamentals. Every recommendation is backed by documented research and rigorous screening, keeping your portfolio safe from short term market movements.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-3xl font-semibold text-[#0B1220] mb-6">Craft Over Scale</h3>
-              <p className="text-lg md:text-xl text-[#5b6067] leading-relaxed">
-                We deliberately choose to remain a close knit team. By focusing on craft and accountability rather than scaling aggressively, we maintain the quality of our research and the integrity of our advice.
-              </p>
-            </div>
-          </div>
-
-          {/* Section 5: Technology at our Core */}
-          <div className="mb-24 pt-16 border-t border-[#e2e4df] grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              Technology at<br/>Our Core
+          {/* ===== What Makes Us Different ===== */}
+          <section className="py-16 md:py-20 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-12"
+              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+            >
+              What Makes Us Different
             </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                We believe that the best investment advisory marries deep human intuition with cutting-edge technology. That is why we are not just analysts; we are builders.
-              </p>
-              <p>
-                By developing in-house tools like <strong className="text-[#0B1220] font-medium">MAHIR Screener</strong>, we eliminate the friction in financial data analysis. Our software sifts through thousands of data points in milliseconds, empowering our research team to uncover hidden market opportunities that others simply cannot see.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl">
+              <div>
+                <div className="w-14 h-14 rounded-full bg-black/5 flex items-center justify-center mx-auto mb-5">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-black/60"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <h3
+                  className="text-xl font-semibold text-black mb-3"
+                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                >
+                  SEBI Registered
+                </h3>
+                <p className="text-black/60 leading-relaxed">
+                  Fully compliant with SEBI regulations. Your investments are protected by strict
+                  governance.
+                </p>
+              </div>
+              <div>
+                <div className="w-14 h-14 rounded-full bg-black/5 flex items-center justify-center mx-auto mb-5">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-black/60"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
+                </div>
+                <h3
+                  className="text-xl font-semibold text-black mb-3"
+                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                >
+                  Research-Backed
+                </h3>
+                <p className="text-black/60 leading-relaxed">
+                  Every recommendation and screen is backed by thorough fundamental research.
+                </p>
+              </div>
+              <div>
+                <div className="w-14 h-14 rounded-full bg-black/5 flex items-center justify-center mx-auto mb-5">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-black/60"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3
+                  className="text-xl font-semibold text-black mb-3"
+                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                >
+                  Client-First
+                </h3>
+                <p className="text-black/60 leading-relaxed">
+                  Flat-fee model with zero commissions. We succeed only when you succeed.
+                </p>
+              </div>
             </div>
-          </div>
+          </section>
 
-          {/* Section 6: Radical Transparency */}
-          <div className="mb-24 pt-16 border-t border-[#e2e4df] grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              Radical<br/>Transparency
+          {/* ===== Built to Last ===== */}
+          <section className="py-16 md:py-20 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
+              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+            >
+              Built to Last
             </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                The financial industry thrives on complexity and opacity. We are here to break that mold. 
-              </p>
-              <p>
-                When we make a recommendation, we show you the exact math, the fundamental logic, and the structural tailwinds behind it. When a thesis is proven wrong, we own it publicly. We believe that acknowledging failure is the ultimate stress test for credibility. 
-              </p>
-            </div>
-          </div>
-
-          {/* Section 7: Commitment to Education */}
-          <div className="mb-24 pt-16 border-t border-[#e2e4df] grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              A Commitment<br/>to Education
-            </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                We don't want you to follow our advice blindly. A true fiduciary does not just hand out stock tickers; they educate the client.
-              </p>
-              <p>
-                Through our comprehensive blog, detailed research reports, and direct research access, we aim to elevate your financial literacy. We want you to understand the <strong className="text-[#0B1220] font-medium">why</strong> behind the <strong className="text-[#0B1220] font-medium">what</strong>, because an educated investor is a disciplined investor.
-              </p>
-            </div>
-          </div>
-
-          {/* Section 8: The Ultimate Goal */}
-          <div className="border-t border-[#e2e4df] pt-16 md:pt-24 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0B1220]">
-              The Ultimate Goal:<br/>Financial Independence
-            </h2>
-            <div className="text-lg md:text-xl text-[#5b6067] leading-relaxed space-y-6">
-              <p>
-                Our ultimate objective is simple: to make everybody financially independent. 
-              </p>
-              <p>
-                We believe that with the right guidance, clear reasoning, and good risk management, financial freedom is achievable for everyone. Whether you use our tools like MAHIR Screener or connect with our research team, we are here to help you get there.
-              </p>
-            </div>
-          </div>
-
-        </section>
+            <p className="text-lg text-black/60 mb-8 max-w-2xl mx-auto">
+              MAHIR is for investors who take the long term seriously and expect the same from their
+              partner.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-black text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase hover:bg-black/90 transition-colors"
+            >
+              Talk to Us
+            </Link>
+          </section>
+        </div>
       </main>
       <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );
 }
-

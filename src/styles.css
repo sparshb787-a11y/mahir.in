@@ -135,14 +135,24 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    font-family:
+      "Syne",
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family:
+      "Syne",
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 }
 
 .font-syne {
-  font-family: 'Syne', sans-serif !important;
+  font-family: "Syne", sans-serif !important;
 }

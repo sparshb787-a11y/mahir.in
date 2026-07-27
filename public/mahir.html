@@ -21,7 +21,8 @@
 <meta name="twitter:image" content="https://mahir.in/mahir-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/chrome.css">
 <link rel="icon" href="/circle-favicon.png" type="image/png">
 <script type="application/ld+json">
 {
@@ -77,23 +78,23 @@
 <style>
 .font-syne { font-family: 'Syne', sans-serif !important; }
 :root {
-  --primary: #2757E6;
-  --primary-deep: #14265C;
-  --ink: #0B1220;
+  --primary: #000000;
+  --primary-deep: #000000;
+  --ink: #000000;
   --muted: #56606E;
   --border: #E4E7EE;
   --soft: #F5F7FB;
   --paper: #ffffff;
-  --mahir-display: "Inter", system-ui, -apple-system, sans-serif;
-  --mahir-body: "Inter", system-ui, -apple-system, sans-serif;
-  --mahir-mono: "Inter", system-ui, -apple-system, sans-serif;
+  --mahir-display: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-body: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-mono: "Syne", system-ui, -apple-system, sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; background: #05070d; }
+html { scroll-behavior: auto; background: #000000; }
 body {
   margin: 0;
   font-family: var(--mahir-body);
-  background: #05070d;
+  background: #000000;
   color: #dfe3ea;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
@@ -112,8 +113,8 @@ body {
   transition: transform 0.2s cubic-bezier(.22,1,.36,1), background .2s cubic-bezier(.22,1,.36,1);
   position: relative;
 }
-.skeuomorphic-btn:hover { background: #eef2ff; transform: translateY(-1px); }
-.skeuomorphic-btn:active { background: #dbe4ff; transform: translateY(0); }
+.skeuomorphic-btn:hover { background: #f0f0f0; transform: translateY(-1px); }
+.skeuomorphic-btn:active { background: #e5e5e5; transform: translateY(0); }
 .machined-border { border: 1px solid rgba(255,255,255,0.1); }
 .noise {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23noise)' opacity='0.75'/%3E%3C/svg%3E");
@@ -121,8 +122,8 @@ body {
 }
 .technical-grid {
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 8.333vw 8.333vw;
 }
 .blend-text { color: #fff; }
@@ -153,7 +154,7 @@ body {
 .signature-card {
   position: sticky; top: 6.5rem; overflow: hidden;
   border-radius: 14px; border: 1px solid var(--border);
-  background: #fff; box-shadow: 0 20px 50px rgba(11,18,32,0.06);
+  background: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.06);
 }
 .signature-card + .signature-card { margin-top: 1.25rem; }
 .spec-chip {
@@ -163,7 +164,7 @@ body {
   letter-spacing: .12em; text-transform: uppercase; color: #57605a;
   background: rgba(255,255,255,.72);
 }
-.signal-band { background: #0B1220; color: white; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.signal-band { background: #000000; color: white; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
 .signal-track { display: flex; gap: 2.5rem; width: max-content; padding: 1.1rem 1.5rem; white-space: nowrap; will-change: transform; }
 .signal-item { font-family: var(--mahir-mono); font-size: .72rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: rgba(255,255,255,.78); }
 .signal-dot { opacity: .45; }
@@ -187,11 +188,11 @@ body {
 .scroll-dark-section { position: relative; overflow: hidden; transition: background-color .5s ease, color .5s ease; }
 .scroll-dark-section::before {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% 18%, rgba(39,87,230,.16), transparent 34%), linear-gradient(180deg, #0B1220 0%, #05070d 100%);
+  background: radial-gradient(circle at 50% 18%, rgba(0,0,0,.16), transparent 34%), linear-gradient(180deg, #000000 0%, #000000 100%);
   opacity: 0; pointer-events: none; transition: opacity .45s ease; z-index: 0;
 }
 .scroll-dark-section > * { position: relative; z-index: 1; }
-.scroll-dark-section.is-dark { background: #05070d !important; color: #f1f3f8; }
+.scroll-dark-section.is-dark { background: #000000 !important; color: #f1f3f8; }
 .scroll-dark-section.is-dark::before { opacity: 1; }
 .scroll-dark-section.is-dark::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
@@ -236,7 +237,7 @@ body {
 .scroll-dark-section .dark-transition-label {
   position: absolute; right: 1.5rem; top: 1.5rem; z-index: 2;
   font-family: var(--mahir-mono); font-size: .62rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(11,18,32,.32); opacity: 0; transform: translateY(8px); pointer-events: none;
+  color: rgba(0,0,0,.32); opacity: 0; transform: translateY(8px); pointer-events: none;
 }
 .scroll-dark-section.is-dark .dark-transition-label { color: rgba(241,243,248,.32); }
 
@@ -270,7 +271,7 @@ section.bg-white, #system, #range, #signatures, #models, #contact { background-c
 }
 .abstract-panel::after {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 22% 18%, rgba(111,149,255,.35), transparent 40%), radial-gradient(circle at 82% 88%, rgba(39,87,230,.35), transparent 45%);
+  background: radial-gradient(circle at 22% 18%, rgba(0,0,0,.35), transparent 40%), radial-gradient(circle at 82% 88%, rgba(0,0,0,.35), transparent 45%);
 }
 .abstract-panel .abstract-icon {
   position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
@@ -294,11 +295,11 @@ section.bg-white, #system, #range, #signatures, #models, #contact { background-c
 .nav-brand { display: inline-flex; align-items: center; gap: .7rem; color: #fff; text-decoration: none; }
 .nav-logo-chip {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 2.4rem; width: auto; background: transparent; flex: 0 0 auto; padding: 0;
+  height: 3rem; width: auto; background: transparent; flex: 0 0 auto; padding: 0;
 }
-.nav-logo-chip img { height: 100%; width: auto; object-fit: contain; display: block; filter: invert(1) brightness(1.1); mix-blend-mode: screen; }
-footer .nav-logo-chip img, footer img[alt="MAHIR"] { filter: invert(1) brightness(1.1); mix-blend-mode: screen; }
-@media (max-width: 640px) { .nav-logo-chip { height: 2rem; } }
+.nav-logo-chip img { height: 100%; width: auto; object-fit: contain; display: block; filter: none !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+footer .nav-logo-chip img, footer img[alt="MAHIR"] { filter: none !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+@media (max-width: 640px) { .nav-logo-chip { height: 2.4rem; } }
 
 /* Loader */
 .load-overlay { position: fixed; inset: 0; z-index: 9999; background: #ffffff; overflow: hidden; pointer-events: none; }
@@ -310,97 +311,97 @@ footer .nav-logo-chip img, footer img[alt="MAHIR"] { filter: invert(1) brightnes
 .loader-logo { position: relative; width: min(22vmin, 12rem); height: min(22vmin, 12rem); opacity: 0; transform: scale(.84); display: flex; align-items: center; justify-content: center; background: transparent; padding: 0; transform-origin: center center; }
 .loader-logo img { width: 100%; height: 100%; object-fit: contain; }
 
-.loader-micro { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); color: rgba(11,18,32,.55); font-family: var(--mahir-mono); font-size: .68rem; font-weight: 800; letter-spacing: .28em; text-transform: uppercase; opacity: 0; }
-.loader-capsule { position: absolute; left: 50%; top: 50%; width: 4.5rem; height: 1.05rem; border-radius: 999px; background: #0B1220; transform: translate(-50%, -50%) scaleX(.25); opacity: 0; }
+.loader-micro { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); color: rgba(0,0,0,.55); font-family: var(--mahir-mono); font-size: .68rem; font-weight: 800; letter-spacing: .28em; text-transform: uppercase; opacity: 0; }
+.loader-capsule { position: absolute; left: 50%; top: 50%; width: 4.5rem; height: 1.05rem; border-radius: 999px; background: #000000; transform: translate(-50%, -50%) scaleX(.25); opacity: 0; }
 @media (max-width: 767px) { .loader-logo { width: min(34vmin, 9rem); height: min(34vmin, 9rem); } .loader-micro { bottom: 5vh; font-size: .58rem; } }
 
 /* === BLUISH-BLACK & DEEP-WHITE OVERRIDE === */
 :root {
-  --bluish-black: #0B1220;
-  --bluish-black-2: #0f1a33;
-  --primary: #0B1220;
-  --primary-deep: #0B1220;
-  --ink: #0B1220;
-  --muted: #4a5468;
+  --bluish-black: #000000;
+  --bluish-black-2: #000000;
+  --primary: #000000;
+  --primary-deep: #000000;
+  --ink: #000000;
+  --muted: #666666;
   --border: #e5e5e5;
   --soft: #f5f5f5;
   --paper: #ffffff;
 }
-body { color: #0B1220 !important; }
-.section-kicker { color: #0B1220 !important; font-weight: 500 !important; }
-.soft-copy, p, li { color: #2a334a !important; }
+body { color: #000000 !important; }
+.section-kicker { color: #000000 !important; font-weight: 500 !important; }
+.soft-copy, p, li { color: #333333 !important; }
 .spec-chip, .pill-btn, .signal-item, .process-index, .loader-micro,
-.dark-transition-label { color: #0B1220 !important; font-weight: 500 !important; letter-spacing: .14em !important; }
-.spec-chip, .pill-btn, .signal-item, .process-index, .loader-micro { color: #0B1220 !important; font-weight: 500 !important; letter-spacing: .14em !important; }
+.dark-transition-label { color: #000000 !important; font-weight: 500 !important; letter-spacing: .14em !important; }
+.spec-chip, .pill-btn, .signal-item, .process-index, .loader-micro { color: #000000 !important; font-weight: 500 !important; letter-spacing: .14em !important; }
 header nav a.nav-link { font-weight: 500 !important; letter-spacing: .22em !important; }
-h1, h2, h3, h4, .section-title { color: #0B1220 !important; font-weight: 600 !important; }
+h1, h2, h3, h4, .section-title { color: #000000 !important; font-weight: 600 !important; }
 .text-\[\#b9bbb7\], .text-\[\#969b97\], .text-\[\#9a9f9a\], .text-\[\#9b9b9b\],
 .text-\[\#6f746f\], .text-\[\#747a76\], .text-\[\#8c918d\], .text-\[\#303833\],
-.text-\[\#57605a\], .text-\[\#56606E\], .text-\[\#111\] { color: #0B1220 !important; }
-.spec-chip { color: #0B1220 !important; background: #ffffff !important; border-color: #0B1220 !important; }
-.pill-accent { background: #0B1220 !important; border-color: #0B1220 !important; color: #ffffff !important; }
-.pill-dark { background: #0B1220 !important; border-color: #0B1220 !important; color: #ffffff !important; }
-.skeuomorphic-btn { color: #0B1220 !important; }
-.engineering-cta { background: #0B1220 !important; color: #ffffff !important; border-color: #0B1220 !important; }
+.text-\[\#57605a\], .text-\[\#56606E\], .text-\[\#111\] { color: #000000 !important; }
+.spec-chip { color: #000000 !important; background: #ffffff !important; border-color: #000000 !important; }
+.pill-accent { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
+.pill-dark { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
+.skeuomorphic-btn { color: #000000 !important; }
+.engineering-cta { background: #000000 !important; color: #ffffff !important; border-color: #000000 !important; }
 
 /* Nav/hero on bluish-black bg, white text */
 header .nav-link, header a.nav-brand { color: #ffffff !important; }
 #reveal .state-line, #state0 *, #state1 *, #state2 *, #state3 *, #state4 * { color: #ffffff !important; }
-#state0 .skeuomorphic-btn, #state4 .skeuomorphic-btn, #reveal .skeuomorphic-btn { color: #0B1220 !important; }
+#state0 .skeuomorphic-btn, #state4 .skeuomorphic-btn, #reveal .skeuomorphic-btn { color: #000000 !important; }
 #state0 .text-white\/70, #state1 .text-white\/60, #state2 .text-white\/60,
 #state3 .text-white\/60, #state4 .text-white\/60, #state0 .text-white\/80 { color: rgba(255,255,255,0.85) !important; }
 .blend-text { color: #ffffff !important; }
 aside p, aside span { color: #ffffff !important; }
 
 /* Dark sections, PERMANENTLY bluish-black, no scroll color swap */
-.scroll-dark-section { background: #0B1220 !important; color: #f1f3f8 !important; }
+.scroll-dark-section { background: #000000 !important; color: #f1f3f8 !important; }
 .scroll-dark-section h1, .scroll-dark-section h2, .scroll-dark-section h3, .scroll-dark-section h4 { color: #ffffff !important; }
 .scroll-dark-section p, .scroll-dark-section li, .scroll-dark-section .soft-copy { color: rgba(241,243,248,.72) !important; }
-.scroll-dark-section .section-kicker { color: #8ab0ff !important; }
+.scroll-dark-section .section-kicker { color: #ffffff !important; }
 .scroll-dark-section .text-\[\#b9bbb7\], .scroll-dark-section .text-\[\#969b97\], .scroll-dark-section .text-\[\#9a9f9a\], .scroll-dark-section .text-\[\#9b9b9b\], .scroll-dark-section .text-\[\#6f746f\], .scroll-dark-section .text-\[\#747a76\], .scroll-dark-section .text-\[\#8c918d\], .scroll-dark-section .text-\[\#303833\], .scroll-dark-section .text-\[\#111\] { color: rgba(241,243,248,.55) !important; }
 .scroll-dark-section .border-\[\#dcded9\], .scroll-dark-section .border-\[\#d8dad5\], .scroll-dark-section .border-\[\#e0e1dc\], .scroll-dark-section .border-\[\#e2e4df\] { border-color: rgba(255,255,255,.14) !important; }
 .scroll-dark-section .spec-chip { color: #ffffff !important; border-color: rgba(255,255,255,.32) !important; background: rgba(255,255,255,.04) !important; }
-.scroll-dark-section .pill-accent { background: #ffffff !important; color: #0B1220 !important; border-color: #ffffff !important; }
+.scroll-dark-section .pill-accent { background: #ffffff !important; color: #000000 !important; border-color: #ffffff !important; }
 .scroll-dark-section .pill-btn { color: #ffffff !important; border-color: rgba(255,255,255,.28) !important; background: transparent !important; }
 .scroll-dark-section .bg-\[\#f7f7f3\] { background: rgba(255,255,255,.04) !important; }
-.scroll-dark-section .engineering-cta { background: #ffffff !important; color: #0B1220 !important; border-color: #ffffff !important; }
+.scroll-dark-section .engineering-cta { background: #ffffff !important; color: #000000 !important; border-color: #ffffff !important; }
 .dark-transition-label { color: rgba(255,255,255,.32) !important; opacity: 1 !important; }
 
 /* Governance chips, dark text on white pill (both light + dark sections) */
-.label-chip, .scroll-dark-section .label-chip, .scroll-dark-section .label-chip.text-\[\#303833\] { color: #0B1220 !important; background: #ffffff !important; border-color: rgba(11,18,32,.12) !important; font-weight: 500 !important; }
+.label-chip, .scroll-dark-section .label-chip, .scroll-dark-section .label-chip.text-\[\#303833\] { color: #000000 !important; background: #ffffff !important; border-color: rgba(0,0,0,.12) !important; font-weight: 500 !important; }
 
 /* Footer bluish-black */
-footer { background: #0B1220 !important; }
+footer { background: #000000 !important; }
 footer, footer * { color: #ffffff !important; }
 footer .text-white\/45, footer .text-white\/35, footer .text-white\/30, footer .text-white\/18 { color: rgba(255,255,255,0.7) !important; }
 @media (max-width: 767px) { #phoneLogoSpin { transform: none !important; animation: none !important; } }
 header.mahir-floating-nav { background: transparent !important; border: none !important; }
-.abstract-tag { background: rgba(11,18,32,0.85) !important; color: #ffffff !important; padding: .4rem .75rem !important; border-radius: 999px !important; font-size: .68rem !important; font-weight: 600 !important; letter-spacing: .18em !important; text-transform: uppercase !important; border: 1px solid rgba(255,255,255,0.14) !important; backdrop-filter: blur(6px); }
-#systemImage .panel-scrim { background: linear-gradient(180deg, rgba(11,18,32,.55) 0%, rgba(11,18,32,.35) 45%, rgba(11,18,32,.9) 100%) !important; }
+.abstract-tag { background: rgba(0,0,0,0.85) !important; color: #ffffff !important; padding: .4rem .75rem !important; border-radius: 999px !important; font-size: .68rem !important; font-weight: 600 !important; letter-spacing: .18em !important; text-transform: uppercase !important; border: 1px solid rgba(255,255,255,0.14) !important; backdrop-filter: blur(6px); }
+#systemImage .panel-scrim { background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.9) 100%) !important; }
 
 /* Abstract panels, bluish-black + optional background image */
-.abstract-panel { background: linear-gradient(150deg, #0B1220 0%, #14265C 55%, #0B1220 100%) !important; position: relative; }
-.abstract-panel::after { background: radial-gradient(circle at 22% 18%, rgba(111,149,255,.25), transparent 45%), radial-gradient(circle at 82% 82%, rgba(39,87,230,.22), transparent 50%) !important; }
-.abstract-panel.has-img { background: #0B1220 !important; }
+.abstract-panel { background: linear-gradient(150deg, #000000 0%, #000000 55%, #000000 100%) !important; position: relative; }
+.abstract-panel::after { background: radial-gradient(circle at 22% 18%, rgba(0,0,0,.25), transparent 45%), radial-gradient(circle at 82% 82%, rgba(0,0,0,.22), transparent 50%) !important; }
+.abstract-panel.has-img { background: #000000 !important; }
 .abstract-panel.has-img::before, .abstract-panel.has-img::after { display: none !important; }
 .abstract-panel.has-img > .panel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: .88; }
-.abstract-panel.has-img > .panel-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,18,32,0) 30%, rgba(11,18,32,.55) 100%); z-index: 1; }
+.abstract-panel.has-img > .panel-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%); z-index: 1; }
 .abstract-panel.has-img > .abstract-icon, .abstract-panel.has-img > .abstract-tag { z-index: 2; }
 .abstract-panel .abstract-icon { border-color: rgba(255,255,255,.3) !important; background: rgba(255,255,255,.06) !important; }
 .abstract-panel .abstract-icon i { color: #ffffff !important; }
 .abstract-tag { color: rgba(255,255,255,.75) !important; }
 
-/* Hero stage bluish-black */
-#stage { background: #0B1220 !important; }
-#lightLayer { background: radial-gradient(circle at 50% 40%, #14265C 0%, #0B1220 44%, #05070d 100%) !important; }
-#darkLayer { background: #05070d !important; }
+/* Hero stage black */
+#stage { background: #000 !important; }
+#lightLayer { background: #000 !important; }
+#darkLayer { background: #000 !important; }
 
 /* Signal band */
-.signal-band { background: #0B1220 !important; }
+.signal-band { background: #000000 !important; }
 .signal-item, .signal-dot { color: #ffffff !important; }
 
 /* Contact bg text */
-#contactBgText { color: rgba(11,18,32,0.06) !important; }
+#contactBgText { color: rgba(0,0,0,0.06) !important; }
 
 /* Header background */
 header { background: #000000 !important; border-color: rgba(255,255,255,0.12) !important; }
@@ -416,36 +417,36 @@ h1, h2, h3, h4, .section-title, #state0 h1, #state1 h2, #state2 h2, #state3 h2, 
 .section-kicker { font-weight: 500 !important; letter-spacing: .18em !important; }
 
 /* Signature cards (product deep-dive) on white bg */
-.signature-card { background: #ffffff !important; border: 1px solid #e4e7ee !important; box-shadow: 0 20px 50px rgba(11,18,32,0.06); }
-.signature-card h3 { color: #0B1220 !important; }
-.signature-card .soft-copy { color: #0B1220 !important; }
-.signature-card .process-index { color: #0B1220 !important; }
+.signature-card { background: #ffffff !important; border: 1px solid #e4e7ee !important; box-shadow: 0 20px 50px rgba(0,0,0,0.06); }
+.signature-card h3 { color: #000000 !important; }
+.signature-card .soft-copy { color: #000000 !important; }
+.signature-card .process-index { color: #000000 !important; }
 
 /* Subtle grid background utility */
 .bg-grid { position: relative; }
 .bg-grid::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
   background-image:
-    linear-gradient(to right, rgba(11,18,32,0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(11,18,32,0.055) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0,0,0,0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.055) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse at center, black 55%, transparent 92%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 92%);
 }
 .bg-grid > * { position: relative; z-index: 1; }
 
-/* ============ Floating pill navbar (shared with /team /careers) ============ */
+/* ============ Fixed top navbar (shared with /team /careers) ============ */
 body { padding-top: 0; }
-.mahir-floating-nav { position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 100; width: min(calc(100% - 1.5rem), 68rem); }
+.mahir-floating-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; }
 .mahir-floating-nav-inner {
   display: flex; align-items: center; justify-content: space-between; gap: 1.25rem;
-  background: #000; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px;
-  padding: .55rem .6rem .55rem 1.25rem;
+  background: #000; border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding: .6rem 1.25rem;
   box-shadow: 0 10px 30px -12px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.05) inset;
 }
 .mahir-floating-nav .nav-brand { display:inline-flex; align-items:center; gap:.6rem; color:#fff !important; text-decoration:none; }
-.mahir-floating-nav .nav-logo-chip { display:inline-flex; align-items:center; justify-content:center; height:2.4rem; padding:0; background:transparent; }
-.mahir-floating-nav .nav-logo-chip img { height:100%; width:auto; object-fit:contain; filter: invert(1) brightness(1.1); mix-blend-mode: screen; }
+.mahir-floating-nav .nav-logo-chip { display:inline-flex; align-items:center; justify-content:center; height:3rem; padding:0; background:transparent; }
+.mahir-floating-nav .nav-logo-chip img { height:100%; width:auto; object-fit:contain; filter: none !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
 .mahir-floating-nav nav { display:none; gap:1.6rem; align-items:center; }
 @media (min-width: 1024px) { .mahir-floating-nav nav { display:flex; } }
 .mahir-floating-nav .nav-link { font-family: var(--mahir-mono); font-weight:600; font-size:.8rem; letter-spacing:.22em; text-transform:uppercase; color: rgba(255,255,255,0.85) !important; text-decoration:none; padding:.35rem 0; }
@@ -464,7 +465,7 @@ body { padding-top: 0; }
 
 /* Fancy animated Contact (conic gradient border) */
 .mahir-nav-contact-fancy { position: relative; display: inline-flex; overflow: hidden; height: 2.5rem; padding: 1px; border-radius: 999px; text-decoration: none; cursor: pointer; outline: none; border: none; background: transparent; }
-.mahir-nav-contact-fancy .nc-ring { position: absolute; inset: -1000%; background: conic-gradient(from 90deg at 50% 50%, #7dd3fc 0%, #0B1E5B 50%, #7dd3fc 100%); animation: mahirNcSpin 2s linear infinite; }
+.mahir-nav-contact-fancy .nc-ring { position: absolute; inset: -1000%; background: conic-gradient(from 90deg at 50% 50%, #ffffff 0%, #0B1E5B 50%, #ffffff 100%); animation: mahirNcSpin 2s linear infinite; }
 .mahir-nav-contact-fancy .nc-inner { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; padding: .25rem 1.5rem; border-radius: 999px; background: #050510; color: #fff !important; font-family: var(--mahir-mono); font-weight: 600; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; backdrop-filter: blur(20px); transition: background .2s ease; }
 .mahir-nav-contact-fancy:hover .nc-inner { background: #14142b; }
 @keyframes mahirNcSpin { to { transform: rotate(360deg); } }
@@ -491,7 +492,7 @@ body { padding-top: 0; }
 .mahir-cta-btn::after { right:-1px; top:0; bottom:0; width:2px; background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
 .mahir-cta-btn > .mahir-cta-h { top:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
 .mahir-cta-btn > .mahir-cta-h2 { bottom:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
-.mahir-cta-btn > .mahir-cta-glow { position:absolute; inset:-24px; z-index:-1; background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 60%); filter: blur(20px); opacity:0; transition: opacity .3s ease; }
+.mahir-cta-btn > .mahir-cta-glow { position:absolute; inset:-24px; z-index:-1; background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 60%); filter: blur(20px); opacity:0; transition: opacity .3s ease; }
 .mahir-cta-btn:hover > .mahir-cta-glow { opacity:1; }
 .mahir-cta-btn > .mahir-cta-label { position:relative; z-index:2; }
 .mahir-force-white, .mahir-force-white * { color: #ffffff !important; }
@@ -501,41 +502,41 @@ body { padding-top: 0; }
 }
 
 /* ============ Product screen mock (replaces panel-img) ============ */
-.abstract-panel.has-img > .panel-mock { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: flex; flex-direction: column; background: linear-gradient(180deg, #0b1220 0%, #101a2f 100%); color: #e5e7eb; font-family: var(--mahir-mono); overflow: hidden; }
+.abstract-panel.has-img > .panel-mock { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: flex; flex-direction: column; background: linear-gradient(180deg, #000000 0%, #000000 100%); color: #e5e7eb; font-family: var(--mahir-mono); overflow: hidden; }
 .abstract-panel.has-img > .panel-mock * { box-sizing: border-box; }
 .pm-topbar { display:flex; align-items:center; gap:.5rem; padding:.55rem .8rem; border-bottom:1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); flex-shrink:0; }
 .pm-dot { width:9px; height:9px; border-radius:999px; display:inline-block; }
 .pm-dot-r { background:#ef4444; } .pm-dot-y { background:#f59e0b; } .pm-dot-g { background:#22c55e; }
 .pm-title { margin-left:.6rem; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:#cbd5e1; font-weight:600; }
-.pm-badge { margin-left:auto; font-size:.55rem; padding:.15rem .5rem; border-radius:999px; background: rgba(56,189,248,0.12); color:#7dd3fc; border:1px solid rgba(56,189,248,0.25); letter-spacing:.14em; text-transform:uppercase; }
+.pm-badge { margin-left:auto; font-size:.55rem; padding:.15rem .5rem; border-radius:999px; background: rgba(255,255,255,0.12); color:#ffffff; border:1px solid rgba(255,255,255,0.25); letter-spacing:.14em; text-transform:uppercase; }
 .pm-body { display:grid; grid-template-columns: 130px 1fr; flex:1; min-height: 0; }
 .pm-side { border-right:1px solid rgba(255,255,255,0.06); padding:.75rem .55rem; display:flex; flex-direction:column; gap:.25rem; background: rgba(255,255,255,0.015); }
 .pm-side-item { font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color: rgba(226,232,240,0.55); padding:.4rem .55rem; border-radius:.4rem; display:flex; align-items:center; gap:.45rem; }
 .pm-side-item .pm-dotmark { width:6px; height:6px; border-radius:999px; background: rgba(148,163,184,0.5); }
-.pm-side-item.active { background: rgba(56,189,248,0.08); color:#e0f2fe; }
-.pm-side-item.active .pm-dotmark { background:#38bdf8; box-shadow:0 0 8px rgba(56,189,248,0.7); }
+.pm-side-item.active { background: rgba(255,255,255,0.08); color:#ffffff; }
+.pm-side-item.active .pm-dotmark { background:#ffffff; box-shadow:0 0 8px rgba(255,255,255,0.7); }
 .pm-main { padding:.9rem 1rem; display:flex; flex-direction:column; gap:.75rem; min-height: 0; overflow: hidden; }
 .pm-stats { display:grid; grid-template-columns: repeat(3, 1fr); gap:.55rem; }
 .pm-stat { border:1px solid rgba(255,255,255,0.08); border-radius:.55rem; padding:.55rem .65rem; background: rgba(255,255,255,0.02); }
 .pm-stat-l { font-size:.55rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(148,163,184,0.75); }
 .pm-stat-v { font-size:1rem; font-weight:600; margin-top:.15rem; color:#f8fafc; font-family: var(--mahir-display); letter-spacing:-.01em; }
 .pm-stat-v.pos { color:#4ade80; } .pm-stat-v.neg { color:#f87171; }
-.pm-chart { position:relative; border:1px solid rgba(255,255,255,0.06); border-radius:.6rem; background: linear-gradient(180deg, rgba(56,189,248,0.04), rgba(56,189,248,0) 70%); padding:.5rem; flex: 1 1 auto; min-height: 90px; }
+.pm-chart { position:relative; border:1px solid rgba(255,255,255,0.06); border-radius:.6rem; background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0) 70%); padding:.5rem; flex: 1 1 auto; min-height: 90px; }
 .pm-chart svg { width:100%; height:100%; display:block; }
 .pm-rows { display:flex; flex-direction:column; gap:.3rem; }
 .pm-row { display:flex; align-items:center; justify-content:space-between; padding:.4rem .6rem; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:.4rem; font-size:.66rem; color:#cbd5e1; }
 .pm-row .pm-pos { color:#4ade80; font-weight:600; }
 .pm-row .pm-neg { color:#f87171; font-weight:600; }
-.pm-tag { display:inline-block; font-size:.52rem; letter-spacing:.14em; text-transform:uppercase; color:#7dd3fc; background:rgba(56,189,248,0.09); padding:.2rem .5rem; border-radius:999px; border:1px solid rgba(56,189,248,0.2); }
+.pm-tag { display:inline-block; font-size:.52rem; letter-spacing:.14em; text-transform:uppercase; color:#ffffff; background:rgba(255,255,255,0.09); padding:.2rem .5rem; border-radius:999px; border:1px solid rgba(255,255,255,0.2); }
 /* Network / system variant */
 .pm-network { position:relative; flex:1; min-height:180px; }
-.pm-node { position:absolute; padding:.4rem .65rem; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(56,189,248,0.3); background: rgba(11,18,32,0.85); color:#e0f2fe; border-radius:.5rem; box-shadow: 0 0 20px rgba(56,189,248,0.12); }
-.pm-node.core { border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(56,189,248,0.15); }
+.pm-node { position:absolute; padding:.4rem .65rem; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.85); color:#ffffff; border-radius:.5rem; box-shadow: 0 0 20px rgba(255,255,255,0.12); }
+.pm-node.core { border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.15); }
 .pm-network svg.pm-lines { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
 /* Screener variant */
 .pm-filters { display:flex; flex-wrap:wrap; gap:.35rem; }
 .pm-filter { font-size:.55rem; letter-spacing:.14em; text-transform:uppercase; padding:.25rem .55rem; border-radius:999px; border:1px solid rgba(255,255,255,0.12); color:#cbd5e1; }
-.pm-filter.on { background: rgba(56,189,248,0.15); color:#e0f2fe; border-color: rgba(56,189,248,0.4); }
+.pm-filter.on { background: rgba(255,255,255,0.15); color:#ffffff; border-color: rgba(255,255,255,0.4); }
 .pm-table { display:grid; grid-template-columns: 1.4fr .8fr .8fr .8fr; gap:.35rem .5rem; font-size:.6rem; align-items:center; }
 .pm-th { font-size:.5rem; letter-spacing:.16em; text-transform:uppercase; color: rgba(148,163,184,0.7); border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:.3rem; }
 .pm-td { color:#cbd5e1; padding:.25rem 0; }
@@ -549,9 +550,9 @@ body { padding-top: 0; }
 
 /* ============ Pre-footer CTA hero card (earth image) ============ */
 .mahir-prefooter-band { background: #000; padding: 0; }
-.mahir-prefooter { position: relative; z-index: 10; width: 100%; max-width: none; margin: 0; padding: 3rem 1rem; border-radius: 0; background-color: rgba(23,23,23,0.6); background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url("/earth-hero.jpg"); background-size: cover; background-position: center; border: 0; overflow: hidden; min-height: 28rem; }
+.mahir-prefooter { position: relative; z-index: 10; width: 100%; max-width: none; margin: 0; padding: 3rem 1rem; border-radius: 0; background-color: rgba(23,23,23,0.6); background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url("/earth-hero.jpg"); background-size: cover; background-position: center; border: 0; overflow: hidden; }
 @media (min-width: 640px) { .mahir-prefooter { padding: 4rem 1.5rem; } }
-@media (min-width: 1024px) { .mahir-prefooter { padding: 5rem 2rem 10rem 2rem; min-height: 38rem; } }
+@media (min-width: 1024px) { .mahir-prefooter { padding: 5rem 2rem 5rem 2rem; } }
 .mahir-prefooter-grid { position: relative; display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: start; padding-top: 1rem; max-width: 96rem; margin: 0 auto; }
 @media (min-width: 1024px) { .mahir-prefooter-grid { grid-template-columns: 7fr 5fr; gap: 2.5rem; } }
 .mahir-prefooter h2 { font-family: var(--mahir-display); font-weight: 300; color: #f4f4f5 !important; letter-spacing: -0.02em; line-height: 1.05; font-size: 2.75rem; margin: 0; }
@@ -564,7 +565,7 @@ body { padding-top: 0; }
 .mahir-standards-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 78rem; margin: 0 auto; }
 @media (min-width: 640px) { .mahir-standards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; } }
 @media (min-width: 1024px) { .mahir-standards-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
-.mahir-std-card { position: relative; padding: 1.75rem 1.5rem 1.65rem; border-radius: 1.1rem; background: #0B1220; border: 1px solid #1e2530; box-shadow: 0 18px 40px -28px rgba(0,0,0,0.55); text-align: left; overflow: hidden; color: #ffffff; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.mahir-std-card { position: relative; padding: 1.75rem 1.5rem 1.65rem; border-radius: 1.1rem; background: #000000; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 18px 40px -28px rgba(0,0,0,0.55); text-align: left; overflow: hidden; color: #ffffff; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
 .mahir-std-card:hover { transform: translateY(-3px); border-color: #ffffff; box-shadow: 0 24px 50px -24px rgba(0,0,0,0.6); }
 .mahir-std-card::before { content: ""; position: absolute; inset: 0; border-radius: 1.1rem; padding: 1px; pointer-events: none; z-index: 0; background: linear-gradient(140deg, rgba(255,255,255,0.35), rgba(255,255,255,0) 45%, rgba(255,255,255,0) 55%, rgba(255,255,255,0.2) 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .35; transition: opacity .3s ease; }
 .mahir-std-card:hover::before { opacity: .9; }
@@ -572,15 +573,15 @@ body { padding-top: 0; }
 @keyframes mahirStdDot { 0%, 100% { top: 8px; right: 8px; } 25% { top: 8px; right: calc(100% - 14px); } 50% { top: calc(100% - 14px); right: calc(100% - 14px); } 75% { top: calc(100% - 14px); right: 8px; } }
 .mahir-std-card > * { position: relative; z-index: 1; }
 .mahir-std-card .mahir-std-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-.mahir-std-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: #ffffff; color: #0B1220; border: 1px solid #ffffff; }
+.mahir-std-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: #ffffff; color: #000000; border: 1px solid #ffffff; }
 .mahir-std-pill { font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; color: #ffffff; padding: .35rem .55rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); }
 .mahir-std-card h4 { font-family: var(--mahir-display); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; color: #ffffff; margin: 0 0 .5rem; }
 .mahir-std-card p { font-size: .88rem; line-height: 1.55; color: #b6bac2; margin: 0; }
 .mahir-std-foot { margin-top: 1.1rem; padding-top: .85rem; border-top: 1px solid rgba(255,255,255,0.12); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: #8a8f96; font-weight: 600; }
-.scroll-dark-section.is-dark .mahir-std-card { background: #0B1220 !important; color: #ffffff !important; border-color: #1e2530 !important; }
+.scroll-dark-section.is-dark .mahir-std-card { background: #000000 !important; color: #ffffff !important; border-color: rgba(255,255,255,0.12) !important; }
 .scroll-dark-section.is-dark .mahir-std-card h4 { color: #ffffff !important; }
 .scroll-dark-section.is-dark .mahir-std-card p { color: #b6bac2 !important; }
-.scroll-dark-section.is-dark .mahir-std-icon { background: #ffffff !important; color: #0B1220 !important; border-color: #ffffff !important; }
+.scroll-dark-section.is-dark .mahir-std-icon { background: #ffffff !important; color: #000000 !important; border-color: #ffffff !important; }
 .scroll-dark-section.is-dark .mahir-std-pill { color: #ffffff !important; background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.25) !important; }
 .scroll-dark-section.is-dark .mahir-std-foot { color: #8a8f96 !important; border-top-color: rgba(255,255,255,0.12) !important; }
 
@@ -590,16 +591,16 @@ body { padding-top: 0; }
 .msp-inner { max-width: 56rem; margin: 0 auto; text-align: center; }
 .msp-badge { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
 .msp-avatars { display: flex; }
-.msp-avatars img { width: 2.35rem; height: 2.35rem; border-radius: 999px; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(11,18,32,0.08); margin-left: -0.55rem; }
+.msp-avatars img { width: 2.35rem; height: 2.35rem; border-radius: 999px; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); margin-left: -0.55rem; }
 .msp-avatars img:first-child { margin-left: 0; }
 .msp-rating { display: flex; flex-direction: column; align-items: flex-start; }
-.msp-stars { display: flex; gap: .1rem; color: #0B1220; }
-.msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 600; color: #0B1220; letter-spacing: .01em; }
-.msp-title { font-family: var(--mahir-display); font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em; color: #0B1220; margin: 0 auto; max-width: 22ch; }
+.msp-stars { display: flex; gap: .1rem; color: #000000; }
+.msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 600; color: #000000; letter-spacing: .01em; }
+.msp-title { font-family: var(--mahir-display); font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em; color: #000000; margin: 0 auto; max-width: 22ch; }
 .msp-italic { font-style: italic; font-family: "Instrument Serif", "Playfair Display", Georgia, serif; font-weight: 400; }
 .msp-sub { margin: 1.5rem auto 0; max-width: 46rem; font-size: 1.05rem; line-height: 1.55; color: #6b7166; }
 
-/* ============ Testimonials cards (match site theme: white bg, dark text, Inter) ============ */
+/* ============ Testimonials cards (match site theme: white bg, dark text, Syne) ============ */
 .mahir-testi-wrap { position: relative; display:flex; justify-content:center; align-items:center; min-height: 380px; padding: 2rem 1rem; font-family: var(--mahir-body); }
 .mahir-testi-row { position:relative; display:flex; justify-content:center; align-items:center; flex-wrap: wrap; }
 .mahir-testi-card { position: relative; width: 280px; height: 300px; margin: 0 -22px; background: linear-gradient(rgba(255,255,255,0.1), transparent); border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 25px 25px rgba(0,0,0,0.12); backdrop-filter: blur(10px); display:flex; align-items:center; justify-content:center; }
@@ -608,20 +609,26 @@ body { padding-top: 0; }
 .mahir-testi-card.t3 { transform: rotate(0deg); z-index:2; }
 .mahir-testi-card.t4 { transform: rotate(5deg); }
 .mahir-testi-card.t5 { transform: rotate(10deg); }
-.mahir-testi-inner { position:absolute; inset:1rem; background:#fff; color:#0B1220; border-radius:.75rem; box-shadow: 0 20px 40px -24px rgba(11,18,32,.35); padding:1.25rem; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; font-family: var(--mahir-body); }
-.mahir-testi-inner p { font-family: var(--mahir-body); font-size:.82rem; line-height:1.55; margin:0; color:#0B1220 !important; font-weight: 400; }
-.mahir-testi-meta { display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(11,18,32,.08); padding-top:.75rem; margin-top: 1rem; }
-.mahir-testi-name { font-family: var(--mahir-body); font-size:.78rem; font-weight:600; color:#0B1220 !important; }
+.mahir-testi-inner { position:absolute; inset:1rem; background:#fff; color:#000000; border-radius:.75rem; box-shadow: 0 20px 40px -24px rgba(0,0,0,.35); padding:1.25rem; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; font-family: var(--mahir-body); }
+.mahir-testi-inner p { font-family: var(--mahir-body); font-size:.82rem; line-height:1.55; margin:0; color:#000000 !important; font-weight: 400; }
+.mahir-testi-meta { display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(0,0,0,.08); padding-top:.75rem; margin-top: 1rem; }
+.mahir-testi-name { font-family: var(--mahir-body); font-size:.78rem; font-weight:600; color:#000000 !important; }
 .mahir-testi-role { font-family: var(--mahir-body); font-size:.7rem; color:#6b7280 !important; margin-top:.15rem; }
-@media (max-width: 900px) { .mahir-testi-row { flex-direction:column; gap: 1rem; } .mahir-testi-card { margin: -20px 0; } }
+@media (max-width: 900px) {
+  .mahir-testi-row { flex-direction:column; gap: 1.5rem; align-items: stretch; }
+  .mahir-testi-card { margin: 0; width: 100%; max-width: 100%; height: auto; min-height: 0; transform: none !important; }
+  .mahir-testi-inner { position: relative; inset: auto; padding: 1.25rem; }
+  .mahir-testi-wrap { min-height: auto; padding: 1rem; align-items: stretch; }
+}
 
 /* ============ Redesigned footer ============ */
-.mahir-footer { background: #000 !important; color: #fff !important; padding: 5rem 1rem 2rem; }
+.mahir-footer { background: #000 !important; color: #fff !important; padding: 4rem 1rem 2rem; }
 .mahir-footer * { color: inherit; }
 .mahir-footer-inner { max-width: 80rem; margin: 0 auto; }
+@media (max-width: 767px) { .mahir-footer-inner { padding: 0 1rem; } }
 .mahir-footer-top { display:grid; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); grid-template-columns: 1fr; }
 @media (min-width: 768px) { .mahir-footer-top { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .mahir-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; } }
+@media (min-width: 1024px) { .mahir-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; } }
 .mahir-footer h4 { font-size:.78rem !important; font-weight:700 !important; letter-spacing:.18em; text-transform:uppercase; color:#fff !important; margin: 0 0 1rem; }
 .mahir-footer ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.65rem; }
 .mahir-footer ul a, .mahir-footer ul li { font-size:.85rem !important; color: rgba(255,255,255,0.55) !important; text-decoration:none; }
@@ -630,14 +637,13 @@ body { padding-top: 0; }
 .mahir-footer-socials { display:flex; gap:.6rem; }
 .mahir-footer-socials a { display:inline-flex; align-items:center; justify-content:center; width:2.25rem; height:2.25rem; border-radius:.6rem; background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8) !important; }
 .mahir-footer-socials a:hover { background: rgba(255,255,255,0.12); color:#fff !important; }
-.mahir-footer-bottom { display:flex; flex-direction:column; gap:1rem; padding-top:2rem; align-items:center; justify-content:space-between; }
+.mahir-footer-bottom { display:flex; flex-direction:column; gap:1rem; padding-top:2rem; align-items:center; justify-content:center; text-align:center; }
 @media (min-width: 640px) { .mahir-footer-bottom { flex-direction: row; } }
 .mahir-footer-bottom p { font-size:.8rem !important; color: rgba(255,255,255,0.4) !important; margin:0; }
-.mahir-footer-bottom-links { display:flex; gap:1.5rem; }
-.mahir-footer-bottom-links a { font-size:.8rem !important; color: rgba(255,255,255,0.4) !important; text-decoration:none; }
-.mahir-footer-bottom-links a:hover { color:#fff !important; }
-.mahir-footer-logo { display:inline-flex; align-items:center; height:4rem; }
-.mahir-footer-logo img { height:100%; width:auto; filter: invert(1); }
+.mahir-footer-logo { display:inline-flex; align-items:center; height:4.5rem; }
+.mahir-footer-logo img { height:100%; width:auto; filter: none !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+.mahir-footer-logo .mahir-footer-logo-text { display:none; font-family:var(--mahir-display); font-weight:700; font-size:1.5rem; letter-spacing:.12em; text-transform:uppercase; color:#ffffff; }
+.mahir-footer-copyright-sep { height:1px; background:rgba(255,255,255,0.1); margin:0; }
 
 /* Compliance / legal panel inside footer */
 .mahir-footer-legal { display:grid; gap:2rem; padding: 2.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); grid-template-columns: 1fr; }
@@ -651,29 +657,29 @@ body { padding-top: 0; }
 .mahir-footer-products a:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.25); }
 .mahir-footer-products span:first-child { font-size:.9rem; color:#fff !important; font-weight:500; }
 .mahir-footer-products span:last-child { font-size:.78rem; color: rgba(255,255,255,0.5) !important; }
-.mahir-footer-trusted { display:flex; flex-direction:column; gap:1rem; padding: 1.75rem 0; align-items:flex-start; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.mahir-footer-trusted { display:flex; flex-direction:column; gap:1rem; padding: 1.75rem 0 0; align-items:flex-start; }
 .mahir-footer-trusted-label { font-size:.72rem !important; letter-spacing:.22em; text-transform:uppercase; color: rgba(255,255,255,0.55) !important; margin: 0; }
-.mahir-footer-trusted img { height: 34px; width:auto; background: #fff; padding: 6px 10px; border-radius: 6px; }
-.mahir-footer-address { padding: 1.5rem 0; font-size:.82rem !important; line-height:1.6; color: rgba(255,255,255,0.6) !important; }
+.mahir-footer-trusted img { height: 34px; width:auto; }
+.mahir-footer-address { padding: 1.5rem 0; font-size:.82rem !important; line-height:1.6; color: rgba(255,255,255,0.6) !important; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .mahir-footer-address strong { color:#fff !important; font-weight:600; display:block; margin-bottom:.35rem; letter-spacing:.02em; }
 
 /* FAQ section */
-.mahir-faq-band { background:#ffffff; padding: 5rem 1rem; }
-@media (min-width: 768px) { .mahir-faq-band { padding: 6rem 1.5rem; } }
+.mahir-faq-band { background:#ffffff; padding: 5rem 1.5rem; }
+@media (min-width: 768px) { .mahir-faq-band { padding: 6rem 2.5rem; } }
 .mahir-faq-inner { max-width: 60rem; margin: 0 auto; display:grid; gap: 2.5rem; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 4rem; align-items:start; } }
+@media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 3rem; align-items:start; } }
 .mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#8a8a80; margin:0 0 .9rem; }
-.mahir-faq-title { font-family: var(--mahir-display); font-weight: 300; letter-spacing:-0.02em; line-height: 1.05; font-size: 2.4rem; color:#0B1220; margin:0 0 1rem; }
+.mahir-faq-title { font-family: var(--mahir-display); font-weight: 300; letter-spacing:-0.02em; line-height: 1.05; font-size: 2.4rem; color:#000000; margin:0 0 1rem; }
 @media (min-width: 768px) { .mahir-faq-title { font-size: 3rem; } }
-.mahir-faq-sub { font-size:.95rem; line-height:1.65; color:#4a4a44; margin:0; max-width: 32ch; }
+.mahir-faq-sub { font-size:.95rem; line-height:1.65; color:#4a4a44; margin:0; }
 .mahir-faq-list { display:flex; flex-direction:column; }
-.mahir-faq-item { border-top: 1px solid rgba(11,18,32,0.12); }
-.mahir-faq-item:last-child { border-bottom: 1px solid rgba(11,18,32,0.12); }
-.mahir-faq-item summary { list-style:none; cursor:pointer; padding: 1.4rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:1.02rem; font-weight:500; color:#0B1220; letter-spacing:-0.01em; }
+.mahir-faq-item { border-top: 1px solid rgba(0,0,0,0.12); }
+.mahir-faq-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
+.mahir-faq-item summary { list-style:none; cursor:pointer; padding: 1.25rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:1rem; font-weight:500; color:#000000; letter-spacing:-0.01em; text-align:left; }
 .mahir-faq-item summary::-webkit-details-marker { display:none; }
-.mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#0B1220; transition: transform .25s ease; line-height:1; }
+.mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#000000; transition: transform .25s ease; line-height:1; flex-shrink:0; }
 .mahir-faq-item[open] summary::after { content:"−"; }
-.mahir-faq-item .mahir-faq-a { padding: 0 0 1.4rem; font-size:.92rem; line-height:1.7; color:#4a4a44; max-width: 58ch; }
+.mahir-faq-item .mahir-faq-a { padding: 0 0 1.25rem; font-size:.92rem; line-height:1.7; color:#4a4a44; text-align:left; }
 
 </style>
 </head>
@@ -691,16 +697,16 @@ body { padding-top: 0; }
 
   <header class="mahir-floating-nav">
     <div class="mahir-floating-nav-inner">
-      <a href="#hero" class="nav-brand" aria-label="MAHIR home">
-        <span class="nav-logo-chip"><img src="/mahir_new.png" alt="MAHIR"></span>
+      <a href="/mahir.html" class="nav-brand" aria-label="MAHIR home">
+        <span class="nav-logo-chip"><img src="/mahir-trust-leads.svg" alt="MAHIR" style="filter:none; opacity:1; visibility:visible; mix-blend-mode:normal;"></span>
       </a>
       <nav>
-        <a href="#process" class="nav-link">Approach</a>
-        <a href="#range" class="nav-link">Products</a>
-        <a href="/about" class="nav-link">About Us</a>
-        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/products" class="nav-link">Products</a>
+        <a href="/approach" class="nav-link">Approach</a>
+        <a href="/about" class="nav-link">About</a>
         <a href="/team" class="nav-link">Team</a>
         <a href="/careers" class="nav-link">Careers</a>
+        <a href="/blog" class="nav-link">Blog</a>
       </nav>
       <div style="display:flex; align-items:center; gap:.5rem;">
         <a href="/contact" class="mahir-nav-contact-fancy mahir-nav-contact-desktop">
@@ -714,12 +720,12 @@ body { padding-top: 0; }
     </div>
   </header>
   <div id="mahirMobileDrawer" class="mahir-mobile-drawer" onclick="this.classList.remove('open');document.body.style.overflow='';">
-    <a href="#process">Approach</a>
-    <a href="#range">Products</a>
-    <a href="/about">About Us</a>
-    <a href="/blog">Blog</a>
+    <a href="/products">Products</a>
+    <a href="/approach">Approach</a>
+    <a href="/about">About</a>
     <a href="/team">Team</a>
     <a href="/careers">Careers</a>
+    <a href="/blog">Blog</a>
     <a href="/contact" class="mahir-nav-contact-fancy">
       <span class="nc-ring" aria-hidden="true"></span>
       <span class="nc-inner">Contact</span>
@@ -730,13 +736,13 @@ body { padding-top: 0; }
   <main>
     <section id="reveal" class="relative h-[610vh] md:h-[690vh]">
       <div id="stage" class="sticky top-0 h-screen overflow-hidden bg-black">
-        <div id="lightLayer" class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,#12213f_0%,#080d1c_44%,#000000_100%)]"></div>
+        <div id="lightLayer" class="absolute inset-0 z-0 bg-[#000000]"></div>
         <div id="darkLayer" class="absolute inset-0 z-[1] bg-[#020305] opacity-0"></div>
 
         <div class="absolute left-1/2 top-[55%] z-[2] h-[74vmin] w-[74vmin] -translate-x-1/2 -translate-y-1/2 rounded-none machined-border opacity-10"></div>
 
         <div class="noise pointer-events-none absolute inset-0 z-[60] opacity-[0.4]"></div>
-        <div id="grid" class="technical-grid pointer-events-none absolute inset-0 z-[4] opacity-30"></div>
+        <div id="grid" class="technical-grid pointer-events-none absolute inset-0 z-[4] opacity-50"></div>
 
         <aside class="pointer-events-none absolute left-4 top-28 z-[70] hidden h-[64vh] flex-col justify-between sm:flex">
           <div class="absolute left-0 top-0 h-full w-[3px] bg-black"></div>
@@ -812,158 +818,11 @@ body { padding-top: 0; }
       </div>
     </section>
 
-    <!-- Intro prelude, About-style scroll reveal -->
-    <section class="relative z-20 bg-white py-24 sm:py-28 lg:py-32 overflow-hidden">
-      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.22fr_1fr] gap-10 lg:gap-16">
-          <div class="reveal-up lg:sticky lg:top-28 lg:self-start">
-            <p class="text-sm font-semibold tracking-tight text-[#0B1220]">How We Work</p>
-          </div>
-          <div>
-            <div class="reveal-up">
-              <h2 class="text-2xl font-semibold leading-[1.15] tracking-[-.02em] text-[#0B1220] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem]">
-                <span class="font-syne uppercase">MAHIR</span> is built to help you invest with more clarity and less noise. Every research note, every screen, and every recommendation is designed to make your investment decisions better, simpler, and more confident.
-              </h2>
-            </div>
-            <div class="mt-8 grid gap-5 max-w-3xl">
-              <p class="reveal-up text-base leading-[1.7] text-[#5b6067]">
-                We do not chase trends or push products. Our advisory and screener start with one question: will this help the client build wealth over time? That question drives our stock research, risk framework, portfolio reviews, and the way we communicate every investment idea.
-              </p>
-              <p class="reveal-up text-base leading-[1.7] text-[#5b6067]">
-                What you read in our reports is backed by documented research. The strict risk checks, compliance reviews, and our refusal to recommend anything we would not own ourselves are what make the advice worth following. <span class="font-syne uppercase">MAHIR</span> is for investors who take the long term seriously and expect the same from their partner.
-              </p>
-            </div>
-
-            <!-- Milestones timeline -->
-            <div class="mt-20 lg:mt-24 lg:-ml-[calc(18%_+_4rem)] lg:w-[calc(100%_+_18%_+_4rem)]">
-              <div class="reveal-up mb-12 max-w-2xl mx-auto text-center">
-                <p class="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#5b6067]">Our Story</p>
-                <h3 class="mt-3 text-3xl font-semibold leading-[1.05] tracking-[-.03em] text-[#0B1220] sm:text-4xl">Key Moments</h3>
-                <p class="mt-3 text-sm leading-[1.7] text-[#5b6067]">From a single idea in October 2025 to a company built with the same care.</p>
-              </div>
-
-              <div id="mahir-timeline" class="relative">
-                <div class="mahir-tl-line hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 rounded-full bg-[#e4e5e1] overflow-hidden">
-                  <div id="mahir-tl-progress" class="w-full h-0 bg-gradient-to-b from-[#0B1220] to-[#3b5566] transition-[height] duration-1000 ease-out"></div>
-                </div>
-
-                <div class="flex flex-col gap-10">
-                  <!-- Step 1 -->
-                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <div class="md:pr-2">
-                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
-                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 01</span>
-                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Founded</h4>
-                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]"><span class="font-syne uppercase">MAHIR</span> started in October 2025 with one belief. Advice should be clear, easy to explain, and truly in the client's interest.</p>
-                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                          <span>Oct 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
-                  </div>
-
-                  <!-- Step 2 -->
-                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <div class="hidden md:block"></div>
-                    <div class="md:pl-2">
-                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
-                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 02</span>
-                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]">SEBI Registered Advisory</h4>
-                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]"><span class="font-syne uppercase">MAHIR</span> Invest became a SEBI Registered Investment Adviser, giving our long-term approach the compliance and transparency clients deserve.</p>
-                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                          <span>Oct 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
-                  </div>
-
-                  <!-- Step 3 -->
-                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <div class="md:pr-2">
-                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
-                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 03</span>
-                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Invest Launched</h4>
-                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]">On 15 May 2026, <span class="font-syne uppercase">MAHIR</span> Invest opened for clients, turning our research into clear, personal investment advice.</p>
-                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                          <span>May 15, 2026</span>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
-                  </div>
-
-                  <!-- Step 4 -->
-                  <div class="mahir-tl-step relative flex flex-col md:grid md:grid-cols-2 md:gap-16 items-stretch md:items-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <div class="hidden md:block"></div>
-                    <div class="md:pl-2">
-                      <div class="mahir-tl-card rounded-2xl border border-[#e4e5e1] bg-white p-6 sm:p-7 transition-all duration-300">
-                        <span class="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#5b6067]">Step 04</span>
-                        <h4 class="mt-2 text-lg font-semibold text-[#0B1220]"><span class="font-syne uppercase">MAHIR</span> Screener in Build</h4>
-                        <p class="mt-2 text-sm leading-[1.7] text-[#5b6067]">The same research logic is being shaped into a screening tool so investors can study markets on the <span class="font-syne uppercase">MAHIR</span> framework.</p>
-                        <div class="mt-4 flex items-center gap-2 text-xs text-[#8a8f96]">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                          <span>2026</span>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="mahir-tl-dot hidden md:block absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8dad5] transition-all duration-700 z-10"></span>
-                  </div>
-                </div>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <style>
-        .mahir-tl-card { background: #0B1220 !important; border-color: #1e2530 !important; color: #ffffff; }
-        .mahir-tl-card span, .mahir-tl-card p, .mahir-tl-card h4, .mahir-tl-card div { color: #ffffff !important; }
-        .mahir-tl-card p { color: #c8ccd3 !important; }
-        .mahir-tl-card .text-\[\#8a8f96\], .mahir-tl-card .text-\[\#5b6067\] { color: #a8adb5 !important; }
-        .mahir-tl-card:hover { border-color: #ffffff !important; transform: translateY(-3px); }
-        .mahir-tl-step.is-in { opacity: 1 !important; transform: translateY(0) !important; }
-        .mahir-tl-step.is-in .mahir-tl-dot { background: #0B1220; box-shadow: 0 0 0 6px rgba(11,18,32,0.08); }
-      </style>
-
-      <script>
-        (function(){
-          const container = document.getElementById('mahir-timeline');
-          if(!container) return;
-          const progress = document.getElementById('mahir-tl-progress');
-          const steps = container.querySelectorAll('.mahir-tl-step');
-          let started = false;
-          function reset(){
-            started = false;
-            if(progress) progress.style.height = '0%';
-            steps.forEach(s => s.classList.remove('is-in'));
-          }
-          function play(){
-            if(started) return;
-            started = true;
-            if(progress) setTimeout(()=>{ progress.style.height = '100%'; }, 200);
-            steps.forEach((s,i)=>{ setTimeout(()=> s.classList.add('is-in'), 350 + i*450); });
-          }
-          const io = new IntersectionObserver((entries)=>{
-            entries.forEach(e=>{
-              if(e.isIntersecting) play();
-              else if(e.boundingClientRect.top > 0) reset();
-            });
-          },{ threshold: 0.15, rootMargin: '-80px 0px -40px 0px' });
-          io.observe(container);
-        })();
-      </script>
-    </section>
+    
 
 
     <!-- Marquee strap -->
-    <div class="relative z-20 overflow-hidden bg-[#0B1220] py-5">
+    <div class="relative z-20 overflow-hidden bg-[#000000] py-5">
       <div class="mahir-strap-track flex whitespace-nowrap">
         <div class="mahir-strap-group flex shrink-0 items-center gap-8 pr-8">
           <span class="text-sm font-medium uppercase tracking-[0.28em] text-white/85">long-term thinking</span><span class="text-white/40">•</span>
@@ -994,10 +853,10 @@ body { padding-top: 0; }
 
     <!-- Hero CTA banner: talk to us -->
     <section class="mahir-force-white relative isolate w-full overflow-hidden">
-      <img src="/talk-arc.png" alt="" class="absolute inset-0 h-full w-full object-cover" />
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+      <img src="/talk-arc.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#000000] to-transparent"></div>
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#000000] to-transparent"></div>
       <div class="relative z-10 mx-auto max-w-5xl px-6 py-28 text-center sm:py-32 lg:py-40">
         <span class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/15 backdrop-blur">One Team One Standard</span>
         <h2 class="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -1014,64 +873,63 @@ body { padding-top: 0; }
     </section>
 
     <!-- Product range section -->
-    <section id="range" class="scroll-dark-section relative bg-white py-24 sm:py-28 lg:min-h-screen lg:py-0">
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
+    <section id="range" class="scroll-dark-section relative bg-[#000000] py-20 sm:py-24 lg:py-28" style="background:#000000 !important;">
       <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
-        <div class="mb-12 max-w-5xl lg:pt-24 reveal-up">
-          <p class="section-kicker">Our Products</p>
-          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] sm:text-5xl lg:text-7xl">
-            Advisory And Market Insights.
-            <span class="text-white">One Research Team.</span>
+        <div class="mb-12 mx-auto max-w-3xl text-center reveal-up">
+          <h2 class="text-4xl font-semibold leading-[1] tracking-[-.045em] sm:text-5xl lg:text-7xl">
+            Our Products
           </h2>
+          <p class="mt-5 text-lg leading-[1.7] text-white/60">Advisory and market insights. One research team. Every recommendation, screen, and report follows the same standard — is this clear, backed by research, and truly right for the client?</p>
         </div>
 
-        <div id="specialPin" class="grid min-h-[44rem] grid-cols-1 gap-10 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
-          <div class="relative h-[26rem] overflow-hidden rounded-2xl bg-[#f7f7f7] sm:h-[34rem] lg:h-[42rem]">
-            <div class="special-img absolute inset-0 h-full w-full opacity-100"><img src="/mahir-invest-app.png" alt="MAHIR Invest app" loading="lazy" class="h-full w-full object-cover" /></div>
-            <div class="special-img absolute inset-0 h-full w-full opacity-0"><img src="/mahir-screener-app.png" alt="MAHIR Screener app" loading="lazy" class="h-full w-full object-cover" /></div>
-            
-            <div class="absolute inset-0 ring-1 ring-inset ring-black/10"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-16 lg:pb-24">
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-[#000000] flex flex-col">
+            <div class="p-6 md:p-8 flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-semibold text-white"><span class="font-syne uppercase">MAHIR</span> Invest</h3>
+                <span class="text-sm text-white/40">01</span>
+              </div>
+              <p class="text-white/60 leading-relaxed mb-4">SEBI-registered RIA. Personal recommendations built on strong research and careful risk checks.</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Personalized portfolio reviews</li>
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Research-backed with transparent reasoning</li>
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flat-fee model, zero commissions</li>
+              </ul>
+              <a href="https://mahirinvest.com" target="_blank" rel="noopener" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Invest</span></a>
+            </div>
+            <div class="overflow-hidden">
+              <img src="/mahir-invest-app.jpg" alt="MAHIR Invest app" loading="lazy" class="w-full h-auto object-cover object-top" />
+            </div>
           </div>
 
-          <div>
-            <div class="mb-10 flex items-end justify-between border-b border-[#d8dad5] pb-5">
-              <h3 class="text-3xl font-semibold tracking-tight sm:text-4xl"><span class="font-syne uppercase">MAHIR</span> PRODUCTS</h3>
-              <span id="specialNumber" class="text-3xl font-semibold text-[#303833]">1</span>
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-[#000000] flex flex-col">
+            <div class="p-6 md:p-8 flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-semibold text-white"><span class="font-syne uppercase">MAHIR</span> Screener</h3>
+                <span class="text-sm text-white/40">02</span>
+              </div>
+              <p class="text-white/60 leading-relaxed mb-4">Filter, study and shortlist stocks using the same logic that powers our advisory desk.</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-criteria stock filtering</li>
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fundamental data &amp; financial ratios</li>
+                <li class="flex items-start gap-2 text-sm text-white/50"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Visual comparison tools</li>
+              </ul>
+              <a href="https://screener.mahir.in" target="_blank" rel="noopener" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Screener</span></a>
             </div>
-
-            <div class="space-y-7">
-              <div class="special-row opacity-100">
-                <div class="mb-3 flex items-center justify-between">
-                  <h4 class="text-lg font-semibold"><span class="font-syne uppercase">MAHIR</span> Invest</h4>
-                  <span class="text-sm text-[#9b9b9b]">01</span>
-                </div>
-                <p class="soft-copy">SEBI-registered RIA. Personal recommendations built on strong research and careful risk checks.</p>
-                <a href="https://mahirinvest.com" target="_blank" rel="noopener" class="mahir-cta-btn mt-5 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Invest</span></a>
-              </div>
-
-              <div class="special-row opacity-20">
-                <div class="mb-3 flex items-center justify-between">
-                  <h4 class="text-lg font-semibold"><span class="font-syne uppercase">MAHIR</span> Screener</h4>
-                  <span class="text-sm text-[#9b9b9b]">02</span>
-                </div>
-                <p class="soft-copy">Filter, study and shortlist stocks using the same logic that powers our advisory desk.</p>
-                <a href="https://screener.mahir.in" target="_blank" rel="noopener" class="mahir-cta-btn mt-5 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Screener</span></a>
-              </div>
-
-
+            <div class="overflow-hidden">
+              <img src="/mahir-screener-app.jpg" alt="MAHIR Screener app" loading="lazy" class="w-full h-auto object-cover object-top" />
             </div>
           </div>
         </div>
       </div>
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
     </section>
 
-    <!-- Feature card banner -->
-    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#0B1220]">
-      <img src="/team-workspace.png" alt="MAHIR team at work" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+    <!-- Testimonial / quote banner -->
+    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#000000]">
+      <img src="/team-workspace.jpg" alt="MAHIR team at work" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_40%,rgba(0,0,0,0.02),rgba(0,0,0,0.2)),linear-gradient(to_top,rgba(0,0,0,0.3),rgba(0,0,0,0.1))]"></div>
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#000000] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#000000] to-transparent"></div>
       <div class="relative z-10 flex min-h-[70vh] items-center">
         <div class="mx-auto max-w-4xl px-6 py-24 text-center md:px-8">
           <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/10">
@@ -1090,88 +948,13 @@ body { padding-top: 0; }
       </div>
     </section>
 
-    <section id="process" class="scroll-dark-section relative overflow-hidden bg-white py-24 text-[#303833] sm:py-28 lg:py-36">
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
-
-      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
-          <div class="reveal-up lg:sticky lg:top-28 lg:self-start">
-            <p class="section-kicker">Our Approach</p>
-            <h2 class="mt-4 text-4xl font-semibold leading-[0.94] tracking-[-.055em] sm:text-5xl lg:text-7xl">
-              Advice, Refined
-              <span class="text-[#b9bbb7]">Down To The Decision.</span>
-            </h2>
-            <p class="soft-copy mt-7 max-w-xl">
-              Every <span class="font-syne uppercase">MAHIR</span> engagement follows the same four steps, whether you're a first-time investor or an existing client exploring a new product.
-            </p>
-          </div>
-
-          <div class="reveal-up">
-            <div class="grid grid-cols-1 gap-0">
-              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
-                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">01</p>
-                <div>
-                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">Understand Your Goals</h3>
-                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Profile / risk appetite / horizon</span>
-                  </div>
-                  <p class="soft-copy mt-4 max-w-3xl">We start with your actual financial goals, risk comfort, and time horizon, not a ready-made portfolio pushed to everyone.</p>
-                </div>
-              </article>
-
-              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
-                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">02</p>
-                <div>
-                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">Do The Research</h3>
-                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Fundamentals / screening / risk</span>
-                  </div>
-                  <p class="soft-copy mt-4 max-w-3xl">Recommendations are built on documented research and fundamental analysis, not market sentiment or short-term momentum.</p>
-                </div>
-              </article>
-
-              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
-                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">03</p>
-                <div>
-                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">Recommend With Reasoning</h3>
-                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Advisory / transparency</span>
-                  </div>
-                  <p class="soft-copy mt-4 max-w-3xl">Every recommendation comes with clear reasoning, so you understand why we suggested it, not just what to buy or hold.</p>
-                </div>
-              </article>
-
-              <article class="group grid grid-cols-[4rem_1fr] gap-6 border-b border-[#dcded9] py-8 sm:grid-cols-[7rem_1fr]">
-                <p class="text-sm font-semibold uppercase tracking-[.22em] text-[#9a9f9a]">04</p>
-                <div>
-                  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <h3 class="text-3xl font-semibold tracking-[-.045em] sm:text-4xl">Stay Accountable</h3>
-                    <span class="text-[0.68rem] font-semibold uppercase tracking-[.18em] text-[#9a9f9a]">Review / support / compliance</span>
-                  </div>
-                  <p class="soft-copy mt-4 max-w-3xl">We track outcomes, review our calls, and stay answerable for the advice we give, long after the recommendation is made.</p>
-                </div>
-              </article>
-            </div>
-
-            <div class="mt-10 flex flex-col justify-between gap-6 rounded-2xl border border-[#e2e4df] bg-[#f7f7f3] p-6 sm:flex-row sm:items-center">
-              <div>
-                <p class="text-[0.68rem] font-semibold uppercase tracking-[.22em] text-[#0B1220]">Client Advisory</p>
-                <p class="mt-2 max-w-2xl text-2xl font-semibold tracking-[-.04em] text-[#0B1220]">Confidence, Finished With Restraint.</p>
-              </div>
-              <a href="/contact" class="mahir-cta-btn shrink-0"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To Us</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Director section -->
     <section id="director" class="relative bg-white py-24 sm:py-28 lg:py-32">
       <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
           <div class="reveal-up">
             <div class="relative overflow-hidden rounded-2xl">
-              <img src="/yash-new-director.jpg" alt="Yash Bedmuttha, Director, <span class="font-syne uppercase">MAHIR</span> Group" loading="lazy" class="h-full w-full object-cover" style="aspect-ratio: 4/5;">
+              <img src="/yash-new-director.jpg" alt="Yash Bedmuttha, Director, MAHIR Group" loading="lazy" class="h-full w-full object-cover" style="aspect-ratio: 4/5;">
             </div>
           </div>
           <div class="reveal-up">
@@ -1180,10 +963,10 @@ body { padding-top: 0; }
               A Steady Hand
               <span class="text-[#b9bbb7]">Behind Every Recommendation.</span>
             </h2>
-            <p class="soft-copy mt-6 max-w-xl">Yash leads <span class="font-syne uppercase">MAHIR</span> with a simple idea. Research first, client first. His work across Indian markets, from research desks to advisory floors to governance rooms, shapes the thinking behind every <span class="font-syne uppercase">MAHIR</span> call.</p>
-            <blockquote class="mt-8 border-l-2 border-[#0B1220]/20 pl-5 text-lg italic tracking-[-.01em] text-[#2a3038]">
+            <p class="soft-copy mt-6 max-w-xl">Yash leads <span class="font-syne uppercase">MAHIR</span> with a focus on building systems that serve clients first. His experience across research, advisory, and governance shapes the discipline and transparency behind every <span class="font-syne uppercase">MAHIR</span> recommendation.</p>
+            <blockquote class="mt-8 border-l-2 border-[#000000]/20 pl-5 text-lg italic tracking-[-.01em] text-[#2a3038]">
               "We would rather explain a modest call than defend a loud one. That's the only way this compounds."
-              <cite class="mt-3 block not-italic text-xs font-semibold uppercase tracking-[.22em] text-[#0B1220]/60">Yash Bedmuttha, Director</cite>
+              <cite class="mt-3 block not-italic text-xs font-semibold uppercase tracking-[.22em] text-[#000000]/60">Yash Bedmuttha, Director</cite>
             </blockquote>
             <a href="/contact" class="mahir-cta-btn mt-8 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Talk To The Team</span></a>
           </div>
@@ -1192,10 +975,10 @@ body { padding-top: 0; }
     </section>
 
     <!-- Testimonial / quote banner -->
-    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#0B1220]">
-      <img src="/9a09de18-b356-4c1a-b720-8c0d05f29746_3840w.jpg" alt="" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+    <section class="mahir-force-white relative isolate min-h-[70vh] overflow-hidden bg-[#000000]">
+      <img src="/hero-bg.jpg" alt="" class="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_40%,rgba(0,0,0,0.25),rgba(0,0,0,0.55)),linear-gradient(to_top,rgba(0,0,0,0.7),rgba(0,0,0,0.2))]"></div>
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#000000] to-transparent"></div>
       <div class="relative z-10 flex min-h-[70vh] items-center">
         <div class="mx-auto max-w-4xl px-6 py-24 text-center md:px-8">
           <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white ring-1 ring-white/10">
@@ -1205,7 +988,7 @@ body { padding-top: 0; }
             "<span class="font-syne uppercase">MAHIR</span> gave us clear thinking and steady advice. We understand every recommendation and why it fits our plan."
           </p>
           <div class="mt-8 flex items-center justify-center gap-3">
-            <img src="/trusted-2.jpg" alt="A <span class="font-syne uppercase">MAHIR</span> Group Client" class="inline-flex h-9 w-9 rounded-full ring-1 ring-white/15 object-cover" />
+            <img src="/trusted-2.jpg" alt="A MAHIR Group Client" class="inline-flex h-9 w-9 rounded-full ring-1 ring-white/15 object-cover" />
             <div class="text-left">
               <div class="text-sm font-medium text-white">Rajesh Kulkarni</div>
               <div class="text-xs text-white">Long term investor, Pune</div>
@@ -1219,15 +1002,14 @@ body { padding-top: 0; }
     </section>
 
     <!-- Governance / dark pinned section -->
-    <section id="engineering" class="scroll-dark-section relative overflow-hidden bg-white py-24 pb-32 text-[#303833] sm:py-28 sm:pb-36 lg:min-h-screen lg:py-0">
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B1220] to-transparent"></div>
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B1220] to-transparent"></div>
-      <div class="noise pointer-events-none absolute inset-0 opacity-[0.04]"></div>
+    <section id="engineering" class="scroll-dark-section relative overflow-hidden bg-[#000000] py-24 pb-32 text-white sm:py-28 sm:pb-36 lg:min-h-screen lg:py-0" style="background:#000000 !important;">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#000000] to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#000000] to-transparent"></div>
       <div id="engineeringPin" class="relative flex min-h-screen flex-col items-center justify-center px-4 pt-24 pb-28 text-center sm:px-6 sm:pb-32 lg:px-8 lg:pb-40">
         <div id="engineeringText" class="engineering-text-card relative z-10 mx-auto max-w-4xl reveal-up rounded-2xl border border-transparent px-6 py-8 sm:px-10 sm:py-10">
           <p class="section-kicker">What Is Inside Every Product</p>
-          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] text-[#111] sm:text-5xl lg:text-7xl">Inside Every <span class="font-syne uppercase">MAHIR</span> Product.</h2>
-          <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#747a76] sm:text-lg">
+          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] text-white sm:text-5xl lg:text-7xl">Inside Every <span class="font-syne uppercase">MAHIR</span> Product.</h2>
+          <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
             Every recommendation, screen, and report is checked against one simple standard. Is this clear to explain, backed by research, and truly right for the client?
           </p>
           <a href="/contact" class="mahir-cta-btn mt-8 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Request A Consultation</span></a>
@@ -1327,7 +1109,7 @@ body { padding-top: 0; }
     <section class="relative bg-white py-20">
       <div class="mb-10 text-center">
         <p class="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-3">What Clients Say</p>
-        <h2 class="text-3xl sm:text-4xl font-medium tracking-tight" style="color:#0B1220;">Client Highlights</h2>
+        <h2 class="text-3xl sm:text-4xl font-medium tracking-tight" style="color:#000000;">Client Highlights</h2>
       </div>
       <div class="mahir-testi-wrap">
         <div class="mahir-testi-row">
@@ -1408,11 +1190,11 @@ body { padding-top: 0; }
           </div>
           <div class="msp-rating">
             <div class="msp-stars" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0B1220"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
             </div>
             <p>Trusted by business owners, employees, and long-term investors</p>
           </div>
@@ -1437,12 +1219,12 @@ body { padding-top: 0; }
         </div>
         <div class="mahir-faq-list">
           <details class="mahir-faq-item">
-            <summary>What does <span class="font-syne uppercase">MAHIR</span> actually do?</summary>
+            <summary>What does the firm actually do?</summary>
             <div class="mahir-faq-a">We are a SEBI-registered investment advisory and market intelligence firm. We help long-term investors build portfolios grounded in original research, disciplined risk, and clear reasoning, not noise or short-term calls.</div>
           </details>
           <details class="mahir-faq-item">
             <summary>Are you registered with SEBI?</summary>
-            <div class="mahir-faq-a">Yes. <span class="font-syne uppercase">MAHIR</span> Group Investment Advisers Private Limited operates a Separately Identifiable Investment Advisory Unit registered with SEBI (RIA Reg. No. INA000022668) and enlisted with BSE (No. 2526). Registration is valid from June 01, 2026, Perpetual.</div>
+            <div class="mahir-faq-a">Yes. The firm operates a Separately Identifiable Investment Advisory Unit registered with SEBI (RIA Reg. No. INA000022668) and enlisted with BSE (No. 2526). Registration is valid from June 01, 2026, Perpetual.</div>
           </details>
           <details class="mahir-faq-item">
             <summary>Who is this for?</summary>
@@ -1453,12 +1235,12 @@ body { padding-top: 0; }
             <div class="mahir-faq-a">Fees are advisory-only and disclosed transparently before onboarding, in line with SEBI's IA regulations. We do not earn commissions or brokerage on client transactions.</div>
           </details>
           <details class="mahir-faq-item">
-            <summary>What is <span class="font-syne uppercase">MAHIR</span> Screener?</summary>
-            <div class="mahir-faq-a"><span class="font-syne uppercase">MAHIR</span> Screener is our market intelligence product | a research toolkit for filtering, comparing, and understanding listed companies. It complements the advisory practice and is available at mahirscreener.com.</div>
+            <summary>What is the screening tool?</summary>
+            <div class="mahir-faq-a">The screener is a market intelligence product — a research toolkit for filtering, comparing, and understanding listed companies. It complements the advisory practice and is available at mahirscreener.com.</div>
           </details>
           <details class="mahir-faq-item">
             <summary>How do I get in touch?</summary>
-            <div class="mahir-faq-a">Write to us at admin@mahiradvisers.com or call +91-9084945151. You can also use the Contact page and we will get back within one business day.</div>
+            <div class="mahir-faq-a">Write to us at admin@mahir.in or call +91-9084945151. You can also use the Contact page and we will get back within one business day.</div>
           </details>
         </div>
       </div>
@@ -1467,7 +1249,6 @@ body { padding-top: 0; }
     <!-- ============ Pre-footer CTA hero card ============ -->
     <div class="mahir-prefooter-band">
       <section class="mahir-prefooter">
-        <img aria-hidden="true" src="/mahir-wordmark.png" alt="" class="mahir-prefooter-mark" />
         <div class="mahir-prefooter-grid">
           <div>
             <h2>Building Institutions That Serve People First.</h2>
@@ -1491,39 +1272,32 @@ body { padding-top: 0; }
     <footer class="mahir-footer">
       <div class="mahir-footer-inner">
         <div class="mahir-footer-top">
-          <div>
-            <span class="mahir-footer-logo"><img src="/mahir_new.png" alt="MAHIR"></span>
+          <div class="mahir-footer-brand">
+            <span class="mahir-footer-logo"><img src="/mahir-trust-leads.svg" alt="MAHIR" style="filter:none; opacity:1; visibility:visible; mix-blend-mode:normal;"><span class="mahir-footer-logo-text">MAHIR</span></span>
             <p class="mahir-footer-brand-copy">Research-led investment advisory and market intelligence. Built quietly. Built to last.</p>
             <div class="mahir-footer-socials">
-              <a href="https://www.linkedin.com/company/mahirinvest" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869C24 5.989 15.078 6.276 12.982 10.155V8z"/></svg></a>
-              <a href="https://x.com/MahirInvest" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.574 4.9 4.9 0 0 1-2.229-.616v.062a4.918 4.918 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.92 4.92 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 14.307-14.417 0-.22-.005-.437-.014-.653A10.243 10.243 0 0 0 24 4.557z"/></svg></a>
-              <a href="https://www.instagram.com/mahirinvest" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
-              <a href="https://www.facebook.com/profile.php?id=61591393817085" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.412c0-3.017 1.792-4.686 4.533-4.686 1.312 0 2.686.235 2.686.235v2.972h-1.514c-1.49 0-1.955.93-1.955 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
-              <a href="https://www.youtube.com/@MahirInvest" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a href="https://www.linkedin.com/company/mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869C24 5.989 15.078 6.276 12.982 10.155V8z"/></svg></a>
+              <a href="https://x.com/MahirInvest" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.574 4.9 4.9 0 0 1-2.229-.616v.062a4.918 4.918 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.92 4.92 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 14.307-14.417 0-.22-.005-.437-.014-.653A10.243 10.243 0 0 0 24 4.557z"/></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61591393817085" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.412c0-3.017 1.792-4.686 4.533-4.686 1.312 0 2.686.235 2.686.235v2.972h-1.514c-1.49 0-1.955.93-1.955 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+              <a href="https://www.instagram.com/mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+              <a href="https://www.youtube.com/@Mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
             </div>
-          </div>
-          <div>
-            <h4>Products</h4>
-            <ul>
-              <li><a href="https://mahirinvest.com" target="_blank" rel="noopener"><span class="font-syne uppercase">MAHIR</span> Invest</a></li>
-              <li><a href="https://mahirscreener.com" target="_blank" rel="noopener"><span class="font-syne uppercase">MAHIR</span> Screener</a></li>
-            </ul>
           </div>
           <div>
             <h4>Company</h4>
             <ul>
               <li><a href="/about">About Us</a></li>
+              <li><a href="/products">Products</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/team">Our Team</a></li>
               <li><a href="/careers">Careers</a></li>
-              <li><a href="/mahir.html#process">Approach</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <div>
             <h4>Resources</h4>
             <ul>
-              <li><a href="#faq">FAQs</a></li>
+              <li><a href="/mahir.html#faq">FAQs</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
@@ -1539,52 +1313,22 @@ body { padding-top: 0; }
           </div>
         </div>
 
-        <!-- Product URLs quick strip -->
         <div class="mahir-footer-address">
-          <strong>Registered office</strong>
-          301 &amp; 302, 3rd Floor, Quick Office, Raichandani 45 Street, 112, Main Road, opposite D-Mart, Baner, Pune, Maharashtra 411045
-        </div>
-
-        <!-- Compliance / legal -->
-        <div class="mahir-footer-legal">
           <div>
-            <h4>Regulatory Disclosures</h4>
-            <p><span class="font-syne uppercase">MAHIR</span> Investment Advisers Private Limited- Investment Advisory Unit (Separately Identifiable Unit)</p>
-            <p>SEBI RIA Registration No: INA000022668</p>
-            <p><strong>Advisory office address:</strong> Kasturi Market PL G/A-9/1 SHOP 1, MIDC G NR MORIS SO, Chinchwad East, Pune, Pune City, Maharashtra, India, 411019.</p>
-            <p><strong>Corresponding SEBI local office:</strong> Securities and Exchange Board of India, SEBI Bhavan II, Plot No: C7, "G" Block, Bandra Kurla Complex, Bandra (East), Mumbai, 400051.</p>
-            <p><strong>Principal Officer:</strong> Yash Mahavir Bedmuttha &nbsp;·&nbsp; <a href="mailto:admin@mahiradvisers.com" style="color:rgba(255,255,255,0.85) !important; text-decoration:underline;">admin@mahiradvisers.com</a> &nbsp;·&nbsp; +91-9084945151.</p>
-            <p class="mahir-footer-disclaimer">Disclaimer: Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, enlistment of IA with the Exchange and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. The securities quoted are for illustration only and are not recommendatory.</p>
+            <strong>Registered office</strong><br>
+            301 &amp; 302, 3rd Floor, Quick Office, Raichandani 45 Street, 112, Main Road, opposite D-Mart, Baner, Pune, Maharashtra 411045
           </div>
-
-          <div>
-            <h4>Our Products</h4>
-            <div class="mahir-footer-products">
-              <a href="https://mahirinvest.com" target="_blank" rel="noopener">
-                <span><span class="font-syne uppercase">MAHIR</span> Invest</span><span>mahirinvest.com →</span>
-              </a>
-              <a href="https://mahirscreener.com" target="_blank" rel="noopener">
-                <span><span class="font-syne uppercase">MAHIR</span> Screener</span><span>mahirscreener.com →</span>
-              </a>
-            </div>
-
-            <div class="mahir-footer-trusted">
-              <p class="mahir-footer-trusted-label">Trusted by</p>
-              <img src="/startup-india.png" alt="Startup India" style="height:48px !important; width:auto !important; background:#fff !important; padding:8px 14px !important; border-radius:8px !important; display:block !important;">
-            </div>
+          <div class="mahir-footer-trusted-item" style="display:flex; align-items:center; gap:1rem; flex-shrink:0;">
+            <span style="font-size:.7rem; text-transform:uppercase; letter-spacing:.15em; color:rgba(255,255,255,0.5); font-weight:600;">Trusted By</span>
+            <img src="/startup-india.png" alt="Startup India" class="mahir-footer-trusted-img" style="height:40px; width:auto; background:#ffffff; border-radius:6px; padding:4px 8px; opacity:0.9;">
           </div>
         </div>
+
+        <div class="mahir-footer-copyright-sep"></div>
 
         <div class="mahir-footer-bottom">
-          <p>© 2026 <span class="font-syne uppercase">MAHIR</span> Group | All Rights Reserved. Website owned and managed by <span class="font-syne uppercase">MAHIR</span> Group.</p>
-          <div class="mahir-footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
-            <a href="/disclaimer">Disclaimer</a>
-            <a href="/cancellation">Cancellation Policy</a>
-            <a href="/refund">Refund Policy</a>
-          </div>
-        </div>
+           <p>&copy; 2026 <span class="font-syne uppercase">MAHIR</span> Group | All Rights Reserved. Website owned and managed by <span class="font-syne uppercase">MAHIR</span> Group.</p>
+         </div>
       </div>
     </footer>
   </main>

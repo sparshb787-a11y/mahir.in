@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import chromeCss from "../styles/chrome.css?url";
 import { reportError } from "../lib/error-reporting";
 
 function NotFoundComponent() {
@@ -77,34 +78,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MAHIR Group | SEBI Registered Investment Advisory" },
-      { name: "description", content: "MAHIR Group is a SEBI-registered investment advisory (INA000022668) delivering research-led stock recommendations and market intelligence via MAHIR Invest and MAHIR Screener." },
+      { title: "MAHIR Group | SEBI Registered RIA" },
+      {
+        name: "description",
+        content:
+          "MAHIR Group is a SEBI-registered RIA (INA000022668) delivering research-based stock recommendations and market research via MAHIR Invest and MAHIR Screener.",
+      },
       { name: "author", content: "MAHIR Group Investment Advisers Private Limited" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:site_name", content: "MAHIR Group" },
-      { property: "og:title", content: "MAHIR Group | SEBI Registered Investment Advisory" },
-      { property: "og:description", content: "Research-led investment advisory and market intelligence, built quietly and built to last." },
+      { property: "og:title", content: "MAHIR Group | SEBI Registered RIA" },
+      {
+        property: "og:description",
+        content:
+          "Research-based investment advisory and market research, built quietly and built to last.",
+      },
       { property: "og:url", content: "https://mahir.in/" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@mahirinvest" },
-      { name: "twitter:title", content: "MAHIR Group | SEBI Registered Investment Advisory" },
-      { name: "twitter:description", content: "Research-led investment advisory and market intelligence, built quietly and built to last." },
+      { name: "twitter:title", content: "MAHIR Group | SEBI Registered RIA" },
+      {
+        name: "twitter:description",
+        content:
+          "Research-based investment advisory and market research, built quietly and built to last.",
+      },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
 
     links: [
+      { rel: "canonical", href: "https://mahir.in/" },
       {
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "stylesheet",
+        href: chromeCss,
+      },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap",
+      },
       { rel: "icon", href: "/circle-favicon.png", type: "image/png" },
       { rel: "preload", as: "image", href: "/mahir-mark-white.png" },
-      { rel: "preload", as: "image", href: "/mahir_new.png" },
+      { rel: "preload", as: "image", href: "/mahir-trust-leads.svg" },
       { rel: "preload", as: "image", href: "/earth-hero.jpg" },
     ],
   }),
@@ -116,11 +137,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" style={{ background: "#05070d" }}>
+    <html lang="en" style={{ background: "#ffffff" }}>
       <head>
         <HeadContent />
       </head>
-      <body style={{ background: "#05070d" }}>
+      <body style={{ background: "#ffffff" }}>
         {children}
         <Scripts />
       </body>

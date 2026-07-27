@@ -1,0 +1,832 @@
+:root {
+  --mahir-display: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-body: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-mono: "Syne", system-ui, -apple-system, sans-serif;
+}
+
+/* ============ Fixed top navbar (black theme) ============ */
+.mahir-floating-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+.mahir-floating-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 1.25rem;
+  box-shadow:
+    0 10px 30px -12px rgba(0, 0, 0, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+.mahir-floating-nav .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff !important;
+  text-decoration: none;
+}
+.mahir-floating-nav .nav-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+@media (max-width: 640px) {
+  .mahir-floating-nav .nav-logo-chip { height: 2.4rem; }
+}
+.mahir-floating-nav .nav-logo-chip img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.mahir-floating-nav nav {
+  display: none;
+  gap: 1.6rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .mahir-floating-nav nav {
+    display: flex;
+  }
+}
+.mahir-floating-nav .nav-link {
+  font-family: var(--mahir-mono);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-decoration: none;
+  position: relative;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
+}
+.mahir-floating-nav .nav-link:hover,
+.mahir-floating-nav .nav-link:active,
+.mahir-floating-nav .nav-link:focus,
+.mahir-floating-nav .nav-link.active {
+  color: #fff !important;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.mahir-floating-nav .nav-link::after {
+  display: none !important;
+}
+
+/* Fancy animated Contact (conic gradient border) */
+.mahir-nav-contact-fancy {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  height: 2.5rem;
+  padding: 1px;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.mahir-nav-contact-fancy .nc-ring {
+  position: absolute;
+  inset: -1000%;
+  background: conic-gradient(from 90deg at 50% 50%, #ffffff 0%, #000000 50%, #ffffff 100%);
+  animation: mahirNcSpin 2s linear infinite;
+}
+.mahir-nav-contact-fancy .nc-inner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.25rem 1.5rem;
+  border-radius: 999px;
+  background: #000000;
+  color: #fff !important;
+  font-family: var(--mahir-mono);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  backdrop-filter: blur(20px);
+  transition: background 0.2s ease;
+}
+.mahir-nav-contact-fancy:hover .nc-inner {
+  background: #14142b;
+}
+@keyframes mahirNcSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mahirContactPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(125, 211, 252, 0.22);
+  }
+}
+@keyframes mahirContactSweep {
+  0%,
+  44% {
+    transform: translateX(-160%) skewX(-16deg);
+  }
+  72%,
+  100% {
+    transform: translateX(160%) skewX(-16deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mahir-nav-contact-fancy .nc-ring {
+    animation: none;
+  }
+}
+.mahir-nav-contact-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .mahir-nav-contact-desktop {
+    display: inline-flex;
+  }
+}
+
+/* Hamburger + mobile drawer */
+.mahir-nav-hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+}
+@media (min-width: 1024px) {
+  .mahir-nav-hamburger {
+    display: none;
+  }
+}
+.mahir-nav-hamburger svg {
+  width: 18px;
+  height: 18px;
+}
+.mahir-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 4rem 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.mahir-mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mahir-mobile-drawer a {
+  color: #fff !important;
+  text-decoration: none;
+  font-family: var(--mahir-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.mahir-mobile-drawer .mahir-nav-contact-fancy {
+  height: 3rem;
+  margin-top: 1rem;
+}
+.mahir-mobile-drawer .mahir-nav-contact-fancy .nc-inner {
+  font-size: 0.78rem;
+  padding: 0.5rem 2rem;
+}
+@media (min-width: 1024px) {
+  .mahir-mobile-drawer {
+    display: none !important;
+  }
+}
+
+/* ============ Fancy CTA button (light streaks + radial glow) ============ */
+.mahir-cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: #000;
+  color: #fff !important;
+  font-family: var(--mahir-mono);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border-radius: 0;
+  transition: transform 0.25s ease;
+}
+.mahir-cta-btn:hover {
+  transform: translateY(-1px);
+}
+.mahir-cta-btn::before,
+.mahir-cta-btn::after,
+.mahir-cta-btn > .mahir-cta-h,
+.mahir-cta-btn > .mahir-cta-h2 {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+.mahir-cta-btn::before {
+  /* left vertical streak */
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0)
+  );
+}
+.mahir-cta-btn::after {
+  /* right vertical streak */
+  right: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0)
+  );
+}
+.mahir-cta-btn > .mahir-cta-h {
+  /* top horizontal streak */
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0)
+  );
+}
+.mahir-cta-btn.mahir-cta-sm {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #000;
+  overflow: hidden;
+}
+.mahir-cta-btn.mahir-cta-sm:hover {
+  background: #111;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.mahir-cta-btn.mahir-cta-sm::before,
+.mahir-cta-btn.mahir-cta-sm::after,
+.mahir-cta-btn.mahir-cta-sm > .mahir-cta-h,
+.mahir-cta-btn.mahir-cta-sm > .mahir-cta-h2,
+.mahir-cta-btn.mahir-cta-sm > .mahir-cta-glow {
+  display: none;
+}
+.mahir-nav-contact-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .mahir-nav-contact-desktop {
+    display: inline-flex;
+  }
+}
+.mahir-nav-contact {
+  animation: mahirContactPulse 3.4s ease-in-out infinite;
+}
+.mahir-nav-contact .mahir-cta-label::after {
+  content: "";
+  position: absolute;
+  inset: -0.4rem -1.2rem;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 48%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-16deg);
+  opacity: 0.75;
+  animation: mahirContactSweep 2.8s ease-in-out infinite;
+}
+@keyframes mahirContactPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(125, 211, 252, 0.22);
+  }
+}
+@keyframes mahirContactSweep {
+  0%,
+  44% {
+    transform: translateX(-160%) skewX(-16deg);
+  }
+  72%,
+  100% {
+    transform: translateX(160%) skewX(-16deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mahir-nav-contact,
+  .mahir-nav-contact .mahir-cta-label::after {
+    animation: none;
+  }
+}
+.mahir-cta-btn > .mahir-cta-h2 {
+  /* bottom horizontal streak */
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0)
+  );
+}
+.mahir-cta-btn > .mahir-cta-glow {
+  position: absolute;
+  inset: -24px;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 60%);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.mahir-cta-btn:hover > .mahir-cta-glow {
+  opacity: 1;
+}
+.mahir-cta-btn > .mahir-cta-label {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============ Pre-footer CTA hero card (earth image) ============ */
+.mahir-prefooter-band {
+  background: #000;
+  padding: 0;
+}
+.mahir-prefooter {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 3rem 1rem;
+  border-radius: 0;
+  background-color: rgba(23, 23, 23, 0.6);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), var(--prefooter-bg, none);
+  background-size: cover;
+  background-position: center;
+  border: 0;
+  overflow: hidden;
+  min-height: 14rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 640px) {
+  .mahir-prefooter {
+    padding: 4rem 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .mahir-prefooter {
+    padding: 5rem 0 5rem 0;
+    min-height: 19rem;
+  }
+}
+.mahir-prefooter-grid {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  padding-top: 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .mahir-prefooter-grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 2.5rem;
+  }
+}
+.mahir-prefooter h2 {
+  font-family: var(--mahir-display);
+  font-weight: 300;
+  color: #f4f4f5 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: 2.75rem;
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .mahir-prefooter h2 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .mahir-prefooter h2 {
+    font-size: 4.2rem;
+  }
+}
+.mahir-prefooter p {
+  color: rgba(212, 212, 216, 1) !important;
+  font-size: 0.95rem;
+  max-width: 42ch;
+  margin: 0;
+}
+.mahir-prefooter-mark {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  pointer-events: none;
+  user-select: none;
+  height: min(16vw, 208px);
+  opacity: 0.5;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+@media (max-width: 767px) {
+  .mahir-prefooter-mark {
+    display: none !important;
+  }
+}
+
+/* ============ Testimonials tilted cards ============ */
+.mahir-testi-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  padding: 3rem 1rem;
+}
+.mahir-testi-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.mahir-testi-card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 -30px;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mahir-testi-card.t1 {
+  transform: rotate(-10deg);
+}
+.mahir-testi-card.t2 {
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+.mahir-testi-card.t3 {
+  transform: rotate(8deg);
+}
+.mahir-testi-inner {
+  position: absolute;
+  inset: 1rem;
+  background: #fff;
+  color: #000000;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+  padding: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mahir-testi-inner p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0;
+  color: #000000;
+}
+.mahir-testi-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem;
+}
+.mahir-testi-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #000000;
+}
+.mahir-testi-role {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+@media (max-width: 700px) {
+  .mahir-testi-row {
+    flex-direction: column;
+  }
+  .mahir-testi-card {
+    margin: -20px 0;
+  }
+}
+
+/* ============ Footer ============ */
+.mahir-footer {
+  background: #000;
+  color: #fff;
+  padding: 4rem 1rem 2rem;
+}
+.mahir-footer * {
+  color: inherit;
+}
+.mahir-footer-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .mahir-footer-inner {
+    padding: 0 1rem;
+  }
+}
+.mahir-footer-top {
+  display: grid;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .mahir-footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .mahir-footer-top {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+.mahir-footer h4 {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff !important;
+  margin: 0 0 1rem;
+}
+.mahir-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.mahir-footer ul a,
+.mahir-footer ul li {
+  font-size: 0.85rem !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-decoration: none;
+}
+.mahir-footer ul a:hover {
+  color: #fff !important;
+}
+.mahir-footer-brand-copy {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55) !important;
+  margin: 1rem 0 1.5rem;
+  max-width: 34ch;
+}
+.mahir-footer-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+.mahir-footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: background 0.2s ease;
+}
+.mahir-footer-socials a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff !important;
+}
+.mahir-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .mahir-footer-bottom {
+    flex-direction: row;
+  }
+}
+.mahir-footer-bottom p {
+  font-size: 0.8rem !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  margin: 0;
+}
+.mahir-footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.mahir-footer-bottom-links a {
+  font-size: 0.8rem !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  text-decoration: none;
+}
+.mahir-footer-bottom-links a:hover {
+  color: #fff !important;
+}
+.mahir-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  height: 4rem;
+}
+.mahir-footer-logo img {
+  height: 100%;
+  width: auto;
+}
+.mahir-footer-logo .mahir-footer-logo-text {
+  display: none;
+  font-family: var(--mahir-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.mahir-footer-startup {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.mahir-footer-startup img {
+  height: 2rem;
+  width: auto;
+  filter: invert(1);
+}
+.mahir-footer-copyright-sep {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0;
+}
+.mahir-footer-legal {
+  display: grid;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .mahir-footer-legal {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+}
+.mahir-footer-legal h4 {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff !important;
+  margin: 0 0 0.9rem;
+}
+.mahir-footer-legal p,
+.mahir-footer-legal li {
+  font-size: 0.82rem !important;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin: 0 0 0.7rem;
+}
+.mahir-footer-legal strong {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+}
+.mahir-footer-legal .mahir-footer-disclaimer {
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-style: italic;
+}
+.mahir-footer-products {
+  display: grid;
+  gap: 0.85rem;
+}
+.mahir-footer-products a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.mahir-footer-products a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.mahir-footer-products span:first-child {
+  font-size: 0.9rem;
+  color: #fff !important;
+  font-weight: 500;
+}
+.mahir-footer-products span:last-child {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.mahir-footer-trusted {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem 0 0;
+  align-items: flex-start;
+}
+.mahir-footer-trusted-label {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55) !important;
+  margin: 0;
+}
+.mahir-footer-trusted img {
+  height: 34px;
+  width: auto;
+}
+.mahir-footer-address {
+  padding: 1.5rem 0;
+  font-size: 0.82rem !important;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.mahir-footer-address strong {
+  color: #fff !important;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
