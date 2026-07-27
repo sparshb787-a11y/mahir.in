@@ -42,7 +42,6 @@ function ProductsPage() {
           badge={{ tag: "Products", text: "What we offer" }}
           title="Advisory"
           titleBreak="And Market Insights."
-
           subtitle="Two products. One research team. Every recommendation, screen, and report follows the same standard of clarity, research, and client fit."
         />
 

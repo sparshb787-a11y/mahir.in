@@ -70,7 +70,7 @@ function AboutPage() {
         {/* ===== Hero ===== */}
         <PageHero
           badge={{ tag: "About us", text: "Who We Are" }}
-          title="Built for You "
+          title="Built for You"
           titleBreak="With Clarity."
           subtitle="MAHIR Group is the parent entity behind two powerful products — MAHIR Invest (SEBI-registered investment advisory) and MAHIR Screener (market research and screening platform). Together, we help investors think clearly, decide confidently, and build wealth sustainably."
         />

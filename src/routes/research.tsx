@@ -101,7 +101,7 @@ function ResearchPage() {
         <PageHero
           badge={{ tag: "Research", text: "Market Insights" }}
           title="Research Led."
-          titleBreak="Client Focused. "
+          titleBreak="Client Focused."
           subtitle="Every recommendation, screen, and report follows one standard: will this help the client build wealth over time? Stay informed with our research insights, market analysis, and investment perspectives."
         />
         {/* Insight Cards */}

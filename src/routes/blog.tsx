@@ -123,9 +123,8 @@ function BlogPage() {
       <main>
         <PageHero
           badge={{ tag: "Blogs", text: "Research & Thinking" }}
-          title="Clarity "
+          title="Clarity"
           titleBreak="in Every Note."
-
           subtitle="We believe in transparency. Read our latest market research, what we think about investing, and thoughts on building better systems for investors."
         />
 
