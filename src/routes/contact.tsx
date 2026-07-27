@@ -110,7 +110,7 @@ function ContactPage() {
         <section className="px-5 md:px-12 py-16 md:py-20 mx-auto max-w-[1100px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Info cards on left */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }} className="order-2 lg:order-1">
               <div style={infoCardStyle}>
                 <p style={infoLabelStyle}>Email</p>
                 <p style={infoValueStyle}>contact@mahir.in</p>
@@ -129,7 +129,7 @@ function ContactPage() {
             </div>
 
             {/* Form on right */}
-            <div>
+            <div className="order-1 lg:order-2">
               <form
                 onSubmit={handleSubmit}
                 style={{

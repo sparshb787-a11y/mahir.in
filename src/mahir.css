@@ -1144,6 +1144,14 @@ h4,
 .mahir-force-white a {
   color: #ffffff !important;
 }
+@media (max-width: 639px) {
+  .mahir-force-white.min-h-\[60vh\] {
+    min-height: auto !important;
+  }
+  .mahir-force-white.min-h-\[60vh\] > .min-h-\[60vh\] {
+    min-height: auto !important;
+  }
+}
 
 /* ============ Product screen mock (replaces panel-img) ============ */
 .abstract-panel.has-img > .panel-mock {
