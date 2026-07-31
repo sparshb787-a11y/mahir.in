@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
+import { PageHero } from "@/components/sections";
 import { blogs } from "../data/blogs";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -39,56 +40,35 @@ function BlogPostPage() {
   return (
     <div style={pageStyles.root}>
       <SiteHeader />
-      <main className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-4xl mx-auto w-full">
-        <div className="mb-12 md:mb-16">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-black/40 hover:text-black transition-colors mb-8"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-            Back to Blog
-          </Link>
+      <main>
+        <PageHero
+          badge={{ tag: "Blog", text: "Research & Thinking" }}
+          title={blog.title}
+          subtitle={blog.excerpt}
+        />
+        <section className="px-5 md:px-12 py-16 md:py-20">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-black/40">
+                {new Date(blog.date).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </span>
+              <span className="w-1 h-1 rounded-full bg-black/20" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-black/40">
+                {blog.readTime}
+              </span>
+            </div>
 
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-black bg-black/5 px-3 py-1.5 rounded-full border border-black/10">
-              {new Date(blog.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-widest text-black/40">
-              {blog.readTime}
-            </span>
+            <div
+              className="mahir-blog-content max-w-none text-black"
+              dangerouslySetInnerHTML={{ __html: blog.content }}
+            />
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-semibold text-black leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
-            {blog.title}
-          </h1>
-
-          <p className="text-xl md:text-2xl text-black/50 leading-relaxed">{blog.excerpt}</p>
-        </div>
-
-        <div className="border-t border-black/5 pt-12 md:pt-16">
-          <div
-            className="mahir-blog-content max-w-none text-black"
-            dangerouslySetInnerHTML={{ __html: blog.content }}
-          />
-        </div>
+        </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
       <style>{`
         .mahir-blog-content p {
@@ -102,7 +82,7 @@ function BlogPostPage() {
         }
         .mahir-blog-content h2 {
           font-size: 1.875rem;
-          font-weight: 600;
+          font-weight: 300;
           margin-top: 3.5rem;
           margin-bottom: 1.5rem;
           color: #000;
@@ -114,7 +94,7 @@ function BlogPostPage() {
         }
         .mahir-blog-content h3 {
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 300;
           margin-top: 2.5rem;
           margin-bottom: 1rem;
           color: #000;
@@ -135,7 +115,7 @@ function BlogPostPage() {
           .mahir-blog-content li { font-size: 1.375rem; }
         }
         .mahir-blog-content strong {
-          font-weight: 600;
+          font-weight: 300;
           color: #000;
         }
         .mahir-blog-content a {

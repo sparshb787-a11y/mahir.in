@@ -12,6 +12,7 @@ function markMahirIntroSeen() {
 
 export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     markMahirIntroSeen();
@@ -24,23 +25,25 @@ export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <header className="mahir-floating-nav">
+      <header className={`mahir-floating-nav${scrolled ? " is-scrolled" : ""}`}>
         <div className="mahir-floating-nav-inner">
-          <a
-            href="/mahir.html"
-            className="nav-brand"
-            aria-label="MAHIR home"
-            onClick={markMahirIntroSeen}
-          >
+          <a href="/" className="nav-brand" aria-label="MAHIR home" onClick={markMahirIntroSeen}>
             <span className="nav-logo-chip">
               <img
                 src={mahirTrustLogo}
                 alt="MAHIR"
-                style={{ filter: "none", opacity: 1, visibility: "visible", mixBlendMode: "normal" }}
+                style={{ opacity: 1, visibility: "visible", mixBlendMode: "normal" }}
               />
             </span>
           </a>
@@ -53,9 +56,6 @@ export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
             </Link>
             <Link to="/about" className="nav-link" activeProps={{ className: "active" }}>
               About
-            </Link>
-            <Link to="/team" className="nav-link" activeProps={{ className: "active" }}>
-              Team
             </Link>
             <Link to="/careers" className="nav-link" activeProps={{ className: "active" }}>
               Careers
@@ -95,22 +95,19 @@ export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
         className={`mahir-mobile-drawer${menuOpen ? " open" : ""}`}
         onClick={closeMenu}
       >
-        <Link to="/products" onClick={closeMenu}>
+        <Link to="/products" onClick={closeMenu} activeProps={{ className: "active" }}>
           Products
         </Link>
-        <Link to="/approach" onClick={closeMenu}>
+        <Link to="/approach" onClick={closeMenu} activeProps={{ className: "active" }}>
           Approach
         </Link>
-        <Link to="/about" onClick={closeMenu}>
+        <Link to="/about" onClick={closeMenu} activeProps={{ className: "active" }}>
           About
         </Link>
-        <Link to="/team" onClick={closeMenu}>
-          Team
-        </Link>
-        <Link to="/careers" onClick={closeMenu}>
+        <Link to="/careers" onClick={closeMenu} activeProps={{ className: "active" }}>
           Careers
         </Link>
-        <Link to="/blog" onClick={closeMenu}>
+        <Link to="/blog" onClick={closeMenu} activeProps={{ className: "active" }}>
           Blog
         </Link>
         <Link to="/contact" className="mahir-nav-contact-fancy" onClick={closeMenu}>

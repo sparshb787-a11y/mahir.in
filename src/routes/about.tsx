@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "@/components/sections";
 
 export const Route = createFileRoute("/about")({
@@ -75,9 +75,8 @@ function AboutPage() {
           subtitle="MAHIR Group is the parent entity behind two powerful products — MAHIR Invest (SEBI-registered investment advisory) and MAHIR Screener (market research and screening platform). Together, we help investors think clearly, decide confidently, and build wealth sustainably."
         />
 
-        <div className="px-5 md:px-12 mx-auto max-w-[1100px]">
-          {/* ===== How We Started ===== */}
-          <section className="py-16 md:py-20">
+        {/* ===== How We Started ===== */}
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-12">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
                 How We Started
@@ -111,7 +110,7 @@ function AboutPage() {
           </section>
 
           {/* ===== Key Moments / Timeline ===== */}
-          <section className="py-16 md:py-20">
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="mb-12 text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
                 Our Story
@@ -143,17 +142,18 @@ function AboutPage() {
                     {i % 2 === 0 ? (
                       <>
                         <div className="md:pr-2 md:text-right pl-10 md:pl-0">
-                          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
-                            {m.step}
-                          </span>
-                          <h4
-                            className="mt-2 text-lg font-semibold text-black"
-                            style={{ fontFamily: "Syne, system-ui, sans-serif" }}
-                          >
-                            {m.title}
-                          </h4>
-                          <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
-                          <div className="mt-4 flex items-center gap-2 text-xs text-black/40 md:justify-end">
+                          <div className="bg-white border border-black/5 rounded-2xl p-4 md:p-6 shadow-sm">
+                            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
+                              {m.step}
+                            </span>
+                            <h4
+                              className="mt-2 text-lg font-semibold text-black"
+                              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                            >
+                              {m.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
+                            <div className="mt-4 flex items-center gap-2 text-xs text-black/40 md:justify-end">
                             <svg
                               width="14"
                               height="14"
@@ -171,6 +171,7 @@ function AboutPage() {
                             </svg>
                             <span>{m.date}</span>
                           </div>
+                          </div>
                         </div>
                         <div className="hidden md:block" />
                       </>
@@ -178,17 +179,18 @@ function AboutPage() {
                       <>
                         <div className="hidden md:block" />
                         <div className="md:pl-2 pl-10 md:pl-0">
-                          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
-                            {m.step}
-                          </span>
-                          <h4
-                            className="mt-2 text-lg font-semibold text-black"
-                            style={{ fontFamily: "Syne, system-ui, sans-serif" }}
-                          >
-                            {m.title}
-                          </h4>
-                          <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
-                          <div className="mt-4 flex items-center gap-2 text-xs text-black/40">
+                          <div className="bg-white border border-black/5 rounded-2xl p-4 md:p-6 shadow-sm">
+                            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-black/35">
+                              {m.step}
+                            </span>
+                            <h4
+                              className="mt-2 text-lg font-semibold text-black"
+                              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                            >
+                              {m.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-[1.7] text-black/50">{m.desc}</p>
+                            <div className="mt-4 flex items-center gap-2 text-xs text-black/40">
                             <svg
                               width="14"
                               height="14"
@@ -205,6 +207,7 @@ function AboutPage() {
                               <line x1="3" y1="10" x2="21" y2="10" />
                             </svg>
                             <span>{m.date}</span>
+                          </div>
                           </div>
                         </div>
                       </>
@@ -218,8 +221,53 @@ function AboutPage() {
             </div>
           </section>
 
+          {/* ===== Director ===== */}
+          <section className="px-5 md:px-12 py-16 md:py-20">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-16 mx-auto max-w-[1100px]">
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/yash-new-director.jpg"
+                  alt="Yash Bedmuttha, Director, MAHIR Group"
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                  style={{ aspectRatio: "4/5" }}
+                />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
+                  Director
+                </p>
+                <h2
+                  className="text-2xl font-medium leading-[1.1] tracking-[-.03em] text-black sm:text-3xl lg:text-4xl"
+                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                >
+                  A Steady Hand <span className="text-black/40">Behind Every Recommendation.</span>
+                </h2>
+                <p className="mt-6 text-base leading-[1.8] text-black/55 max-w-xl">
+                  Yash leads <span className="font-syne uppercase">MAHIR</span> with a focus on
+                  building systems that serve clients first. His experience across research,
+                  advisory, and governance shapes the discipline and transparency behind every{" "}
+                  <span className="font-syne uppercase">MAHIR</span> recommendation.
+                </p>
+                <blockquote className="mt-8 text-lg italic tracking-[-.01em] text-black/80">
+                  "We would rather explain a modest recommendation than defend a loud one. That's the only way
+                  this compounds."
+                  <cite className="mt-3 block not-italic text-xs font-semibold uppercase tracking-[.22em] text-black/60">
+                    Yash Bedmuttha, Director
+                  </cite>
+                </blockquote>
+                <Link
+                  to="/contact"
+                  className="mt-8 inline-flex items-center gap-2 bg-black text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase hover:bg-black/90 transition-colors"
+                >
+                  Talk To The Team
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* ===== Who is MAHIR ===== */}
-          <section className="py-16 md:py-20">
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-8">
               <h2
                 className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
@@ -244,7 +292,7 @@ function AboutPage() {
           </section>
 
           {/* ===== Why We Started ===== */}
-          <section className="py-16 md:py-20">
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-8">
               <h2
                 className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
@@ -271,7 +319,7 @@ function AboutPage() {
           </section>
 
           {/* ===== Our Mission ===== */}
-          <section className="py-16 md:py-20">
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-8">
               <h2
                 className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
@@ -292,7 +340,7 @@ function AboutPage() {
           </section>
 
           {/* ===== Our Products ===== */}
-          <section className="py-16 md:py-20">
+          <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-12">
               <h2
                 className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
@@ -305,7 +353,7 @@ function AboutPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="rounded-3xl bg-[#f9fafb] border border-black/5 p-8 md:p-10 flex flex-col text-left">
+              <div className="rounded-3xl bg-white border border-black/5 p-8 md:p-10 flex flex-col text-left">
                 <div className="flex items-center gap-3 mb-4">
                   <svg
                     width="32"
@@ -388,7 +436,7 @@ function AboutPage() {
                 </ul>
               </div>
 
-              <div className="rounded-3xl bg-[#f9fafb] border border-black/5 p-8 md:p-10 flex flex-col text-left">
+              <div className="rounded-3xl bg-white border border-black/5 p-8 md:p-10 flex flex-col text-left">
                 <div className="flex items-center gap-3 mb-4">
                   <svg
                     width="32"
@@ -477,14 +525,14 @@ function AboutPage() {
           </section>
 
           {/* ===== What Makes Us Different ===== */}
-          <section className="py-16 md:py-20 text-center">
+          <section className="px-5 md:px-12 py-16 md:py-20 text-center">
             <h2
               className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-12"
               style={{ fontFamily: "Syne, system-ui, sans-serif" }}
             >
               What Makes Us Different
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div>
                 <div className="w-14 h-14 rounded-full bg-black/5 flex items-center justify-center mx-auto mb-5">
                   <svg
@@ -572,7 +620,7 @@ function AboutPage() {
           </section>
 
           {/* ===== Built to Last ===== */}
-          <section className="py-16 md:py-20 text-center">
+          <section className="px-5 md:px-12 py-16 md:py-20 text-center">
             <h2
               className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
               style={{ fontFamily: "Syne, system-ui, sans-serif" }}
@@ -590,10 +638,8 @@ function AboutPage() {
               Talk to Us
             </Link>
           </section>
-        </div>
-      </main>
-      <SitePreFooterCTA />
-      <SiteFooter />
+        </main>
+        <SiteFooter />
     </div>
   );
 }

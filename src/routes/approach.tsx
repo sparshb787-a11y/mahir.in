@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/approach")({
@@ -94,7 +94,7 @@ const steps = [
   },
   {
     title: "Transparent Reasoning",
-    desc: "Every buy, hold, and exit call comes with a written 'why'. The reasoning is clear today and clear years later. Documented theses, not whispered tips.",
+    desc: "Every buy, hold, and exit recommendation comes with a written 'why'. The reasoning is clear today and clear years later. Documented theses, not whispered tips.",
     icon: (
       <svg
         width="28"
@@ -132,7 +132,7 @@ const steps = [
   },
   {
     title: "Long-Term Focus",
-    desc: "We track results, review our calls, and stay responsible long after a recommendation is made. Compounding rewards patience, and so do we.",
+    desc: "We track results, review our recommendations, and stay responsible long after a recommendation is made. Compounding rewards patience, and so do we.",
     icon: (
       <svg
         width="28"
@@ -158,8 +158,8 @@ function ApproachPage() {
       <main>
         <PageHero
           badge={{ tag: "Approach", text: "How we work" }}
-          title="Research Led"
-          titleBreak="Client Focused"
+          title="Research Led."
+          titleBreak="Client Focused."
           subtitle="Every recommendation, screen, and report follows one standard: is this clear to explain, backed by research, and truly right for the client?"
         />
 
@@ -181,7 +181,7 @@ function ApproachPage() {
           </div>
         </section>
 
-        <section className="px-5 py-16 md:py-20 md:px-12" style={{ background: "#f9fafb" }}>
+        <section className="px-5 py-16 md:py-20 md:px-12">
           <div className="mx-auto max-w-[1100px]">
             <div className="text-center mb-12">
               <h2
@@ -236,7 +236,6 @@ function ApproachPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

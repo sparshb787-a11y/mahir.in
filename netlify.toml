@@ -3,6 +3,11 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/mahir.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
   status = 200

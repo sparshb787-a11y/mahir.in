@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as TeamRouteImport } from './routes/team'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as RefundRouteImport } from './routes/refund'
@@ -30,11 +29,6 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TeamRoute = TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -128,7 +122,6 @@ export interface FileRoutesByFullPath {
   '/refund': typeof RefundRoute
   '/research': typeof ResearchRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
@@ -147,7 +140,6 @@ export interface FileRoutesByTo {
   '/refund': typeof RefundRoute
   '/research': typeof ResearchRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
@@ -167,7 +159,6 @@ export interface FileRoutesById {
   '/refund': typeof RefundRoute
   '/research': typeof ResearchRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
@@ -188,7 +179,6 @@ export interface FileRouteTypes {
     | '/refund'
     | '/research'
     | '/services'
-    | '/team'
     | '/terms'
     | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -207,7 +197,6 @@ export interface FileRouteTypes {
     | '/refund'
     | '/research'
     | '/services'
-    | '/team'
     | '/terms'
     | '/blog/$slug'
   id:
@@ -226,7 +215,6 @@ export interface FileRouteTypes {
     | '/refund'
     | '/research'
     | '/services'
-    | '/team'
     | '/terms'
     | '/blog/$slug'
   fileRoutesById: FileRoutesById
@@ -246,7 +234,6 @@ export interface RootRouteChildren {
   RefundRoute: typeof RefundRoute
   ResearchRoute: typeof ResearchRoute
   ServicesRoute: typeof ServicesRoute
-  TeamRoute: typeof TeamRoute
   TermsRoute: typeof TermsRoute
 }
 
@@ -257,13 +244,6 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/team': {
-      id: '/team'
-      path: '/team'
-      fullPath: '/team'
-      preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -399,7 +379,6 @@ const rootRouteChildren: RootRouteChildren = {
   RefundRoute: RefundRoute,
   ResearchRoute: ResearchRoute,
   ServicesRoute: ServicesRoute,
-  TeamRoute: TeamRoute,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport

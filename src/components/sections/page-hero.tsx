@@ -26,15 +26,11 @@ export function PageHero({
             </div>
           )}
           <h1 className="mahir-page-hero-title">
-            <span className="mahir-page-hero-title-main">{title}</span>
-            {titleBreak && (
-              <>
-                <br className="mahir-page-hero-br" />
-                <span className="mahir-page-hero-title-accent">{titleBreak}</span>
-              </>
-            )}
+            {title}{titleBreak ? ` ${titleBreak}` : ''}
           </h1>
-          {subtitle && <p className="mahir-page-hero-sub">{subtitle}</p>}
+          {subtitle && (
+            <p className="mahir-page-hero-desc">{subtitle}</p>
+          )}
         </div>
       </section>
     </>

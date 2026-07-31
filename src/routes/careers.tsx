@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/careers")({
@@ -76,8 +76,8 @@ function CareersPage() {
         />
 
         {/* No Openings Card */}
-        <section className="px-5 md:px-12 py-16 md:py-20 max-w-[1100px] mx-auto text-center">
-          <div className="rounded-3xl bg-white border border-black/[0.06] p-8 md:p-12 shadow-sm">
+        <section className="px-5 md:px-12 py-16 md:py-20 text-center">
+          <div className="rounded-3xl bg-white border border-black/[0.06] p-8 md:p-12 shadow-sm mx-auto max-w-[1100px]">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 rounded-full bg-black/[0.04] flex items-center justify-center">
                 <svg
@@ -251,7 +251,6 @@ function CareersPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/services")({
@@ -47,7 +47,7 @@ function ServicesPage() {
 
         <section className="px-5 py-16 md:py-20 md:px-12">
           <div className="mx-auto max-w-[1100px] grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-3xl overflow-hidden border border-black/5 bg-[#f9fafb] flex flex-col">
+            <div className="rounded-3xl overflow-hidden border border-black/5 bg-white flex flex-col">
               <div className="p-8 md:p-10 flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black/5">
@@ -138,7 +138,7 @@ function ServicesPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://mahirinvest.com"
+                  href="https://mahirscreener.com"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/90 transition-colors"
@@ -156,17 +156,9 @@ function ServicesPage() {
                   </svg>
                 </a>
               </div>
-              <div className="aspect-[16/7] overflow-hidden">
-                <img
-                  src="/mahir-invest-app.jpg"
-                  alt="MAHIR Invest"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden border border-black/5 bg-[#f9fafb] flex flex-col">
+            <div className="rounded-3xl overflow-hidden border border-black/5 bg-white flex flex-col">
               <div className="p-8 md:p-10 flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black/5">
@@ -258,7 +250,7 @@ function ServicesPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://screener.mahir.in"
+                  href="https://www.mahirscreener.com"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/90 transition-colors"
@@ -275,14 +267,6 @@ function ServicesPage() {
                     <path d="M7 17l9.2-9.2M17 17V7H7" />
                   </svg>
                 </a>
-              </div>
-              <div className="aspect-[16/7] overflow-hidden">
-                <img
-                  src="/mahir-screener-app.jpg"
-                  alt="MAHIR Screener"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
               </div>
             </div>
           </div>
@@ -309,7 +293,6 @@ function ServicesPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

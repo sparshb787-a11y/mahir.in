@@ -1,5 +1,5 @@
 import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 import { blogs } from "../data/blogs";
 
@@ -71,7 +71,7 @@ const blogCardCss = `
 }
 .mahir-blog-card-readtime {
   font-size: .6875rem;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: rgba(11,18,32,0.4);
@@ -81,7 +81,7 @@ const blogCardCss = `
 }
 .mahir-blog-card-title {
   font-family: "Syne", system-ui, -apple-system, sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.25rem;
   line-height: 1.25;
   color: #000000;
@@ -97,9 +97,8 @@ const blogCardCss = `
 .mahir-blog-card-link {
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.06);
   font-size: .8125rem;
-  font-weight: 500;
+  font-weight: 300;
   color: #000000;
   display: flex;
   align-items: center;
@@ -167,7 +166,6 @@ function BlogPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

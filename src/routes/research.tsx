@@ -7,7 +7,7 @@ import {
   FileText,
   Lightbulb,
 } from "lucide-react";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/research")({
@@ -116,7 +116,7 @@ function ResearchPage() {
                   </div>
                   <h3 className="mb-2 text-[1rem] font-medium text-white">{item.title}</h3>
                   <p className="text-[0.875rem] leading-[1.7] text-white/55 flex-1">{item.desc}</p>
-                  <div className="mt-4 pt-4 border-t border-black/[0.06]">
+                  <div className="mt-4 pt-4">
                     <span className="text-[0.8125rem] font-medium text-white/70 cursor-pointer hover:text-white transition-colors">
                       {item.date} →
                     </span>
@@ -159,7 +159,6 @@ function ResearchPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

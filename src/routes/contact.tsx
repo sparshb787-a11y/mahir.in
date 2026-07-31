@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { SiteHeader, SiteFooter, SitePreFooterCTA, pageStyles } from "../components/layout";
+import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
 import { PageHero } from "../components/sections";
 
 export const Route = createFileRoute("/contact")({
@@ -107,8 +107,8 @@ function ContactPage() {
           subtitle="We'd love to hear from you. Tell us about your goals, your horizon and your risk appetite. Our team reads every message."
         />
 
-        <section className="px-5 md:px-12 py-16 md:py-20 mx-auto max-w-[1100px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <section className="px-5 md:px-12 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mx-auto max-w-[1100px]">
             {/* Info cards on left */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }} className="order-2 lg:order-1">
               <div style={infoCardStyle}>
@@ -207,8 +207,8 @@ function ContactPage() {
         </section>
 
         {/* Working Hours - at bottom without box */}
-        <section className="px-5 md:px-12 py-16 md:py-20 mx-auto max-w-[1100px]">
-          <div className="text-center">
+        <section className="px-5 md:px-12 py-16 md:py-20">
+          <div className="text-center mx-auto max-w-[1100px]">
             <p style={infoLabelStyle}>Working Hours</p>
             <p style={{ fontSize: ".95rem", color: "#000", lineHeight: 1.6, marginTop: ".5rem" }}>
               Monday — Saturday: 10:00 AM to 6:00 PM IST
@@ -219,7 +219,6 @@ function ContactPage() {
           </div>
         </section>
       </main>
-      <SitePreFooterCTA />
       <SiteFooter />
     </div>
   );

@@ -126,7 +126,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/circle-favicon.png", type: "image/png" },
       { rel: "preload", as: "image", href: "/mahir-mark-white.png" },
       { rel: "preload", as: "image", href: "/mahir-trust-leads.svg" },
-      { rel: "preload", as: "image", href: "/earth-hero.jpg" },
     ],
   }),
   shellComponent: RootShell,
@@ -142,7 +141,9 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body style={{ background: "#ffffff" }}>
-        {children}
+        <div className="mahir-page-wrap">
+          {children}
+        </div>
         <Scripts />
       </body>
     </html>

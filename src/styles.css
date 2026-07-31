@@ -156,3 +156,40 @@
 .font-syne {
   font-family: "Syne", sans-serif !important;
 }
+
+h1, h2, h3, h4, h5, h6, .font-semibold, .font-bold, .font-medium {
+  font-weight: 300 !important;
+}
+
+/* Content wrapper — constrains everything inside the side lines */
+.mahir-page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .mahir-page-wrap {
+    max-width: 100%;
+  }
+}
+
+/* Footer and prefooter break out of the wrapper to span full width */
+.mahir-footer,
+.mahir-prefooter-band {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 201;
+}
+
+/* Section separation line between adjacent sections (React pages only) */
+section + section {
+  border-top: none;
+}
+@media (max-width: 767px) {
+  section + section {
+    border-top: none;
+  }
+}

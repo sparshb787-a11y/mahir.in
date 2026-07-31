@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
+import { LegalPageShell } from "../components/layout";
 
 export const Route = createFileRoute("/cancellation")({
   component: CancellationPolicy,
@@ -31,123 +31,114 @@ export const Route = createFileRoute("/cancellation")({
 });
 
 function CancellationPolicy() {
+  const meta = (
+    <div className="border border-black/5 rounded-2xl p-6 md:p-8 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            Company Name
+          </span>
+          <p className="text-black mt-1">MAHIR Investment Advisers Private Limited</p>
+        </div>
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            CIN
+          </span>
+          <p className="text-black mt-1">U66190PN2025PTC244016</p>
+        </div>
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            SEBI Reg. No.
+          </span>
+          <p className="text-black mt-1">INA000022668</p>
+        </div>
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            Registered Office
+          </span>
+          <p className="text-black mt-1">
+            PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad East, Pune 411019, Maharashtra
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div style={pageStyles.root}>
-      <SiteHeader />
-      <main className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-4xl mx-auto w-full">
-        <h1 className="text-4xl md:text-5xl font-semibold text-[#000000] leading-[1.05] tracking-tight mb-4">
-          CANCELLATION POLICY
-        </h1>
-        <h2 className="text-xl md:text-2xl text-[#5b6067] mb-8">
-          Advisory Engagement Cancellation & Cooling-Off Framework
-        </h2>
-
-        <div className="prose prose-lg max-w-none text-[#000000]">
-          <div className="bg-gray-50 p-6 rounded-lg mb-8 text-sm">
-            <p>
-              <strong>Company Name:</strong> MAHIR Investment Advisers Private Limited
-            </p>
-            <p>
-              <strong>CIN:</strong> U66190PN2025PTC244016
-            </p>
-            <p>
-              <strong>SEBI Reg. No.:</strong> INA000022668
-            </p>
-            <p>
-              <strong>SEBI Reg. Type:</strong> Investment Adviser (Non-Individual)
-            </p>
-            <p>
-              <strong>Registration Validity:</strong> June 01, 2026 — Perpetual
-            </p>
-            <p>
-              <strong>Registered Office:</strong> PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad
-              East, Pune 411019, Maharashtra
-            </p>
-            <p>
-              <strong>Website:</strong> www.mahir.in
-            </p>
-            <p>
-              <strong>Principal Officer:</strong> Yash Mahavir Bedmuttha (Phone No.: +91 9084945151)
-            </p>
-            <p>
-              <strong>Compliance Officer:</strong> Bharat Makkar (Phone No.: +91 9084945151)
-            </p>
-            <p>
-              <strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> June 01, 2026
-            </p>
-          </div>
-
-          <h3 className="text-2xl font-semibold mt-10 mb-4">1. INTRODUCTION</h3>
-          <p className="mb-4">
+    <LegalPageShell
+      title="Cancellation Policy"
+      subtitle="Advisory Engagement Cancellation & Cooling-Off Framework"
+      meta={meta}
+    >
+      <div className="space-y-10">
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            1. Introduction
+          </h3>
+          <p className="text-black/55 leading-[1.8] mb-4">
             This Cancellation Policy ('Policy') governs the terms under which clients of MAHIR
             Investment Advisers Private Limited ('MIA (MAHIR Invest)', 'Company', 'we', 'us', 'our')
             may cancel their advisory engagement. This Policy is issued in compliance with the SEBI
             (Investment Advisers) Regulations, 2013 ('IA Regulations'), applicable SEBI Circulars,
             the Consumer Protection Act, 2019, and the Information Technology Act, 2000.
           </p>
-          <p className="mb-4">
+          <p className="text-black/55 leading-[1.8]">
             This Policy shall be read in conjunction with the Refund Policy, Terms and Conditions,
             Client Agreement, Privacy Policy, and SEBI Disclosures, all of which are incorporated
             herein by reference and form an integral part of this Agreement.
           </p>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">2. DEFINITIONS</h3>
-          <p className="mb-4">
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            2. Definitions
+          </h3>
+          <p className="text-black/55 leading-[1.8] mb-4">
             In this Policy, the following expressions shall have the meanings assigned to them
             below:
           </p>
-          <ul className="list-disc pl-6 space-y-2 mb-6">
+          <ul className="list-disc pl-6 space-y-2 text-black/55">
             <li>
-              <strong>"Advisory Fee"</strong> means the fee charged by MIA (MAHIR Invest) for
-              rendering investment advisory services, whether on a fixed fee basis or as a
-              percentage of Assets Under Advice (AUA), as agreed upon in the Client Agreement.
+              <strong className="text-black">"Advisory Fee"</strong> means the fee charged by MIA for rendering investment
+              advisory services, whether on a fixed fee basis or as a percentage of Assets Under
+              Advice (AUA), as agreed upon in the Client Agreement.
             </li>
             <li>
-              <strong>"Subscription Plan"</strong> means any periodic (monthly, quarterly,
-              semi-annual, or annual) advisory service plan offered by MIA (MAHIR Invest) through
-              the Platform.
+              <strong className="text-black">"Subscription Plan"</strong> means any periodic (monthly, quarterly,
+              semi-annual, or annual) advisory service plan offered by MIA through the Platform.
             </li>
             <li>
-              <strong>"Cooling-Off Period"</strong> means the initial period following the execution
+              <strong className="text-black">"Cooling-Off Period"</strong> means the initial period following the execution
               of the Client Agreement during which the Client may terminate the engagement without
               penalty, as prescribed under SEBI IA Regulations.
             </li>
             <li>
-              <strong>"Client Agreement"</strong> means the formal agreement executed between MIA
-              (MAHIR Invest) and the Client as mandated under SEBI IA Regulations, 2013.
-            </li>
-            <li>
-              <strong>"Platform"</strong> collectively means the MIA (MAHIR Invest) mobile
-              application and website (www.mahir.in) and all associated digital interfaces.
-            </li>
-            <li>
-              <strong>"Services"</strong> means investment advisory services, portfolio guidance,
-              financial planning content, risk profiling, and any other offerings provided by MIA
-              (MAHIR Invest) through the Platform.
-            </li>
-            <li>
-              <strong>"Applicable Laws"</strong> means the SEBI Act, 1992; SEBI (IA) Regulations,
-              2013; SEBI Circulars; Consumer Protection Act, 2019; Information Technology Act, 2000;
-              and all other applicable laws, rules, and regulations of India in force from time to
-              time.
+              <strong className="text-black">"Client Agreement"</strong> means the formal agreement executed between MIA
+              and the Client as mandated under SEBI IA Regulations, 2013.
             </li>
           </ul>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">3. RIGHT TO CANCEL</h3>
-          <p className="mb-4">
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            3. Right to Cancel
+          </h3>
+          <p className="text-black/55 leading-[1.8] mb-4">
             Clients can cancel their subscription at any time during the subscription period by
             providing a written request to compliance@mahir.in or through the Platform
             settings.
           </p>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">
-            4. CANCELLATION BY MIA (MAHIR Invest)
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            4. Cancellation by MIA (MAHIR Invest)
           </h3>
-          <p className="mb-4">
-            MIA (MAHIR Invest) reserves the right to cancel or terminate the advisory engagement
+          <p className="text-black/55 leading-[1.8] mb-4">
+            MIA reserves the right to cancel or terminate the advisory engagement
             with a Client under the following circumstances:
           </p>
-          <ul className="list-disc pl-6 space-y-2 mb-6">
+          <ul className="list-disc pl-6 space-y-2 text-black/55">
             <li>
               Non-compliance by the Client with KYC/AML requirements or provision of
               false/misleading information.
@@ -158,7 +149,7 @@ function CancellationPolicy() {
             </li>
             <li>
               Client's conduct that is in violation of Applicable Laws or poses a regulatory risk to
-              MIA (MAHIR Invest).
+              MIA.
             </li>
             <li>
               Regulatory direction or order from SEBI or any competent authority requiring cessation
@@ -166,54 +157,82 @@ function CancellationPolicy() {
             </li>
             <li>Any event of force majeure making continued advisory engagement impracticable.</li>
           </ul>
-          <p className="mb-4">
-            In the event of cancellation by MIA (MAHIR Invest), the Client shall be given at least
+          <p className="text-black/55 leading-[1.8] mt-4">
+            In the event of cancellation by MIA, the Client shall be given at least
             30 (thirty) days' prior written notice (except in cases of regulatory directives or
             fraud), and a pro-rata refund of any unused prepaid fees shall be processed in
             accordance with the Refund Policy.
           </p>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">5. AMENDMENTS TO THIS POLICY</h3>
-          <p className="mb-4">
-            MIA (MAHIR Invest) reserves the right to amend, modify, or update this Policy at any
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            5. Amendments to This Policy
+          </h3>
+          <p className="text-black/55 leading-[1.8]">
+            MIA reserves the right to amend, modify, or update this Policy at any
             time. All amendments shall be published on the Platform and communicated to registered
             Clients via email at least 15 (fifteen) days prior to the update taking effect.
             Continued use of the Platform after publication of amendments constitutes your
-            irrevocable acceptance of the amended Policy. If you do not agree with the amended
-            Policy, you must terminate your engagement with MIA (MAHIR Invest) by providing 30 days
-            written notice to compliance@mahir.in.
+            irrevocable acceptance of the amended Policy.
           </p>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">6. CONTACT INFORMATION</h3>
-          <p className="mb-4">
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            6. Contact Information
+          </h3>
+          <p className="text-black/55 leading-[1.8] mb-6">
             For cancellation requests or any questions regarding this Policy, please contact:
           </p>
-          <div className="bg-gray-50 p-6 rounded-lg mb-8">
-            <p>
-              <strong>Compliance Officer:</strong> Bharat Makkar
-            </p>
-            <p>
-              <strong>Email:</strong> compliance@mahir.in
-            </p>
-            <p>
-              <strong>Phone:</strong> +91 9084945151
-            </p>
-            <p className="mt-4">
-              <strong>Registered Office:</strong> MAHIR Investment Advisers Private Limited
-            </p>
-            <p>PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad East, Pune 411019, Maharashtra</p>
-            <p className="mt-4">
-              <strong>Resolution Timeline:</strong> Within 30 days from date of receipt of complaint
-            </p>
-            <p>
-              <strong>Grievance Escalation:</strong> If your cancellation grievance is not resolved
-              within 30 days, you may escalate it to SEBI SCORES (scores.gov.in) or approach the
-              competent courts at Pune, Maharashtra, India.
-            </p>
+          <div className="border border-black/5 rounded-2xl p-6 md:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Compliance Officer
+                </span>
+                <p className="text-black mt-1">Bharat Makkar</p>
+              </div>
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Email
+                </span>
+                <p className="text-black mt-1">compliance@mahir.in</p>
+              </div>
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Phone
+                </span>
+                <p className="text-black mt-1">+91 9084945151</p>
+              </div>
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Registered Office
+                </span>
+                <p className="text-black mt-1">
+                  PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad East, Pune 411019, Maharashtra
+                </p>
+              </div>
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Resolution Timeline
+                </span>
+                <p className="text-black mt-1">Within 30 days from date of receipt of complaint</p>
+              </div>
+              <div>
+                <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+                  Grievance Escalation
+                </span>
+                <p className="text-black mt-1">
+                  If your cancellation grievance is not resolved within 30 days, you may escalate it
+                  to SEBI SCORES (scores.gov.in) or approach the competent courts at Pune,
+                  Maharashtra, India.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </main>
-      <SiteFooter />
-    </div>
+        </section>
+      </div>
+    </LegalPageShell>
   );
 }

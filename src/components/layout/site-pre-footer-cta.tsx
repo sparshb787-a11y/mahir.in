@@ -1,13 +1,9 @@
-import earthHeroImage from "../../assets/images/backgrounds/earth-hero.jpg";
 import { Link } from "@tanstack/react-router";
 
 export function SitePreFooterCTA() {
   return (
     <div className="mahir-prefooter-band">
-      <section
-        className="mahir-prefooter"
-        style={{ "--prefooter-bg": `url(${earthHeroImage})` } as React.CSSProperties}
-      >
+      <section className="mahir-prefooter">
         <div className="mahir-prefooter-grid">
           <div>
             <h2>Building Institutions That Serve People First.</h2>

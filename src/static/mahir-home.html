@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAHIR Group | SEBI Registered Investment Advisory | Research Led Advice & Market Intelligence</title>
+<meta name="description" content="MAHIR is a SEBI-registered investment advisory (INA000022668) offering research-led stock recommendations and market intelligence through MAHIR Invest and MAHIR Screener.">
+<meta name="keywords" content="SEBI registered investment advisor, RIA India, stock advisory, investment advisory Pune, MAHIR Invest, MAHIR Screener, equity research, market intelligence">
+<meta name="author" content="MAHIR Investment Advisers Private Limited">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://mahir.in/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MAHIR">
+<meta property="og:title" content="MAHIR Group | SEBI Registered Investment Advisory">
+<meta property="og:description" content="Research-led investment advisory and market intelligence, built quietly and built to last.">
+<meta property="og:url" content="https://mahir.in/">
+<meta property="og:image" content="https://mahir.in/mahir-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MAHIR Group | SEBI Registered Investment Advisory">
+<meta name="twitter:description" content="Research-led investment advisory and market intelligence.">
+<meta name="twitter:image" content="https://mahir.in/mahir-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/chrome.css">
+<link rel="icon" href="/circle-favicon.png" type="image/png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "MAHIR Investment Advisers Private Limited",
+  "alternateName": "MAHIR",
+  "url": "https://mahir.in/",
+  "logo": "https://mahir.in/mahir-logo.png",
+  "image": "https://mahir.in/mahir-logo.png",
+  "description": "SEBI-registered investment advisory offering research-led stock recommendations and market intelligence.",
+  "telephone": "+91",
+  "email": "hello@mahir.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kasturi Market PL G/A-9/1 Shop 1, MIDC G Nr Moris SO, Chinchwad East",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411019",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://linkedin.com/company/mahirinvest",
+    "https://instagram.com/mahirinvest",
+    "https://x.com/mahirinvest",
+    "https://facebook.com/mahirinvest"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "SEBI RIA Registration",
+    "value": "INA000022668"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MAHIR",
+  "url": "https://mahir.in/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mahir.in/?q={search_term_string}",
+    "name": "Search MAHIR",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+.font-syne { font-family: 'Syne', sans-serif !important; }
+:root {
+  --primary: #000000;
+  --primary-deep: #000000;
+  --ink: #000000;
+  --muted: #56606E;
+  --border: #E4E7EE;
+  --soft: #F5F7FB;
+  --paper: #ffffff;
+  --mahir-display: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-body: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-mono: "Syne", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #ffffff; }
+body {
+  margin: 0;
+  font-family: var(--mahir-body);
+  background: #ffffff;
+  color: #111111;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+.liquid-glass-panel {
+  background: rgba(10, 12, 20, 0.46);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.skeuomorphic-btn {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 8px;
+  transition: transform 0.2s cubic-bezier(.22,1,.36,1), background .2s cubic-bezier(.22,1,.36,1);
+  position: relative;
+}
+.skeuomorphic-btn:hover { background: #f0f0f0; transform: translateY(-1px); }
+.skeuomorphic-btn:active { background: #e5e5e5; transform: translateY(0); }
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23noise)' opacity='0.75'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+.technical-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 8.333vw 8.333vw;
+}
+.blend-text { color: #fff; }
+.nav-link { position: relative; }
+.state-line { display: inline-block; will-change: transform, opacity; }
+@media (max-width: 767px) { .technical-grid { background-size: 28vw 28vw; } }
+
+.section-kicker {
+  font-family: var(--mahir-mono);
+  font-size: .7rem;
+  font-weight: 300;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.section-title {
+  font-size: clamp(2.5rem, 7vw, 6.9rem);
+  line-height: .94;
+  letter-spacing: -.045em;
+  font-weight: 300;
+}
+.soft-copy { color: var(--muted); font-size: clamp(1rem, 1.3vw, 1.12rem); line-height: 1.75; }
+.reveal-up { animation: revealUpIn 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+@keyframes revealUpIn { from { opacity: 0; transform: translate3d(0, 24px, 0); } to { opacity: 1; transform: none; } }
+.model-panel { width: min(84vw, 82rem); flex-shrink: 0; }
+@media (max-width: 767px) { .model-panel { width: 88vw; } }
+
+.signature-card {
+  position: sticky; top: 6.5rem; overflow: hidden;
+  border-radius: 14px; border: 1px solid var(--border);
+  background: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+.signature-card + .signature-card { margin-top: 1.25rem; }
+.spec-chip {
+  display: inline-flex; align-items: center; border-radius: 8px;
+  border: 1px solid var(--border); padding: .55rem .8rem;
+  font-family: var(--mahir-mono); font-size: .66rem; font-weight: 300;
+  letter-spacing: .12em; text-transform: uppercase; color: #57605a;
+  background: rgba(255,255,255,.72);
+}
+.signal-band { background: #000000; color: white; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.signal-track { display: flex; gap: 2.5rem; width: max-content; padding: 1.1rem 1.5rem; white-space: nowrap; will-change: transform; }
+.signal-item { font-family: var(--mahir-mono); font-size: .72rem; font-weight: 300; letter-spacing: .24em; text-transform: uppercase; color: rgba(255,255,255,.78); }
+.signal-dot { opacity: .45; }
+
+.build-progress-shell { height: 1px; background: #dcded9; overflow: hidden; }
+
+.pill-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px; border: 1px solid var(--border);
+  padding: .9rem 1.25rem; font-family: var(--mahir-mono);
+  font-size: .68rem; font-weight: 300; letter-spacing: .16em; text-transform: uppercase;
+  transition: transform .25s cubic-bezier(.22,1,.36,1), background .25s ease, color .25s ease, border-color .25s ease;
+  color: var(--ink); background: #fff;
+}
+.pill-btn:hover { transform: translateY(-2px); }
+.pill-dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+.pill-dark:hover { background: #000; }
+.pill-accent { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* Scroll-dark cinematic sections */
+.scroll-dark-section { position: relative; overflow: hidden; transition: background-color .5s ease, color .5s ease; }
+.scroll-dark-section::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 18%, rgba(0,0,0,.16), transparent 34%), linear-gradient(180deg, #000000 0%, #000000 100%);
+  opacity: 0; pointer-events: none; transition: opacity .45s ease; z-index: 0;
+}
+.scroll-dark-section > * { position: relative; z-index: 1; }
+.scroll-dark-section.is-dark { background: #000000 !important; color: #f1f3f8; }
+.scroll-dark-section.is-dark::before { opacity: 1; }
+.scroll-dark-section.is-dark::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.055) 1px, transparent 1px);
+  background-size: 8.333vw 8.333vw;
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+}
+.scroll-dark-section.is-dark .section-kicker { color: #6f95ff; }
+.scroll-dark-section.is-dark .soft-copy,
+.scroll-dark-section.is-dark p,
+.scroll-dark-section.is-dark .text-\[\#747a76\],
+.scroll-dark-section.is-dark .text-\[\#6f746f\],
+.scroll-dark-section.is-dark .text-\[\#969b97\],
+.scroll-dark-section.is-dark .text-\[\#9b9b9b\],
+.scroll-dark-section.is-dark .text-\[\#8c918d\],
+.scroll-dark-section.is-dark .text-\[\#9a9f9a\] { color: rgba(241,243,248,.62) !important; }
+.scroll-dark-section.is-dark h2,
+.scroll-dark-section.is-dark h3,
+.scroll-dark-section.is-dark h4,
+.scroll-dark-section.is-dark .text-\[\#111\],
+.scroll-dark-section.is-dark .text-\[\#303833\] { color: #f1f3f8 !important; }
+.scroll-dark-section.is-dark .text-\[\#b9bbb7\] { color: rgba(241,243,248,.34) !important; }
+.scroll-dark-section.is-dark .border-\[\#d8dad5\],
+.scroll-dark-section.is-dark .border-\[\#dcded9\],
+.scroll-dark-section.is-dark .border-\[\#e0e1dc\],
+.scroll-dark-section.is-dark .border-\[\#e2e4df\],
+.scroll-dark-section.is-dark .border-\[\#e4e5e1\],
+.scroll-dark-section.is-dark .border-\[\#303833\] { border-color: rgba(241,243,248,.16) !important; }
+.scroll-dark-section.is-dark .bg-white,
+.scroll-dark-section.is-dark .bg-white\/70,
+.scroll-dark-section.is-dark .bg-white\/75,
+.scroll-dark-section.is-dark .bg-\[\#f7f7f7\],
+.scroll-dark-section.is-dark .bg-\[\#f4f5f1\],
+.scroll-dark-section.is-dark .signature-card,
+.scroll-dark-section.is-dark .process-panel { background-color: rgba(255,255,255,.055) !important; color: #f1f3f8; }
+.scroll-dark-section.is-dark .spec-chip,
+.scroll-dark-section.is-dark .pill-btn { border-color: rgba(241,243,248,.18); background: rgba(241,243,248,.06); color: rgba(241,243,248,.72); }
+.scroll-dark-section.is-dark .pill-accent { background: var(--primary); border-color: var(--primary); color: #fff; }
+.scroll-dark-section .dark-transition-label {
+  position: absolute; right: 1.5rem; top: 1.5rem; z-index: 2;
+  font-family: var(--mahir-mono); font-size: .62rem; font-weight: 300; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(0,0,0,.32); opacity: 0; transform: translateY(8px); pointer-events: none;
+}
+.scroll-dark-section.is-dark .dark-transition-label { color: rgba(241,243,248,.32); }
+
+body, button, a, input, textarea, select { font-family: var(--mahir-body); }
+h1, h2, h3, h4, .section-title, #state0 h1 {
+  font-family: var(--mahir-display) !important; font-weight: 300 !important; letter-spacing: -.04em !important; line-height: 1.04 !important;
+}
+.nav-wordmark { font-family: var(--mahir-display) !important; font-weight: 300 !important; letter-spacing: .28em !important; }
+.section-kicker, .pill-btn, .spec-chip, .signal-item, .process-index, .loader-micro,
+.dark-transition-label, header nav a, .nav-link, .text-\[0\.65rem\], .text-\[0\.68rem\] {
+  font-family: var(--mahir-mono) !important; font-weight: 300 !important; letter-spacing: .14em !important; text-transform: uppercase;
+}
+.soft-copy, p, li { color: var(--muted); line-height: 1.65; letter-spacing: -.005em; }
+.pill-btn, .skeuomorphic-btn { border-radius: 8px !important; box-shadow: none !important; }
+.signature-card, .process-panel, .rounded-2xl, .rounded-xl { border-radius: 12px !important; }
+section.bg-white, #system, #range, #signatures, #models, #contact { background-color: #ffffff !important; }
+#process { background-color: var(--soft) !important; }
+
+.process-step { position: relative; border-top: 1px solid #dcded9; padding-top: 1.5rem; opacity: .42; transform: translate3d(0, 14px, 0); }
+.process-index { font-size: .72rem; font-weight: 300; letter-spacing: .22em; text-transform: uppercase; color: #8c918d; }
+
+/* Abstract "systems" artwork panels, replace photography with brand-consistent generative visuals */
+.abstract-panel {
+  position: relative; overflow: hidden; background: linear-gradient(150deg, #0d1a3d 0%, #14265C 46%, #0b1330 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.abstract-panel::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.abstract-panel::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 22% 18%, rgba(0,0,0,.35), transparent 40%), radial-gradient(circle at 82% 88%, rgba(0,0,0,.35), transparent 45%);
+}
+.abstract-panel .abstract-icon {
+  position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
+  width: 5.5rem; height: 5.5rem; border-radius: 999px; border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06); backdrop-filter: blur(6px);
+}
+.abstract-panel .abstract-icon i { width: 2.1rem; height: 2.1rem; color: #dfe7ff; }
+.abstract-panel .abstract-tag {
+  position: absolute; z-index: 1; font-family: var(--mahir-mono); font-size: .62rem; font-weight: 300;
+  letter-spacing: .18em; text-transform: uppercase; color: rgba(223,231,255,.55);
+}
+
+/* Fixed hero height */
+:root { --hero-stage-max-height: 920px; }
+#productWrap { width: min(100vmin, 980px) !important; height: min(100vmin, 980px) !important; }
+@media (min-width: 1440px) { #productWrap { width: 940px !important; height: 940px !important; } }
+
+/* Full-bleed hero card — flush to the top, spans the full width, curved corners visible */
+:root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 2.25rem; }
+#stage {
+  width: 100vw !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  margin-left: calc(50% - 50vw) !important;
+  border-radius: var(--hero-radius) !important;
+}
+@media (max-width: 767px) {
+  :root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 1.6rem; }
+  #stage { height: auto !important; max-height: none !important; }
+}
+
+/* Header logo lockup, no white chip; native logo, larger */
+.nav-brand { display: inline-flex; align-items: center; gap: .7rem; color: #fff; text-decoration: none; }
+.nav-logo-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 3rem; width: auto; background: transparent; flex: 0 0 auto; padding: 0;
+}
+.nav-logo-chip img { height: 100%; width: auto; object-fit: contain; display: block; filter: invert(1) !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+footer .nav-logo-chip img, footer img[alt="MAHIR"] { filter: invert(1) !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+@media (max-width: 640px) { .nav-logo-chip { height: 2.4rem; } }
+
+/* Loader */
+.load-overlay { position: fixed; inset: 0; z-index: 9999; background: #ffffff; overflow: hidden; pointer-events: none; }
+.loader-panel {
+  position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center;
+  width: 100vw; height: 0vh; overflow: hidden; background: #ffffff; transform: translate(-50%, -50%);
+  will-change: width, height, transform, opacity, background-color;
+}
+.loader-logo { position: relative; width: min(22vmin, 12rem); height: min(22vmin, 12rem); opacity: 0; transform: scale(.84); display: flex; align-items: center; justify-content: center; background: transparent; padding: 0; transform-origin: center center; }
+.loader-logo img { width: 100%; height: 100%; object-fit: contain; }
+
+.loader-micro { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); color: rgba(0,0,0,.55); font-family: var(--mahir-mono); font-size: .68rem; font-weight: 300; letter-spacing: .28em; text-transform: uppercase; opacity: 0; }
+.loader-capsule { position: absolute; left: 50%; top: 50%; width: 4.5rem; height: 1.05rem; border-radius: 999px; background: #000000; transform: translate(-50%, -50%) scaleX(.25); opacity: 0; }
+@media (max-width: 767px) { .loader-logo { width: min(34vmin, 9rem); height: min(34vmin, 9rem); } .loader-micro { bottom: 5vh; font-size: .58rem; } }
+
+/* === WHITE THEME OVERRIDES === */
+:root {
+  --bluish-black: #111111;
+  --bluish-black-2: #111111;
+  --primary: #000000;
+  --primary-deep: #000000;
+  --ink: #000000;
+  --muted: #555555;
+  --border: #e5e5e5;
+  --soft: #f9f9f9;
+  --paper: #ffffff;
+}
+body { color: #111111 !important; }
+.section-kicker { color: #111111 !important; font-weight: 300 !important; }
+.soft-copy, p, li { color: #444444 !important; }
+.spec-chip, .pill-btn, .signal-item, .process-index, .loader-micro,
+.dark-transition-label { color: #111111 !important; font-weight: 300 !important; letter-spacing: .14em !important; }
+header nav a.nav-link { font-weight: 300 !important; letter-spacing: .22em !important; }
+h1, h2, h3, h4, .section-title { color: #111111 !important; font-weight: 300 !important; }
+.text-\[\#b9bbb7\], .text-\[\#969b97\], .text-\[\#9a9f9a\], .text-\[\#9b9b9b\],
+.text-\[\#6f746f\], .text-\[\#747a76\], .text-\[\#8c918d\], .text-\[\#303833\],
+.text-\[\#57605a\], .text-\[\#56606E\], .text-\[\#111\] { color: #333333 !important; }
+.spec-chip { color: #111111 !important; background: #ffffff !important; border-color: #e5e5e5 !important; }
+.pill-accent { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
+.pill-dark { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
+.skeuomorphic-btn { color: #111111 !important; background: #ffffff !important; border-color: #e5e5e5 !important; }
+.engineering-cta { background: #000000 !important; color: #ffffff !important; border-color: #000000 !important; }
+
+/* Hero section text styles (black, readable on light) */
+#reveal, #reveal h1, #reveal p, #reveal span { color: #111111 !important; }
+#reveal .text-black\/80 { color: rgba(17,17,17,0.8) !important; }
+#reveal .text-black\/70 { color: rgba(17,17,17,0.7) !important; }
+#reveal .mahir-cta-btn, #reveal .mahir-cta-btn span { color: #ffffff !important; }
+.blend-text { color: #ffffff !important; }
+aside p, aside span { color: #ffffff !important; }
+
+/* Image-bg sections keep dark overlays */
+.mahir-force-white, .mahir-force-white * { color: #ffffff !important; }
+.mahir-force-white h1, .mahir-force-white h2, .mahir-force-white h3, .mahir-force-white h4,
+.mahir-force-white p, .mahir-force-white span, .mahir-force-white div, .mahir-force-white a {
+  color: #ffffff !important;
+}
+
+/* Governance chips */
+.label-chip { color: #111111 !important; background: #ffffff !important; border-color: rgba(0,0,0,.12) !important; font-weight: 300 !important; }
+
+/* Footer stays light */
+footer { background: #ffffff !important; }
+footer .text-white\/45, footer .text-white\/35, footer .text-white\/30, footer .text-white\/18 { color: rgba(255,255,255,0.7) !important; }
+
+
+/* Hero stage keeps the background image, stage stays light */
+#stage { background: #ffffff !important; }
+#darkLayer { background: #000 !important; }
+
+/* Contact bg text */
+#contactBgText { color: rgba(0,0,0,0.06) !important; }
+
+/* Header transparent so the white nav bar sits over the hero */
+header.mahir-floating-nav { background: transparent !important; border: none !important; }
+
+/* Abstract panels */
+.abstract-tag { background: rgba(0,0,0,0.85) !important; color: #ffffff !important; padding: .4rem .75rem !important; border-radius: 999px !important; font-size: .68rem !important; font-weight: 300 !important; letter-spacing: .18em !important; text-transform: uppercase !important; border: 1px solid rgba(255,255,255,0.14) !important; backdrop-filter: blur(6px); }
+#systemImage .panel-scrim { background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.9) 100%) !important; }
+.abstract-panel { background: linear-gradient(150deg, #000000 0%, #000000 55%, #000000 100%) !important; position: relative; }
+.abstract-panel::after { background: radial-gradient(circle at 22% 18%, rgba(0,0,0,.25), transparent 45%), radial-gradient(circle at 82% 82%, rgba(0,0,0,.22), transparent 50%) !important; }
+.abstract-panel.has-img { background: #000000 !important; }
+.abstract-panel.has-img::before, .abstract-panel.has-img::after { display: none !important; }
+.abstract-panel.has-img > .panel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: .88; }
+.abstract-panel.has-img > .panel-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%); z-index: 1; }
+.abstract-panel.has-img > .abstract-icon, .abstract-panel.has-img > .abstract-tag { z-index: 2; }
+.abstract-panel .abstract-icon { border-color: rgba(255,255,255,.3) !important; background: rgba(255,255,255,.06) !important; }
+.abstract-panel .abstract-icon i { color: #ffffff !important; }
+.abstract-tag { color: rgba(255,255,255,.75) !important; }
+
+/* Product row boxes */
+.special-row { border: 1px solid #e5e5e5; border-radius: 14px; padding: 1.4rem 1.5rem; background: #ffffff; transition: opacity .35s ease, border-color .35s ease, box-shadow .35s ease; }
+.special-row + .special-row { margin-top: 1rem; }
+.special-row.is-active, .special-row:hover { border-color: #cccccc; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+
+/* Thin font weights across all headings */
+h1, h2, h3, h4, .section-title, #state0 h1 { font-weight: 300 !important; letter-spacing: -0.035em !important; }
+.font-semibold, .font-bold, .font-medium { font-weight: 300 !important; }
+.section-kicker { font-weight: 300 !important; letter-spacing: .18em !important; }
+
+
+
+/* Section separator line removed — sections now separated by consistent spacing */
+
+/* Signature cards (product deep-dive) on white bg */
+.signature-card { background: #ffffff !important; border: 1px solid #e4e7ee !important; box-shadow: 0 20px 50px rgba(0,0,0,0.06); }
+.signature-card h3 { color: #000000 !important; }
+.signature-card .soft-copy { color: #000000 !important; }
+.signature-card .process-index { color: #000000 !important; }
+
+/* Subtle grid background utility */
+.bg-grid { position: relative; }
+.bg-grid::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 55%, transparent 92%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 92%);
+}
+.bg-grid > * { position: relative; z-index: 1; }
+
+/* ============ Fixed top navbar (shared with /careers) ============ */
+body { padding-top: 0; }
+.mahir-floating-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; }
+.mahir-floating-nav-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.25rem;
+  background: transparent !important; border-bottom: 1px solid transparent !important;
+  padding: .6rem 1.25rem;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.mahir-floating-nav .nav-brand { display:inline-flex; align-items:center; gap:.6rem; color:#ffffff !important; text-decoration:none; transition: color 0.3s ease !important; }
+.mahir-floating-nav .nav-logo-chip { display:inline-flex; align-items:center; justify-content:center; height:3rem; padding:0; background:transparent; }
+.mahir-floating-nav .nav-logo-chip img { height:100%; width:auto; object-fit:contain; filter: none !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; transition: filter 0.3s ease !important; }
+.mahir-floating-nav nav { display:none; gap:1.6rem; align-items:center; }
+@media (min-width: 1024px) { .mahir-floating-nav nav { display:flex; } }
+.mahir-floating-nav .nav-link { font-family: var(--mahir-mono); font-weight:300; font-size:.8rem; letter-spacing:.22em; text-transform:uppercase; color: rgba(255,255,255,0.85) !important; text-decoration:none; padding:.35rem 0; transition: color 0.3s ease !important; }
+.mahir-floating-nav .nav-link:hover,
+.mahir-floating-nav .nav-link:active,
+.mahir-floating-nav .nav-link:focus,
+.mahir-floating-nav .nav-link.active { color:#ffffff !important; text-decoration: none !important; border: none !important; box-shadow: none !important; }
+
+/* Scrolled/White navbar styles */
+.mahir-floating-nav.is-scrolled .mahir-floating-nav-inner {
+  background: #ffffff !important;
+  border-bottom: 1px solid #dedede !important;
+  box-shadow: 0 10px 30px -12px rgba(0,0,0,0.06) !important;
+}
+.mahir-floating-nav.is-scrolled .nav-brand {
+  color: #111111 !important;
+}
+.mahir-floating-nav.is-scrolled .nav-link {
+  color: rgba(17,17,17,0.78) !important;
+}
+.mahir-floating-nav.is-scrolled .nav-link:hover,
+.mahir-floating-nav.is-scrolled .nav-link:active,
+.mahir-floating-nav.is-scrolled .nav-link:focus,
+.mahir-floating-nav.is-scrolled .nav-link.active {
+  color: #000000 !important;
+}
+.mahir-floating-nav.is-scrolled .nav-logo-chip img {
+  filter: invert(1) !important;
+}
+.mahir-cta-btn.mahir-cta-sm { padding: .6rem 1.3rem; font-size: .62rem; letter-spacing: .16em; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); background:#000; overflow:hidden; }
+.mahir-cta-btn.mahir-cta-sm:hover { background:#111; border-color: rgba(255,255,255,0.4); }
+.mahir-cta-btn.mahir-cta-sm::before, .mahir-cta-btn.mahir-cta-sm::after, .mahir-cta-btn.mahir-cta-sm > .mahir-cta-h, .mahir-cta-btn.mahir-cta-sm > .mahir-cta-h2, .mahir-cta-btn.mahir-cta-sm > .mahir-cta-glow { display: none; }
+.mahir-nav-contact { animation: mahirContactPulse 3.4s ease-in-out infinite; }
+.mahir-nav-contact .mahir-cta-label::after { content:""; position:absolute; inset:-0.4rem -1.2rem; background:linear-gradient(115deg, transparent 0%, rgba(255,255,255,.55) 48%, transparent 100%); transform:translateX(-160%) skewX(-16deg); opacity:.75; animation: mahirContactSweep 2.8s ease-in-out infinite; }
+@keyframes mahirContactPulse { 0%,100%{ box-shadow:0 0 0 rgba(255,255,255,0); } 50%{ box-shadow:0 0 24px rgba(125,211,252,.22); } }
+@keyframes mahirContactSweep { 0%,44%{ transform:translateX(-160%) skewX(-16deg); } 72%,100%{ transform:translateX(160%) skewX(-16deg); } }
+@media (prefers-reduced-motion: reduce) { .mahir-nav-contact, .mahir-nav-contact .mahir-cta-label::after { animation:none; } }
+
+/* Fancy animated Contact (conic gradient border) */
+.mahir-nav-contact-fancy { position: relative; display: inline-flex; overflow: hidden; height: 2.5rem; padding: 1px; border-radius: 0; text-decoration: none; cursor: pointer; outline: none; border: none; background: transparent; }
+.mahir-nav-contact-fancy .nc-ring { position: absolute; inset: -1000%; background: conic-gradient(from 90deg at 50% 50%, #ffffff 0%, #0B1E5B 50%, #ffffff 100%); animation: mahirNcSpin 2s linear infinite; }
+.mahir-nav-contact-fancy .nc-inner { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; padding: .25rem 1.5rem; border-radius: 0; background: #050510; color: #fff !important; font-family: var(--mahir-mono); font-weight: 300; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; backdrop-filter: blur(20px); transition: background .2s ease; }
+.mahir-nav-contact-fancy:hover .nc-inner { background: #14142b; }
+@keyframes mahirNcSpin { to { transform: rotate(360deg); } }
+.mahir-nav-contact-desktop { display: none; }
+@media (min-width: 1024px) { .mahir-nav-contact-desktop { display: inline-flex; } }
+@media (prefers-reduced-motion: reduce) { .mahir-nav-contact-fancy .nc-ring { animation: none; } }
+
+/* Hamburger + drawer */
+.mahir-nav-hamburger { display: inline-flex; align-items:center; justify-content:center; width:2.5rem; height:2.5rem; border-radius:999px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#ffffff; cursor:pointer; padding:0; transition: all 0.3s ease; }
+.mahir-floating-nav.is-scrolled .mahir-nav-hamburger {
+  background: rgba(0,0,0,0.04) !important;
+  border: 1px solid rgba(0,0,0,0.14) !important;
+  color: #111111 !important;
+}
+@media (min-width:1024px) { .mahir-nav-hamburger { display:none; } }
+.mahir-mobile-drawer { position: fixed; inset:0; z-index:99; background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.75rem; padding:4rem 1.5rem; opacity:0; pointer-events:none; transition: opacity .25s ease; }
+.mahir-mobile-drawer.open { opacity:1; pointer-events:auto; }
+.mahir-mobile-drawer a { color:#111111 !important; text-decoration:none; font-family: var(--mahir-mono); font-weight:300; font-size:.95rem; letter-spacing:.2em; text-transform:uppercase; }
+.mahir-mobile-drawer .mahir-nav-contact-fancy { height:3rem; margin-top:1rem; display:inline-flex; }
+.mahir-mobile-drawer .mahir-nav-contact-fancy .nc-inner { font-size:.78rem; padding:.5rem 2rem; }
+@media (min-width:1024px) { .mahir-mobile-drawer { display:none !important; } }
+
+
+/* ============ Fancy CTA button (light streaks + radial glow) ============ */
+.mahir-cta-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: none; text-decoration: none; background:#000; color:#fff !important; font-family: var(--mahir-mono); font-weight:300; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; padding:.25rem 1.5rem; border-radius:0; height:2.5rem; transition: transform .25s ease; }
+.mahir-cta-btn:hover { transform: translateY(-1px); }
+.mahir-cta-btn::before, .mahir-cta-btn::after, .mahir-cta-btn > .mahir-cta-h, .mahir-cta-btn > .mahir-cta-h2 { content:""; position:absolute; pointer-events:none; z-index:0; }
+.mahir-cta-btn::before { left:-1px; top:0; bottom:0; width:2px; background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
+.mahir-cta-btn::after { right:-1px; top:0; bottom:0; width:2px; background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
+.mahir-cta-btn > .mahir-cta-h { top:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
+.mahir-cta-btn > .mahir-cta-h2 { bottom:-1px; left:0; right:0; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.85) 50%, rgba(255,255,255,0)); }
+.mahir-cta-btn > .mahir-cta-glow { position:absolute; inset:-24px; z-index:-1; background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 60%); filter: blur(20px); opacity:0; transition: opacity .3s ease; }
+.mahir-cta-btn:hover > .mahir-cta-glow { opacity:1; }
+.mahir-cta-btn > .mahir-cta-label { position:relative; z-index:2; }
+.mahir-force-white, .mahir-force-white * { color: #ffffff !important; }
+.mahir-force-white h1, .mahir-force-white h2, .mahir-force-white h3, .mahir-force-white h4,
+.mahir-force-white p, .mahir-force-white span, .mahir-force-white div, .mahir-force-white a {
+  color: #ffffff !important;
+}
+
+/* ============ Product screen mock (replaces panel-img) ============ */
+.abstract-panel.has-img > .panel-mock { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: flex; flex-direction: column; background: linear-gradient(180deg, #000000 0%, #000000 100%); color: #e5e7eb; font-family: var(--mahir-mono); overflow: hidden; }
+.abstract-panel.has-img > .panel-mock * { box-sizing: border-box; }
+.pm-topbar { display:flex; align-items:center; gap:.5rem; padding:.55rem .8rem; border-bottom:1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); flex-shrink:0; }
+.pm-dot { width:9px; height:9px; border-radius:999px; display:inline-block; }
+.pm-dot-r { background:#ef4444; } .pm-dot-y { background:#f59e0b; } .pm-dot-g { background:#22c55e; }
+.pm-title { margin-left:.6rem; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:#cbd5e1; font-weight:300; }
+.pm-badge { margin-left:auto; font-size:.55rem; padding:.15rem .5rem; border-radius:999px; background: rgba(255,255,255,0.12); color:#ffffff; border:1px solid rgba(255,255,255,0.25); letter-spacing:.14em; text-transform:uppercase; }
+.pm-body { display:grid; grid-template-columns: 130px 1fr; flex:1; min-height: 0; }
+.pm-side { border-right:1px solid rgba(255,255,255,0.06); padding:.75rem .55rem; display:flex; flex-direction:column; gap:.25rem; background: rgba(255,255,255,0.015); }
+.pm-side-item { font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color: rgba(226,232,240,0.55); padding:.4rem .55rem; border-radius:.4rem; display:flex; align-items:center; gap:.45rem; }
+.pm-side-item .pm-dotmark { width:6px; height:6px; border-radius:999px; background: rgba(148,163,184,0.5); }
+.pm-side-item.active { background: rgba(255,255,255,0.08); color:#ffffff; }
+.pm-side-item.active .pm-dotmark { background:#ffffff; box-shadow:0 0 8px rgba(255,255,255,0.7); }
+.pm-main { padding:.9rem 1rem; display:flex; flex-direction:column; gap:.75rem; min-height: 0; overflow: hidden; }
+.pm-stats { display:grid; grid-template-columns: repeat(3, 1fr); gap:.55rem; }
+.pm-stat { border:1px solid rgba(255,255,255,0.08); border-radius:.55rem; padding:.55rem .65rem; background: rgba(255,255,255,0.02); }
+.pm-stat-l { font-size:.55rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(148,163,184,0.75); }
+.pm-stat-v { font-size:1rem; font-weight:300; margin-top:.15rem; color:#f8fafc; font-family: var(--mahir-display); letter-spacing:-.01em; }
+.pm-stat-v.pos { color:#4ade80; } .pm-stat-v.neg { color:#f87171; }
+.pm-chart { position:relative; border:1px solid rgba(255,255,255,0.06); border-radius:.6rem; background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0) 70%); padding:.5rem; flex: 1 1 auto; min-height: 90px; }
+.pm-chart svg { width:100%; height:100%; display:block; }
+.pm-rows { display:flex; flex-direction:column; gap:.3rem; }
+.pm-row { display:flex; align-items:center; justify-content:space-between; padding:.4rem .6rem; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:.4rem; font-size:.66rem; color:#cbd5e1; }
+.pm-row .pm-pos { color:#4ade80; font-weight:300; }
+.pm-row .pm-neg { color:#f87171; font-weight:300; }
+.pm-tag { display:inline-block; font-size:.52rem; letter-spacing:.14em; text-transform:uppercase; color:#ffffff; background:rgba(255,255,255,0.09); padding:.2rem .5rem; border-radius:999px; border:1px solid rgba(255,255,255,0.2); }
+/* Network / system variant */
+.pm-network { position:relative; flex:1; min-height:180px; }
+.pm-node { position:absolute; padding:.4rem .65rem; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.85); color:#ffffff; border-radius:.5rem; box-shadow: 0 0 20px rgba(255,255,255,0.12); }
+.pm-node.core { border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.15); }
+.pm-network svg.pm-lines { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+/* Screener variant */
+.pm-filters { display:flex; flex-wrap:wrap; gap:.35rem; }
+.pm-filter { font-size:.55rem; letter-spacing:.14em; text-transform:uppercase; padding:.25rem .55rem; border-radius:999px; border:1px solid rgba(255,255,255,0.12); color:#cbd5e1; }
+.pm-filter.on { background: rgba(255,255,255,0.15); color:#ffffff; border-color: rgba(255,255,255,0.4); }
+.pm-table { display:grid; grid-template-columns: 1.4fr .8fr .8fr .8fr; gap:.35rem .5rem; font-size:.6rem; align-items:center; }
+.pm-th { font-size:.5rem; letter-spacing:.16em; text-transform:uppercase; color: rgba(148,163,184,0.7); border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:.3rem; }
+.pm-td { color:#cbd5e1; padding:.25rem 0; }
+/* Compact when panel is small */
+@media (max-width: 720px) {
+  .pm-body { grid-template-columns: 1fr; }
+  .pm-side { flex-direction:row; overflow-x:auto; border-right:0; border-bottom:1px solid rgba(255,255,255,0.06); }
+}
+
+
+
+/* ============ Standards grid (Inside Every <span class="font-syne uppercase">MAHIR</span> Product) ============ */
+.mahir-standards-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 78rem; margin: 0 auto; }
+@media (min-width: 640px) { .mahir-standards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; } }
+@media (min-width: 1024px) { .mahir-standards-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+.mahir-std-card { position: relative; padding: 1.75rem 1.5rem 1.65rem; border-radius: 1.1rem; background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-align: left; overflow: hidden; color: #111111; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.mahir-std-card:hover { transform: translateY(-3px); border-color: #d1d5db; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.mahir-std-card::before { content: ""; position: absolute; inset: 0; border-radius: 1.1rem; padding: 1px; pointer-events: none; z-index: 0; background: linear-gradient(140deg, rgba(0,0,0,0.08), rgba(0,0,0,0) 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.06) 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .5; transition: opacity .3s ease; }
+.mahir-std-card:hover::before { opacity: 1; }
+
+@keyframes mahirStdDot { 0%, 100% { top: 8px; right: 8px; } 25% { top: 8px; right: calc(100% - 14px); } 50% { top: calc(100% - 14px); right: calc(100% - 14px); } 75% { top: calc(100% - 14px); right: 8px; } }
+.mahir-std-card > * { position: relative; z-index: 1; }
+.mahir-std-card .mahir-std-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.mahir-std-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: transparent; color: #111111; border: 1.5px solid rgba(0,0,0,0.15); }
+.mahir-std-pill { font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 300; color: #111111; padding: .35rem .55rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.15); background: rgba(0,0,0,0.05); }
+.mahir-std-card h4 { font-family: var(--mahir-display); font-size: 1.15rem; font-weight: 300; letter-spacing: -0.02em; color: #111111; margin: 0 0 .5rem; }
+.mahir-std-card p { font-size: .88rem; line-height: 1.55; color: #555555; margin: 0; }
+.mahir-std-foot { margin-top: 1.1rem; padding-top: .85rem; border-top: 1px solid #e5e7eb; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: #888888; font-weight: 300; }
+.scroll-dark-section.is-dark .mahir-std-card { background: #000000 !important; color: #ffffff !important; border-color: rgba(255,255,255,0.12) !important; }
+.scroll-dark-section.is-dark .mahir-std-card h4 { color: #ffffff !important; }
+.scroll-dark-section.is-dark .mahir-std-card p { color: #b6bac2 !important; }
+.scroll-dark-section.is-dark .mahir-std-icon { background: transparent !important; color: #ffffff !important; border-color: rgba(255,255,255,0.3) !important; }
+.scroll-dark-section.is-dark .mahir-std-pill { color: #ffffff !important; background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.25) !important; }
+.scroll-dark-section.is-dark .mahir-std-foot { color: #8a8f96 !important; border-top-color: rgba(255,255,255,0.12) !important; }
+
+
+/* ============ Social proof band (below Client Highlights) ============ */
+.mahir-socialproof { background: #ffffff; padding: 5rem 1rem; }
+.msp-inner { max-width: 56rem; margin: 0 auto; text-align: center; }
+.msp-badge { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
+.msp-avatars { display: flex; }
+.msp-avatars img { width: 2.35rem; height: 2.35rem; border-radius: 999px; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); margin-left: -0.55rem; }
+.msp-avatars img:first-child { margin-left: 0; }
+.msp-rating { display: flex; flex-direction: column; align-items: flex-start; }
+.msp-stars { display: flex; gap: .1rem; color: #000000; }
+.msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 300; color: #000000; letter-spacing: .01em; }
+.msp-title { font-family: var(--mahir-display); font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.03em; color: #000000; margin: 0 auto; max-width: 22ch; }
+.msp-italic { font-style: italic; font-family: "Instrument Serif", "Playfair Display", Georgia, serif; font-weight: 300; }
+.msp-sub { margin: 1.5rem auto 0; max-width: 46rem; font-size: 1.05rem; line-height: 1.55; color: #6b7166; }
+
+/* ============ Testimonials cards (match site theme: white bg, dark text, Syne) ============ */
+.mahir-testi-wrap { position: relative; display:flex; justify-content:center; align-items:center; min-height: 380px; padding: 2rem 1rem; font-family: var(--mahir-body); }
+.mahir-testi-row { position:relative; display:flex; justify-content:center; align-items:center; flex-wrap: wrap; }
+.mahir-testi-card { position: relative; width: 280px; height: 300px; margin: 0 -22px; background: linear-gradient(rgba(255,255,255,0.1), transparent); border: 1px solid rgba(0,0,0,0.05); border-radius: 1rem; box-shadow: 0 25px 25px rgba(0,0,0,0.12); backdrop-filter: blur(10px); display:flex; align-items:center; justify-content:center; }
+.mahir-testi-card.t1 { transform: rotate(-10deg); }
+.mahir-testi-card.t2 { transform: rotate(-5deg); }
+.mahir-testi-card.t3 { transform: rotate(0deg); z-index:2; }
+.mahir-testi-card.t4 { transform: rotate(5deg); }
+.mahir-testi-card.t5 { transform: rotate(10deg); }
+.mahir-testi-inner { position:absolute; inset:1rem; background:#fff; color:#000000; border-radius:.75rem; box-shadow: 0 20px 40px -24px rgba(0,0,0,.35); padding:1.25rem; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; font-family: var(--mahir-body); }
+.mahir-testi-inner p { font-family: var(--mahir-body); font-size:.82rem; line-height:1.55; margin:0; color:#000000 !important; font-weight: 300; }
+.mahir-testi-meta { display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(0,0,0,.08); padding-top:.75rem; margin-top: 1rem; }
+.mahir-testi-name { font-family: var(--mahir-body); font-size:.78rem; font-weight:300; color:#000000 !important; }
+.mahir-testi-role { font-family: var(--mahir-body); font-size:.7rem; color:#6b7280 !important; margin-top:.15rem; }
+@media (max-width: 900px) {
+  .mahir-testi-row { flex-direction:column; gap: 1.5rem; align-items: stretch; }
+  .mahir-testi-card { margin: 0; width: 100%; max-width: 100%; height: auto; min-height: 0; transform: none !important; }
+  .mahir-testi-inner { position: relative; inset: auto; padding: 1.25rem; }
+  .mahir-testi-wrap { min-height: auto; padding: 1rem; align-items: stretch; }
+}
+
+/* FAQ section */
+.mahir-faq-band { background:#ffffff; padding: 5rem 1.5rem; }
+@media (min-width: 768px) { .mahir-faq-band { padding: 6rem 2.5rem; } }
+.mahir-faq-inner { max-width: 60rem; margin: 0 auto; display:grid; gap: 2.5rem; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 3rem; align-items:start; } }
+.mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#8a8a80; margin:0 0 .9rem; }
+.mahir-faq-title { font-family: var(--mahir-display); font-weight: 300; letter-spacing:-0.02em; line-height: 1.05; font-size: 2.4rem; color:#000000; margin:0 0 1rem; }
+@media (min-width: 768px) { .mahir-faq-title { font-size: 3rem; } }
+.mahir-faq-sub { font-size:.95rem; line-height:1.65; color:#4a4a44; margin:0; }
+.mahir-faq-list { display:flex; flex-direction:column; }
+.mahir-faq-item { border-top: 1px solid rgba(0,0,0,0.12); }
+.mahir-faq-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
+.mahir-faq-item summary { list-style:none; cursor:pointer; padding: 1.25rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:1rem; font-weight:300; color:#000000; letter-spacing:-0.01em; text-align:left; }
+.mahir-faq-item summary::-webkit-details-marker { display:none; }
+.mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#000000; transition: transform .25s ease; line-height:1; flex-shrink:0; }
+.mahir-faq-item[open] summary::after { content:"−"; }
+.mahir-faq-item .mahir-faq-a { padding: 0 0 1.25rem; font-size:.92rem; line-height:1.7; color:#4a4a44; text-align:left; }
+
+/* ============ White-theme section overrides ============ */
+.mahir-white-section { background: #ffffff !important; color: #111 !important; }
+.mahir-white-section * { color: inherit !important; }
+.mahir-white-section h2, .mahir-white-section h3, .mahir-white-section h4 { color: #111 !important; }
+.mahir-white-section p, .mahir-white-section li { color: #444 !important; }
+.mahir-white-section .section-kicker { color: #111 !important; }
+.mahir-white-section .text-white\/60, .mahir-white-section .text-white\/50, .mahir-white-section .text-white\/40, .mahir-white-section .text-white\/70, .mahir-white-section .text-white\/80 { color: #666 !important; }
+.mahir-white-section .text-white { color: #111 !important; }
+.mahir-white-section .bg-\[\#000000\], .mahir-white-section .bg-black { background: #ffffff !important; }
+.mahir-white-section .border-white\/10 { border-color: #e5e5e5 !important; }
+.mahir-white-section .bg-white\/10 { background: #f3f4f6 !important; }
+.mahir-white-section .ring-white\/15, .mahir-white-section .ring-white\/10 { --tw-ring-color: rgba(0,0,0,0.1) !important; }
+.mahir-white-section .from-\[\#000000\] { --tw-gradient-from: #ffffff !important; }
+.mahir-white-section .to-\[\#000000\] { --tw-gradient-to: #ffffff !important; }
+.mahir-white-section .from-black\/5, .mahir-white-section .from-black { --tw-gradient-from: rgba(0,0,0,0.02) !important; }
+.mahir-white-section .to-black\/10, .mahir-white-section .to-black { --tw-gradient-to: rgba(0,0,0,0.05) !important; }
+.mahir-white-section .bg-gradient-to-b { background-image: none !important; }
+.mahir-white-section .drop-shadow-xl, .mahir-white-section [class*="drop-shadow"] { filter: none !important; }
+.mahir-white-section img { opacity: 1 !important; }
+.mahir-white-section .mahir-cta-btn { background: #000 !important; color: #fff !important; }
+.mahir-white-section .mahir-cta-btn .nc-inner { background: #050510 !important; }
+
+/* White box card */
+.mahir-white-box { background: #ffffff !important; border-radius: 1rem; box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04); overflow: hidden; }
+.mahir-white-box h2, .mahir-white-box h3 { color: #111 !important; }
+.mahir-white-box p { color: #444 !important; }
+.mahir-white-box .text-white\/60, .mahir-white-box .text-white\/50, .mahir-white-box .text-white\/40, .mahir-white-box .text-white\/70 { color: #666 !important; }
+.mahir-white-box .text-white { color: #111 !important; }
+.mahir-white-box .bg-white\/10 { background: #f3f4f6 !important; }
+.mahir-white-box .ring-white\/15, .mahir-white-box .ring-white\/10 { --tw-ring-color: rgba(0,0,0,0.1) !important; }
+.mahir-white-box .from-black\/5 { --tw-gradient-from: rgba(0,0,0,0.02) !important; }
+.mahir-white-box .to-transparent { --tw-gradient-to: transparent !important; }
+.mahir-white-box .bg-gradient-to-b { background-image: none !important; }
+.mahir-white-box .bg-gradient-to-t { background-image: none !important; }
+.mahir-white-box .pointer-events-none.absolute { display: none !important; }
+.mahir-white-box .drop-shadow-xl, .mahir-white-box [class*="drop-shadow"] { filter: none !important; }
+.mahir-white-box .section-kicker { color: #111 !important; }
+.mahir-white-box img { opacity: 1 !important; }
+
+/* Image-bg section with white outside */
+.mahir-img-section { position: relative; background: #ffffff !important; }
+.mahir-img-section .mahir-img-inner { position: relative; border-radius: 1rem; overflow: hidden; }
+.mahir-img-section .mahir-img-inner img { width: 100%; height: 100%; object-fit: cover; }
+.mahir-img-section .mahir-img-content { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.mahir-img-section .mahir-img-scrim { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.55)); z-index: 1; }
+
+/* Full-width white bands — consistent section spacing */
+
+</style>
+</head>
+
+<body class="hero-stage-ready selection:bg-white selection:text-black">
+  <div id="loadOverlay" class="load-overlay" aria-hidden="true">
+    <div id="loaderPanel" class="loader-panel">
+      <div id="loaderMark" class="loader-logo font-syne font-bold uppercase tracking-widest text-white text-5xl">
+        <span class="font-syne uppercase">MAHIR</span>
+      </div>
+    </div>
+    <div id="loaderCapsule" class="loader-capsule"></div>
+
+  </div>
+
+  <header class="mahir-floating-nav">
+    <div class="mahir-floating-nav-inner">
+      <a href="/" class="nav-brand" aria-label="MAHIR home" style="color:#111111 !important;">
+        <span class="nav-logo-chip"><img src="/mahir-trust-leads.svg" alt="MAHIR" style="opacity:1; visibility:visible; mix-blend-mode:normal; filter:invert(1);"></span>
+      </a>
+      <nav>
+        <a href="/products" class="nav-link" style="color:rgba(17,17,17,.78) !important;">Products</a>
+        <a href="/approach" class="nav-link" style="color:rgba(17,17,17,.78) !important;">Approach</a>
+        <a href="/about" class="nav-link" style="color:rgba(17,17,17,.78) !important;">About</a>
+        <a href="/careers" class="nav-link" style="color:rgba(17,17,17,.78) !important;">Careers</a>
+        <a href="/blog" class="nav-link" style="color:rgba(17,17,17,.78) !important;">Blog</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:.5rem;">
+        <a href="/contact" class="mahir-nav-contact-fancy mahir-nav-contact-desktop">
+          <span class="nc-ring" aria-hidden="true"></span>
+          <span class="nc-inner">Contact</span>
+        </a>
+        <button type="button" class="mahir-nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="(function(b){var d=document.getElementById('mahirMobileDrawer');var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';})(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="mahirMobileDrawer" class="mahir-mobile-drawer" onclick="this.classList.remove('open');document.body.style.overflow='';">
+    <a href="/products">Products</a>
+    <a href="/approach">Approach</a>
+    <a href="/about">About</a>
+    <a href="/careers">Careers</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact" class="mahir-nav-contact-fancy">
+      <span class="nc-ring" aria-hidden="true"></span>
+      <span class="nc-inner">Contact</span>
+    </a>
+  </div>
+
+
+  <main>
+    <section id="reveal" class="relative mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+      <div id="stage" class="relative overflow-hidden rounded-[2rem] bg-white mt-6" style="aspect-ratio: 1578/997; min-height: clamp(440px, 62svh, 640px);">
+        <div id="lightLayer" class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('/451cfe4d-301f-4668-958a-fa207a707111.png');"></div>
+
+        <div class="relative z-10 flex items-start justify-center h-full px-4 pt-[7rem] sm:pt-[10rem] lg:pt-[13rem]">
+          <section id="state0" class="w-[min(42rem,86vw)] text-center text-black">
+            <p class="text-[0.68rem] font-bold uppercase tracking-[0.34rem] text-black/80"><span class="font-syne uppercase">MAHIR</span> GROUP</p>
+            <h1 class="mt-5 text-4xl font-semibold leading-[0.95] tracking-[-0.02em] sm:text-[2.5rem] md:text-[2.75rem] lg:text-5xl text-black">Building Institutions That Serve People First.</h1>
+            <p class="mx-auto mt-6 max-w-md text-sm leading-6 text-black/70">A SEBI-registered research team helping people invest with clarity, confidence, and a long-term view.</p>
+            <div class="mt-8 flex justify-center"><a href="/products" class="mahir-cta-btn"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Explore What We Build</span></a></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product range section (white theme) -->
+    <section id="range" class="mahir-white-section relative bg-white py-20 sm:py-24 lg:py-28">
+      <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 mx-auto max-w-3xl text-center reveal-up">
+          <h2 class="text-4xl font-semibold leading-[1] tracking-[-.045em] sm:text-5xl lg:text-7xl">
+            Our Products
+          </h2>
+          <p class="mt-6 text-lg leading-[1.7] text-gray-500">Advisory and market insights. One research team. Every recommendation, screen, and report follows the same standard — is this clear, backed by research, and truly right for the client?</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-6 lg:pb-10">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-white flex flex-col shadow-sm">
+            <div class="p-6 md:p-8 flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-semibold text-gray-900"><span class="font-syne uppercase">MAHIR</span> Invest</h3>
+                <span class="text-sm text-gray-400">01</span>
+              </div>
+              <p class="text-gray-500 leading-relaxed mb-4">A SEBI-registered RIA that removes guesswork. You get personal, research-backed buy, hold and exit recommendations — documented, risk-checked, and explained in plain language before you act.</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Portfolio reviews tailored to your goals</li>
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Every recommendation researched, documented, and risk-checked</li>
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flat-fee model — zero commissions, no hidden costs</li>
+              </ul>
+              <a href="https://mahirscreener.com" target="_blank" rel="noopener" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Invest</span></a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-white flex flex-col shadow-sm">
+            <div class="p-6 md:p-8 flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-semibold text-gray-900"><span class="font-syne uppercase">MAHIR</span> Screener</h3>
+                <span class="text-sm text-gray-400">02</span>
+              </div>
+              <p class="text-gray-500 leading-relaxed mb-4">Screen the market like an analyst. Filter, compare, and shortlist stocks on fundamentals — with the same data and logic our advisory desk uses to build client portfolios.</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-criteria filtering to find quality stocks fast</li>
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fundamentals &amp; ratios in one clean view</li>
+                <li class="flex items-start gap-2 text-sm text-gray-500"><svg class="mt-1 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Visual tools to compare candidates side-by-side</li>
+              </ul>
+              <a href="https://www.mahirscreener.com" target="_blank" rel="noopener" class="mahir-cta-btn inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Visit <span class="font-syne uppercase">MAHIR</span> Screener</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance / white pinned section -->
+    <section id="engineering" class="mahir-white-section relative overflow-hidden bg-white py-14 pb-24 sm:py-16 sm:pb-28 lg:min-h-[85vh] lg:py-0">
+      <div id="engineeringPin" class="relative flex min-h-[85vh] flex-col items-center justify-center px-4 pt-4 pb-24 text-center sm:px-6 sm:pb-28 lg:px-8 lg:pb-32">
+        <div id="engineeringText" class="engineering-text-card relative z-10 mx-auto max-w-4xl reveal-up rounded-2xl border border-transparent px-6 py-8 sm:px-10 sm:py-10">
+          <p class="section-kicker">What Is Inside Every Product</p>
+          <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] text-gray-900 sm:text-5xl lg:text-7xl">Inside Every <span class="font-syne uppercase">MAHIR</span> Product.</h2>
+          <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-500 sm:text-lg">
+            Every recommendation, screen, and report is checked against one simple standard. Is this clear to explain, backed by research, and truly right for the client?
+          </p>
+          <a href="/contact" class="mahir-cta-btn mt-8 inline-flex"><span class="mahir-cta-h"></span><span class="mahir-cta-h2"></span><span class="mahir-cta-glow"></span><span class="mahir-cta-label">Request A Consultation</span></a>
+        </div>
+
+        <div id="ctWrap" class="relative z-0 mt-14 w-full max-w-6xl">
+          <div id="ctImage" class="mahir-standards-grid">
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 9 9 10 5.2-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                <span class="mahir-std-pill">Registered</span>
+              </div>
+              <h4>SEBI Compliant</h4>
+              <p>Every recommendation is sent under our SEBI-registered RIA framework, with clear disclosures included from the start.</p>
+              <div class="mahir-std-foot">Ria Framework</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+                </span>
+                <span class="mahir-std-pill">Documented</span>
+              </div>
+              <h4>Research First</h4>
+              <p>Fundamentals, screening, and internal review. Every recommendation is written up before it is ever sent to a client.</p>
+              <div class="mahir-std-foot">Written Theses</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+                </span>
+                <span class="mahir-std-pill">Checked</span>
+              </div>
+              <h4>Risk Checked</h4>
+              <p>Position size, risk levels, and time frame are always checked against the client's profile, not the market's mood.</p>
+              <div class="mahir-std-foot">Client-Fit First</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="mahir-std-pill">Suitability</span>
+              </div>
+              <h4>Client-First Advice</h4>
+              <p>We check if an idea fits the client first. If it doesn't fit, we don't recommend it, no matter how good the idea looks.</p>
+              <div class="mahir-std-foot">Client Fit First</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+                </span>
+                <span class="mahir-std-pill">Transparent</span>
+              </div>
+              <h4>Clear Reasoning</h4>
+              <p>Every buy, hold, and exit recommendation comes with a written 'why', so the reason is clear even years later.</p>
+              <div class="mahir-std-foot">Decision Logs</div>
+            </div>
+            <div class="mahir-std-card">
+              <div class="mahir-std-head">
+                <span class="mahir-std-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/></svg>
+                </span>
+                <span class="mahir-std-pill">Compounding</span>
+              </div>
+              <h4>Long-Term Focus</h4>
+              <p>Long term investing rewards patience. We track results, review our recommendations, and stay responsible long after a recommendation is made.</p>
+              <div class="mahir-std-foot">Multi-Year View</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Social proof band ============ -->
+    <section class="mahir-socialproof">
+      <div class="msp-inner">
+        <div class="msp-badge">
+          <div class="msp-avatars" aria-hidden="true">
+            <img src="/trusted-1.jpg" alt="" loading="lazy" />
+            <img src="/trusted-2.jpg" alt="" loading="lazy" />
+            <img src="/trusted-3.jpg" alt="" loading="lazy" />
+            <img src="/trusted-4.jpg" alt="" loading="lazy" />
+            <img src="/trusted-5.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="msp-rating">
+            <div class="msp-stars" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M12 2l3 7 7 .8-5.3 4.7 1.6 7-6.3-3.7L5.7 21.5l1.6-7L2 9.8 9 9z"/></svg>
+            </div>
+            <p>Trusted by business owners, employees, and long-term investors</p>
+          </div>
+        </div>
+        <h2 class="msp-title">
+          Advice, <span class="msp-italic">refined</span> for people who take investing seriously.
+        </h2>
+        <p class="msp-sub">
+          A quiet, research-first advisory group building trustworthy systems for how people invest, decide and plan, one recommendation at a time.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="mahir-faq-band" id="faq">
+      <div class="mahir-faq-inner">
+        <div>
+          <p class="mahir-faq-eyebrow">FAQ</p>
+          <h2 class="mahir-faq-title">Questions,<br>answered plainly.</h2>
+          <p class="mahir-faq-sub">The essentials about who we are, how we work, and what to expect before you speak with us.</p>
+        </div>
+        <div class="mahir-faq-list">
+          <details class="mahir-faq-item">
+            <summary>What does the firm actually do?</summary>
+            <div class="mahir-faq-a">We are a SEBI-registered investment advisory and market intelligence firm. We help long-term investors build portfolios grounded in original research, disciplined risk, and clear reasoning, not noise or short-term recommendations.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>Are you registered with SEBI?</summary>
+            <div class="mahir-faq-a">Yes. The firm operates a Separately Identifiable Investment Advisory Unit registered with SEBI (RIA Reg. No. INA000022668) and enlisted with BSE (No. 2526). Registration is valid from June 01, 2026, Perpetual.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>Who is this for?</summary>
+            <div class="mahir-faq-a">Individuals, families, and institutions who take investing seriously and want a research-led partner focused on process, transparency, and a long horizon rather than product-pushing.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>How do you charge?</summary>
+            <div class="mahir-faq-a">Fees are advisory-only and disclosed transparently before onboarding, in line with SEBI's IA regulations. We do not earn commissions or brokerage on client transactions.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>What is the screening tool?</summary>
+            <div class="mahir-faq-a">The screener is a market intelligence product — a research toolkit for filtering, comparing, and understanding listed companies. It complements the advisory practice and is available at mahirscreener.com.</div>
+          </details>
+          <details class="mahir-faq-item">
+            <summary>How do I get in touch?</summary>
+            <div class="mahir-faq-a">Write to us at admin@mahir.in or call +91-9084945151. You can also use the Contact page and we will get back within one business day.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ Footer (combined) ============ -->
+        <footer class="mahir-footer">
+          <!-- Top Line -->
+          <div class="footer-line"></div>
+
+          <div class="footer-inner">
+            <!-- =====================================
+                 TOP FOOTER GRID
+            ====================================== -->
+
+            <div class="footer-grid">
+
+              <!-- ===================================
+                   MAHIR BRAND
+              ==================================== -->
+
+              <div class="footer-brand">
+
+                <span class="mahir-footer-logo">
+                  <img src="/mahir-trust-leads.svg" alt="MAHIR" class="mahir-logo" style="filter:invert(1); opacity:1; visibility:visible; mix-blend-mode:normal;">
+                </span>
+
+                <p class="brand-description">
+                  Research-led investment advisory and market
+                  intelligence. Built quietly. Built to last.
+                </p>
+
+                <div class="mahir-footer-socials">
+                  <a href="https://www.linkedin.com/company/mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869C24 5.989 15.078 6.276 12.982 10.155V8z"/></svg></a>
+                  <a href="https://x.com/MahirInvest" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.574 4.9 4.916 0 0 1-2.229-.616v.062a4.918 4.916 0 0 0 3.946 4.827 4.902 4.918 0 0 1-2.224.084 4.92 4.916 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 14.307-14.417 0-.22-.005-.437-.014-.653A10.243 10.243 0 0 0 24 4.557z"/></svg></a>
+                  <a href="https://www.facebook.com/profile.php?id=61591393817085" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.412c0-3.017 1.792-4.686 4.533-4.686 1.312 0 2.686.235 2.686.235v2.972h-1.514c-1.49 0-1.955.93-1.955 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+                  <a href="https://www.instagram.com/mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+                  <a href="https://www.youtube.com/@Mahirinvest" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+              </div>
+
+              <!-- ===================================
+                   COMPANY
+              ==================================== -->
+
+              <div class="footer-column">
+
+                <div class="footer-column-title">
+                  Company
+                </div>
+
+                <ul class="footer-links">
+
+                  <li>
+                    <a href="/about">
+                      About Us
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/products">
+                      Products
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/blog">
+                      Blog
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/careers">
+                      Careers
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/contact">
+                      Contact
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+
+              <!-- ===================================
+                   LEGAL
+              ==================================== -->
+
+              <div class="footer-column">
+
+                <div class="footer-column-title">
+                  Legal
+                </div>
+
+                <ul class="footer-links">
+
+                  <li>
+                    <a href="/privacy">
+                      Privacy Policy
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/terms">
+                      Terms &amp; Conditions
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/disclaimer">
+                      Disclaimer
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/cancellation">
+                      Cancellation Policy
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/refund">
+                      Refund Policy
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+
+              <!-- ===================================
+                   REGISTERED OFFICE
+              ==================================== -->
+
+              <div class="footer-column office-column">
+
+                <div class="footer-column-title">
+                  Registered Office
+                </div>
+
+                <p class="office-address">
+                  301 &amp; 302, 3rd Floor, Quick Office,
+                  Raichandani 45 Street, 112, Main Road,
+                  opposite D-Mart, Baner, Pune,
+                  Maharashtra 411045
+                </p>
+
+
+                <!-- =================================
+                     TRUSTED BY
+                ================================== -->
+
+                <div class="trusted-block">
+
+                  <div class="trusted-title">
+                    Trusted By
+                  </div>
+
+                  <img
+                    src="/startup-india.png"
+                    alt="Startup India"
+                    class="startup-logo"
+                  />
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 LARGE STATEMENT
+            ====================================== -->
+
+            <div class="footer-statement">
+
+              <h2 class="statement">
+                Building Institutions That Serve People First.
+              </h2>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 COPYRIGHT
+            ====================================== -->
+
+            <div class="footer-bottom">
+
+              <p class="copyright">
+                &copy; 2026 MAHIR Group | All Rights Reserved.
+              </p>
+
+              <p class="managed-by">
+                Website owned and managed by
+                <span>MAHIR Group.</span>
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </footer>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const darkLayer = document.getElementById("darkLayer");
+    const lightLayer = document.getElementById("lightLayer");
+    const grid = document.getElementById("grid");
+
+    const loadOverlay = document.getElementById("loadOverlay");
+    if (loadOverlay) loadOverlay.remove();
+    document.body?.classList.remove("hero-stage-ready");
+
+    gsap.utils.toArray(".scroll-dark-section").forEach((section) => {
+      section.classList.add("is-dark");
+    });
+
+    const navBar = document.querySelector(".mahir-floating-nav");
+    if (navBar) {
+      const revealEl = document.getElementById("reveal");
+      const heroEnd = () => Math.max(0, (revealEl ? revealEl.offsetHeight : 0));
+      const toggleNavLine = () => navBar.classList.toggle("is-scrolled", window.scrollY > heroEnd());
+      window.addEventListener("scroll", toggleNavLine, { passive: true });
+      window.addEventListener("resize", toggleNavLine, { passive: true });
+      toggleNavLine();
+    }
+
+    lucide.createIcons({ attrs: { "stroke-width": 2 } });
+  </script>
+  <style>
+    .mahir-floating-nav-inner { background: #ffffff !important; border-bottom: none !important; box-shadow: none !important; transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease !important; }
+    .mahir-floating-nav.is-scrolled .mahir-floating-nav-inner { background: #ffffff !important; border-bottom: 1px solid rgba(0,0,0,.08) !important; box-shadow: 0 10px 30px -12px rgba(0,0,0,.06) !important; }
+    .mahir-floating-nav .nav-brand { color: #111111 !important; }
+    .mahir-floating-nav .nav-logo-chip img { filter: invert(1) !important; opacity: 1 !important; visibility: visible !important; mix-blend-mode: normal !important; }
+    .mahir-floating-nav .nav-link { color: rgba(17,17,17,.78) !important; }
+    .mahir-floating-nav .nav-link:hover,
+    .mahir-floating-nav .nav-link:active,
+    .mahir-floating-nav .nav-link:focus,
+    .mahir-floating-nav .nav-link.active { color: #000000 !important; }
+    .mahir-floating-nav .mahir-nav-hamburger { background: rgba(0,0,0,.04) !important; border: 1px solid rgba(0,0,0,.14) !important; color: #111111 !important; }
+    .mahir-mobile-drawer { background: rgba(255,255,255,.97) !important; }
+    .mahir-mobile-drawer a { color: #111111 !important; }
+    @media (max-width: 767px) {
+      .mahir-floating-nav-inner {
+        background: #ffffff !important;
+        border-bottom: 1px solid rgba(0,0,0,.08) !important;
+        border-left: 1px solid rgba(0,0,0,.08) !important;
+        border-right: 1px solid rgba(0,0,0,.08) !important;
+        box-shadow: none !important;
+      }
+      .mahir-floating-nav.is-scrolled .mahir-floating-nav-inner {
+        border-bottom-color: rgba(0,0,0,.14) !important;
+      }
+    }
+  </style>
+</body>
+
+</html>

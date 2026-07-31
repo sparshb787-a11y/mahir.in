@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, pageStyles } from "../components/layout";
+import { LegalPageShell } from "../components/layout";
 
 export const Route = createFileRoute("/disclaimer")({
   component: Disclaimer,
@@ -34,167 +34,139 @@ export const Route = createFileRoute("/disclaimer")({
 });
 
 function Disclaimer() {
+  const meta = (
+    <div className="border border-black/5 rounded-2xl p-6 md:p-8 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            Version
+          </span>
+          <p className="text-black mt-1">1.0</p>
+        </div>
+        <div>
+          <span className="text-black/40 text-xs font-semibold uppercase tracking-widest">
+            Effective Date
+          </span>
+          <p className="text-black mt-1">June 01, 2026</p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div style={pageStyles.root}>
-      <SiteHeader />
-      <main className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-4xl mx-auto w-full">
-        <h1 className="text-4xl md:text-5xl font-semibold text-[#000000] leading-[1.05] tracking-tight mb-4">
-          COMPREHENSIVE DISCLAIMERS
-        </h1>
-        <h2 className="text-xl md:text-2xl text-[#5b6067] mb-8">
-          MIA App & Web Platform — Important Legal Notices
-        </h2>
-
-        <div className="prose prose-lg max-w-none text-[#000000]">
-          <div className="bg-gray-50 p-6 rounded-lg mb-8 text-sm">
-            <p>
-              <strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> June 01, 2026
-            </p>
+    <LegalPageShell
+      title="Comprehensive Disclaimers"
+      subtitle="MIA App & Web Platform — Important Legal Notices"
+      meta={meta}
+    >
+      <div className="space-y-10">
+        <section className="border border-amber-200 bg-amber-50/50 rounded-2xl p-6 md:p-8">
+          <div className="flex items-start gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-amber-700 mt-0.5 shrink-0"
+            >
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
+            <div>
+              <h3 className="text-xl font-semibold text-amber-900 mb-2" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+                Important Notice — Please Read All Disclaimers Carefully
+              </h3>
+              <p className="text-amber-800 leading-[1.8]">
+                These Disclaimers form an integral part of your agreement with MAHIR Investment
+                Advisers Private Limited. By accessing the MIA Platform or availing advisory services,
+                you unconditionally accept all disclaimers set out herein.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg mb-8">
-            <h3 className="text-xl font-semibold text-amber-900 mb-2 flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
-                <path d="M12 9v4" />
-                <path d="M12 17h.01" />
-              </svg>
-              IMPORTANT NOTICE — PLEASE READ ALL DISCLAIMERS CAREFULLY
-            </h3>
-            <p className="text-amber-800">
-              These Disclaimers form an integral part of your agreement with MAHIR Investment
-              Advisers Private Limited. By accessing the MIA Platform or availing advisory services,
-              you unconditionally accept all disclaimers set out herein.
-            </p>
-          </div>
-
-          <h3 className="text-2xl font-semibold mt-10 mb-4">
-            DISCLAIMER 1: SEBI REGISTRATION STATUS AND REGULATORY DISCLOSURE
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            Disclaimer 1: SEBI Registration Status and Regulatory Disclosure
           </h3>
-          <p className="mb-4">
+          <p className="text-black/55 leading-[1.8] mb-6">
             MAHIR Investment Advisers Private Limited is registered as an Investment Adviser with
             the Securities and Exchange Board of India (SEBI) under the SEBI (Investment Advisers)
             Regulations, 2013.
           </p>
-
-          <table className="min-w-full bg-white border border-gray-200 mb-6 text-sm">
-            <tbody>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">SEBI Registration No.</td>
-                <td className="py-2 px-4">INA000022668</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Registration Type</td>
-                <td className="py-2 px-4">
-                  Investment Adviser (Non-Individual) under SEBI (IA) Regulations, 2013
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Registration Date</td>
-                <td className="py-2 px-4">June 01, 2026</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Validity</td>
-                <td className="py-2 px-4">
-                  Perpetual (subject to compliance with SEBI Regulations)
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Principal Officer</td>
-                <td className="py-2 px-4">Yash Mahavir Bedmuttha</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Compliance Officer</td>
-                <td className="py-2 px-4">
-                  Bharat Makkar
-                  <br />
-                  Email: compliance@mahir.in
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">Registered Office</td>
-                <td className="py-2 px-4">
-                  PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad East, Pune 411019, Maharashtra
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold w-1/3">SEBI Regional Office</td>
-                <td className="py-2 px-4">
-                  SEBI Bhavan II, Plot No. C-7, 'G' Block, Bandra Kurla Complex, Bandra (East),
-                  Mumbai — 400051
-                </td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 font-semibold w-1/3">SEBI SCORES Portal</td>
-                <td className="py-2 px-4">
-                  https://scores.sebi.gov.in/ | Toll Free: 1800 266 7575
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="mb-8 text-sm italic">
+          <div className="overflow-x-auto">
+            <table className="w-full border border-black/5 text-sm">
+              <tbody>
+                {[
+                  ["SEBI Registration No.", "INA000022668"],
+                  ["Registration Type", "Investment Adviser (Non-Individual) under SEBI (IA) Regulations, 2013"],
+                  ["Registration Date", "June 01, 2026"],
+                  ["Validity", "Perpetual (subject to compliance with SEBI Regulations)"],
+                  ["Principal Officer", "Yash Mahavir Bedmuttha"],
+                  ["Compliance Officer", "Bharat Makkar\nEmail: compliance@mahir.in"],
+                  ["Registered Office", "PL G/A-9/1 Shop 1, MIDC G Nr Moris So, Chinchwad East, Pune 411019, Maharashtra"],
+                  ["SEBI Regional Office", "SEBI Bhavan II, Plot No. C-7, 'G' Block, Bandra Kurla Complex, Bandra (East), Mumbai — 400051"],
+                  ["SEBI SCORES Portal", "https://scores.sebi.gov.in/ | Toll Free: 1800 266 7575"],
+                ].map(([label, value], i) => (
+                  <tr key={i} className="border-b border-black/5 last:border-0">
+                    <td className="py-3 px-4 font-semibold text-black w-1/3">{label}</td>
+                    <td className="py-3 px-4 text-black/70 whitespace-pre-line">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-black/55 leading-[1.8] mt-4 text-sm">
             SEBI registration does not in any manner guarantee the quality of advice, services, or
             the profitability of investments. Clients are advised to verify MIA's registration at
             www.sebi.gov.in before engaging services.
           </p>
+        </section>
 
-          <h3 className="text-2xl font-semibold mt-10 mb-4">
-            DISCLAIMER 2: INVESTMENT RISK DISCLAIMER
+        <section>
+          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+            Disclaimer 2: Investment Risk Disclaimer
           </h3>
-          <p className="mb-4 font-semibold uppercase tracking-wider text-red-700">
-            MUTUAL FUNDS AND SECURITIES INVESTMENTS ARE SUBJECT TO MARKET RISKS. PAST PERFORMANCE IS
-            NOT INDICATIVE OF FUTURE RETURNS. PLEASE READ ALL SCHEME-RELATED DOCUMENTS CAREFULLY
-            BEFORE INVESTING.
+          <p className="text-black/55 leading-[1.8] mb-4 font-semibold uppercase tracking-wider text-red-700">
+            Mutual funds and securities investments are subject to market risks. Past performance is
+            not indicative of future returns. Please read all scheme-related documents carefully
+            before investing.
           </p>
-          <p className="mb-4">
+          <p className="text-black/55 leading-[1.8] mb-4">
             Investment in securities markets is subject to inherent market risk. The value of
             investments and income derived therefrom can go up as well as down, and investors may
-            not recover the full principal amount invested. The specific risk types include:
+            not recover the full principal amount invested.
           </p>
-          <table className="min-w-full bg-white border border-gray-200 mb-6 text-sm">
-            <thead>
-              <tr className="bg-gray-50 border-b">
-                <th className="py-2 px-4 text-left font-semibold">Risk Type</th>
-                <th className="py-2 px-4 text-left font-semibold">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold">Market Risk</td>
-                <td className="py-2 px-4">
-                  Prices of securities fluctuate due to macroeconomic conditions, market sentiment,
-                  and factors beyond MIA's control.
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-2 px-4 font-semibold">Liquidity Risk</td>
-                <td className="py-2 px-4">
-                  Some investments may not be easily liquidated at fair market value, particularly
-                  in volatile or thin markets.
-                </td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 font-semibold">Concentration Risk</td>
-                <td className="py-2 px-4">
-                  Concentrated investment in any single security or sector may expose the portfolio
-                  to higher volatility.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-      <SiteFooter />
-    </div>
+          <div className="overflow-x-auto">
+            <table className="w-full border border-black/5 text-sm">
+              <thead>
+                <tr className="border-b border-black/5 bg-black/[0.02]">
+                  <th className="py-3 px-4 text-left font-semibold text-black">Risk Type</th>
+                  <th className="py-3 px-4 text-left font-semibold text-black">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Market Risk", "Prices of securities fluctuate due to macroeconomic conditions, market sentiment, and factors beyond MIA's control."],
+                  ["Liquidity Risk", "Some investments may not be easily liquidated at fair market value, particularly in volatile or thin markets."],
+                  ["Concentration Risk", "Concentrated investment in any single security or sector may expose the portfolio to higher volatility."],
+                ].map(([type, desc], i) => (
+                  <tr key={i} className="border-b border-black/5 last:border-0">
+                    <td className="py-3 px-4 font-semibold text-black">{type}</td>
+                    <td className="py-3 px-4 text-black/70">{desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </LegalPageShell>
   );
 }
