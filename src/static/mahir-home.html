@@ -289,7 +289,7 @@ section.bg-white, #system, #range, #signatures, #models, #contact { background-c
 @media (min-width: 1440px) { #productWrap { width: 940px !important; height: 940px !important; } }
 
 /* Full-bleed hero card — flush to the top, spans the full width, curved corners visible */
-:root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 2.25rem; }
+:root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 0rem; }
 #stage {
   width: 100vw !important;
   height: auto !important;
@@ -299,7 +299,7 @@ section.bg-white, #system, #range, #signatures, #models, #contact { background-c
   border-radius: var(--hero-radius) !important;
 }
 @media (max-width: 767px) {
-  :root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 1.6rem; }
+  :root { --hero-gap: 0rem; --hero-gap-top: 0rem; --hero-radius: 0rem; }
   #stage { height: auto !important; max-height: none !important; }
 }
 
@@ -602,7 +602,8 @@ body { padding-top: 0; }
 
 
 /* ============ Social proof band (below Client Highlights) ============ */
-.mahir-socialproof { background: #ffffff; padding: 5rem 1rem; }
+.mahir-socialproof { background: #ffffff; padding: 2.5rem 1rem; }
+@media (min-width: 768px) { .mahir-socialproof { padding: 5rem 1rem; } }
 .msp-inner { max-width: 56rem; margin: 0 auto; text-align: center; }
 .msp-badge { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
 .msp-avatars { display: flex; }
@@ -754,7 +755,7 @@ body { padding-top: 0; }
 
   <main>
     <section id="reveal" class="relative mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
-      <div id="stage" class="relative overflow-hidden rounded-[2rem] bg-white mt-6" style="aspect-ratio: 1578/997; min-height: clamp(440px, 62svh, 640px);">
+      <div id="stage" class="relative overflow-hidden rounded-none bg-white mt-6" style="aspect-ratio: 1578/997; min-height: clamp(440px, 62svh, 640px);">
         <div id="lightLayer" class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('/451cfe4d-301f-4668-958a-fa207a707111.png');"></div>
 
         <div class="relative z-10 flex items-start justify-center h-full px-4 pt-[7rem] sm:pt-[10rem] lg:pt-[13rem]">
@@ -769,9 +770,9 @@ body { padding-top: 0; }
     </section>
 
     <!-- Product range section (white theme) -->
-    <section id="range" class="mahir-white-section relative bg-white py-20 sm:py-24 lg:py-28">
+    <section id="range" class="mahir-white-section relative bg-white py-12 sm:py-24 lg:py-28">
       <div class="mx-auto max-w-[96rem] px-4 sm:px-6 lg:px-8">
-        <div class="mb-12 mx-auto max-w-3xl text-center reveal-up">
+        <div class="mb-8 sm:mb-12 mx-auto max-w-3xl text-center reveal-up">
           <h2 class="text-4xl font-semibold leading-[1] tracking-[-.045em] sm:text-5xl lg:text-7xl">
             Our Products
           </h2>
@@ -815,8 +816,8 @@ body { padding-top: 0; }
     </section>
 
     <!-- Governance / white pinned section -->
-    <section id="engineering" class="mahir-white-section relative overflow-hidden bg-white py-14 pb-24 sm:py-16 sm:pb-28 lg:min-h-[85vh] lg:py-0">
-      <div id="engineeringPin" class="relative flex min-h-[85vh] flex-col items-center justify-center px-4 pt-4 pb-24 text-center sm:px-6 sm:pb-28 lg:px-8 lg:pb-32">
+    <section id="engineering" class="mahir-white-section relative overflow-hidden bg-white py-12 pb-16 sm:py-16 sm:pb-28 lg:min-h-[85vh] lg:py-0">
+      <div id="engineeringPin" class="relative flex min-h-0 flex-col items-center justify-start px-4 pt-2 pb-12 text-center sm:min-h-[85vh] sm:justify-center sm:px-6 sm:pt-4 sm:pb-28 lg:px-8 lg:pb-32">
         <div id="engineeringText" class="engineering-text-card relative z-10 mx-auto max-w-4xl reveal-up rounded-2xl border border-transparent px-6 py-8 sm:px-10 sm:py-10">
           <p class="section-kicker">What Is Inside Every Product</p>
           <h2 class="mt-4 text-4xl font-semibold leading-[1] tracking-[-.045em] text-gray-900 sm:text-5xl lg:text-7xl">Inside Every <span class="font-syne uppercase">MAHIR</span> Product.</h2>
