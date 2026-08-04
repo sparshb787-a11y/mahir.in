@@ -30,7 +30,7 @@ export const Route = createFileRoute("/linktree")({
 const links = [
   {
     name: "MAHIR Invest",
-    url: "https://mahirscreener.com",
+    url: "https://www.mahirinvest.com",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const links = [
   },
   {
     name: "MAHIR Screener",
-    url: "https://mahirscreener.com",
+    url: "https://www.mahrscreener.com",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

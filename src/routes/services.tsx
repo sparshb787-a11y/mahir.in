@@ -138,7 +138,7 @@ function ServicesPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://mahirscreener.com"
+                  href="https://www.mahirinvest.com"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/90 transition-colors"
@@ -250,7 +250,7 @@ function ServicesPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://www.mahirscreener.com"
+                  href="https://www.mahrscreener.com"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/90 transition-colors"
