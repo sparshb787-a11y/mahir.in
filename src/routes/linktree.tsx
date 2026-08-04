@@ -50,7 +50,7 @@ const links = [
   },
   {
     name: "MAHIR Screener",
-    url: "https://www.mahrscreener.com",
+    url: "https://www.mahirscreener.com",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
