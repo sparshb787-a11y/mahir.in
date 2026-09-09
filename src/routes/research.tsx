@@ -14,28 +14,28 @@ export const Route = createFileRoute("/research")({
   component: ResearchPage,
   head: () => ({
     meta: [
-      { title: "Research & Insights – MAHIR Group" },
+      { title: "Research & Insights" },
       {
         name: "description",
         content:
-          "Stay informed with MAHIR Group's research insights, market analysis, and investment perspectives.",
+          "Stay informed with MAHIR's research insights, market analysis, and investment perspectives.",
       },
-      { property: "og:title", content: "Research & Insights – MAHIR Group" },
+      { property: "og:title", content: "Research & Insights" },
       {
         property: "og:description",
         content:
-          "Stay informed with MAHIR Group's research insights, market analysis, and investment perspectives.",
+          "Stay informed with MAHIR's research insights, market analysis, and investment perspectives.",
       },
       { property: "og:url", content: "https://mahir.in/research" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@mahirinvest" },
-      { name: "twitter:title", content: "Research & Insights – MAHIR Group" },
+      { name: "twitter:title", content: "Research & Insights" },
       {
         name: "twitter:description",
         content:
-          "Stay informed with MAHIR Group's research insights, market analysis, and investment perspectives.",
+          "Stay informed with MAHIR's research insights, market analysis, and investment perspectives.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],

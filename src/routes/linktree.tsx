@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import mahirNewLogo from "../assets/images/logos/mahir-trust-leads.svg";
+import { pageStyles } from "../components/layout";
 
 export const Route = createFileRoute("/linktree")({
   component: Linktree,
   head: () => ({
     meta: [
-      { title: "MAHIR Group | Links" },
+      { title: "Links" },
       { name: "description", content: "Research-based investment advisory and market research." },
-      { property: "og:title", content: "MAHIR Group | Links" },
+      { property: "og:title", content: "Links" },
       {
         property: "og:description",
         content: "Research-based investment advisory and market research.",
@@ -16,7 +17,7 @@ export const Route = createFileRoute("/linktree")({
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MAHIR Group | Links" },
+      { name: "twitter:title", content: "Links" },
       {
         name: "twitter:description",
         content: "Research-based investment advisory and market research.",
@@ -70,7 +71,7 @@ const links = [
     description: "Advanced market research & data",
   },
   {
-    name: "MAHIR Group Website",
+    name: "MAHIR Website",
     url: "https://mahir.in",
     icon: (
       <svg
@@ -178,92 +179,81 @@ const socials = [
 
 function Linktree() {
   return (
-    <div className="min-h-screen bg-[#000000] flex flex-col items-center justify-start pt-16 pb-20 px-4 sm:px-6 relative overflow-hidden font-sans">
-      {/* Background ambient light */}
-      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
-
-      <div className="relative z-10 w-full max-w-lg flex flex-col items-center">
-        {/* Logo & Header */}
-        <div className="flex flex-col items-center mb-10">
-          <div className="h-20 flex items-center justify-center mb-4">
-            <img
-              src={mahirNewLogo}
-              alt="MAHIR Group"
-              className="h-full object-contain opacity-90"
-              style={{ filter: "invert(1) brightness(1.1)", mixBlendMode: "screen" }}
-            />
-          </div>
-          <p className="text-sm font-medium tracking-wide" style={{ color: "white" }}>
-            Research-based investment advisory & market research.
-          </p>
-        </div>
-
-        {/* Links Grid */}
-        <div className="w-full space-y-4 mb-12">
-          {links.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex items-center justify-between p-4 bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.05] hover:border-white/20 rounded-2xl transition-all duration-300"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-xl group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-all duration-300">
-                  {link.icon}
-                </div>
-                <div>
-                  <h2 className="font-semibold text-base" style={{ color: "white" }}>
-                    {link.name}
-                  </h2>
-                  <p className="text-xs mt-0.5 opacity-80" style={{ color: "white" }}>
-                    {link.description}
-                  </p>
-                </div>
+    <div style={pageStyles.root}>
+      <main>
+        <section className="px-5 py-20 md:py-28">
+          <div className="w-full max-w-lg mx-auto flex flex-col items-center">
+            {/* Logo & Header */}
+            <div className="flex flex-col items-center mb-10">
+              <div className="h-16 flex items-center justify-center mb-4">
+                <img src={mahirNewLogo} alt="MAHIR" className="h-full object-contain" />
               </div>
-              <div className="text-white/40 group-hover:text-white transition-colors mr-2 group-hover:translate-x-1 duration-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              <p className="text-sm font-medium tracking-wide text-white/85">
+                Research-based investment advisory &amp; market research.
+              </p>
+            </div>
+
+            {/* Links Grid */}
+            <div className="w-full space-y-4 mb-12">
+              {links.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center justify-between p-4 bg-white rounded-2xl transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </div>
-            </a>
-          ))}
-        </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 flex items-center justify-center bg-black/5 text-black rounded-xl group-hover:scale-110 transition-transform duration-300">
+                      {link.icon}
+                    </div>
+                    <div>
+                      <h2 className="font-semibold text-base text-black">{link.name}</h2>
+                      <p className="text-xs mt-0.5 text-black/60">{link.description}</p>
+                    </div>
+                  </div>
+                  <div className="text-black/40 group-hover:text-black transition-colors mr-2 group-hover:translate-x-1 duration-300">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
 
-        {/* Social Links */}
-        <div className="flex items-center justify-center gap-6 mt-4">
-          {socials.map((social, idx) => (
-            <a
-              key={idx}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="text-white/40 hover:text-white hover:scale-110 transition-all duration-300"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+            {/* Social Links */}
+            <div className="flex items-center justify-center gap-6 mt-4">
+              {socials.map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  className="text-white/60 hover:text-white hover:scale-110 transition-all duration-300"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
 
-        {/* Registration Disclaimer for trust (Optional but good practice for RIA) */}
-        <div
-          className="mt-16 text-center text-xs font-medium"
-          style={{ color: "rgba(255, 255, 255, 0.4)" }}
-        >
-          <p>SEBI RIA Registration No: INA000022668</p>
-        </div>
-      </div>
+            {/* Registration disclaimer */}
+            <div className="mt-16 text-center text-xs font-medium text-white/60">
+              <p>SEBI RIA Registration No: INA000022668</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

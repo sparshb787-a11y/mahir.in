@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Canela";
+  src: url("/fonts/Canela-Light-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -136,7 +144,7 @@
   * {
     border-color: var(--color-border);
     font-family:
-      "Syne",
+      "Canela",
       system-ui,
       -apple-system,
       sans-serif;
@@ -146,15 +154,18 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family:
-      "Syne",
+      "Canela",
       system-ui,
       -apple-system,
       sans-serif;
   }
 }
 
-.font-syne {
-  font-family: "Syne", sans-serif !important;
+.font-canela,
+.font-sans,
+.font-mono,
+.font-serif {
+  font-family: "Canela", system-ui, -apple-system, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6, .font-semibold, .font-bold, .font-medium {
@@ -172,8 +183,7 @@ h1, h2, h3, h4, h5, h6, .font-semibold, .font-bold, .font-medium {
   }
 }
 
-/* Footer and prefooter break out of the wrapper to span full width */
-.mahir-footer,
+/* Prefooter breaks out of the wrapper to span full width */
 .mahir-prefooter-band {
   width: 100vw;
   position: relative;
@@ -192,4 +202,39 @@ section + section {
   section + section {
     border-top: none;
   }
+}
+
+/* Sections transparent over sky background */
+.mahir-page-hero {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+section {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+footer {
+  background: transparent !important;
+}
+
+/* White boxes get glass effect */
+.bg-white, .rounded-2xl.bg-white, .border.bg-white {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+.mahir-floating-nav-inner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
 }

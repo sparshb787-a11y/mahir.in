@@ -5,24 +5,24 @@ export const Route = createFileRoute("/privacy")({
   component: PrivacyPolicy,
   head: () => ({
     meta: [
-      { title: "Privacy Policy | MAHIR Group" },
+      { title: "Privacy Policy" },
       {
         name: "description",
-        content: "Privacy Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Privacy Policy for MAHIR Investment Advisers Private Limited.",
       },
-      { property: "og:title", content: "Privacy Policy | MAHIR Group" },
+      { property: "og:title", content: "Privacy Policy" },
       {
         property: "og:description",
-        content: "Privacy Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Privacy Policy for MAHIR Investment Advisers Private Limited.",
       },
       { property: "og:url", content: "https://mahir.in/privacy" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Privacy Policy | MAHIR Group" },
+      { name: "twitter:title", content: "Privacy Policy" },
       {
         name: "twitter:description",
-        content: "Privacy Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Privacy Policy for MAHIR Investment Advisers Private Limited.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -96,7 +96,7 @@ function PrivacyPolicy() {
     >
       <div className="space-y-10">
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             1. About This Privacy Policy
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -124,7 +124,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             2. Personal Data We Collect
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -171,7 +171,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             3. Purposes and Legal Basis for Processing
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -210,7 +210,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             4. Data Sharing and Disclosure
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -248,7 +248,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             5. Data Security Measures
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -285,7 +285,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             6. Your Rights as Data Principal
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -327,7 +327,7 @@ function PrivacyPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             7. Contact, DPO, and Grievance Officer
           </h3>
           <p className="text-black/55 leading-[1.8] mb-6">

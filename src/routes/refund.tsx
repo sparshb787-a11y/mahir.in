@@ -5,24 +5,24 @@ export const Route = createFileRoute("/refund")({
   component: RefundPolicy,
   head: () => ({
     meta: [
-      { title: "Refund Policy | MAHIR Group" },
+      { title: "Refund Policy" },
       {
         name: "description",
-        content: "Refund Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Refund Policy for MAHIR Investment Advisers Private Limited.",
       },
-      { property: "og:title", content: "Refund Policy | MAHIR Group" },
+      { property: "og:title", content: "Refund Policy" },
       {
         property: "og:description",
-        content: "Refund Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Refund Policy for MAHIR Investment Advisers Private Limited.",
       },
       { property: "og:url", content: "https://mahir.in/refund" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Refund Policy | MAHIR Group" },
+      { name: "twitter:title", content: "Refund Policy" },
       {
         name: "twitter:description",
-        content: "Refund Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Refund Policy for MAHIR Investment Advisers Private Limited.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -72,7 +72,7 @@ function RefundPolicy() {
     >
       <div className="space-y-10">
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             1. Introduction
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -90,7 +90,7 @@ function RefundPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             2. Definitions
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -120,7 +120,7 @@ function RefundPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             3. Refund Policy
           </h3>
           <p className="text-black/55 leading-[1.8] mb-6">
@@ -197,7 +197,7 @@ function RefundPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             4. Amendments to This Policy
           </h3>
           <p className="text-black/55 leading-[1.8]">
@@ -210,7 +210,7 @@ function RefundPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             5. Contact Information
           </h3>
           <p className="text-black/55 leading-[1.8] mb-6">

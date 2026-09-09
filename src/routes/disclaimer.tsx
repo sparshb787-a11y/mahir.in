@@ -5,27 +5,27 @@ export const Route = createFileRoute("/disclaimer")({
   component: Disclaimer,
   head: () => ({
     meta: [
-      { title: "Comprehensive Disclaimers | MAHIR Group" },
+      { title: "Comprehensive Disclaimers" },
       {
         name: "description",
         content:
-          "Regulatory and Investment Disclaimer for MAHIR Group Investment Advisers Private Limited.",
+          "Regulatory and Investment Disclaimer for MAHIR Investment Advisers Private Limited.",
       },
-      { property: "og:title", content: "Comprehensive Disclaimers | MAHIR Group" },
+      { property: "og:title", content: "Comprehensive Disclaimers" },
       {
         property: "og:description",
         content:
-          "Regulatory and Investment Disclaimer for MAHIR Group Investment Advisers Private Limited.",
+          "Regulatory and Investment Disclaimer for MAHIR Investment Advisers Private Limited.",
       },
       { property: "og:url", content: "https://mahir.in/disclaimer" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Comprehensive Disclaimers | MAHIR Group" },
+      { name: "twitter:title", content: "Comprehensive Disclaimers" },
       {
         name: "twitter:description",
         content:
-          "Regulatory and Investment Disclaimer for MAHIR Group Investment Advisers Private Limited.",
+          "Regulatory and Investment Disclaimer for MAHIR Investment Advisers Private Limited.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -79,7 +79,7 @@ function Disclaimer() {
               <path d="M12 17h.01" />
             </svg>
             <div>
-              <h3 className="text-xl font-semibold text-amber-900 mb-2" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+              <h3 className="text-xl font-semibold text-amber-900 mb-2" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
                 Important Notice — Please Read All Disclaimers Carefully
               </h3>
               <p className="text-amber-800 leading-[1.8]">
@@ -92,7 +92,7 @@ function Disclaimer() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             Disclaimer 1: SEBI Registration Status and Regulatory Disclosure
           </h3>
           <p className="text-black/55 leading-[1.8] mb-6">
@@ -130,7 +130,7 @@ function Disclaimer() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             Disclaimer 2: Investment Risk Disclaimer
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4 font-semibold uppercase tracking-wider text-red-700">

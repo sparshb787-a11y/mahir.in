@@ -5,24 +5,24 @@ export const Route = createFileRoute("/cancellation")({
   component: CancellationPolicy,
   head: () => ({
     meta: [
-      { title: "Cancellation Policy | MAHIR Group" },
+      { title: "Cancellation Policy" },
       {
         name: "description",
-        content: "Cancellation Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Cancellation Policy for MAHIR Investment Advisers Private Limited.",
       },
-      { property: "og:title", content: "Cancellation Policy | MAHIR Group" },
+      { property: "og:title", content: "Cancellation Policy" },
       {
         property: "og:description",
-        content: "Cancellation Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Cancellation Policy for MAHIR Investment Advisers Private Limited.",
       },
       { property: "og:url", content: "https://mahir.in/cancellation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Cancellation Policy | MAHIR Group" },
+      { name: "twitter:title", content: "Cancellation Policy" },
       {
         name: "twitter:description",
-        content: "Cancellation Policy for MAHIR Group Investment Advisers Private Limited.",
+        content: "Cancellation Policy for MAHIR Investment Advisers Private Limited.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -72,7 +72,7 @@ function CancellationPolicy() {
     >
       <div className="space-y-10">
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             1. Introduction
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -90,7 +90,7 @@ function CancellationPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             2. Definitions
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -120,7 +120,7 @@ function CancellationPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             3. Right to Cancel
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -131,7 +131,7 @@ function CancellationPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             4. Cancellation by MIA (MAHIR Invest)
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -166,7 +166,7 @@ function CancellationPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             5. Amendments to This Policy
           </h3>
           <p className="text-black/55 leading-[1.8]">
@@ -179,7 +179,7 @@ function CancellationPolicy() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             6. Contact Information
           </h3>
           <p className="text-black/55 leading-[1.8] mb-6">

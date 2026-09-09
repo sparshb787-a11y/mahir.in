@@ -6,23 +6,23 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
   head: () => ({
     meta: [
-      { title: "Products | MAHIR Group" },
+      { title: "Products" },
       {
         name: "description",
         content:
-          "Explore MAHIR Group products — SEBI-registered investment advisory through MAHIR Invest and market research tools through MAHIR Screener.",
+          "Explore MAHIR products — SEBI-registered investment advisory through MAHIR Invest and market research tools through MAHIR Screener.",
       },
-      { property: "og:title", content: "Products | MAHIR Group" },
+      { property: "og:title", content: "Products" },
       {
         property: "og:description",
         content:
-          "Research-backed investment advisory and market intelligence tools from MAHIR Group.",
+          "Research-backed investment advisory and market intelligence tools from MAHIR.",
       },
       { property: "og:url", content: "https://mahir.in/products" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Products | MAHIR Group" },
+      { name: "twitter:title", content: "Products" },
       {
         name: "twitter:description",
         content: "Research-backed investment advisory and market intelligence tools.",
@@ -67,7 +67,7 @@ function ProductsPage() {
                   </div>
                   <h2
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Invest
                   </h2>
@@ -179,7 +179,7 @@ function ProductsPage() {
                   </div>
                   <h2
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Screener
                   </h2>
@@ -278,8 +278,8 @@ function ProductsPage() {
           <div className="mx-auto max-w-[1100px]">
             <div className="text-center mb-12">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Why Choose MAHIR
               </h2>
@@ -306,7 +306,7 @@ function ProductsPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   SEBI Registered
                 </h3>
@@ -334,7 +334,7 @@ function ProductsPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   Research-Backed
                 </h3>
@@ -363,7 +363,7 @@ function ProductsPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   Client-First
                 </h3>
@@ -380,8 +380,8 @@ function ProductsPage() {
           <div className="mx-auto max-w-[900px]">
             <div className="text-center mb-12">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 How It Works
               </h2>
@@ -397,7 +397,7 @@ function ProductsPage() {
                 <div>
                   <h3
                     className="text-xl font-semibold text-black mb-2"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     Share Your Goals
                   </h3>
@@ -413,7 +413,7 @@ function ProductsPage() {
                 <div>
                   <h3
                     className="text-xl font-semibold text-black mb-2"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     Get Personalized Research
                   </h3>
@@ -429,7 +429,7 @@ function ProductsPage() {
                 <div>
                   <h3
                     className="text-xl font-semibold text-black mb-2"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     Invest with Confidence
                   </h3>
@@ -446,8 +446,8 @@ function ProductsPage() {
         <section className="px-5 py-16 md:py-20 md:px-12">
           <div className="mx-auto max-w-[900px] text-center">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               Built by the Same Research Team
             </h2>

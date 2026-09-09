@@ -6,26 +6,26 @@ export const Route = createFileRoute("/approach")({
   component: ApproachPage,
   head: () => ({
     meta: [
-      { title: "Our Approach | MAHIR Group" },
+      { title: "Our Approach" },
       {
         name: "description",
         content:
-          "Learn how MAHIR Group approaches investment research, risk management, and client advisory with discipline and transparency.",
+          "Learn how MAHIR approaches investment research, risk management, and client advisory with discipline and transparency.",
       },
-      { property: "og:title", content: "Our Approach | MAHIR Group" },
+      { property: "og:title", content: "Our Approach" },
       {
         property: "og:description",
         content:
-          "Research-first, client-first. How MAHIR Group approaches investment advisory and market research.",
+          "Research-first, client-first. How MAHIR approaches investment advisory and market research.",
       },
       { property: "og:url", content: "https://mahir.in/approach" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Our Approach | MAHIR Group" },
+      { name: "twitter:title", content: "Our Approach" },
       {
         name: "twitter:description",
-        content: "Research-first, client-first. How MAHIR Group approaches investment advisory.",
+        content: "Research-first, client-first investment advisory, done right.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -185,8 +185,8 @@ function ApproachPage() {
           <div className="mx-auto max-w-[1100px]">
             <div className="text-center mb-12">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Our Process
               </h2>
@@ -204,7 +204,7 @@ function ApproachPage() {
                   <div className="mb-4 text-black/60">{s.icon}</div>
                   <h3
                     className="text-xl font-semibold text-black mb-3"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     {s.title}
                   </h3>
@@ -218,8 +218,8 @@ function ApproachPage() {
         <section className="px-5 py-16 md:py-20 md:px-12">
           <div className="mx-auto max-w-[900px] text-center">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               Built to Last
             </h2>

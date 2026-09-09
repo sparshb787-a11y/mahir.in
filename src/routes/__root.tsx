@@ -12,12 +12,13 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import chromeCss from "../styles/chrome.css?url";
 import { reportError } from "../lib/error-reporting";
+import { ScrollReveal } from "../components/scroll-reveal";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h1 className="text-5xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
@@ -78,16 +79,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MAHIR Group | SEBI Registered RIA" },
+      { title: "MAHIR | SEBI Registered RIA" },
       {
         name: "description",
         content:
-          "MAHIR Group is a SEBI-registered RIA (INA000022668) delivering research-based stock recommendations and market research via MAHIR Invest and MAHIR Screener.",
+          "MAHIR is a SEBI-registered RIA (INA000022668) delivering research-based stock recommendations and market research via MAHIR Invest and MAHIR Screener.",
       },
-      { name: "author", content: "MAHIR Group Investment Advisers Private Limited" },
+      { name: "author", content: "MAHIR Investment Advisers Private Limited" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
-      { property: "og:site_name", content: "MAHIR Group" },
-      { property: "og:title", content: "MAHIR Group | SEBI Registered RIA" },
+      { property: "og:site_name", content: "MAHIR" },
+      { property: "og:title", content: "MAHIR | SEBI Registered RIA" },
       {
         property: "og:description",
         content:
@@ -98,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@mahirinvest" },
-      { name: "twitter:title", content: "MAHIR Group | SEBI Registered RIA" },
+      { name: "twitter:title", content: "MAHIR | SEBI Registered RIA" },
       {
         name: "twitter:description",
         content:
@@ -117,12 +118,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: chromeCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap",
-      },
       { rel: "icon", href: "/circle-favicon.png", type: "image/png" },
       { rel: "preload", as: "image", href: "/mahir-mark-white.png" },
       { rel: "preload", as: "image", href: "/mahir-trust-leads.svg" },
@@ -136,12 +131,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" style={{ background: "#ffffff" }}>
+    <html lang="en" style={{ background: "url('/hero-sky.png') center center / cover no-repeat fixed", backgroundColor: "#87CEEB" }}>
       <head>
         <HeadContent />
       </head>
-      <body style={{ background: "#ffffff" }}>
-        <div className="mahir-page-wrap">
+      <body style={{ background: "transparent" }}>
+        <div className="mahir-page-wrap relative z-10">
           {children}
         </div>
         <Scripts />
@@ -155,6 +150,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollReveal />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

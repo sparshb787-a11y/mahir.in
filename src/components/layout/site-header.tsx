@@ -47,28 +47,27 @@ export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
               />
             </span>
           </a>
-          <nav>
-            <Link to="/products" className="nav-link" activeProps={{ className: "active" }}>
-              Products
-            </Link>
-            <Link to="/approach" className="nav-link" activeProps={{ className: "active" }}>
-              Approach
-            </Link>
-            <Link to="/about" className="nav-link" activeProps={{ className: "active" }}>
-              About
-            </Link>
-            <Link to="/careers" className="nav-link" activeProps={{ className: "active" }}>
-              Careers
-            </Link>
-            <Link to="/blog" className="nav-link" activeProps={{ className: "active" }}>
-              Blog
-            </Link>
-          </nav>
-          <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
-            <Link to="/contact" className="mahir-nav-contact-fancy mahir-nav-contact-desktop">
-              <span className="nc-ring" aria-hidden="true" />
-              <span className="nc-inner">Contact</span>
-            </Link>
+          <div className="mahir-floating-nav-right">
+            <nav>
+              <Link to="/products" className="nav-link" activeProps={{ className: "active" }}>
+                Products
+              </Link>
+              <Link to="/approach" className="nav-link" activeProps={{ className: "active" }}>
+                Approach
+              </Link>
+              <Link to="/about" className="nav-link" activeProps={{ className: "active" }}>
+                About
+              </Link>
+              <Link to="/careers" className="nav-link" activeProps={{ className: "active" }}>
+                Careers
+              </Link>
+              <Link to="/blog" className="nav-link" activeProps={{ className: "active" }}>
+                Blog
+              </Link>
+              <Link to="/contact" className="nav-link" activeProps={{ className: "active" }}>
+                Contact
+              </Link>
+            </nav>
             <button
               type="button"
               className="mahir-nav-hamburger"
@@ -110,9 +109,8 @@ export function SiteHeader({ injectCss = true }: { injectCss?: boolean } = {}) {
         <Link to="/blog" onClick={closeMenu} activeProps={{ className: "active" }}>
           Blog
         </Link>
-        <Link to="/contact" className="mahir-nav-contact-fancy" onClick={closeMenu}>
-          <span className="nc-ring" aria-hidden="true" />
-          <span className="nc-inner">Contact</span>
+        <Link to="/contact" onClick={closeMenu} activeProps={{ className: "active" }}>
+          Contact
         </Link>
       </div>
     </>

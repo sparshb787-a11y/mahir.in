@@ -6,29 +6,27 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About MAHIR Group | Parent Company of MAHIR Invest & MAHIR Screener" },
+      { title: "About Us" },
       {
         name: "description",
         content:
-          "MAHIR Group is the parent company behind MAHIR Invest (SEBI-registered RIA) and MAHIR Screener (market research tool). Learn our story, mission, and products.",
+          "The team behind MAHIR Invest (SEBI-registered RIA) and MAHIR Screener (market research tool). Our story, mission, and products.",
       },
       {
         name: "keywords",
-        content:
-          "MAHIR Group, MAHIR Invest, MAHIR Screener, SEBI registered RIA, investment advisory, stock screening, market research",
+        content: "investment advisory, SEBI registered RIA, stock screening, market research",
       },
-      { property: "og:title", content: "About MAHIR Group | MAHIR Invest & MAHIR Screener" },
+      { property: "og:title", content: "About Us" },
       {
         property: "og:description",
-        content:
-          "MAHIR Group is the parent company behind MAHIR Invest and MAHIR Screener. Research-led investment advisory and market intelligence.",
+        content: "The team behind MAHIR Invest and MAHIR Screener — research-led advisory and market intelligence.",
       },
       { property: "og:url", content: "https://mahir.in/about" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About MAHIR Group" },
-      { name: "twitter:description", content: "Parent company of MAHIR Invest & MAHIR Screener." },
+      { name: "twitter:title", content: "About Us" },
+      { name: "twitter:description", content: "The team behind MAHIR Invest & MAHIR Screener." },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
     links: [{ rel: "canonical", href: "https://mahir.in/about" }],
@@ -82,8 +80,8 @@ function AboutPage() {
                 How We Started
               </p>
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-[-.03em] text-black"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.1] tracking-[-.03em] text-black"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Clarity Over Noise.
               </h2>
@@ -116,8 +114,8 @@ function AboutPage() {
                 Our Story
               </p>
               <h3
-                className="text-3xl md:text-4xl font-semibold leading-[1.05] tracking-[-.03em] text-black"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold leading-[1.05] tracking-[-.03em] text-black"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Key Moments
               </h3>
@@ -148,7 +146,7 @@ function AboutPage() {
                             </span>
                             <h4
                               className="mt-2 text-lg font-semibold text-black"
-                              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                             >
                               {m.title}
                             </h4>
@@ -185,7 +183,7 @@ function AboutPage() {
                             </span>
                             <h4
                               className="mt-2 text-lg font-semibold text-black"
-                              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                             >
                               {m.title}
                             </h4>
@@ -239,15 +237,15 @@ function AboutPage() {
                 </p>
                 <h2
                   className="text-2xl font-medium leading-[1.1] tracking-[-.03em] text-black sm:text-3xl lg:text-4xl"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
-                  A Steady Hand <span className="text-black/40">Behind Every Recommendation.</span>
+                  A Steady Hand Behind Every Recommendation.
                 </h2>
                 <p className="mt-6 text-base leading-[1.8] text-black/55 max-w-xl">
-                  Yash leads <span className="font-syne uppercase">MAHIR</span> with a focus on
+                  Yash leads <span className="font-canela uppercase">MAHIR</span> with a focus on
                   building systems that serve clients first. His experience across research,
                   advisory, and governance shapes the discipline and transparency behind every{" "}
-                  <span className="font-syne uppercase">MAHIR</span> recommendation.
+                  <span className="font-canela uppercase">MAHIR</span> recommendation.
                 </p>
                 <blockquote className="mt-8 text-lg italic tracking-[-.01em] text-black/80">
                   "We would rather explain a modest recommendation than defend a loud one. That's the only way
@@ -266,37 +264,12 @@ function AboutPage() {
             </div>
           </section>
 
-          {/* ===== Who is MAHIR ===== */}
-          <section className="px-5 md:px-12 py-16 md:py-20">
-            <div className="text-center mb-8">
-              <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
-              >
-                Who is MAHIR
-              </h2>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-black/70 leading-relaxed text-justify">
-                MAHIR Group is the parent company that powers two distinct products serving the
-                Indian investor. On one side, <strong className="text-black">MAHIR Invest</strong>{" "}
-                is a SEBI-registered Investment Adviser (RIA) providing personalized investment
-                recommendations grounded in deep fundamental research — no commissions, no
-                conflicts, just honest advice. On the other,{" "}
-                <strong className="text-black">MAHIR Screener</strong> is a market intelligence tool
-                that puts powerful screening, data visualization, and research capabilities in the
-                hands of every investor. We are a single team united by a shared mission: to make
-                high-quality investment thinking accessible to everyone.
-              </p>
-            </div>
-          </section>
-
           {/* ===== Why We Started ===== */}
           <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-8">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Why We Started
               </h2>
@@ -322,8 +295,8 @@ function AboutPage() {
           <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-8">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Our Mission
               </h2>
@@ -343,8 +316,8 @@ function AboutPage() {
           <section className="px-5 md:px-12 py-16 md:py-20">
             <div className="text-center mb-12">
               <h2
-                className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-                style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+                style={{ fontFamily: "Canela, system-ui, sans-serif" }}
               >
                 Advisory and Market Insights.
               </h2>
@@ -370,7 +343,7 @@ function AboutPage() {
                   </svg>
                   <h3
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Invest
                   </h3>
@@ -456,7 +429,7 @@ function AboutPage() {
                   </svg>
                   <h3
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Screener
                   </h3>
@@ -527,8 +500,8 @@ function AboutPage() {
           {/* ===== What Makes Us Different ===== */}
           <section className="px-5 md:px-12 py-16 md:py-20 text-center">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-12"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-12"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               What Makes Us Different
             </h2>
@@ -551,7 +524,7 @@ function AboutPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   SEBI Registered
                 </h3>
@@ -579,7 +552,7 @@ function AboutPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   Research-Backed
                 </h3>
@@ -608,7 +581,7 @@ function AboutPage() {
                 </div>
                 <h3
                   className="text-xl font-semibold text-black mb-3"
-                  style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                  style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
                   Client-First
                 </h3>
@@ -622,8 +595,8 @@ function AboutPage() {
           {/* ===== Built to Last ===== */}
           <section className="px-5 md:px-12 py-16 md:py-20 text-center">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               Built to Last
             </h2>

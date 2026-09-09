@@ -7,9 +7,9 @@
   --border: #e4e7ee;
   --soft: #f5f7fb;
   --paper: #ffffff;
-  --mahir-display: "Syne", system-ui, -apple-system, sans-serif;
-  --mahir-body: "Syne", system-ui, -apple-system, sans-serif;
-  --mahir-mono: "Syne", system-ui, -apple-system, sans-serif;
+  --mahir-display: "Canela", system-ui, -apple-system, sans-serif;
+  --mahir-body: "Canela", system-ui, -apple-system, sans-serif;
+  --mahir-mono: "Canela", system-ui, -apple-system, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -1053,7 +1053,7 @@ h4,
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.95rem 2rem;
-  border-radius: 0;
+  border-radius: 999px;
   transition: transform 0.25s ease;
 }
 .mahir-cta-btn:hover {
@@ -1773,7 +1773,7 @@ h4,
 }
 .msp-italic {
   font-style: italic;
-  font-family: "Instrument Serif", "Playfair Display", Georgia, serif;
+  font-family: "Canela", system-ui, -apple-system, sans-serif;
   font-weight: 400;
 }
 .msp-sub {
@@ -2244,8 +2244,8 @@ h4,
   max-width: 58ch;
   text-align: left;
 }
-.mahir-faq-item summary .font-syne,
-.mahir-faq-item .mahir-faq-a .font-syne {
+.mahir-faq-item summary .font-canela,
+.mahir-faq-item .mahir-faq-a .font-canela {
   letter-spacing: 0;
 }
 @media (max-width: 640px) {

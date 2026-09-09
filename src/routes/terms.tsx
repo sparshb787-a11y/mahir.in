@@ -5,24 +5,24 @@ export const Route = createFileRoute("/terms")({
   component: TermsAndConditions,
   head: () => ({
     meta: [
-      { title: "Terms and Conditions | MAHIR Group" },
+      { title: "Terms and Conditions" },
       {
         name: "description",
-        content: "Terms and Conditions for MAHIR Group Investment Advisers Private Limited.",
+        content: "Terms and Conditions for MAHIR Investment Advisers Private Limited.",
       },
-      { property: "og:title", content: "Terms and Conditions | MAHIR Group" },
+      { property: "og:title", content: "Terms and Conditions" },
       {
         property: "og:description",
-        content: "Terms and Conditions for MAHIR Group Investment Advisers Private Limited.",
+        content: "Terms and Conditions for MAHIR Investment Advisers Private Limited.",
       },
       { property: "og:url", content: "https://mahir.in/terms" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Terms and Conditions | MAHIR Group" },
+      { name: "twitter:title", content: "Terms and Conditions" },
       {
         name: "twitter:description",
-        content: "Terms and Conditions for MAHIR Group Investment Advisers Private Limited.",
+        content: "Terms and Conditions for MAHIR Investment Advisers Private Limited.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -96,7 +96,7 @@ function TermsAndConditions() {
     >
       <div className="space-y-10">
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             1. Introduction and Acceptance of Terms
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -115,7 +115,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             2. Definitions
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -148,7 +148,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             3. Eligibility Criteria
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -181,7 +181,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             4. Nature and Scope of Services
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -209,7 +209,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             5. Fee Structure and Payment Terms
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -247,7 +247,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             6. Client Obligations and Representations
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -281,7 +281,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             7. Grievance Redressal Mechanism
           </h3>
           <p className="text-black/55 leading-[1.8] mb-4">
@@ -317,7 +317,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             8. Governing Law and Jurisdiction
           </h3>
           <p className="text-black/55 leading-[1.8]">
@@ -329,7 +329,7 @@ function TermsAndConditions() {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Syne, system-ui, sans-serif" }}>
+          <h3 className="text-xl font-semibold tracking-tight text-black mb-4" style={{ fontFamily: "Canela, system-ui, sans-serif" }}>
             9. Amendments to Terms
           </h3>
           <p className="text-black/55 leading-[1.8]">

@@ -6,9 +6,9 @@ export { LegalPageShell } from "./legal-page-shell";
 
 export const pageStyles = {
   root: {
-    background: "#ffffff",
+    background: "transparent",
     color: "#000000",
     minHeight: "100vh",
-    fontFamily: "Syne, system-ui, sans-serif",
+    fontFamily: "Canela, system-ui, sans-serif",
   } as React.CSSProperties,
 };

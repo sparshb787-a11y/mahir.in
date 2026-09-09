@@ -6,18 +6,18 @@ export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     meta: [
-      { title: "Careers | MAHIR Group" },
+      { title: "Careers" },
       {
         name: "description",
         content:
-          "Careers at MAHIR Group | join a research-based SEBI-registered RIA building financial systems that put people first.",
+          "Careers at MAHIR | join a research-based SEBI-registered RIA building financial systems that put people first.",
       },
       {
         name: "keywords",
         content:
-          "MAHIR Group Careers, jobs at MAHIR Group, investment advisory jobs Pune, finance jobs Pune",
+          "MAHIR Careers, jobs at MAHIR, investment advisory jobs Pune, finance jobs Pune",
       },
-      { property: "og:title", content: "Careers | MAHIR Group" },
+      { property: "og:title", content: "Careers" },
       {
         property: "og:description",
         content:
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/careers")({
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Careers | MAHIR Group" },
+      { name: "twitter:title", content: "Careers" },
       {
         name: "twitter:description",
         content:
@@ -77,9 +77,9 @@ function CareersPage() {
 
         {/* No Openings Card */}
         <section className="px-5 md:px-12 py-16 md:py-20 text-center">
-          <div className="rounded-3xl bg-white border border-black/[0.06] p-8 md:p-12 shadow-sm mx-auto max-w-[1100px]">
+          <div className="rounded-3xl bg-white/[0.15] backdrop-blur-xl border border-white/30 p-8 md:p-12 shadow-sm mx-auto max-w-[1100px]">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 rounded-full bg-black/[0.04] flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center">
                 <svg
                   width="28"
                   height="28"
@@ -89,7 +89,7 @@ function CareersPage() {
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-black/40"
+                  className="text-white"
                 >
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
@@ -97,12 +97,12 @@ function CareersPage() {
               </div>
             </div>
             <h2
-              className="text-2xl font-semibold text-black mb-3"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl font-semibold text-white mb-3"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               No Openings Right Now
             </h2>
-            <p className="text-black/60 text-lg max-w-lg mx-auto">
+            <p className="text-white/80 text-lg max-w-lg mx-auto">
               We are not actively hiring at the moment. We grow deliberately and only when the
               timing is right.
             </p>
@@ -113,8 +113,8 @@ function CareersPage() {
         <section className="px-5 md:px-12 py-16 md:py-20">
           <div className="mx-auto max-w-[1100px]">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-8 text-center"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8 text-center"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               Perks & Benefits
             </h2>
@@ -122,9 +122,9 @@ function CareersPage() {
               {perks.map((p, i) => (
                 <div
                   key={p.title}
-                  className="rounded-2xl border border-black/5 bg-white p-8 transition-all hover:shadow-lg hover:-translate-y-1"
+                  className="rounded-2xl border border-white/30 bg-white/[0.15] backdrop-blur-xl p-8 transition-all hover:shadow-lg hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-black/[0.04] flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
                     {i === 0 && (
                       <svg
                         width="22"
@@ -135,7 +135,7 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <circle cx="12" cy="12" r="10" />
                         <polyline points="12 6 12 12 16 14" />
@@ -151,7 +151,7 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                         <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -167,7 +167,7 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                         <polyline points="9 22 9 12 15 12 15 22" />
@@ -183,7 +183,7 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                       </svg>
@@ -198,7 +198,7 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
@@ -216,19 +216,19 @@ function CareersPage() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-black/50"
+                        className="text-white"
                       >
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     )}
                   </div>
                   <h3
-                    className="text-xl font-semibold text-black mb-3"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    className="text-xl font-semibold text-white mb-3"
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     {p.title}
                   </h3>
-                  <p className="text-black/60 leading-relaxed text-[0.95rem]">{p.desc}</p>
+                  <p className="text-white/80 leading-relaxed text-[0.95rem]">{p.desc}</p>
                 </div>
               ))}
             </div>
@@ -238,13 +238,13 @@ function CareersPage() {
         {/* Bottom text */}
         <section className="px-5 py-16 md:py-20 md:px-12 text-center">
           <div className="mx-auto max-w-[900px]">
-            <p className="text-lg text-black/60 mb-4">
+            <p className="text-lg text-white/80 mb-4">
               Don't see your role? We're always open to hearing from exceptional people. Send us an
               email.
             </p>
             <a
               href="mailto:careers@mahir.in"
-              className="text-black font-semibold underline underline-offset-4 hover:text-black/70 transition-colors"
+              className="text-white font-semibold underline underline-offset-4 hover:text-white/70 transition-colors"
             >
               careers@mahir.in
             </a>

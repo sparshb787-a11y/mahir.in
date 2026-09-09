@@ -6,23 +6,23 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Our Services | MAHIR Group" },
+      { title: "Our Services" },
       {
         name: "description",
         content:
-          "Explore MAHIR Group services — SEBI-registered investment advisory through MAHIR Invest and market research tools through MAHIR Screener.",
+          "Explore MAHIR services — SEBI-registered investment advisory through MAHIR Invest and market research tools through MAHIR Screener.",
       },
-      { property: "og:title", content: "Our Services | MAHIR Group" },
+      { property: "og:title", content: "Our Services" },
       {
         property: "og:description",
         content:
-          "Research-backed investment advisory and market intelligence tools from MAHIR Group.",
+          "Research-backed investment advisory and market intelligence tools from MAHIR.",
       },
       { property: "og:url", content: "https://mahir.in/services" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Our Services | MAHIR Group" },
+      { name: "twitter:title", content: "Our Services" },
       {
         name: "twitter:description",
         content: "Research-backed investment advisory and market intelligence tools.",
@@ -66,7 +66,7 @@ function ServicesPage() {
                   </div>
                   <h2
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Invest
                   </h2>
@@ -178,7 +178,7 @@ function ServicesPage() {
                   </div>
                   <h2
                     className="text-2xl font-semibold text-black"
-                    style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+                    style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                   >
                     MAHIR Screener
                   </h2>
@@ -275,8 +275,8 @@ function ServicesPage() {
         <section className="px-5 py-16 md:py-20 md:px-12">
           <div className="mx-auto max-w-[900px] text-center">
             <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-black mb-4"
-              style={{ fontFamily: "Syne, system-ui, sans-serif" }}
+              className="text-2xl md:text-3xl font-semibold tracking-tight text-black mb-4"
+              style={{ fontFamily: "Canela, system-ui, sans-serif" }}
             >
               Built by the Same Research Team
             </h2>

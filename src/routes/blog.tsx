@@ -7,13 +7,13 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
   head: () => ({
     meta: [
-      { title: "Blog | MAHIR Group" },
+      { title: "Blog" },
       {
         name: "description",
         content:
           "Read our latest market research, what we think about investing, and thoughts on building better systems for investors.",
       },
-      { property: "og:title", content: "Blog | MAHIR Group" },
+      { property: "og:title", content: "Blog" },
       {
         property: "og:description",
         content:
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/blog")({
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@mahirinvest" },
-      { name: "twitter:title", content: "Blog | MAHIR Group" },
+      { name: "twitter:title", content: "Blog" },
       {
         name: "twitter:description",
         content:
@@ -40,17 +40,20 @@ const blogCardCss = `
 .mahir-blog-card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.35);
   border-radius: 1.25rem;
   overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
   text-decoration: none;
   color: inherit;
 }
 .mahir-blog-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
 }
 .mahir-blog-card-body {
   padding: 1.75rem;
@@ -66,7 +69,7 @@ const blogCardCss = `
 }
 .mahir-blog-card-date {
   font-size: .75rem;
-  color: rgba(11,18,32,0.45);
+  color: rgba(255,255,255,0.75);
   letter-spacing: .02em;
 }
 .mahir-blog-card-readtime {
@@ -74,23 +77,23 @@ const blogCardCss = `
   font-weight: 300;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(11,18,32,0.4);
-  background: rgba(11,18,32,0.04);
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.15);
   padding: .2rem .6rem;
   border-radius: 999px;
 }
 .mahir-blog-card-title {
-  font-family: "Syne", system-ui, -apple-system, sans-serif;
+  font-family: "Canela", system-ui, -apple-system, sans-serif;
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #000000;
+  color: #ffffff;
   margin: 0 0 .5rem;
 }
 .mahir-blog-card-excerpt {
   font-size: .9rem;
   line-height: 1.65;
-  color: rgba(11,18,32,0.55);
+  color: rgba(255,255,255,0.8);
   margin: 0;
   flex: 1;
 }
@@ -99,7 +102,7 @@ const blogCardCss = `
   padding-top: 1rem;
   font-size: .8125rem;
   font-weight: 300;
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: .35rem;
@@ -155,9 +158,9 @@ function BlogPage() {
 
         <section className="overflow-hidden px-5 py-16 md:px-12">
           <div className="mx-auto max-w-[900px]">
-            <div className="rounded-2xl bg-black/[0.03] px-7 py-6">
-              <p className="text-[0.8125rem] leading-[1.7] text-black/45">
-                <strong className="text-black/60">Disclaimer:</strong> The content above is for
+            <div className="rounded-2xl bg-white/[0.15] backdrop-blur-xl border border-white/30 px-7 py-6">
+              <p className="text-[0.8125rem] leading-[1.7] text-white/70">
+                <strong className="text-white">Disclaimer:</strong> The content above is for
                 educational and informational purposes only. It does not constitute investment
                 advice or a recommendation to buy or sell any securities. Please consult a
                 SEBI-registered investment adviser before making investment decisions.

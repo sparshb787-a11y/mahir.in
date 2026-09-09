@@ -7,30 +7,30 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact | MAHIR Group" },
+      { title: "Contact" },
       {
         name: "description",
         content:
-          "Contact MAHIR Group | SEBI-registered investment advisers based in Pune. Reach us for advisory, partnerships, or MAHIR Screener platform questions.",
+          "Contact MAHIR | SEBI-registered investment advisers based in Pune. Reach us for advisory, partnerships, or MAHIR Screener platform questions.",
       },
       {
         name: "keywords",
         content:
-          "Contact MAHIR Group, MAHIR Group Pune, SEBI registered advisory contact, investment advisory Pune",
+          "Contact MAHIR, MAHIR Pune, SEBI registered advisory contact, investment advisory Pune",
       },
-      { property: "og:title", content: "Contact | MAHIR Group" },
+      { property: "og:title", content: "Contact" },
       {
         property: "og:description",
-        content: "Reach MAHIR Group for advisory, partnerships, or platform questions.",
+        content: "Reach us for advisory, partnerships, or platform questions.",
       },
       { property: "og:url", content: "https://mahir.in/contact" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://mahir.in/mahir-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact | MAHIR Group" },
+      { name: "twitter:title", content: "Contact" },
       {
         name: "twitter:description",
-        content: "Reach MAHIR Group for advisory, partnerships, or platform questions.",
+        content: "Reach us for advisory, partnerships, or platform questions.",
       },
       { name: "twitter:image", content: "https://mahir.in/mahir-logo.png" },
     ],
@@ -48,10 +48,13 @@ function ContactPage() {
   }
 
   const infoCardStyle: React.CSSProperties = {
-    background: "rgba(0,0,0,0.02)",
-    border: "1px solid rgba(0,0,0,0.06)",
+    background: "rgba(255,255,255,0.15)",
+    backdropFilter: "blur(20px)",
+    WebkitBackdropFilter: "blur(20px)",
+    border: "1px solid rgba(255,255,255,0.3)",
     borderRadius: "1.5rem",
     padding: "1.5rem",
+    boxShadow: "0 4px 24px rgba(0,0,0,0.15)",
   };
 
   const infoLabelStyle: React.CSSProperties = {
@@ -59,13 +62,13 @@ function ContactPage() {
     fontWeight: 600,
     textTransform: "uppercase",
     letterSpacing: ".18em",
-    color: "rgba(0,0,0,0.5)",
+    color: "rgba(255,255,255,0.7)",
     marginBottom: ".25rem",
   };
 
   const infoValueStyle: React.CSSProperties = {
     fontSize: ".95rem",
-    color: "#000",
+    color: "#ffffff",
     lineHeight: 1.5,
   };
 
@@ -80,18 +83,20 @@ function ContactPage() {
     fontWeight: 600,
     textTransform: "uppercase",
     letterSpacing: ".15em",
-    color: "rgba(0,0,0,0.7)",
+    color: "rgba(255,255,255,0.8)",
   };
 
   const inputStyle: React.CSSProperties = {
     borderRadius: ".55rem",
-    border: "1px solid rgba(0,0,0,0.15)",
-    background: "rgba(0,0,0,0.03)",
+    border: "1px solid rgba(255,255,255,0.4)",
+    background: "rgba(255,255,255,0.15)",
+    backdropFilter: "blur(8px)",
+    WebkitBackdropFilter: "blur(8px)",
     padding: ".8rem 1rem",
     fontSize: ".9rem",
-    color: "#000",
+    color: "#fff",
     outline: "none",
-    fontFamily: "Syne, system-ui, sans-serif",
+    fontFamily: "Canela, system-ui, sans-serif",
     width: "100%",
     boxSizing: "border-box",
   };
@@ -176,7 +181,7 @@ function ContactPage() {
                     required
                     maxLength={1000}
                     name="message"
-                    rows={4}
+                    rows={3}
                     placeholder="Tell us about your goals, horizon and risk appetite."
                     style={{ ...inputStyle, resize: "vertical" }}
                   />
@@ -190,7 +195,7 @@ function ContactPage() {
                   }}
                 >
                   {ok && (
-                    <p style={{ color: "#000", fontSize: ".9rem", margin: 0 }}>
+                    <p style={{ color: "#fff", fontSize: ".9rem", margin: 0 }}>
                       Thank you. We'll be in touch shortly.
                     </p>
                   )}
