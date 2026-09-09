@@ -221,8 +221,9 @@ function AboutPage() {
 
           {/* ===== Director ===== */}
           <section className="px-5 md:px-12 py-16 md:py-20">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-16 mx-auto max-w-[1100px]">
-              <div className="relative overflow-hidden rounded-2xl">
+            <div className="mahir-director-card bg-white mx-auto max-w-[1100px] rounded-3xl p-6 md:p-12">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-[0.7fr_1.3fr] md:items-center md:gap-16">
+              <div className="relative overflow-hidden rounded-2xl max-w-[280px] mx-auto md:mx-0 w-full">
                 <img
                   src="/yash-new-director.jpg"
                   alt="Yash Bedmuttha, Director, MAHIR Group"
@@ -232,35 +233,53 @@ function AboutPage() {
                 />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/40 mb-3">
-                  Director
-                </p>
                 <h2
                   className="text-2xl font-medium leading-[1.1] tracking-[-.03em] text-black sm:text-3xl lg:text-4xl"
                   style={{ fontFamily: "Canela, system-ui, sans-serif" }}
                 >
-                  A Steady Hand Behind Every Recommendation.
+                  Yash Mahavir Bedmuttha
                 </h2>
-                <p className="mt-6 text-base leading-[1.8] text-black/55 max-w-xl">
-                  Yash leads <span className="font-canela uppercase">MAHIR</span> with a focus on
-                  building systems that serve clients first. His experience across research,
-                  advisory, and governance shapes the discipline and transparency behind every{" "}
-                  <span className="font-canela uppercase">MAHIR</span> recommendation.
+                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] text-black/40">
+                  Founder, <span className="font-canela uppercase">MAHIR</span>
                 </p>
-                <blockquote className="mt-8 text-lg italic tracking-[-.01em] text-black/80">
-                  "We would rather explain a modest recommendation than defend a loud one. That's the only way
-                  this compounds."
-                  <cite className="mt-3 block not-italic text-xs font-semibold uppercase tracking-[.22em] text-black/60">
-                    Yash Bedmuttha, Director
-                  </cite>
-                </blockquote>
+                <div className="mt-6 space-y-4 text-base leading-[1.8] text-black/55 max-w-xl">
+                  <p>
+                    I started <span className="font-canela uppercase">MAHIR</span> with a very
+                    simple thought, we all work hard to earn money, but nobody really teaches us
+                    what to do with it.
+                  </p>
+                  <p>
+                    Most of us learn about investing from friends, WhatsApp groups, YouTube, or by
+                    making mistakes ourselves. I felt there had to be a better way.
+                  </p>
+                  <p>
+                    So, I decided to build <span className="font-canela uppercase">MAHIR</span>, a
+                    place where people can get simple, honest and research-backed financial
+                    guidance without feeling lost or confused.
+                  </p>
+                  <p>
+                    For me, <span className="font-canela uppercase">MAHIR</span> is not just about
+                    stocks or investments. It is about helping people make better decisions with
+                    their money.
+                  </p>
+                  <p>
+                    And the name <span className="font-canela uppercase">MAHIR</span> is very
+                    personal to me. It comes from my father, Mahavir, whose values of hard work,
+                    honesty and responsibility continue to guide everything we build.
+                  </p>
+                  <p className="font-semibold text-black/80">
+                    This is what I want <span className="font-canela uppercase">MAHIR</span> to
+                    stand for, simple advice, honest intentions and putting people first.
+                  </p>
+                </div>
                 <Link
                   to="/contact"
                   className="mt-8 inline-flex items-center gap-2 bg-black text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase hover:bg-black/90 transition-colors"
                 >
-                  Talk To The Team
+                  Talk To Us
                 </Link>
               </div>
+            </div>
             </div>
           </section>
 
