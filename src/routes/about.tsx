@@ -242,36 +242,24 @@ function AboutPage() {
                 <p className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] text-black/40">
                   Founder, <span className="font-canela uppercase">MAHIR</span>
                 </p>
-                <div className="mt-6 space-y-4 text-base leading-[1.8] text-black/55 max-w-xl">
-                  <p>
-                    I started <span className="font-canela uppercase">MAHIR</span> with a very
-                    simple thought, we all work hard to earn money, but nobody really teaches us
-                    what to do with it.
-                  </p>
-                  <p>
-                    Most of us learn about investing from friends, WhatsApp groups, YouTube, or by
-                    making mistakes ourselves. I felt there had to be a better way.
-                  </p>
-                  <p>
-                    So, I decided to build <span className="font-canela uppercase">MAHIR</span>, a
-                    place where people can get simple, honest and research-backed financial
-                    guidance without feeling lost or confused.
-                  </p>
-                  <p>
-                    For me, <span className="font-canela uppercase">MAHIR</span> is not just about
-                    stocks or investments. It is about helping people make better decisions with
-                    their money.
-                  </p>
-                  <p>
-                    And the name <span className="font-canela uppercase">MAHIR</span> is very
-                    personal to me. It comes from my father, Mahavir, whose values of hard work,
-                    honesty and responsibility continue to guide everything we build.
-                  </p>
-                  <p className="font-semibold text-black/80">
+                <p className="mt-6 text-base leading-[1.8] text-black/55 max-w-xl">
+                  I started <span className="font-canela uppercase">MAHIR</span> with a very simple
+                  thought, we all work hard to earn money, but nobody really teaches us what to do
+                  with it. Most of us learn about investing from friends, WhatsApp groups,
+                  YouTube, or by making mistakes ourselves. I felt there had to be a better way. So,
+                  I decided to build <span className="font-canela uppercase">MAHIR</span>, a place
+                  where people can get simple, honest and research-backed financial guidance
+                  without feeling lost or confused. For me,{" "}
+                  <span className="font-canela uppercase">MAHIR</span> is not just about stocks or
+                  investments. It is about helping people make better decisions with their money.
+                  And the name <span className="font-canela uppercase">MAHIR</span> is very
+                  personal to me. It comes from my father, Mahavir, whose values of hard work,
+                  honesty and responsibility continue to guide everything we build.{" "}
+                  <span className="font-semibold text-black/80">
                     This is what I want <span className="font-canela uppercase">MAHIR</span> to
                     stand for, simple advice, honest intentions and putting people first.
-                  </p>
-                </div>
+                  </span>
+                </p>
                 <Link
                   to="/contact"
                   className="mt-8 inline-flex items-center gap-2 bg-black text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase hover:bg-black/90 transition-colors"
