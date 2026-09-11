@@ -48,13 +48,13 @@ function ContactPage() {
   }
 
   const infoCardStyle: React.CSSProperties = {
-    background: "rgba(255,255,255,0.15)",
+    background: "rgba(0,0,0,0.35)",
     backdropFilter: "blur(20px)",
     WebkitBackdropFilter: "blur(20px)",
-    border: "1px solid rgba(255,255,255,0.3)",
+    border: "1px solid rgba(255,255,255,0.12)",
     borderRadius: "1.5rem",
     padding: "1.5rem",
-    boxShadow: "0 4px 24px rgba(0,0,0,0.15)",
+    boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
   };
 
   const infoLabelStyle: React.CSSProperties = {
@@ -88,8 +88,8 @@ function ContactPage() {
 
   const inputStyle: React.CSSProperties = {
     borderRadius: ".55rem",
-    border: "1px solid rgba(255,255,255,0.4)",
-    background: "rgba(255,255,255,0.15)",
+    border: "1px solid rgba(255,255,255,0.15)",
+    background: "rgba(0,0,0,0.25)",
     backdropFilter: "blur(8px)",
     WebkitBackdropFilter: "blur(8px)",
     padding: ".8rem 1rem",
@@ -215,10 +215,10 @@ function ContactPage() {
         <section className="px-5 md:px-12 py-16 md:py-20">
           <div className="text-center mx-auto max-w-[1100px]">
             <p style={infoLabelStyle}>Working Hours</p>
-            <p style={{ fontSize: ".95rem", color: "#000", lineHeight: 1.6, marginTop: ".5rem" }}>
+            <p style={{ fontSize: ".95rem", color: "#fff", lineHeight: 1.6, marginTop: ".5rem" }}>
               Monday — Saturday: 10:00 AM to 6:00 PM IST
             </p>
-            <p style={{ fontSize: ".85rem", color: "rgba(0,0,0,0.5)", marginTop: ".25rem" }}>
+            <p style={{ fontSize: ".85rem", color: "rgba(255,255,255,0.6)", marginTop: ".25rem" }}>
               Sunday &amp; Public Holidays: Closed
             </p>
           </div>

@@ -88,6 +88,9 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: url('/hero-sky.png') center center / cover no-repeat fixed; background-color: #87CEEB; }
+@media (max-width: 767px) {
+  html { background-position: left center !important; }
+}
 body {
   margin: 0;
   font-family: var(--mahir-body);
@@ -350,22 +353,21 @@ footer .nav-logo-chip img, footer img[alt="MAHIR"] { filter: none !important; op
   --soft: #f9f9f9;
   --paper: #ffffff;
 }
-body { color: #000000 !important; }
-.section-kicker { color: #000000 !important; font-weight: 300 !important; }
-.soft-copy, p, li { color: #000000 !important; }
+body { color: #ffffff !important; }
+.section-kicker { color: rgba(255,255,255,0.75) !important; font-weight: 300 !important; }
+.soft-copy, p, li { color: #ffffff !important; }
 .mahir-footer .brand-description,
 .mahir-footer .office-address,
 .mahir-footer p { color: rgba(255,255,255,0.85) !important; }
 .spec-chip, .pill-btn, .signal-item, .process-index, .loader-micro,
-.dark-transition-label { color: #111111 !important; font-weight: 300 !important; letter-spacing: .14em !important; }
+.dark-transition-label { color: #ffffff !important; font-weight: 300 !important; letter-spacing: .14em !important; }
 header nav a.nav-link { font-weight: 300 !important; letter-spacing: .22em !important; }
-h1, h2 { color: #ffffff !important; font-weight: 300 !important; }
-h3, h4, .section-title { color: #000000 !important; font-weight: 300 !important; }
+h1, h2, h3, h4, .section-title { color: #ffffff !important; font-weight: 300 !important; }
 #state0 h1, #state0 p, #state0 span, #reveal #state0 * { color: #ffffff !important; }
 .text-\[\#b9bbb7\], .text-\[\#969b97\], .text-\[\#9a9f9a\], .text-\[\#9b9b9b\],
 .text-\[\#6f746f\], .text-\[\#747a76\], .text-\[\#8c918d\], .text-\[\#303833\],
-.text-\[\#57605a\], .text-\[\#56606E\], .text-\[\#111\] { color: #000000 !important; }
-.spec-chip { color: #111111 !important; background: #ffffff !important; border-color: #e5e5e5 !important; }
+.text-\[\#57605a\], .text-\[\#56606E\], .text-\[\#111\] { color: rgba(255,255,255,0.75) !important; }
+.spec-chip { color: #ffffff !important; background: rgba(0,0,0,0.35) !important; border-color: rgba(255,255,255,0.15) !important; }
 .pill-accent { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
 .pill-dark { background: #000000 !important; border-color: #000000 !important; color: #ffffff !important; }
 .skeuomorphic-btn { color: #111111 !important; background: #ffffff !important; border-color: #e5e5e5 !important; }
@@ -423,13 +425,13 @@ footer .text-white\/45, footer .text-white\/35, footer .text-white\/30, footer .
   -webkit-backdrop-filter: none !important;
 }
 
-/* White boxes get glass effect */
+/* Boxes get black glass effect, matching the nav/footer */
 .mahir-std-card, .mahir-testi-card, .rounded-2xl.bg-white, .bg-white {
-  background: rgba(255, 255, 255, 0.65) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16) !important;
 }
 
 /* Contact bg text */
@@ -626,7 +628,7 @@ body { padding-top: 0; }
 .mahir-standards-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; max-width: 78rem; margin: 0 auto; }
 @media (min-width: 640px) { .mahir-standards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; } }
 @media (min-width: 1024px) { .mahir-standards-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
-.mahir-std-card { position: relative; padding: 1.75rem 1.5rem 1.65rem; border-radius: 1.1rem; background: rgba(255,255,255,0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 4px 24px rgba(0,0,0,0.06); text-align: left; overflow: hidden; color: #111111; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.mahir-std-card { position: relative; padding: 1.75rem 1.5rem 1.65rem; border-radius: 1.1rem; background: rgba(0,0,0,0.35); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 4px 24px rgba(0,0,0,0.16); text-align: left; overflow: hidden; color: #ffffff; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
 .mahir-std-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.7); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
 .mahir-std-card::before { content: ""; position: absolute; inset: 0; border-radius: 1.1rem; padding: 1px; pointer-events: none; z-index: 0; background: linear-gradient(140deg, rgba(255,255,255,0.3), rgba(255,255,255,0) 45%, rgba(255,255,255,0) 55%, rgba(255,255,255,0.2) 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .5; transition: opacity .3s ease; }
 .mahir-std-card:hover::before { opacity: 1; }
@@ -634,11 +636,11 @@ body { padding-top: 0; }
 @keyframes mahirStdDot { 0%, 100% { top: 8px; right: 8px; } 25% { top: 8px; right: calc(100% - 14px); } 50% { top: calc(100% - 14px); right: calc(100% - 14px); } 75% { top: calc(100% - 14px); right: 8px; } }
 .mahir-std-card > * { position: relative; z-index: 1; }
 .mahir-std-card .mahir-std-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-.mahir-std-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: transparent; color: #111111; border: 1.5px solid rgba(0,0,0,0.15); }
-.mahir-std-pill { font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 300; color: #111111; padding: .35rem .55rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.15); background: rgba(0,0,0,0.05); }
-.mahir-std-card h4 { font-family: var(--mahir-display); font-size: 1rem; font-weight: 300; letter-spacing: -0.01em; color: #111111; margin: 0 0 .5rem; }
-.mahir-std-card p { font-size: .88rem; line-height: 1.55; color: #333333; margin: 0; }
-.mahir-std-foot { margin-top: 1.1rem; padding-top: .85rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: #555555; font-weight: 300; }
+.mahir-std-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: .8rem; background: transparent; color: #ffffff; border: 1.5px solid rgba(255,255,255,0.3); }
+.mahir-std-pill { font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 300; color: #ffffff; padding: .35rem .55rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); }
+.mahir-std-card h4 { font-family: var(--mahir-display); font-size: 1rem; font-weight: 300; letter-spacing: -0.01em; color: #ffffff; margin: 0 0 .5rem; }
+.mahir-std-card p { font-size: .88rem; line-height: 1.55; color: #b6bac2; margin: 0; }
+.mahir-std-foot { margin-top: 1.1rem; padding-top: .85rem; border-top: 1px solid rgba(255,255,255,0.12); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: #8a8f96; font-weight: 300; }
 .scroll-dark-section.is-dark .mahir-std-card { background: #000000 !important; color: #ffffff !important; border-color: rgba(255,255,255,0.12) !important; }
 .scroll-dark-section.is-dark .mahir-std-card h4 { color: #ffffff !important; }
 .scroll-dark-section.is-dark .mahir-std-card p { color: #b6bac2 !important; }
@@ -656,11 +658,12 @@ body { padding-top: 0; }
 .msp-avatars img { width: 2.35rem; height: 2.35rem; border-radius: 999px; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); margin-left: -0.55rem; }
 .msp-avatars img:first-child { margin-left: 0; }
 .msp-rating { display: flex; flex-direction: column; align-items: flex-start; }
-.msp-stars { display: flex; gap: .1rem; color: #000000; }
-.msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 300; color: #000000; letter-spacing: .01em; }
-.msp-title { font-family: var(--mahir-display); font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; color: #000000; margin: 0 auto; max-width: 22ch; }
+.msp-stars { display: flex; gap: .1rem; color: #ffffff; }
+.msp-stars svg { fill: #ffffff !important; }
+.msp-rating p { margin: .25rem 0 0; font-size: .78rem; font-weight: 300; color: rgba(255,255,255,0.85); letter-spacing: .01em; }
+.msp-title { font-family: var(--mahir-display); font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; color: #ffffff; margin: 0 auto; max-width: 22ch; }
 .msp-italic { font-style: italic; font-family: "Canela", system-ui, -apple-system, sans-serif; font-weight: 300; }
-.msp-sub { margin: 1.5rem auto 0; max-width: 46rem; font-size: 1.05rem; line-height: 1.55; color: #6b7166; }
+.msp-sub { margin: 1.5rem auto 0; max-width: 46rem; font-size: 1.05rem; line-height: 1.55; color: rgba(255,255,255,0.75); }
 
 /* ============ Testimonials cards (match site theme: white bg, dark text, Canela) ============ */
 .mahir-testi-wrap { position: relative; display:flex; justify-content:center; align-items:center; min-height: 380px; padding: 2rem 1rem; font-family: var(--mahir-body); }
@@ -688,51 +691,49 @@ body { padding-top: 0; }
 @media (min-width: 768px) { .mahir-faq-band { padding: 6rem 2.5rem; } }
 .mahir-faq-inner { max-width: 60rem; margin: 0 auto; display:grid; gap: 2.5rem; grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mahir-faq-inner { grid-template-columns: 5fr 7fr; gap: 3rem; align-items:start; } }
-.mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:#8a8a80; margin:0 0 .9rem; }
-.mahir-faq-title { font-family: var(--mahir-display); font-weight: 300; letter-spacing:-0.02em; line-height: 1.1; font-size: 1.75rem; color:#000000; margin:0 0 1rem; }
+.mahir-faq-eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin:0 0 .9rem; }
+.mahir-faq-title { font-family: var(--mahir-display); font-weight: 300; letter-spacing:-0.02em; line-height: 1.1; font-size: 1.75rem; color:#ffffff; margin:0 0 1rem; }
 @media (min-width: 768px) { .mahir-faq-title { font-size: 2.25rem; } }
-.mahir-faq-sub { font-size:.95rem; line-height:1.65; color:#4a4a44; margin:0; }
+.mahir-faq-sub { font-size:.95rem; line-height:1.65; color:rgba(255,255,255,0.75); margin:0; }
 .mahir-faq-list { display:flex; flex-direction:column; }
-.mahir-faq-item { border-top: 1px solid rgba(0,0,0,0.12); }
-.mahir-faq-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
-.mahir-faq-item summary { list-style:none; cursor:pointer; padding: 1.25rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:1rem; font-weight:300; color:#000000; letter-spacing:-0.01em; text-align:left; }
+.mahir-faq-item { border-top: 1px solid rgba(255,255,255,0.15); }
+.mahir-faq-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.15); }
+.mahir-faq-item summary { list-style:none; cursor:pointer; padding: 1.25rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:1rem; font-weight:300; color:#ffffff; letter-spacing:-0.01em; text-align:left; }
 .mahir-faq-item summary::-webkit-details-marker { display:none; }
-.mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#000000; transition: transform .25s ease; line-height:1; flex-shrink:0; }
+.mahir-faq-item summary::after { content:"+"; font-size:1.5rem; font-weight:300; color:#ffffff; transition: transform .25s ease; line-height:1; flex-shrink:0; }
 .mahir-faq-item[open] summary::after { content:"−"; }
-.mahir-faq-item .mahir-faq-a { padding: 0 0 1.25rem; font-size:.92rem; line-height:1.7; color:#4a4a44; text-align:left; }
+.mahir-faq-item .mahir-faq-a { padding: 0 0 1.25rem; font-size:.92rem; line-height:1.7; color:rgba(255,255,255,0.75); text-align:left; }
 
-/* ============ White-theme section overrides ============ */
-.mahir-white-section { background: transparent !important; color: #111 !important; }
+/* ============ Section text: white everywhere; boxes: black glass ============ */
+.mahir-white-section { background: transparent !important; color: #ffffff !important; }
 .mahir-white-section * { color: inherit !important; }
-.mahir-white-section h3, .mahir-white-section h4 { color: #111 !important; }
-.mahir-white-section h2 { color: #ffffff !important; }
-.mahir-white-section p, .mahir-white-section li { color: #444 !important; }
-.mahir-white-section .section-kicker { color: #111 !important; }
-.mahir-white-section .text-white\/60, .mahir-white-section .text-white\/50, .mahir-white-section .text-white\/40, .mahir-white-section .text-white\/70, .mahir-white-section .text-white\/80 { color: #666 !important; }
-.mahir-white-section .text-white { color: #111 !important; }
-.mahir-white-section .bg-\[\#000000\], .mahir-white-section .bg-black { background: #ffffff !important; }
-.mahir-white-section .border-white\/10 { border-color: #e5e5e5 !important; }
-.mahir-white-section .bg-white\/10 { background: #f3f4f6 !important; }
-.mahir-white-section .ring-white\/15, .mahir-white-section .ring-white\/10 { --tw-ring-color: rgba(0,0,0,0.1) !important; }
-.mahir-white-section .from-\[\#000000\] { --tw-gradient-from: #ffffff !important; }
-.mahir-white-section .to-\[\#000000\] { --tw-gradient-to: #ffffff !important; }
-.mahir-white-section .from-black\/5, .mahir-white-section .from-black { --tw-gradient-from: rgba(0,0,0,0.02) !important; }
-.mahir-white-section .to-black\/10, .mahir-white-section .to-black { --tw-gradient-to: rgba(0,0,0,0.05) !important; }
+.mahir-white-section h2, .mahir-white-section h3, .mahir-white-section h4 { color: #ffffff !important; }
+.mahir-white-section p, .mahir-white-section li { color: rgba(255,255,255,0.75) !important; }
+.mahir-white-section .section-kicker { color: rgba(255,255,255,0.75) !important; }
+.mahir-white-section .text-gray-900 { color: #ffffff !important; }
+.mahir-white-section .text-gray-500, .mahir-white-section .text-gray-600 { color: rgba(255,255,255,0.75) !important; }
+.mahir-white-section .text-gray-400 { color: rgba(255,255,255,0.5) !important; }
+.mahir-white-section .bg-white\/60, .mahir-white-section .bg-white\/40 {
+  background: rgba(0,0,0,0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+.mahir-white-section .border-white\/40 { border-color: rgba(255,255,255,0.12) !important; }
+.mahir-white-section .border-white\/10 { border-color: rgba(255,255,255,0.12) !important; }
+.mahir-white-section .bg-white\/10 { background: rgba(0,0,0,0.25) !important; }
+.mahir-white-section .ring-white\/15, .mahir-white-section .ring-white\/10 { --tw-ring-color: rgba(255,255,255,0.15) !important; }
 .mahir-white-section .bg-gradient-to-b { background-image: none !important; }
 .mahir-white-section .drop-shadow-xl, .mahir-white-section [class*="drop-shadow"] { filter: none !important; }
 .mahir-white-section img { opacity: 1 !important; }
 .mahir-white-section .mahir-cta-btn { background: #000 !important; color: #fff !important; }
 
-/* White box card */
-.mahir-white-box { background: #ffffff !important; border-radius: 1rem; box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04); overflow: hidden; }
-.mahir-white-box h2, .mahir-white-box h3 { color: #111 !important; }
-.mahir-white-box p { color: #444 !important; }
-.mahir-white-box .text-white\/60, .mahir-white-box .text-white\/50, .mahir-white-box .text-white\/40, .mahir-white-box .text-white\/70 { color: #666 !important; }
-.mahir-white-box .text-white { color: #111 !important; }
-.mahir-white-box .bg-white\/10 { background: #f3f4f6 !important; }
-.mahir-white-box .ring-white\/15, .mahir-white-box .ring-white\/10 { --tw-ring-color: rgba(0,0,0,0.1) !important; }
-.mahir-white-box .from-black\/5 { --tw-gradient-from: rgba(0,0,0,0.02) !important; }
-.mahir-white-box .to-transparent { --tw-gradient-to: transparent !important; }
+/* Black glass box card */
+.mahir-white-box { background: rgba(0,0,0,0.35) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; box-shadow: 0 4px 32px rgba(0,0,0,0.16); overflow: hidden; color: #ffffff; }
+.mahir-white-box h2, .mahir-white-box h3 { color: #ffffff !important; }
+.mahir-white-box p { color: rgba(255,255,255,0.75) !important; }
+.mahir-white-box .text-white\/60, .mahir-white-box .text-white\/50, .mahir-white-box .text-white\/40, .mahir-white-box .text-white\/70 { color: rgba(255,255,255,0.7) !important; }
+.mahir-white-box .bg-white\/10 { background: rgba(255,255,255,0.1) !important; }
+.mahir-white-box .ring-white\/15, .mahir-white-box .ring-white\/10 { --tw-ring-color: rgba(255,255,255,0.15) !important; }
 .mahir-white-box .bg-gradient-to-b { background-image: none !important; }
 .mahir-white-box .bg-gradient-to-t { background-image: none !important; }
 .mahir-white-box .pointer-events-none.absolute { display: none !important; }
