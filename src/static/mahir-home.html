@@ -1268,18 +1268,21 @@ body { padding-top: 0; }
     /* ============ Scroll-in reveal animation (every section) ============ */
     function initScrollReveal() {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced) return;
+
+      // Every top-level section on the page (skip the hero, which already
+      // plays its own load-in animation) plus a few nested elements for a
+      // nicer cascade within each section.
       const targets = document.querySelectorAll(
+        "main > section:not(#reveal), " +
         "#range .mx-auto.max-w-3xl, #range .grid > div, " +
         "#engineeringText, #ctWrap .mahir-std-card, " +
         ".mahir-socialproof .msp-badge, .mahir-socialproof .msp-title, .mahir-socialproof .msp-sub, " +
         ".mahir-faq-inner > div, .mahir-faq-item, " +
         ".mahir-footer .footer-brand, .mahir-footer .footer-column, .mahir-footer .footer-statement"
       );
-      if (prefersReduced || !targets.length) return;
-      targets.forEach((el, i) => {
-        el.classList.add("mahir-reveal");
-        el.style.transitionDelay = (i % 5) * 0.09 + "s";
-      });
+      if (!targets.length) return;
+
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -1291,7 +1294,41 @@ body { padding-top: 0; }
         },
         { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
       );
-      targets.forEach((el) => io.observe(el));
+
+      const viewportH = window.innerHeight || 800;
+      const bound = [];
+      const revealOnLoad = [];
+
+      targets.forEach((el, i) => {
+        if (el.dataset.revealBound) return;
+        el.dataset.revealBound = "1";
+        el.classList.add("mahir-reveal");
+        el.style.transitionDelay = (i % 5) * 0.09 + "s";
+
+        const rect = el.getBoundingClientRect();
+        if (rect.top < viewportH * 1.1) {
+          revealOnLoad.push(el);
+          return;
+        }
+        io.observe(el);
+        bound.push(el);
+      });
+
+      // Force the browser to paint the opacity:0 starting state first,
+      // otherwise the class changes get coalesced into one paint and the
+      // transition never actually plays.
+      if (revealOnLoad.length) {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            revealOnLoad.forEach((el) => el.classList.add("is-visible"));
+          });
+        });
+      }
+
+      // Safety net: never leave content permanently invisible.
+      setTimeout(() => {
+        bound.forEach((el) => el.classList.add("is-visible"));
+      }, 2500);
     }
     initScrollReveal();
 
