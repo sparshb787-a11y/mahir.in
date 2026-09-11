@@ -131,7 +131,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" style={{ background: "url('/hero-sky.png') center center / cover no-repeat fixed", backgroundColor: "#87CEEB" }}>
+    <html lang="en" className="mahir-html-bg" style={{ backgroundColor: "#87CEEB" }}>
       <head>
         <HeadContent />
       </head>

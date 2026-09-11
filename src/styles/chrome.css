@@ -4,6 +4,15 @@
   --mahir-mono: "Canela", system-ui, -apple-system, sans-serif;
 }
 
+.mahir-html-bg {
+  background: url('/hero-sky.png') center center / cover no-repeat fixed;
+}
+@media (max-width: 767px) {
+  .mahir-html-bg {
+    background: url('/hero-sky-mobile.png') center center / cover no-repeat fixed;
+  }
+}
+
 /* Scroll-in reveal (applied via ScrollReveal component, all React pages) */
 .mahir-reveal {
   opacity: 0;
