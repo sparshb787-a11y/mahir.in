@@ -87,9 +87,10 @@
   --mahir-mono: "Canela", system-ui, -apple-system, sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: url('/hero-sky.png') center center / cover no-repeat fixed; background-color: #87CEEB; }
+html { scroll-behavior: smooth; background-color: #87CEEB; }
+.mahir-bg-fixed { position: fixed; inset: 0; z-index: -1; width: 100vw; height: 100vh; height: 100dvh; background: url('/hero-sky.png') center center / cover no-repeat; }
 @media (max-width: 767px) {
-  html { background: url('/hero-sky-mobile.png') center center / cover no-repeat fixed; }
+  .mahir-bg-fixed { background-image: url('/hero-sky-mobile.png'); }
 }
 @media (max-width: 767px) {
   html { background-position: left center !important; }
@@ -757,6 +758,7 @@ body { padding-top: 0; }
 </head>
 
 <body class="hero-stage-ready selection:bg-white selection:text-black">
+<div class="mahir-bg-fixed" aria-hidden="true"></div>
   <div id="loadOverlay" class="load-overlay" aria-hidden="true">
     <div id="loaderPanel" class="loader-panel">
       <div id="loaderMark" class="loader-logo font-canela font-bold uppercase tracking-widest text-white text-5xl">

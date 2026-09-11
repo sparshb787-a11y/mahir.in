@@ -131,11 +131,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="mahir-html-bg" style={{ backgroundColor: "#87CEEB" }}>
+    <html lang="en" style={{ backgroundColor: "#87CEEB" }}>
       <head>
         <HeadContent />
       </head>
       <body style={{ background: "transparent" }}>
+        <div className="mahir-bg-fixed" aria-hidden="true" />
         <div className="mahir-page-wrap relative z-10">
           {children}
         </div>
