@@ -80,6 +80,11 @@ export function SiteFooter() {
                 <Link to="/products">Products</Link>
               </li>
               <li>
+                <a href="https://www.mahirinvest.com" target="_blank" rel="noopener">
+                  MAHIR Invest
+                </a>
+              </li>
+              <li>
                 <Link to="/blog">Blog</Link>
               </li>
               <li>

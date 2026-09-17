@@ -288,7 +288,15 @@ function AboutPage() {
                 distributors better than they served the people buying them. At the same time,
                 quality market research tools were either prohibitively expensive or locked behind
                 institutional walls. We started MAHIR Group to solve both problems. With{" "}
-                <strong className="text-black">MAHIR Invest</strong>, we built an advisory service
+                <a
+                  href="https://www.mahirinvest.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="font-semibold text-black underline underline-offset-2"
+                >
+                  MAHIR Invest
+                </a>
+                , we built an advisory service
                 where every recommendation is backed by documented research and zero hidden
                 incentives. With <strong className="text-black">MAHIR Screener</strong>, we built a
                 platform that democratizes access to the same caliber of data and analysis that
